@@ -1,0 +1,71 @@
+{
+  "recette001": {
+    "nom": "Crepes de Jafar",
+    "auteur" : "Aladdin",
+    "univers": "Disney",
+    "ingredients": {
+      "dbref1": "4",
+      "dbref2": "250",
+      "dbref3": "50",
+      "dbref4": "1 pincée"
+    },
+    "ustensiles": {
+      "poele": "1"
+    },
+    "nombrePersonnes": "4",
+    "temps": {
+      "tempsPreparation": "20min",
+      "tempsCuisson": "20min",
+      "tempsTotal": "40min"
+    },
+    "tags": {
+      "typePlat": "Dessert",
+      "difficulté": "facile",
+      "cout": "bon marché",
+      "saison": "toutes"
+    },
+    "photo": "url de la photo",
+    "recette": {
+      "etape1": "Blabla",
+      "etape2": "Blablablabla",
+      "etape3": "BlablaBla"
+    }
+  },
+  "recette2": {
+  },
+  
+  "ingredient1": {
+    "id" : "001",
+    "nom": "farine",
+    "unité": "grammes",
+    "image" : "url_image"
+  },
+  "ingredient2": {
+    "id": "002",
+    "nom": "lait",
+    "unité": "cL",
+    "image": "url_image"
+  },
+
+  "ustensile1": {
+    "id": "112",
+    "nom": "poele",
+    "image": "urlimage"
+  },
+  "ustensile2": {
+    "id": "113",
+    "nom": "four",
+    "image": "urlimage"
+  },
+
+  "utilisateur1": {
+    "nomUtilisateur": "SuperPseudo2000",
+    "adresseMail": "superpseudo2000@gmail.com",
+    "motdepasse": "SiOnArriveAleCryter",
+    "dateDeNaissance" : "01/01/1970",
+    "favoris": [ "idrecetteXX1", "idrecetteXX2", "idrecetteXX3" ],
+    "preferences" : "plusTardPaskeJeSaisPasFaire"
+  }
+
+}
+
