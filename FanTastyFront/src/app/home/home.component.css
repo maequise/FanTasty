@@ -1,7 +1,184 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+a,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #e6e6e6;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 5px;
+}
+
+.openmenu {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.closemenu {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+.style-svg{
+  width: 35px;
+  height: 20px;
+}
+
+
+.title {
+  font-family: inherit;
+  line-height: inherit;
+  text-transform: capitalize;
+  text-rendering: optimizeLegibility;
+}
+.title-large {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #00FECA;
+}
+
+.subtitle {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: inherit;
+  margin: 0;
+  color: #00FECA;
+  text-transform: capitalize;
+  text-rendering: optimizeLegibility;
+}
+
+.navmenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.navmodal {
+  position: absolute;
+  margin-top: 65px;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 60%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: none;
+  outline: none;
+  background: #181A18;
+  transform: translateY(-1600px);
+  transition: transform 0.5s ease-in-out;
+  border-radius: 30px;
+  font-family: 'Encode Sans', sans-serif;
+  color: #00FECA;
+}
+.navmodal.active {
+  position: fixed;
+  overflow-y: scroll;
+  transform: translateY(0);
+}
+.navmodal-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  width: 100%;
+  min-height: auto;
+  padding: 5px;
+}
+@media only screen and (max-width: 768px) {
+  .navmodal-wrapper {
+    padding: 5px;
+  }
+  .navmodal{
+    height: 70%;
+  }
+}
+.navmodal-wrapper .column {
+  flex: auto;
+  flex-basis: 25%;
+  width: 50px;
+  height: auto;
+}
+
+.navmodal-wrapper .column .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  list-style:none;
+}
+.navmodal-wrapper .column .menu-item {
+  margin: 0.15rem 0;
+}
+.navmodal-wrapper .column .menu-link {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: inherit;  
+  color: #00fecbc0;  
+  text-transform: capitalize;
+  text-rendering: optimizeLegibility;
+}
+ .menu-link:hover {
+   text-shadow: 0 0 10px #09FBD3,
+              0 0 10px #09FBD3;
+
+}
+@media only screen and (max-width: 1024px) {
+  .navmodal-wrapper .column {
+    flex-basis: 33.33%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navmodal-wrapper .column {
+    flex-basis: 50%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .navmodal-wrapper .column {
+    flex-basis: 100%;
+  }
+}
 
 .header-container{
     display: inline-flex;
@@ -13,11 +190,12 @@ h1 {
     position: relative;
     margin: 0;
     padding:0;
-    font-family: 'Mochiy Pop P One', sans-serif;
+    font-family: 'Bebas Neue', cursive;
     font-weight: 100;
     font-size: 45px;
     color: #00FECA;
 }
+
 
 .search > div {
   display: inline-block;
@@ -28,22 +206,22 @@ h1 {
 .search > div:after {
   content: "";
   background: #00FECA;
-  width: 3px;
-  height: 20px;
+  width: 2px;
+  height: 14px;
   position: absolute;
-  top: 55px;
-  right: 14px;
-  transform: rotate(135deg);
+  top: 40px;
+  right: 12px;
+  transform: rotate(145deg);
 }
 
 .search > div > input {
-  color: #00FECA;
+  color: #00fecb80;
   font-size: 18px;
   font-family: 'Encode Sans', sans-serif;
   background: transparent;
-  width: 25px;
-  height: 25px;
-  margin:16px;
+  width: 12px;
+  height: 12px;
+  margin:9px;
   padding: 10px;
   border: solid 2.5px #00FECA;
   outline: none;
@@ -52,7 +230,7 @@ h1 {
 }
 
 .search > div > input::placeholder {
-  color: #00FECA;
+  color: #00fecb80;
   opacity: 0;
   transition: opacity 150ms ease-out;
 }
@@ -66,23 +244,76 @@ h1 {
   width: 250px;
 }
 
-
-.cards-list {
-  z-index: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.login{
+    display: flex;
+    float: right;
+}
+.login-btn-img{
+  background-color: transparent;
+  width: 45px;
 }
 
-.card {
-  margin: 30px auto;
-  width: 250px;
-  height: 460px;
+.main-container{
+  display: flex;
+  box-sizing:border-box;
+  width: 100%;
+  margin: 0;
+}
+
+.recipes-home {
+  display: flex;
+  justify-content: center;
+  margin-top:20px;
+}
+
+.recipe{
+  margin: 30px 15px 0 15px;
+  width: 520px;
+  height: 310px;
   border-radius: 40px;
   cursor: pointer;
   border: 2.5px solid #00FECA;
 }
+.recipe_1{
+  background-image: url(../../assets/superman-pizza.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.recipe_2{
+  margin-top:60px;
+  background-image: url(../../assets/superhero-cupcakes.jpg);
+  background-repeat: no-repeat;
+  background-position:top;
+}
+
+.cards-list {
+  margin: 0;
+  z-index: 0;
+  width: 100%;
+  display: flex;  
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 10px 15px 15px 15px;
+  width: 240px;
+  height: 480px;
+  border-radius: 40px;
+  cursor: pointer;
+  border: 2.5px solid #00FECA;
+}
+.card_2 {
+  margin-top: 35px;
+}
+.card_3{
+  margin-top: 65px;
+}
+.card_4{
+  margin-top: 95px;
+}
+
 
 .card .card_image {
   width: inherit;
@@ -113,14 +344,6 @@ h1 {
   
   box-shadow: 0 0 23px #09FBD3,
               0 0 23px #09FBD3;
-
-
-}
-
-
-
-.title-black {
-  color: black;
 }
 
 @media all and (max-width: 500px) {
@@ -128,4 +351,193 @@ h1 {
     /* On small screens, we are no longer using row direction but column */
     flex-direction: column;
   }
+  ;.recipes-container {
+      flex-direction: column;
+  }
 }
+
+footer {
+    background-color: #1cb89efa;
+    font-family: "Lato", sans-serif;
+    padding: 85px 0 15px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.footer-item {
+    float: left;
+    margin: 0 7.2% 0 0;
+}
+
+.footer-item:nth-of-type(4) {
+    display: none;
+}
+
+.footer-item:nth-of-type(7) {
+    float: right;
+    margin-right: 0;
+}
+
+.footer-button {
+    color: white;
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    transition: 1s;
+    transition-delay: .2s;
+    padding: 14px;
+}
+  
+.footer-button:after {
+    content: "";
+    position: absolute;
+    top: 45px;
+    right: 13px;
+    background-color: white;
+    height: 1px;
+    width: 86px;
+    transition: .6s;
+}
+  
+.footer-button:hover {
+    color: black;
+    background-color: white;
+}
+  
+.footer-button:hover:after {
+    width: 112px;
+    right: 0px;
+}
+
+
+  
+h2 {
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 13px;
+    color: #d1d1d1;
+    letter-spacing: 0.03em;
+    padding: 15px 0 0 0;
+}
+  
+.color {
+    color: white;
+    font-weight: 400;
+}
+  
+h3 {
+    font-weight: 400;
+    font-size: 13px;
+    color: white;
+    margin: 0;
+    padding-bottom: 9px;
+    letter-spacing: 0.03em;
+}
+
+h3.desktop {
+    padding-top: 30px;
+}
+  
+ul {
+    line-height: 1.8;
+    list-style-type: none;
+    padding: 0;
+}
+  
+li {
+    font-weight: 300;
+    font-size: 13px;
+    color: #d1d1d1;
+    letter-spacing: 0.03em;
+}
+  
+p {
+    font-weight: 300;
+    font-size: 13px;
+    padding: 0;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+}
+  
+a {
+    text-decoration: none;
+    color: #d1d1d1;
+}
+  
+a:hover {
+    color: white;
+}
+  
+.desktop {
+    display: auto;
+}
+
+.footer-inner:after {
+    content: "Made with love by Fan'Tasty 2022";
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    font-size: 13px;
+    color: #d1d1d1;
+    position: absolute;
+    top: 200px;
+    clear: both;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+  
+footer {
+    padding: 50px 0 5px 0 !important;
+}
+
+.footer-inner {
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+}
+
+.footer-item {
+    margin: 0 0 42px 0;
+    width: 50%;
+}
+
+.footer-item:nth-of-type(1) {
+    padding-bottom: 32px;
+    float: none;
+    width: 100%;
+}
+
+.footer-item:nth-of-type(2) {
+    clear: both;
+}
+
+.footer-item:nth-of-type(4) {
+    clear: both;
+    display: block;
+}
+
+.footer-item:nth-of-type(6) {
+    clear: both;
+}
+
+.footer-item:nth-of-type(7) {
+    clear: both;
+    float: left;
+    margin: 20px 0 0 -13px;
+}
+
+.desktop {
+    display: none;
+}
+
+.footer-inner:after {
+    top: 260px;
+}}
+
