@@ -19,5 +19,11 @@ namespace FanTastyBack.Services
             List<Ingredient> ingredients = this._repository.FindAll();
             return ingredients;
         }
+
+        public Ingredient FindById(string id)
+        {
+            Ingredient ingredient = this._repository.FindById(id);
+            return ingredient;
+        }
     }
 }

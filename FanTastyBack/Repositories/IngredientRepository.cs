@@ -19,8 +19,14 @@ namespace FanTastyBack.Repositories
 
         public List<Ingredient> FindAll()
         {
-            List<Ingredient> ingredients = this._ingredients.Find(ing => true).ToList();
+            List<Ingredient> ingredients = this._ingredients.Find(ingr => true).ToList();
             return ingredients;
+        }
+
+        public Ingredient FindById(string id)
+        {
+            Ingredient ingredient = this._ingredients.Find(ingr => ingr.Id == id).FirstOrDefault();
+            return ingredient;
         }
     }
 }
