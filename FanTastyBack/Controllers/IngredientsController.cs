@@ -1,12 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FanTastyBack.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FanTastyBack.Controllers
 {
-    public class IngredientsController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class IngredientsController : ControllerBase
     {
-        public IActionResult Index()
+        private readonly IngredientService _service;
+
+        public IngredientsController(IngredientService service)
         {
-            return View();
+            _service = service;
+        }
+
+        [HttpGet]
+        public IActionResult FindAll()
+        {
+            return Ok(this._service.FindAll());
         }
     }
 }
