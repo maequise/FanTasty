@@ -1,7 +1,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body{
+  background-color: #1d1e1f;
+}
 
 a,
 button {
@@ -66,11 +70,7 @@ img {
   text-transform: capitalize;
   text-rendering: optimizeLegibility;
 }
-.title-large {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #00FECA;
-}
+
 
 .subtitle {
   font-family: inherit;
@@ -78,7 +78,7 @@ img {
   font-weight: 700;
   line-height: inherit;
   margin: 0;
-  color: #00FECA;
+  color: var(--main-color-dark);
   text-transform: capitalize;
   text-rendering: optimizeLegibility;
 }
@@ -108,7 +108,7 @@ img {
   transition: transform 0.5s ease-in-out;
   border-radius: 30px;
   font-family: 'Encode Sans', sans-serif;
-  color: #00FECA;
+  color: var(--main-color-dark);
 }
 .navmodal.active {
   position: fixed;
@@ -155,13 +155,13 @@ img {
   font-size: 1rem;
   font-weight: 500;
   line-height: inherit;  
-  color: #00fecbc0;  
+  color: var(--main-color-dark);  
   text-transform: capitalize;
   text-rendering: optimizeLegibility;
 }
  .menu-link:hover {
-   text-shadow: 0 0 10px #09FBD3,
-              0 0 10px #09FBD3;
+   text-shadow: 0 0 10px var(--main-color-dark),
+              0 0 10px var(--main-color-dark);
 
 }
 @media only screen and (max-width: 1024px) {
@@ -193,7 +193,7 @@ h1 {
     font-family: 'Bebas Neue', cursive;
     font-weight: 100;
     font-size: 45px;
-    color: #00FECA;
+    color: var(--main-color-dark);
 }
 
 
@@ -205,7 +205,7 @@ h1 {
 
 .search > div:after {
   content: "";
-  background: #00FECA;
+  background: var(--main-color-dark);
   width: 2px;
   height: 14px;
   position: absolute;
@@ -215,7 +215,7 @@ h1 {
 }
 
 .search > div > input {
-  color: #00fecb80;
+  color: #7a61f8ab;
   font-size: 18px;
   font-family: 'Encode Sans', sans-serif;
   background: transparent;
@@ -223,14 +223,14 @@ h1 {
   height: 12px;
   margin:9px;
   padding: 10px;
-  border: solid 2.5px #00FECA;
+  border: solid 2.5px var(--main-color-dark);
   outline: none;
   border-radius: 35px;
   transition: width 0.5s;
 }
 
 .search > div > input::placeholder {
-  color: #00fecb80;
+  color: var(--main-color-dark)e7;
   opacity: 0;
   transition: opacity 150ms ease-out;
 }
@@ -252,6 +252,106 @@ h1 {
   background-color: transparent;
   width: 45px;
 }
+.title-container{
+  margin-left: 220px;
+  display:flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.title-users-recipes{
+  
+  margin-bottom: 0;
+  font-size: 24px;
+  color: var(--main-color-dark);
+  font-family: 'Bebas Neue', cursive;
+
+}
+.title_container_duo{
+  margin-left: 450px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.tags_users_recipes{
+  margin-top:48px;
+  margin-left:8px;
+  font-size: 16px;
+  color: var(--main-color-dark);
+  font-family: 'Encode Sans Expanded', sans-serif;
+}
+.title_icon{
+  margin-top:32px;
+  margin-left: 10px;;
+  width: 26px;
+  height: 26px;
+}
+.container-users-recipes{
+    margin-top:10px;
+    display:flex;
+    justify-content: center;
+    width:100%;
+}
+
+.panel{  
+    border-radius: 30px;
+    width: 210px;
+    height: 310px;
+    position:relative;
+    transition:flex 0.7s ease-in;
+    cursor: pointer;
+    border: 2.5px solid var(--main-color-dark);
+}
+.panel_0{
+  background-image: url(../../assets/mike-wazowski-recipe.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+}
+.panel_1{
+  background-image: url(../../assets/star-wars-marshmallows.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.panel_2{
+  background-image: url(../../assets/batman-cake.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.panel_3{
+  background-image: url( ../../assets/mickey-waffles.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.panel:hover{
+  box-shadow: 0 0 23px var(--main-color-dark),
+              0 0 23px var(--main-color-dark);
+}
+
+.panel_active{
+    flex:0.5;
+}
+.panel_active h3{
+    opacity:1;
+    transition:opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width:480px){
+    .container{
+        width:100vw; 
+    }
+    .panel:nth-of-type(4),.panel:nth-of-type(5){
+        display:none;
+    }
+}
 
 .main-container{
   display: flex;
@@ -259,20 +359,22 @@ h1 {
   width: 100%;
   margin: 0;
 }
+.title_duo{
+  font-size: 24px;
+}
 
 .recipes-home {
   display: flex;
   justify-content: center;
-  margin-top:20px;
 }
 
 .recipe{
-  margin: 30px 15px 0 15px;
+  margin: 0 15px 0 15px;
   width: 520px;
   height: 310px;
   border-radius: 40px;
   cursor: pointer;
-  border: 2.5px solid #00FECA;
+  border: 2.5px solid var(--main-color-dark);
 }
 .recipe_1{
   background-image: url(../../assets/superman-pizza.jpg);
@@ -281,10 +383,14 @@ h1 {
 }
 
 .recipe_2{
-  margin-top:60px;
+  
   background-image: url(../../assets/superhero-cupcakes.jpg);
   background-repeat: no-repeat;
   background-position:top;
+}
+.recipe:hover{
+  box-shadow: 0 0 23px var(--main-color-dark),
+              0 0 23px var(--main-color-dark);
 }
 
 .cards-list {
@@ -302,7 +408,7 @@ h1 {
   height: 480px;
   border-radius: 40px;
   cursor: pointer;
-  border: 2.5px solid #00FECA;
+  border: 2.5px solid var(--main-color-dark);
 }
 .card_2 {
   margin-top: 35px;
@@ -342,8 +448,8 @@ h1 {
 
 .card:hover {
   
-  box-shadow: 0 0 23px #09FBD3,
-              0 0 23px #09FBD3;
+  box-shadow: 0 0 23px var(--main-color-dark),
+              0 0 23px var(--main-color-dark);
 }
 
 @media all and (max-width: 500px) {
@@ -357,7 +463,7 @@ h1 {
 }
 
 footer {
-    background-color: #1cb89efa;
+    background-color: #7a61f8c5;
     font-family: "Lato", sans-serif;
     padding: 85px 0 15px 0;
 }

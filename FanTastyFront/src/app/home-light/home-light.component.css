@@ -1,0 +1,224 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body{
+    
+    background-color: #151515;
+}
+
+.title-container{
+  margin-left: 220px;
+  display:flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.title-users-recipes{
+  
+  margin-bottom: 0;
+  font-size: 22px;
+  color: var(--main-color-light);
+  font-family: 'Bebas Neue', cursive;
+
+}
+.title_container_duo{
+  margin-left: 450px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.title_duo{
+  font-size: 22px;
+}
+.tags_users_recipes{
+  margin-top:35px;
+  margin-left:8px;
+  font-size: 16px;
+  color: var(--main-color-light);
+  font-family: 'Encode Sans Expanded', sans-serif;
+}
+.tags_duo{
+  margin-top:35px;
+  margin-left:-300px;
+  margin-right: 8px;;
+  font-size: 16px;
+  color: var(--main-color-light);
+  font-family: 'Encode Sans Expanded', sans-serif;
+}
+.title_icon{
+  margin-top:20px;
+  margin-left: 8px;;
+  width: 26px;
+  height: 26px;
+}
+.container-users-recipes{
+    margin-top:10px;
+    display:flex;
+    justify-content: center;
+    width:100%;
+}
+
+.panel{  
+    border-radius: 30px;
+    width: 210px;
+    height: 310px;
+    position:relative;
+    transition:flex 0.7s ease-in;
+    border: 2.5px solid var(--main-color-light);
+}
+.panel_0{
+  background-image: url(../../assets/mike-wazowski-recipe.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+}
+.panel_1{
+  background-image: url(../../assets/star-wars-marshmallows.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.panel_2{
+  background-image: url(../../assets/batman-cake.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.panel_3{
+  background-image: url( ../../assets/mickey-waffles.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.panel:hover{
+  box-shadow: 0 0 23px var(--main-color-light),
+              0 0 23px var(--main-color-light);
+}
+
+.panel_active{
+    flex:0.5;
+}
+.panel_active h3{
+    opacity:1;
+    transition:opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width:480px){
+    .container{
+        width:100vw; 
+    }
+    .panel:nth-of-type(4),.panel:nth-of-type(5){
+        display:none;
+    }
+}
+
+.main-container{
+  display: flex;
+  box-sizing:border-box;
+  width: 100%;
+  margin: 0;
+}
+
+.recipes-home {
+  display: flex;
+  justify-content: center;
+}
+
+.recipe{
+  margin: 0 15px 0 15px;
+  width: 520px;
+  height: 310px;
+  border-radius: 40px;
+  border: 2.5px solid var(--main-color-light);
+}
+.recipe_1{
+  background-image: url(../../assets/superman-pizza.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.recipe_2{
+  
+  background-image: url(../../assets/superhero-cupcakes.jpg);
+  background-repeat: no-repeat;
+  background-position:top;
+}
+.recipe:hover{
+  box-shadow: 0 0 23px var(--main-color-light),
+              0 0 23px var(--main-color-light);
+}
+
+.cards-list {
+  margin: 0;
+  z-index: 0;
+  width: 100%;
+  display: flex;  
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 10px 15px 15px 15px;
+  width: 240px;
+  height: 480px;
+  border-radius: 40px;
+  border: 2.5px solid var(--main-color-light);
+}
+.card_2 {
+  margin-top: 35px;
+}
+.card_3{
+  margin-top: 65px;
+}
+.card_4{
+  margin-top: 95px;
+}
+
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  color: var(--main-color-light);
+  border-radius: 0px 0px 40px 40px;
+  font-family: 'Encode Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 30px;
+  font-stretch:wider;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.card:hover {
+  
+  box-shadow: 0 0 23px var(--main-color-light),
+              0 0 23px var(--main-color-light);
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+  ;.recipes-container {
+      flex-direction: column;
+  }
+}
+

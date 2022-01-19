@@ -6,13 +6,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RecipeTemplateComponent } from './recipe-template/recipe-template.component';
 import { UniversTemplateComponent } from './univers-template/univers-template.component';
-
+import { HomeLightComponent } from './home-light/home-light.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     RecipeTemplateComponent,
-    UniversTemplateComponent
+    UniversTemplateComponent,
+    HomeLightComponent,
   ],
   imports: [
     BrowserModule,
