@@ -19,13 +19,13 @@ namespace FanTastyBack.Repositories
 
         public List<Utilisateur> FindAll()
         {
-            List<Utilisateur> utilisateurs = this._utilisateur.Find(ingr => true).ToList();
+            List<Utilisateur> utilisateurs = this._utilisateur.Find(utili => true).ToList();
             return utilisateurs;
         }
 
         public Utilisateur FindById(string id)
         {
-            Utilisateur utilisateur = this._utilisateur.Find(ingr => ingr.Id == id).FirstOrDefault();
+            Utilisateur utilisateur = this._utilisateur.Find(utili => utili.Id == id).FirstOrDefault();
             return utilisateur;
         }
 
@@ -37,6 +37,13 @@ namespace FanTastyBack.Repositories
         public void Delete(string id)
         {
             _utilisateur.DeleteOne(utilisateur => utilisateur.Id == id);
+        }
+
+        public Utilisateur Update(string id, Utilisateur utilisateur)
+        {
+            utilisateur.Id = id;
+            _utilisateur.ReplaceOne(utili => utili.Id == id, utilisateur);
+            return utilisateur;
         }
 
     }

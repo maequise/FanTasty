@@ -36,5 +36,11 @@ namespace FanTastyBack.Services
             this._repository.Delete(id);
         }
 
+        public Utilisateur Update(string id, Utilisateur utilisateur)
+        {
+            this._repository.Update(id, utilisateur);
+            return utilisateur;
+        }
+
     }
 }
