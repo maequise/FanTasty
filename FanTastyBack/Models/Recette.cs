@@ -20,7 +20,7 @@ namespace FanTastyBack.Models
 
         public List<string> Ustensiles { get; set; }
 
-        public string NombrePersonnes { get; set; } //Faire un int nullable
+        public int NombrePersonnes { get; set; }
 
         public Temps Temps { get; set; }
 
@@ -57,6 +57,6 @@ namespace FanTastyBack.Models
         public Ingredient Ingredient { get; set; }
 
         public string Unite { get; set; }
-        public string Quantite { get; set; } //Faire un truc pour le mettre en double
+        public double Quantite { get; set; }
     }
 }
