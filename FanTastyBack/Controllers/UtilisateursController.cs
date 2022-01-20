@@ -34,5 +34,12 @@ namespace FanTastyBack.Controllers
             return Ok("Utilisateur créer");
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult Delete(string id)
+        {
+            this._service.Delete(id);
+            return Ok("Utilisateur Supprimé");
+        }
+
     }
 }
