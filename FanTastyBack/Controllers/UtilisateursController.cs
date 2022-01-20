@@ -41,5 +41,12 @@ namespace FanTastyBack.Controllers
             return Ok("Utilisateur Supprimé");
         }
 
+        [HttpPut("{id}")]
+        public IActionResult Update(string id, Utilisateur utilisateur)
+        {
+            this._service.Update(id, utilisateur);
+            return Ok("Utilisateur modifié");
+        }
+
     }
 }

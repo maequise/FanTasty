@@ -13,5 +13,7 @@ namespace FanTastyBack.Repositories.Interfaces
 
         public void Delete(string id);
 
+        public Utilisateur Update(string id, Utilisateur utilisateur);
+
     }
 }
