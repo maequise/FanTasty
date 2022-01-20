@@ -34,5 +34,10 @@ namespace FanTastyBack.Repositories
             _utilisateur.InsertOne(utilisateur);
         }
 
+        public void Delete(string id)
+        {
+            _utilisateur.DeleteOne(utilisateur => utilisateur.Id == id);
+        }
+
     }
 }
