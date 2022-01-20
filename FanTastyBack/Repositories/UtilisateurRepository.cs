@@ -23,5 +23,11 @@ namespace FanTastyBack.Repositories
             return utilisateurs;
         }
 
+        public Utilisateur FindById(string id)
+        {
+            Utilisateur utilisateur = this._utilisateur.Find(ingr => ingr.Id == id).FirstOrDefault();
+            return utilisateur;
+        }
+
     }
 }

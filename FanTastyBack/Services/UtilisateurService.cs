@@ -20,5 +20,11 @@ namespace FanTastyBack.Services
             return Utilisateurs;
         }
 
+        public Utilisateur FindById(string id)
+        {
+            Utilisateur utilisateur = this._repository.FindById(id);
+            return utilisateur;
+        }
+
     }
 }

@@ -20,5 +20,11 @@ namespace FanTastyBack.Controllers
             return Ok(this._service.FindAll());
         }
 
+        [HttpGet("{id}")]
+        public IActionResult FindById(string id)
+        {
+            return Ok(this._service.FindById(id));
+        }
+
     }
 }
