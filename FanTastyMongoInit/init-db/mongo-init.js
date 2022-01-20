@@ -135,53 +135,53 @@ db.Recettes.insertMany([
         "ingredients": [
             {
                 "_id": nouille_id,
-                "quantite": "200",
-                "unite": "grammes"
+                "quantite": 200,
+                "unite": "gramme"
             },
             {
                 "_id": porcChashu_id,
-                "quantite": "3",
-                "unite": "tranches"
+                "quantite": 3,
+                "unite": "tranche"
             },
             {
                 "_id": oeufMollet_id,
-                "quantite": "1",
+                "quantite": 1,
                 "unite": "pièce"
             },
             {
                 "_id": pateMiso_id,
-                "quantite": "1",
-                "unite": "c à s"
+                "quantite": 1,
+                "unite": "cuillère à soupe"
             },
             {
                 "_id": pousseDeBambou_id,
-                "quantite": "50",
-                "unite": "grammes"
+                "quantite": 50,
+                "unite": "gramme"
             },
             {
                 "_id": bouillonPorc_id,
-                "quantite": "1",
+                "quantite": 1,
                 "unite": "cube"
             },
             {
                 "_id": huileSesame_id,
-                "quantite": "1",
-                "unite": "c à c"
+                "quantite": 1,
+                "unite": "cuillère à café"
             },
             {
                 "_id": algueNori_id,
-                "quantite": "1",
+                "quantite": 1,
                 "unite": "feuille"
             },
             {
                 "_id": oignonFrais_id,
-                "quantite": "2",
-                "unite": "c à s"
+                "quantite": 2,
+                "unite": "cuillère à soupe"
             },
             {
                 "_id": narutomaki_id,
-                "quantite": "2",
-                "unite": "tranches"
+                "quantite": 2,
+                "unite": "tranche"
             }
         ],
         "ustensiles": [
@@ -190,7 +190,7 @@ db.Recettes.insertMany([
             "bol",
             "spatule"
         ],
-        "nombrePersonnes": "1",
+        "nombrePersonnes": 1,
         "temps": {
             "tempsPreparation": "10mn",
             "tempsCuisson": "5h",
@@ -228,27 +228,27 @@ db.Recettes.insertMany([
             {
                 "_id": sucreRoux_id,
                 "unite": "gramme",
-                "quantite": "200"
+                "quantite": 200
             },
             {
                 "_id": beurre_id,
                 "unite": "gramme",
-                "quantite": "25"
+                "quantite": 25
             },
             {
                 "_id": cremeEpaisse_id,
                 "unite": "centilitre",
-                "quantite": "60"
+                "quantite": 60
             },
             {
                 "_id": extraitVanille_id,
                 "unite": "cuillère à café",
-                "quantite": "1/4"
+                "quantite": 0.25
             },
             {
                 "_id": biere_id,
                 "unite": "litre",
-                "quantite": "1"
+                "quantite": 1
             }
         ],
         "ustensiles": [
@@ -256,7 +256,6 @@ db.Recettes.insertMany([
             "fouet",
             "spatule"
         ],
-        "nombrePersonnes": "",
         "temps": {
             "tempsPreparation": "5mn",
             "tempsCuisson": "15mn",
@@ -285,32 +284,32 @@ db.Recettes.insertMany([
             {
                 "_id": farine_id,
                 "unite": "gramme",
-                "quantite": "250"
+                "quantite": 250
             },
             {
                 "_id": oeuf_id,
                 "unite": "pièce",
-                "quantite": "4"
+                "quantite": 4
             },
             {
                 "_id": lait_id,
                 "unite": "centilitre",
-                "quantite": "50"
+                "quantite": 50
             },
             {
                 "_id": sel_id,
                 "unite": "pincée",
-                "quantite": "1"
+                "quantite": 1
             },
             {
                 "_id": sucre_id,
                 "unite": "cuillère à soupe",
-                "quantite": "2"
+                "quantite": 2
             },
             {
                 "_id": beurre_id,
                 "unite": "gramme",
-                "quantite": "50"
+                "quantite": 50
             }
         ],
         "ustensiles": [
@@ -319,7 +318,6 @@ db.Recettes.insertMany([
             "spatule",
             "saladier"
         ],
-        "nombrePersonnes": "",
         "temps": {
             "tempsPreparation": "10mn",
             "tempsCuisson": "15mn",
