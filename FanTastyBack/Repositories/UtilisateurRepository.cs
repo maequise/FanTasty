@@ -29,5 +29,10 @@ namespace FanTastyBack.Repositories
             return utilisateur;
         }
 
+        public void Create(Utilisateur utilisateur)
+        {
+            _utilisateur.InsertOne(utilisateur);
+        }
+
     }
 }
