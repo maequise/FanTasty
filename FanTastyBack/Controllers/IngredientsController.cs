@@ -1,4 +1,5 @@
-﻿using FanTastyBack.Services;
+﻿using FanTastyBack.Models;
+using FanTastyBack.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FanTastyBack.Controllers
@@ -24,6 +25,31 @@ namespace FanTastyBack.Controllers
         public IActionResult FindById(string id)
         {
             return Ok(this._service.FindById(id));
+        }
+
+        [HttpGet("name/{nom}")]
+        public IActionResult FindByName(string nom)
+        {
+            return Ok(this._service.FindByName(nom));
+        }
+
+        [HttpPost]
+        public IActionResult Create(Ingredient ingredient)
+        {
+            return Ok(this._service.Create(ingredient));
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(string id)
+        {
+            this._service.Delete(id);
+            return Ok($"{id} deleted");
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Update(string id, Ingredient ingredient)
+        {
+            return Ok(this._service.Update(id, ingredient));
         }
     }
 }
