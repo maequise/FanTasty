@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using MongoDB.Bson.Serialization.Conventions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +36,11 @@ namespace FanTastyBack
             // Configuration DB
             services.Configure<FantastyDatabaseSettings>(Configuration.GetSection(nameof(FantastyDatabaseSettings)));
             services.AddSingleton<IFantastyDatabaseSettings>(sp => sp.GetRequiredService<IOptions<FantastyDatabaseSettings>>().Value);
+            
+            // Mapping des attributs insensible à la case
+            var pack = new ConventionPack();
+            pack.Add(new CamelCaseElementNameConvention());
+            ConventionRegistry.Register("Camel case convention", pack, t => true);
 
             // Repositories
             services.AddSingleton<IRecetteRepository, RecetteRepository>();
