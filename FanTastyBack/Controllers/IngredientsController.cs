@@ -1,4 +1,5 @@
-﻿using FanTastyBack.Models;
+﻿using FanTastyBack.Exceptions;
+using FanTastyBack.Models;
 using FanTastyBack.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,19 +19,40 @@ namespace FanTastyBack.Controllers
         [HttpGet]
         public IActionResult FindAll()
         {
-            return Ok(this._service.FindAll());
+            try
+            {
+                return Ok(this._service.FindAll());
+            }
+            catch(NotFoundException e)
+            {
+                return NotFound(e.Message);
+            }
         }
 
         [HttpGet("{id}")]
         public IActionResult FindById(string id)
         {
-            return Ok(this._service.FindById(id));
+            try
+            {
+                return Ok(this._service.FindById(id));
+            }
+            catch (NotFoundException e)
+            {
+                return NotFound(e.Message);
+            }
         }
 
         [HttpGet("name/{nom}")]
         public IActionResult FindByName(string nom)
         {
-            return Ok(this._service.FindByName(nom));
+            try
+            {
+                return Ok(this._service.FindByName(nom));
+            }
+            catch (NotFoundException e)
+            {
+                return NotFound(e.Message);
+            }
         }
 
         [HttpPost]
