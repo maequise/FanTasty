@@ -7,5 +7,8 @@ namespace FanTastyBack.Repositories.Interfaces
     {
         public List<Utilisateur> FindAll();
 
+        public Utilisateur FindById(string id);
+
+
     }
 }
