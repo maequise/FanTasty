@@ -2,6 +2,7 @@ db = db.getSiblingDB('FanTastyDB');
 
 db.createCollection('Recettes');
 db.createCollection('Ingredients');
+db.createCollection('Utilisateurs');
 
 nouille_id = ObjectId()
 porcChashu_id = ObjectId()
@@ -23,6 +24,21 @@ cremeEpaisse_id = ObjectId()
 extraitVanille_id = ObjectId()
 biere_id = ObjectId()
 oeuf_id = ObjectId()
+
+db.Utilisateurs.insertMany([
+    {
+        "nom": "adminNom",
+        "prenom": "adminPrenom",
+        "email": "admin@admin.com",
+        "motDePasse": "123",
+    },
+    {
+        "nom": "utilisateurNom",
+        "prenom": "utilisateurPrenom",
+        "email": "utilisateur@utilisateur.com",
+        "motDePasse": "123",
+    }
+])
 
 db.Ingredients.insertMany([
     {
@@ -136,17 +152,17 @@ db.Recettes.insertMany([
             {
                 "_id": nouille_id,
                 "quantite": "200",
-                "unite": "grammes"
+                "unite": "gramme(s)"
             },
             {
                 "_id": porcChashu_id,
                 "quantite": "3",
-                "unite": "tranches"
+                "unite": "tranche(s)"
             },
             {
                 "_id": oeufMollet_id,
                 "quantite": "1",
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": pateMiso_id,
@@ -156,12 +172,12 @@ db.Recettes.insertMany([
             {
                 "_id": pousseDeBambou_id,
                 "quantite": "50",
-                "unite": "grammes"
+                "unite": "gramme(s)"
             },
             {
                 "_id": bouillonPorc_id,
                 "quantite": "1",
-                "unite": "cube"
+                "unite": "cube(s)"
             },
             {
                 "_id": huileSesame_id,
@@ -171,7 +187,7 @@ db.Recettes.insertMany([
             {
                 "_id": algueNori_id,
                 "quantite": "1",
-                "unite": "feuille"
+                "unite": "feuille(s)"
             },
             {
                 "_id": oignonFrais_id,
@@ -181,7 +197,7 @@ db.Recettes.insertMany([
             {
                 "_id": narutomaki_id,
                 "quantite": "2",
-                "unite": "tranches"
+                "unite": "tranche(s)"
             }
         ],
         "ustensiles": [
@@ -227,17 +243,17 @@ db.Recettes.insertMany([
         "ingredients": [
             {
                 "_id": sucreRoux_id,
-                "unite": "gramme",
+                "unite": "gramme(s)",
                 "quantite": "200"
             },
             {
                 "_id": beurre_id,
-                "unite": "gramme",
+                "unite": "gramme(s)",
                 "quantite": "25"
             },
             {
                 "_id": cremeEpaisse_id,
-                "unite": "centilitre",
+                "unite": "centilitre(s)",
                 "quantite": "60"
             },
             {
@@ -247,7 +263,7 @@ db.Recettes.insertMany([
             },
             {
                 "_id": biere_id,
-                "unite": "litre",
+                "unite": "litre(s)",
                 "quantite": "1"
             }
         ],
@@ -284,22 +300,22 @@ db.Recettes.insertMany([
         "ingredients": [
             {
                 "_id": farine_id,
-                "unite": "gramme",
+                "unite": "gramme(s)",
                 "quantite": "250"
             },
             {
                 "_id": oeuf_id,
-                "unite": "pièce",
+                "unite": "pièce(s)",
                 "quantite": "4"
             },
             {
                 "_id": lait_id,
-                "unite": "centilitre",
+                "unite": "centilitre(s)",
                 "quantite": "50"
             },
             {
                 "_id": sel_id,
-                "unite": "pincée",
+                "unite": "pincée(s)",
                 "quantite": "1"
             },
             {
@@ -309,7 +325,7 @@ db.Recettes.insertMany([
             },
             {
                 "_id": beurre_id,
-                "unite": "gramme",
+                "unite": "gramme(s)",
                 "quantite": "50"
             }
         ],
