@@ -26,5 +26,10 @@ namespace FanTastyBack.Services
             return utilisateur;
         }
 
+        public void Create(Utilisateur utilisateur)
+        {
+            this._repository.Create(utilisateur);
+        }
+
     }
 }

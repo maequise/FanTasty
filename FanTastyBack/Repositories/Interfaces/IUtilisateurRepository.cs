@@ -9,6 +9,7 @@ namespace FanTastyBack.Repositories.Interfaces
 
         public Utilisateur FindById(string id);
 
+        public void Create(Utilisateur utilisateur);
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using FanTastyBack.Services;
+﻿using FanTastyBack.Models;
+using FanTastyBack.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FanTastyBack.Controllers
@@ -24,6 +25,13 @@ namespace FanTastyBack.Controllers
         public IActionResult FindById(string id)
         {
             return Ok(this._service.FindById(id));
+        }
+
+        [HttpPost]
+        public IActionResult Create(Utilisateur utilisateur)
+        {
+            this._service.Create(utilisateur);
+            return Ok("Utilisateur créer");
         }
 
     }
