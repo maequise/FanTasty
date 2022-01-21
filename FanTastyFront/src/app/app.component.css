@@ -304,8 +304,8 @@ h1 {
 
 .switch + label {
   display: block;
-  height: 10.8px;
-  width: 40px;
+  height: 19px;
+  width: 50px;
   position: relative;
   background-color: rgba(122, 122, 122, 0.753);
   border-radius: 150px;
@@ -316,12 +316,12 @@ h1 {
   display: block;
   position: absolute;
   content: "";
-  left: 5px;
+  left: 1px;
   top: 0px;
   bottom: 10px;
   border-radius: 100%;
-  width: 10px;
-  height: 10px;
+  width: 18px;
+  height: 18px;
   background-color: #fff;
   box-shadow: 0 3px 5px rgba(0,0,0,0.3);
 }
@@ -335,7 +335,7 @@ h1 {
 }
 
 .switch:checked + label::before {
-  margin-left: 24px;
+  margin-left: 30px;
 }
 
 
