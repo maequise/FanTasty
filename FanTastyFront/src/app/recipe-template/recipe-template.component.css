@@ -1,0 +1,225 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400|Lora:400);
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+
+html {
+  font: 400 1em/1.33 "Lora", serif;
+  background-color: #191919;
+}
+
+body {
+  padding-bottom: 3em;
+}
+
+
+
+.header-container{
+    display: inline-flex;
+    justify-content: space-evenly;
+    
+}
+
+h1 {
+    position: relative;
+    margin: 0;
+    padding:0;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-weight: 100;
+    font-size:55px;
+    color: #08F7FE;
+}
+
+
+.search > div {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+}
+
+.search > div:after {
+  content: "";
+  background: #08F7FE;
+  width: 3px;
+  height: 20px;
+  position: absolute;
+  top: 55px;
+  right: 14px;
+  transform: rotate(135deg);
+}
+
+.search > div > input {
+  color: #08f6fea6;
+  font-size: 18px;
+  font-family: 'Encode Sans', sans-serif;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  margin:16px;
+  padding: 10px;
+  border: solid 2.5px #08F7FE;
+  outline: none;
+  border-radius: 35px;
+  transition: width 0.5s;
+}
+
+.search > div > input::placeholder {
+  color: #08f6fea6;
+  opacity: 0;
+  transition: opacity 150ms ease-out;
+}
+
+.search > div > input:focus::placeholder {
+  opacity: 1;
+}
+
+.search > div > input:focus,
+.search > div > input:not(:placeholder-shown) {
+  width: 250px;
+}
+
+.profile {
+  background: url("../../assets/cinderella-1.jpg") center 30%;
+  height: 50vh;
+  background-size: cover;
+}
+@media (min-width: 55em) {
+  .profile {
+    width: 40%;
+    position: fixed;
+    top: 90px;
+    left: 0;
+    bottom: 0;
+    height: auto;
+  }
+}
+@media (min-width: 80em) {
+  .profile {
+    width: 50%;
+  }
+}
+
+article {
+  color: #ccc;
+}
+@media (min-width: 55em) {
+  article {
+    margin-left: 40%;
+    position: relative;
+    max-width: 66em;
+  }
+}
+@media (min-width: 80em) {
+  article {
+    margin-left: 50%;
+  }
+}
+
+header {
+  text-align: center;
+  padding: 0 2em;
+}
+
+h1 {
+  font-family: "Old Standard TT", serif;
+  color: #75D5FD;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.nth-line-1,
+.nth-line-2 {
+  line-height: 1;
+}
+
+.nth-line-1 {
+  font-size: 19vw;
+}
+@media (min-width: 55em) {
+  .nth-line-1 {
+    font-size: 10.5vw;
+  }
+}
+
+.nth-line-2 {
+  font-size: 14.5vw;
+}
+@media (min-width: 55em) {
+  .nth-line-2 {
+    font-size: 6vw;
+  }
+}
+
+.lead {
+  color: #ccc;
+  font-size: 1.5625em;
+  max-width: 20em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+hr {
+  border: none;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/5175/hr-01.png") no-repeat center;
+  height: 40px;
+  margin: 5em 0;
+}
+
+section {
+  -moz-column-width: 14em;
+       column-width: 14em;
+  -moz-column-gap: 1.33em;
+       column-gap: 1.33em;
+  padding: 0 1em;
+}
+@media (min-width: 55em) {
+  section {
+    padding: 0 3em;
+  }
+}
+
+section p:first-of-type:first-letter {
+  color: #75D5FD;
+  float: left;
+  font-size: 7em;
+  line-height: 1;
+  margin-top: -0.2em;
+  margin-bottom: -0.2em;
+  margin-right: 0.1em;
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 1.33em;
+  vertical-align: middle;
+}
+
+blockquote {
+  border-left: 0.2em solid #75D5FD;
+  font-size: 1.953125em;
+  padding: 0.1em 0.5em;
+  line-height: 1.5;
+  margin-left: 0;
+  margin-right: 0;
+  quotes: "“" "”" "‘" "’";
+}
+blockquote::before, blockquote::after {
+  color: #75D5FD;
+  font-size: 1.25em;
+  line-height: 0;
+}
+blockquote::before {
+  content: open-quote;
+}
+blockquote::after {
+  content: close-quote;
+}
+@media (min-width: 55em) {
+  blockquote {
+    position: absolute;
+    right: 100%;
+    top: 80vh;
+    width: 9em;
+    background: #191919;
+  }
+}
