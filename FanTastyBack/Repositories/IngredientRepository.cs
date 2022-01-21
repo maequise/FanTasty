@@ -17,7 +17,6 @@ namespace FanTastyBack.Repositories
             _ingredients = database.GetCollection<Ingredient>(settings.IngredientsCollectionName);
         }
 
-
         public List<Ingredient> FindAll()
         {
             List<Ingredient> ingredients = this._ingredients.Find(ingr => true).ToList();
