@@ -44,11 +44,6 @@ namespace FanTastyBack.Services
             }
             return ingredient;
         }
-
-        public Ingredient Update(string id, Ingredient ingredient)
-        {
-            return this._repository.Update(id, ingredient);
-        }
         
         public Ingredient Create(Ingredient ingredient)
         {
@@ -58,6 +53,10 @@ namespace FanTastyBack.Services
         public void Delete(string id)
         {
             this._repository.Delete(id);
+        }
+        public Ingredient Update(string id, Ingredient ingredient)
+        {
+            return this._repository.Update(id, ingredient);
         }
     }
 }
