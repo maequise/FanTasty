@@ -15,7 +15,7 @@ namespace FanTastyBack.Models
         
         public string Image { get; set; }
         
-        public Ingredient(string id, string nom, string image, List<string> unites)
+        public Ingredient(string id, string nom, string image)
         {
             Id = id;
             Nom = nom;
