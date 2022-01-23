@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-light',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeLightComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  btnClickHome() {
+    this.router.navigate(['']);
+  }
+
+  btnClickDisney() {
+    this.router.navigate(['/disney']);
+  }
+  btnClickNaruto() {
+    this.router.navigate(['/naruto']);
+  }
+  btnClickMarvel() {
+    this.router.navigate(['/marvel']);
+  }
+  btnClickHarryPotter() {
+    this.router.navigate(['/harrypotter']);
+  }
+  btnClickWowCraft() {
+    this.router.navigate(['/wowcraft']);
   }
 
 }

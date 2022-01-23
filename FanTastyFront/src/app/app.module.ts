@@ -5,15 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RecipeTemplateComponent } from './recipe-template/recipe-template.component';
-import { UniversTemplateComponent } from './univers-template/univers-template.component';
 import { HomeLightComponent } from './home-light/home-light.component';
+import { NarutoComponent } from './naruto/naruto.component';
+import { HarrypotterComponent } from './harrypotter/harrypotter.component';
+import { DisneyComponent } from './disney/disney.component';
+import { MarvelComponent } from './marvel/marvel.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     RecipeTemplateComponent,
-    UniversTemplateComponent,
+    NarutoComponent,
     HomeLightComponent,
+    HarrypotterComponent,
+    DisneyComponent,
+    MarvelComponent,
   ],
   imports: [
     BrowserModule,

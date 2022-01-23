@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FanTastyFront';
+  flag = false;
+  colorA = 'var(--main-color-light)';
 }
