@@ -14,12 +14,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
         navmodal.classList.remove("active");
     });
 });
-document.addEventListener('DOMContentLoaded', function (event) {
+/*document.addEventListener('DOMContentLoaded', function (event) {
     const example = document.getElementById("example");
 
     example.addEventListener("change", () => {
         document.body.classList.toggle('dark');
     });
-});
+});*/
 
 

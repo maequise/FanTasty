@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,9 +8,19 @@ import { Router } from '@angular/router';
 })
 export class HomeLightComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  @ViewChild('example') example!: ElementRef;
+
+
+
+  constructor(private router: Router, private elementRef: ElementRef) { }
 
   ngOnInit(): void {
+
+    /*if (document.body.classList.contains('dark')) {
+      document.querySelector('#exemple')?.setAttribute('checked', 'true');
+    };*/
+
+
   }
 
   btnClickHome() {
@@ -32,5 +42,16 @@ export class HomeLightComponent implements OnInit {
   btnClickWowCraft() {
     this.router.navigate(['/wowcraft']);
   }
+  darkOnOff(event: Event) {
+    let darkMode = <any>event;
+    let element: Element = document.querySelector('body')!;
+
+    if (darkMode === 'dark') {
+      element.classList.add('dark');
+    } else {
+      element.classList.remove('dark');
+    }
+  }
+
 
 }

@@ -10,6 +10,8 @@ import { NarutoComponent } from './naruto/naruto.component';
 import { HarrypotterComponent } from './harrypotter/harrypotter.component';
 import { DisneyComponent } from './disney/disney.component';
 import { MarvelComponent } from './marvel/marvel.component';
+import { FormsModule } from '@angular/forms';
+import { DarkModeDirective } from './dark-mode.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,10 +22,12 @@ import { MarvelComponent } from './marvel/marvel.component';
     HarrypotterComponent,
     DisneyComponent,
     MarvelComponent,
+    DarkModeDirective,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

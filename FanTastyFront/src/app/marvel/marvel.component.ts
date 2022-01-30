@@ -15,5 +15,15 @@ export class MarvelComponent implements OnInit {
   btnClickHome() {
     this.router.navigate(['']);
   }
+  darkOnOff(event: Event) {
+    let darkMode = <any>event;
+    let element: Element = document.querySelector('body')!;
+
+    if (darkMode === 'dark') {
+      element.classList.add('dark');
+    } else {
+      element.classList.remove('dark');
+    }
+  }
 
 }
