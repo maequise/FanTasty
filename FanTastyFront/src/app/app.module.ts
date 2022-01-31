@@ -12,6 +12,7 @@ import { DisneyComponent } from './disney/disney.component';
 import { MarvelComponent } from './marvel/marvel.component';
 import { FormsModule } from '@angular/forms';
 import { DarkModeDirective } from './dark-mode.directive';
+import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { DarkModeDirective } from './dark-mode.directive';
     DisneyComponent,
     MarvelComponent,
     DarkModeDirective,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
-
 @Component({
-  selector: 'app-recipe-template',
-  templateUrl: './recipe-template.component.html',
-  styleUrls: ['./recipe-template.component.css']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
-export class RecipeTemplateComponent implements OnInit {
+export class HeaderComponent implements OnInit {
 
   constructor(private router: Router) { }
 

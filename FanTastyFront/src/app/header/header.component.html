@@ -85,92 +85,9 @@
     <h3 class="title-top-container">Concours</h3>
     <img class="icon-top-container" src="../assets/concours.png" />
     <h3 class="title-top-container">Light/Dark</h3>
-    <input #example type="checkbox" class="switch" id="example" (appDarkMode)="darkOnOff($event)" />
+    <input #example type="checkbox" class="switch" id="example" reauired="required" (appDarkMode)="darkOnOff($event)" />
     <label for="example"></label>
 </div>
 
 <!--HomaLightComponent-->
 <hr class="hline_color">
-
-<div class="title-container">
-    <h2 class="title-users-recipes">Créations de la semaine</h2>
-    <img class="title_icon" src="../../assets/heart.png" />
-    <p class="tags_users_recipes">#MonstresEtCie #StarWars #Batman #Mickey </p>
-</div>
-<div class="container-users-recipes">
-    <div class="panel panel_active panel_0"></div>
-    <div class="panel panel_1"></div>
-    <div class="panel panel_2"></div>
-    <div class="panel panel_3"></div>
-
-</div>
-<div class="title_container_duo">
-    <p class="tags_duo">#Superman #Marvel #Pizza #CupCake </p>
-    <h2 class="title-users-recipes title_duo">Le duo du jour</h2>
-    <img class="duo_icon" src="../../assets/two.png" />
-</div>
-<div class="recipes-home">
-    <div class="recipe recipe_1"></div>
-    <div class="recipe recipe_2"></div>
-</div>
-
-<div class="title_container_universe">
-    <h2 class="title-universe">Nos univers</h2>
-    <img class="universe_icon" src="../../assets/universe.png" />
-    <p class="tags_universe">#Disney #Naruto #Marvel #HarryPotter #WorldOfWarCraft #BackToTheFuture</p>
-</div>
-
-<div class="main-container">
-    <div class=" cards-list">
-        <div class="card card_1">
-            <div class="card_image gif_1" (click)="btnClickDisney()"></div>
-        </div>
-        <div class="card card_2">
-            <div class="card_image gif_2" (click)="btnClickNaruto()"></div>
-        </div>
-        <div class=" card card_3">
-            <div class="card_image gif_3" (click)="btnClickMarvel()"></div>
-        </div>
-        <div class=" card card_3">
-            <div class="card_image gif_4" (click)="btnClickHarryPotter()"></div>
-        </div>
-        <div class="card card_3">
-            <div class="card_image gif_5"></div>
-        </div>
-        <div class="card card_3">
-            <div class="card_image gif_6"></div>
-        </div>
-    </div>
-</div>
-
-<!--Common App Blocks-->
-<footer>
-    <div class="footer-inner">
-
-        <section class="footer-item">
-            <h3>Explore</h3>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Capabilities</a></li>
-                <li><a href="#">Careers</a></li>
-            </ul>
-        </section>
-
-        <section class="footer-item">
-            <h3>Visit</h3>
-            <a href="#">
-                <p>Envoy So. California</p>
-                <p>34 Tesla, Ste 100</p>
-                <p>Irvine, Ca, USA 92618</p>
-            </a>
-
-        </section>
-
-        <section class="footer-item">
-            <h3>New Business</h3>
-            <p><a href="#">Email us</a></p>
-            <p><a href="#">949.333.3106</a></p>
-        </section>
-    </div>
-</footer>

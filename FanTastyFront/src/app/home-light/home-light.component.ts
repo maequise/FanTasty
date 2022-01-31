@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-light',
   templateUrl: './home-light.component.html',
-  styleUrls: ['./home-light.component.css']
+  styleUrls: ['./home-light.component.css'],
+  //encapsulation: ViewEncapsulation.None
 })
 export class HomeLightComponent implements OnInit {
 

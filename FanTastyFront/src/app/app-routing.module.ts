@@ -5,6 +5,7 @@ import { NarutoComponent } from './naruto/naruto.component';
 import { HarrypotterComponent } from './harrypotter/harrypotter.component';
 import { DisneyComponent } from './disney/disney.component';
 import { MarvelComponent } from './marvel/marvel.component';
+import { RecipeTemplateComponent } from './recipe-template/recipe-template.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home-light', pathMatch: 'full' },
@@ -12,7 +13,9 @@ const routes: Routes = [
   { path: 'naruto', component: NarutoComponent },
   { path: 'harrypotter', component: HarrypotterComponent },
   { path: 'disney', component: DisneyComponent },
-  { path: 'marvel', component: MarvelComponent }
+  { path: 'marvel', component: MarvelComponent },
+  { path: 'recette', component: RecipeTemplateComponent }
+
 
 ];
 
