@@ -22,3 +22,11 @@ body {
 body.dark{
   background-color: var(--bg-color-dark);
 }
+.recipe-card{
+   background-color: var(--bg-color-dark);
+  
+}
+.card-bg{
+ 
+  background-color: white;
+}
