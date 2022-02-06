@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
   selector: 'app-home-light',
   templateUrl: './home-light.component.html',
   styleUrls: ['./home-light.component.css'],
-  //encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class HomeLightComponent implements OnInit {
 
@@ -43,7 +43,8 @@ export class HomeLightComponent implements OnInit {
   btnClickWowCraft() {
     this.router.navigate(['/wowcraft']);
   }
-  darkOnOff(event: Event) {
+
+  /* darkOnOff(event: Event) {
     let darkMode = <any>event;
     let element: Element = document.querySelector('body')!;
 
@@ -52,7 +53,7 @@ export class HomeLightComponent implements OnInit {
     } else {
       element.classList.remove('dark');
     }
-  }
+  } */
 
 
 }

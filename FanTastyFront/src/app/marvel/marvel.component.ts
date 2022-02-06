@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-marvel',
   templateUrl: './marvel.component.html',
-  styleUrls: ['./marvel.component.css']
+  styleUrls: ['./marvel.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class MarvelComponent implements OnInit {
 

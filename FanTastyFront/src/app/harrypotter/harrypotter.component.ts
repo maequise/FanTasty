@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-harrypotter',
   templateUrl: './harrypotter.component.html',
-  styleUrls: ['./harrypotter.component.css']
+  styleUrls: ['./harrypotter.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class HarrypotterComponent implements OnInit {
 

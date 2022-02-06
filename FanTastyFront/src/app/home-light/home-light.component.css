@@ -215,7 +215,7 @@ img {
     
 }
 
-h1 {
+::shadow h1 {
     position: relative;
     margin: 0;
     padding:0;
