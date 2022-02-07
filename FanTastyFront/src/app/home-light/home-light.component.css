@@ -722,7 +722,7 @@ footer {
 
 .card {
   margin: 10px;
-  width: 355px;
+  width: 360px;
   height: 240px;
   border-radius: 40px;
   border: 2.5px solid var(--main-color-light);

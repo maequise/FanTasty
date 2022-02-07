@@ -98,6 +98,7 @@ img {
   color: var(--main-color-naruto);
   font-family: 'Balsamiq Sans', cursive;
   font-size: 17px;
+  font-weight: 500;
 }
 .icon-top-container{
   width: 30px;
@@ -541,8 +542,8 @@ img {
 .btn {
   
   font-family: 'Balsamiq Sans', cursive;
-  letter-spacing: .2rem;
-  font-weight:unset;
+  letter-spacing: .1px;
+  font-weight:500;
   font-size: 19px;
   margin: 10px;
   color: var(--main-color-naruto);

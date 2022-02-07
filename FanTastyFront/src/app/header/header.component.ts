@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   pathColor: string = '#7B61F8';
   iconTop: string = '../assets/recipe-book.png';
   iconTopDice: string = '../assets/dice.png';
+  iconTopContest: string = '../assets/concours.png';
 
 
   constructor(private router: Router) { }
@@ -86,6 +87,24 @@ export class HeaderComponent implements OnInit {
     }
 
     return this.iconTopDice;
+  }
+
+  getIconTopContest(): string {
+    let urlUniverse: string = this.router.url;
+
+    if (urlUniverse === '/naruto') {
+      this.iconTopContest = '../../assets/concours-orange.png';
+    } else if (urlUniverse === '/disney') {
+      this.iconTopContest = '../../assets/concours-blue.png';
+    } else if (urlUniverse === '/harrypotter') {
+      this.iconTopContest = '../../assets/concours-red-bordeaux.png';
+    } else if (urlUniverse === '') {
+      this.iconTopContest = '../../assets/concours.png';
+    } else if (urlUniverse === '/marvel') {
+      this.iconTopContest = '../../assets/concours-red-marvel.png';
+    }
+
+    return this.iconTopContest;
   }
 
 

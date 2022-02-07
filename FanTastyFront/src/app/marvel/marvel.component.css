@@ -538,8 +538,8 @@ footer {
 .btn {
   
   font-family: 'Coda', cursive;
-  letter-spacing: .2rem;
-  font-weight:unset;
+  letter-spacing: 1px;
+  font-weight:600;
   font-size: 19px;
   margin: 10px;
   color: var(--main-color-marvel);

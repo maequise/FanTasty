@@ -85,7 +85,7 @@
     <h3 class="title-top-container">Recette Random</h3>
     <img class="icon-top-container" [src]="getIconTopDice()" />
     <h3 class="title-top-container">Concours</h3>
-    <img class="icon-top-container" src="../assets/concours.png" />
+    <img class="icon-top-container" [src]="getIconTopContest()" />
     <h3 class="title-top-container">Light/Dark</h3>
     <input #example type="checkbox" class="switch" id="example" reauired="required" (appDarkMode)="darkOnOff($event)" />
     <label for="example"></label>
