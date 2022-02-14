@@ -46,5 +46,23 @@ namespace FanTastyBack.Repositories
             return utilisateur;
         }
 
+        public void AjoutRecetteFavoris(string idUtilisateur, string idRecette)
+        {
+            Utilisateur utilisateur = this._utilisateur.Find(utili => utili.Id == idUtilisateur).FirstOrDefault();
+            if(utilisateur.RecetteFavoris == null)
+            {
+                utilisateur.RecetteFavoris = new List<string>();
+            }
+            utilisateur.RecetteFavoris.Add(idRecette);
+            _utilisateur.ReplaceOne(utili => utili.Id == idUtilisateur, utilisateur);
+        }
+
+        public List<string> FindAllRecetteFavoris(string idUtilisateur)
+        {
+            Utilisateur utilisateur = this._utilisateur.Find(utili => utili.Id == idUtilisateur).FirstOrDefault();
+            List<string> recettesFavoris = utilisateur.RecetteFavoris;
+            return recettesFavoris;
+        }
+
     }
 }
