@@ -48,5 +48,19 @@ namespace FanTastyBack.Controllers
             return Ok("Utilisateur modifié");
         }
 
+        [HttpPut("{idUtilisateur}/{idRecette}")]
+        public IActionResult AjoutRecetteFavoris(string idUtilisateur, string idRecette)
+        {
+            this._service.AjoutRecetteFavoris(idUtilisateur, idRecette);
+            return Ok("Ajout recette dans favoris |OK| ");
+        }
+
+        [HttpGet("{idUtilisateur}/recettesFavoris")]
+        public IActionResult FindAllRecetteFavoris(string idUtilisateur)
+        {
+            return Ok(this._service.FindAllRecetteFavoris(idUtilisateur));
+        }
+
+
     }
 }

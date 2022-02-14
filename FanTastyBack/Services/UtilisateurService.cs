@@ -42,5 +42,16 @@ namespace FanTastyBack.Services
             return utilisateur;
         }
 
+        public void AjoutRecetteFavoris(string idUtilisateur, string idRecette)
+        {
+            this._repository.AjoutRecetteFavoris(idUtilisateur, idRecette);
+        }
+
+        public List<string> FindAllRecetteFavoris(string idUtilisateur)
+        {
+            List<string> recettesFavoris = this._repository.FindAllRecetteFavoris(idUtilisateur);
+            return recettesFavoris;
+        }
+
     }
 }
