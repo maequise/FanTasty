@@ -51,6 +51,46 @@ namespace FanTastyBack.Repositories
             }
             return recette;
         }
+
+        public List<Recette> FindByUnivers(string univers)
+        {
+            List<Recette> recettes = this._recettes.Find(rec => rec.Univers==univers).ToList();
+            for (int i = 0; i < recettes.Count; i++)
+            {
+                foreach (IngredientRecette ingr in recettes[i].Ingredients)
+                {
+                    ingr.Ingredient = this._ingredientRepository.FindById(ingr.Id);
+                }
+            }
+            return recettes;
+        }
+
+        public List<Recette> FindByAuteur(string auteur)
+        {
+            List<Recette> recettes = this._recettes.Find(rec => rec.Auteur == auteur).ToList();
+            for (int i = 0; i < recettes.Count; i++)
+            {
+                foreach (IngredientRecette ingr in recettes[i].Ingredients)
+                {
+                    ingr.Ingredient = this._ingredientRepository.FindById(ingr.Id);
+                }
+            }
+            return recettes;
+        }
+
+        //public List<Recette> FindByTags(List<string> tags)
+        //{
+        //    var filter = Builders<Recette>.Filter.Eq("tags", "typePlat");
+        //    List<Recette> recettes = this._recettes.Find(filter).ToList();
+        //    return recettes;
+
+        //}
+
+        public List<Recette> FindByTag(string tag)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Recette Create(Recette recette)
         {
             _recettes.InsertOne(recette);
