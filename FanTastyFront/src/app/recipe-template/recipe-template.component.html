@@ -1,75 +1,74 @@
-<div class="header-container">
-    <h1>Fan'Tasty</h1>
+<!--Components Block-->
+<div class="recipe-card card-bg">
+    <div class="description">
+        <h2 class="title-recipe">Pasta with Pesto and Tomatoes</h2>
+        <p>#Moyen #BonMarché #AllSeasons</p>
 
-    <div class="search">
-        <div>
-            <input type="text" placeholder="Search . . ." required>
-        </div>
+        <h2 class="subtitle-ingredients">Ingrédients</h2>
+        <ul class="ingredients" *ngFor="let ingredients of ingredients">
+            <li>{{ingredients.nom}}</li>
+        </ul>
+
     </div>
 
+    <div>
+        <figure>
+            <img src="../../assets/disney-baby-yoda-pie.jpg" />
+            <figcaption>Shania</figcaption>
+        </figure>
+        <ul>
+            <li>🥄Personnes: 4</li>
+            <li>⏲️Temps de préparation : 5 minutes</li>
+            <li>👨🏻‍🍳Temps de Cuisson : 25 minutes</li>
+            <li>✔️Temps total : 30 minutes</li>
+
+        </ul>
+
+    </div>
 </div>
 
-<div class="profile"></div>
-<article>
-    <header>
-        <h1>
-            <div class="nth-line-2">
-                cinderella cake
-            </div>
-        </h1>
-        <p class="lead">
-            blablabla
-        </p>
-    </header>
-    <br />
-    <section>
-        <p>
-            Sorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptate et asperiores. Consequatur beatae
-            aperiam, dolore? Amet, a, unde. Accusamus repellat adipisci aut quasi quibusdam voluptate pariatur
-            repellendus distinctio omnis, nulla iste soluta deserunt quae veniam reprehenderit. Ea dignissimos obcaecati
-            dicta aliquam, suscipit maxime atque modi quas asperiores laboriosam assumenda quos deserunt tempore debitis
-            facilis optio itaque autem quidem iusto quaerat nulla perferendis vero veritatis minus delectus! Natus quam
-            ullam porro, blanditiis hic numquam, incidunt eligendi minus ab, soluta animi.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos sit, adipisci tempore molestiae, accusantium
-            praesentium consequatur asperiores facilis ipsum mollitia autem. Aspernatur, reiciendis. Debitis ullam
-            expedita voluptatibus illo sequi, ut cumque eaque quibusdam officiis pariatur, recusandae mollitia illum
-            nostrum optio facere, at quisquam! Repellat adipisci ullam, soluta quo autem officia expedita itaque
-            consectetur id accusantium et beatae animi nisi veniam sed accusamus voluptate necessitatibus maxime minus
-            fugit sint, unde ratione placeat! Iste, possimus magni nihil? Accusantium, porro officia quidem eaque,
-            libero placeat enim ipsa blanditiis quis ea beatae atque, aspernatur cumque quas laborum fugiat minima minus
-            temporibus in deserunt.
-        </p>
-        <blockquote>Blablabla</blockquote>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque exercitationem delectus ipsam dolor,
-            corporis iusto facere sint mollitia nemo aut. Excepturi rem tempore laborum mollitia explicabo sunt
-            quisquam, ut provident, cum temporibus facere enim, facilis consequuntur nostrum porro corporis. Molestiae
-            quam impedit consectetur facilis architecto nostrum voluptas, ducimus adipisci quos nulla, obcaecati culpa
-            est totam rem harum laborum, asperiores quibusdam. Nam blanditiis ea temporibus delectus, quo officiis
-            reprehenderit quasi illo praesentium magni amet laboriosam deserunt asperiores quidem. Odit, iure.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo officiis ullam error necessitatibus ab non
-            velit vero beatae illum temporibus. Laborum hic neque ut quidem. Consectetur quis, quod tenetur harum
-            dolorem quia unde odit at blanditiis deserunt aspernatur incidunt placeat, magni mollitia similique, velit
-            porro nobis vitae hic possimus. Dolorem, iusto eveniet. Magnam perspiciatis repellendus sequi, explicabo
-            soluta quidem atque ex animi, autem doloremque delectus esse in consequatur. Ipsam in vero minus ad non
-            sequi molestiae impedit a sit dignissimos? Quo repudiandae laborum minus, omnis voluptates praesentium
-            officiis.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium accusamus consectetur consequatur
-            molestias, blanditiis placeat autem fugiat eligendi earum repellendus nihil sed, architecto.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, quaerat, illo. Culpa?
-        </p>
-        <p>
-            Autor Name
-        </p>
-        <img alt="cinderella" src="../../assets/cinderella.jpg" /><img alt="cinderlla_01"
-            src="../../assets/cinderella.jpg" />
-    </section>
-</article>
+<div id="process"></div>
+
+<div class="process">
+    <h2 class="subtitle-recipe">Préparation</h2>
+
+    <ol class="instructions" *ngFor="let etape of recette?.etapes; let index = index">
+        <h3 class="subtitle-process">Etape {{index +1}}</h3>
+        <li class="instructions">{{etape}}</li>
+    </ol>
+</div>
+
+<!--End Components Block-->
+
+<!--Common App Blocks-->
+<footer>
+    <div class="footer-inner">
+
+        <section class="footer-item">
+            <h3>Explore</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Capabilities</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </section>
+
+        <section class="footer-item">
+            <h3>Visit</h3>
+            <a href="#">
+                <p>Envoy So. California</p>
+                <p>34 Tesla, Ste 100</p>
+                <p>Irvine, Ca, USA 92618</p>
+            </a>
+
+        </section>
+
+        <section class="footer-item">
+            <h3>New Business</h3>
+            <p><a href="#">Email us</a></p>
+            <p><a href="#">949.333.3106</a></p>
+        </section>
+    </div>
+</footer>
+<!--End Common Blocks CSS-->

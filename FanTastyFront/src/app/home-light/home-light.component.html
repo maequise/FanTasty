@@ -1,3 +1,6 @@
+<!--HomaLightComponent-->
+
+
 <div class="title-container">
     <h2 class="title-users-recipes">Créations de la semaine</h2>
     <img class="title_icon" src="../../assets/heart.png" />
@@ -29,16 +32,16 @@
 <div class="main-container">
     <div class=" cards-list">
         <div class="card card_1">
-            <div class="card_image gif_1"></div>
+            <div class="card_image gif_1" (click)="btnClickDisney()"></div>
         </div>
         <div class="card card_2">
-            <div class="card_image gif_2"></div>
+            <div class="card_image gif_2" (click)="btnClickNaruto()"></div>
         </div>
-        <div class="card card_3">
-            <div class="card_image gif_3"></div>
+        <div class=" card card_3">
+            <div class="card_image gif_3" (click)="btnClickMarvel()"></div>
         </div>
-        <div class="card card_3">
-            <div class="card_image gif_4"></div>
+        <div class=" card card_3">
+            <div class="card_image gif_4" (click)="btnClickHarryPotter()"></div>
         </div>
         <div class="card card_3">
             <div class="card_image gif_5"></div>
@@ -48,3 +51,35 @@
         </div>
     </div>
 </div>
+
+<!--Common App Blocks-->
+<footer>
+    <div class="footer-inner">
+
+        <section class="footer-item">
+            <h3>Explore</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Capabilities</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </section>
+
+        <section class="footer-item">
+            <h3>Visit</h3>
+            <a href="#">
+                <p>Envoy So. California</p>
+                <p>34 Tesla, Ste 100</p>
+                <p>Irvine, Ca, USA 92618</p>
+            </a>
+
+        </section>
+
+        <section class="footer-item">
+            <h3>New Business</h3>
+            <p><a href="#">Email us</a></p>
+            <p><a href="#">949.333.3106</a></p>
+        </section>
+    </div>
+</footer>
