@@ -74,12 +74,38 @@ namespace FanTastyBack.Controllers
             }
         }
 
-        [HttpGet("tag/{tag}")]
-        public IActionResult FindByTag(string tag)
+        [HttpGet("tag/")]
+        public IActionResult FindByTag(Tag tag)
         {
             try
             {
                 return Ok(this._service.FindByTag(tag));
+            }
+            catch (NotFoundException e)
+            {
+                return NotFound(e.Message);
+            }
+        }
+
+        [HttpGet("ingredient/{ingredient}")]
+        public IActionResult FindByIngredient(string ingredient)
+        {
+            try
+            {
+                return Ok(this._service.FindByIngredient(ingredient));
+            }
+            catch (NotFoundException e)
+            {
+                return NotFound(e.Message);
+            }
+        }
+
+        [HttpGet("ustensile/{ustensile}")]
+        public IActionResult FindByUstensile(string ustensile)
+        {
+            try
+            {
+                return Ok(this._service.FindByUstensile(ustensile));
             }
             catch (NotFoundException e)
             {
