@@ -45,16 +45,6 @@ namespace FanTastyBack.Services
             return recette;
         }
 
-        //public List<Recette> FindByTags(List<string> tags)
-        //{
-        //    List<Recette> recettes = this._repository.FindByTags(tags);
-        //    if (recettes == null || recettes.Count == 0)
-        //    {
-        //        throw new NotFoundException("Not found.");
-        //    }
-        //    return recettes;
-        //}
-
         public List<Recette> FindByUnivers(string univers)
         {
             List<Recette> recettes = this._repository.FindByUnivers(univers);
@@ -75,7 +65,7 @@ namespace FanTastyBack.Services
             return recettes;
         }
 
-        public List<Recette> FindByTag(string tag)
+        public List<Recette> FindByTag(Tag tag)
         {
             List<Recette> recettes = this._repository.FindByTag(tag);
             if (recettes == null || recettes.Count == 0)
