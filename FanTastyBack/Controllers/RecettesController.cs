@@ -74,8 +74,8 @@ namespace FanTastyBack.Controllers
             }
         }
 
-        [HttpGet("tag/{tag}")]
-        public IActionResult FindByTag(string tag)
+        [HttpGet("tag/")]
+        public IActionResult FindByTag(Tag tag)
         {
             try
             {
