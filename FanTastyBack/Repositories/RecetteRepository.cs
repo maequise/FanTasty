@@ -79,32 +79,32 @@ namespace FanTastyBack.Repositories
             return recettes;
         }
 
-        public List<Recette> FindByTag(Models.Tag searchTag)
+        public List<Recette> FindByTag(Models.Tag tag)
         {
             var builder = Builders<Recette>.Filter;
             var filter = builder.Empty;
 
-            if (!string.IsNullOrWhiteSpace(searchTag.Saison))
+            if (!string.IsNullOrWhiteSpace(tag.Saison))
             {
-                var SeasonFilter = builder.Eq(recette => recette.Tags.Saison, searchTag.Saison);
+                var SeasonFilter = builder.Eq(rec => rec.Tags.Saison, tag.Saison);
                 filter &= SeasonFilter;
             }
 
-            if (!string.IsNullOrWhiteSpace(searchTag.TypePlat))
+            if (!string.IsNullOrWhiteSpace(tag.TypePlat))
             {
-                var TypePlatFilter = builder.Eq(recette => recette.Tags.TypePlat, searchTag.TypePlat);
+                var TypePlatFilter = builder.Eq(rec => rec.Tags.TypePlat, tag.TypePlat);
                 filter &= TypePlatFilter;
             }
 
-            if (searchTag.Difficulte!=0)
+            if (tag.Difficulte!=0)
             {
-                var DifficulteFilter = builder.Eq(recette => recette.Tags.Difficulte, searchTag.Difficulte);
+                var DifficulteFilter = builder.Eq(rec => rec.Tags.Difficulte, tag.Difficulte);
                 filter &= DifficulteFilter;
             }
 
-            if (searchTag.Cout != 0)
+            if (tag.Cout != 0)
             {
-                var CoutFilter = builder.Eq(recette => recette.Tags.Cout, searchTag.Cout);
+                var CoutFilter = builder.Eq(recette => recette.Tags.Cout, tag.Cout);
                 filter &= CoutFilter;
             }
             
@@ -120,7 +120,36 @@ namespace FanTastyBack.Repositories
             return recettes;
         }
 
-        public Recette Create(Recette recette)
+        public List<Recette> FindByIngredient(string ingredient)
+        {
+            var filter = Builders<Recette>.Filter.ElemMatch(rec => rec.Ingredients, ingr => ingr.Id == ingredient);
+            List<Recette> recettes = this._recettes.Find(filter).ToList();
+            for (int i = 0; i < recettes.Count; i++)
+            {
+                foreach (IngredientRecette ingr in recettes[i].Ingredients)
+                {
+                    ingr.Ingredient = this._ingredientRepository.FindById(ingr.Id);
+                }
+            }
+            return recettes;
+        }
+
+        public List<Recette> FindByUstensile(string ustensile)
+        {
+            var filter = Builders<Recette>.Filter.AnyEq(rec => rec.Ustensiles, ustensile);
+
+            List<Recette> recettes = this._recettes.Find(filter).ToList();
+            for (int i = 0; i < recettes.Count; i++)
+            {
+                foreach (IngredientRecette ingr in recettes[i].Ingredients)
+                {
+                    ingr.Ingredient = this._ingredientRepository.FindById(ingr.Id);
+                }
+            }
+            return recettes;
+        }
+
+            public Recette Create(Recette recette)
         {
             _recettes.InsertOne(recette);
             return recette;
