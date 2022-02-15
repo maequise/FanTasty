@@ -5,13 +5,8 @@
         <p>#Moyen #BonMarché #AllSeasons</p>
 
         <h2 class="subtitle-ingredients">Ingrédients</h2>
-        <ul class="ingredients">
-            <li>8 oz. spaghetti or linguine pasta</li>
-            <li>2 cups fresh basil leaves, plus 4-8 reserved leaves for garnish</li>
-            <li>2 cloves garlic</li>
-            <li>2 tbsp. pine nuts or blanched almonds</li>
-            <li>1/2 cup olive oil</li>
-            <li>1/2 cup grated Parmesan cheese, plus 2 tbsp. for garnish.</li>
+        <ul class="ingredients" *ngFor="let ingredients of ingredients">
+            <li>{{ingredients.nom}}</li>
         </ul>
 
     </div>
@@ -37,30 +32,9 @@
 <div class="process">
     <h2 class="subtitle-recipe">Préparation</h2>
 
-    <ol class="instructions">
-        <h3 class="subtitle-process">Etape 1</h3>
-        <li class="instructions">Bring 4 quarts of water to a rolling boil in a large pot. Salt the water
-            generously and add the
-            pasta.</li>
-        <h3 class="subtitle-process">Etape 2</h3>
-        <li class="instructions">
-            While the pasta cooks, make the pesto
-        </li>
-        <h3 class="subtitle-process">Etape 3</h3>
-        <li class="instructions">
-            Heat a large skillet over medium heat.
-        </li>
-        <h3 class="subtitle-process">Etape 4</h3>
-        <li class="instructions">
-            Add the 1/2 tsp. olive oil to the heated skillet.
-        </li>
-        <h3 class="subtitle-process">Etape 5</h3>
-        <li class="instructions">
-            Add the cherry tomatoes to the skillet and let them blister, stirring
-            occasionally and gently so they
-            don't burst.
-        </li>
-
+    <ol class="instructions" *ngFor="let etape of recette?.etapes; let index = index">
+        <h3 class="subtitle-process">Etape {{index +1}}</h3>
+        <li class="instructions">{{etape}}</li>
     </ol>
 </div>
 

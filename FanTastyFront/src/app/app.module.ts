@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { RecipeTemplateComponent } from './recipe-template/recipe-template.component';
 import { HomeLightComponent } from './home-light/home-light.component';
 import { NarutoComponent } from './naruto/naruto.component';
@@ -16,7 +16,6 @@ import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     RecipeTemplateComponent,
     NarutoComponent,
     HomeLightComponent,
@@ -29,7 +28,8 @@ import { HeaderComponent } from './header/header.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

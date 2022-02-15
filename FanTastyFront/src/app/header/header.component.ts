@@ -46,6 +46,8 @@ export class HeaderComponent implements OnInit {
   getBurgerMenu(): string {
     let urlUniverse: string = this.router.url;
 
+    console.log(urlUniverse.match('/recette+(.*)'))
+
     if (urlUniverse === '/naruto') {
       this.burger = '../../assets/burger-naruto.png';
     } else if (urlUniverse === '/disney') {
