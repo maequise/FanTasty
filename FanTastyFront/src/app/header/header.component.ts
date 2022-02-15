@@ -44,121 +44,111 @@ export class HeaderComponent implements OnInit {
   }
 
   getBurgerMenu(): string {
-    let urlUniverse: string = this.router.url;
+    let urlUniverse: String = this.router.url;
 
-    console.log(urlUniverse.match('/recette+(.*)'))
-
-    if (urlUniverse === '/naruto') {
+    if (urlUniverse.startsWith('/naruto')) {
       this.burger = '../../assets/burger-naruto.png';
-    } else if (urlUniverse === '/disney') {
+    } else if (urlUniverse.startsWith('/disney')) {
       this.burger = '../../assets/burger-disney.png';
-    } else if (urlUniverse === '/harrypotter') {
+    } else if (urlUniverse.startsWith('/harrypotter')) {
       this.burger = '../../assets/burger-harry-potter.png';
     } else if (urlUniverse === '') {
       this.burger = '../../assets/hamburger.png';
-    } else if (urlUniverse === '/marvel') {
+    } else if (urlUniverse.startsWith('/marvel')) {
       this.burger = '../../assets/burger-marvel.png';
-    } else if (urlUniverse === '/recette') {
-      this.burger = '../../assets/burger-disney.png';
     }
+
     return this.burger;
   }
 
   getIconTopSeason(): string {
-    let urlUniverse: string = this.router.url;
+    let urlUniverse: String = this.router.url;
 
-    if (urlUniverse === '/naruto') {
+    if (urlUniverse.startsWith('/naruto')) {
       this.iconTop = '../../assets/recipe-book-orange.png';
-    } else if (urlUniverse === '/disney') {
+    } else if (urlUniverse.startsWith('/disney')) {
       this.iconTop = '../../assets/recipe-book-blue.png';
-    } else if (urlUniverse === '/harrypotter') {
+    } else if (urlUniverse.startsWith('/harrypotter')) {
       this.iconTop = '../../assets/recipe-book-red-bordeaux.png';
     } else if (urlUniverse === '') {
       this.iconTop = '../../assets/recipe-book.png';
-    } else if (urlUniverse === '/marvel') {
+    } else if (urlUniverse.startsWith('/marvel')) {
       this.iconTop = '../../assets/recipe-book-red-marvel.png';
-    } else if (urlUniverse === '/recette') {
-      this.iconTop = '../../assets/recipe-book-blue.png';
     }
+
     return this.iconTop;
   }
 
   getIconTopDice(): string {
-    let urlUniverse: string = this.router.url;
+    let urlUniverse: String = this.router.url;
 
-    if (urlUniverse === '/naruto') {
+    if (urlUniverse.startsWith('/naruto')) {
       this.iconTopDice = '../../assets/dice-orange.png';
-    } else if (urlUniverse === '/disney') {
+    } else if (urlUniverse.startsWith('/disney')) {
       this.iconTopDice = '../../assets/dice-blue.png';
-    } else if (urlUniverse === '/harrypotter') {
+    } else if (urlUniverse.startsWith('/harrypotter')) {
       this.iconTopDice = '../../assets/dice-red-bordeaux.png';
     } else if (urlUniverse === '') {
       this.iconTopDice = '../../assets/dice.png';
-    } else if (urlUniverse === '/marvel') {
+    } else if (urlUniverse.startsWith('/marvel')) {
       this.iconTopDice = '../../assets/dice-red-marvel.png';
-    } else if (urlUniverse === '/recette') {
-      this.iconTopDice = '../../assets/dice-blue.png';
     }
 
     return this.iconTopDice;
   }
 
   getIconTopContest(): string {
-    let urlUniverse: string = this.router.url;
+    let urlUniverse: String = this.router.url;
 
-    if (urlUniverse === '/naruto') {
+    if (urlUniverse.startsWith('/naruto')) {
       this.iconTopContest = '../../assets/concours-orange.png';
-    } else if (urlUniverse === '/disney') {
+    } else if (urlUniverse.startsWith('/disney')) {
       this.iconTopContest = '../../assets/concours-blue.png';
-    } else if (urlUniverse === '/harrypotter') {
+    } else if (urlUniverse.startsWith('/harrypotter')) {
       this.iconTopContest = '../../assets/concours-red-bordeaux.png';
     } else if (urlUniverse === '') {
       this.iconTopContest = '../../assets/concours.png';
-    } else if (urlUniverse === '/marvel') {
+    } else if (urlUniverse.startsWith('/marvel')) {
       this.iconTopContest = '../../assets/concours-red-marvel.png';
-    } else if (urlUniverse === '/recette') {
-      this.iconTopContest = '../../assets/concours-blue.png';
     }
+
     return this.iconTopContest;
   }
-  getIconHome(): string {
-    let urlUniverse: string = this.router.url;
 
-    if (urlUniverse === '/naruto') {
+  getIconHome(): string {
+    let urlUniverse: String = this.router.url;
+
+    if (urlUniverse.startsWith('/naruto')) {
       this.iconHome = '../../assets/home-orange.png';
-    } else if (urlUniverse === '/disney') {
+    } else if (urlUniverse.startsWith('/disney')) {
       this.iconHome = '../../assets/home-blue.png';
-    } else if (urlUniverse === '/harrypotter') {
+    } else if (urlUniverse.startsWith('/harrypotter')) {
       this.iconHome = '../../assets/home-red-bordeaux.png';
     } else if (urlUniverse === '') {
       this.iconHome = '../../assets/home.png';
-    } else if (urlUniverse === '/marvel') {
+    } else if (urlUniverse.startsWith('/marvel')) {
       this.iconHome = '../../assets/home-red-marvel.png';
-    } else if (urlUniverse === '/recette') {
-      this.iconHome = '../../assets/home-blue.png';
     }
+
     return this.iconHome;
   }
 
   getIconLogin(): string {
     let urlUniverse: string = this.router.url;
 
-    if (urlUniverse === '/naruto') {
+    if (urlUniverse.startsWith('/naruto')) {
       this.iconLogin = '../../assets/login-naruto.png';
-    } else if (urlUniverse === '/disney') {
+    } else if (urlUniverse.startsWith('/disney')) {
       this.iconLogin = '../../assets/login-disney.png';
-    } else if (urlUniverse === '/harrypotter') {
+    } else if (urlUniverse.startsWith('/harrypotter')) {
       this.iconLogin = '../../assets/login-harry-potter.png';
     } else if (urlUniverse === '') {
       this.iconLogin = '../../assets/login.png';
-    } else if (urlUniverse === '/marvel') {
+    } else if (urlUniverse.startsWith('/marvel')) {
       this.iconLogin = '../../assets/login-marvel.png';
-    } else if (urlUniverse === '/recette') {
-      this.iconLogin = '../../assets/login-disney.png';
     }
+
     return this.iconLogin;
   }
-
-
 
 }

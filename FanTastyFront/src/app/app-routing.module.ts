@@ -12,9 +12,17 @@ const routes: Routes = [
   { path: 'home-light', component: HomeLightComponent },
   { path: 'naruto', component: NarutoComponent },
   { path: 'harrypotter', component: HarrypotterComponent },
-  { path: 'disney', component: DisneyComponent },
+  {
+    path: 'disney', component: DisneyComponent,
+
+  },
   { path: 'marvel', component: MarvelComponent },
-  { path: 'recette', component: RecipeTemplateComponent }
+
+  { path: 'disney/recette/:id', component: RecipeTemplateComponent },
+  { path: 'naruto/recette/:id', component: RecipeTemplateComponent },
+  { path: 'harrypotter/recette/:id', component: RecipeTemplateComponent },
+  { path: 'marvel/recette/:id', component: RecipeTemplateComponent },
+
 
 
 ];

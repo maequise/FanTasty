@@ -1,5 +1,7 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { Recette } from '../models/recette';
+import { RecettesService } from '../services/recettes.service';
 
 @Component({
   selector: 'app-disney',
@@ -8,11 +10,17 @@ import { Router } from '@angular/router';
   encapsulation: ViewEncapsulation.None
 })
 export class DisneyComponent implements OnInit {
+  recettes: Recette[] = [];
+  isFromUniverse = true;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private recetteService: RecettesService) {
+    console.log('test + back');
+  }
 
   ngOnInit(): void {
-
+    this.recetteService.findAll().subscribe(response => {
+      this.recettes = response;
+    });
 
   }
   btnClickHome() {
