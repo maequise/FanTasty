@@ -48,6 +48,45 @@ namespace FanTastyBack.Controllers
             }
         }
 
+        [HttpGet("univers/{univers}")]
+        public IActionResult FindByUnivers(string univers)
+        {
+            try
+            {
+                return Ok(this._service.FindByUnivers(univers));
+            }
+            catch(NotFoundException e)
+            {
+                return NotFound(e.Message);
+            }
+        }
+
+        [HttpGet("auteur/{auteur}")]
+        public IActionResult FindByAuteur(string auteur)
+        {
+            try
+            {
+                return Ok(this._service.FindByAuteur(auteur));
+            }
+            catch (NotFoundException e)
+            {
+                return NotFound(e.Message);
+            }
+        }
+
+        [HttpGet("tag/{tag}")]
+        public IActionResult FindByTag(string tag)
+        {
+            try
+            {
+                return Ok(this._service.FindByTag(tag));
+            }
+            catch (NotFoundException e)
+            {
+                return NotFound(e.Message);
+            }
+        }
+
         [HttpPost]
         public IActionResult Create(Recette recette)
         {

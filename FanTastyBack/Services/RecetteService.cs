@@ -45,6 +45,46 @@ namespace FanTastyBack.Services
             return recette;
         }
 
+        //public List<Recette> FindByTags(List<string> tags)
+        //{
+        //    List<Recette> recettes = this._repository.FindByTags(tags);
+        //    if (recettes == null || recettes.Count == 0)
+        //    {
+        //        throw new NotFoundException("Not found.");
+        //    }
+        //    return recettes;
+        //}
+
+        public List<Recette> FindByUnivers(string univers)
+        {
+            List<Recette> recettes = this._repository.FindByUnivers(univers);
+            if (recettes == null || recettes.Count == 0)
+            {
+                throw new NotFoundException("Not found.");
+            }
+            return recettes;
+        }
+
+        public List<Recette> FindByAuteur(string auteur)
+        {
+            List<Recette> recettes = this._repository.FindByAuteur(auteur);
+            if (recettes == null || recettes.Count == 0)
+            {
+                throw new NotFoundException("Not found.");
+            }
+            return recettes;
+        }
+
+        public List<Recette> FindByTag(string tag)
+        {
+            List<Recette> recettes = this._repository.FindByTag(tag);
+            if (recettes == null || recettes.Count == 0)
+            {
+                throw new NotFoundException("Not found.");
+            }
+            return recettes;
+        }
+
         public Recette Create(Recette recette)
         {
             return this._repository.Create(recette);
