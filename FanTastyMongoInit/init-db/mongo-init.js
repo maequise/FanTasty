@@ -2,6 +2,7 @@ db = db.getSiblingDB('FanTastyDB');
 
 db.createCollection('Recettes');
 db.createCollection('Ingredients');
+db.createCollection('Utilisateurs');
 
 nouille_id = ObjectId()
 porcChashu_id = ObjectId()
@@ -23,6 +24,21 @@ cremeEpaisse_id = ObjectId()
 extraitVanille_id = ObjectId()
 biere_id = ObjectId()
 oeuf_id = ObjectId()
+
+db.Utilisateurs.insertMany([
+    {
+        "nom": "adminNom",
+        "prenom": "adminPrenom",
+        "email": "admin@admin.com",
+        "motDePasse": "123",
+    },
+    {
+        "nom": "utilisateurNom",
+        "prenom": "utilisateurPrenom",
+        "email": "utilisateur@utilisateur.com",
+        "motDePasse": "123",
+    }
+])
 
 db.Ingredients.insertMany([
     {
