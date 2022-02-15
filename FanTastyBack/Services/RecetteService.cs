@@ -75,6 +75,26 @@ namespace FanTastyBack.Services
             return recettes;
         }
 
+        public List<Recette> FindByIngredient(string ingredient)
+        {
+            List<Recette> recettes = this._repository.FindByIngredient(ingredient);
+            if (recettes == null || recettes.Count == 0)
+            {
+                throw new NotFoundException("Not found.");
+            }
+            return recettes;
+        }
+
+        public List<Recette> FindByUstensile(string ustensile)
+        {
+            List<Recette> recettes = this._repository.FindByUstensile(ustensile);
+            if (recettes == null || recettes.Count == 0)
+            {
+                throw new NotFoundException("Not found.");
+            }
+            return recettes;
+        }
+
         public Recette Create(Recette recette)
         {
             return this._repository.Create(recette);
