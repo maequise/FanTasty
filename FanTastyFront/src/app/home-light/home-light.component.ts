@@ -17,11 +17,6 @@ export class HomeLightComponent implements OnInit {
 
   ngOnInit(): void {
 
-    /*if (document.body.classList.contains('dark')) {
-      document.querySelector('#exemple')?.setAttribute('checked', 'true');
-    };*/
-
-
   }
 
   btnClickHome() {
@@ -43,17 +38,5 @@ export class HomeLightComponent implements OnInit {
   btnClickWowCraft() {
     this.router.navigate(['/wowcraft']);
   }
-
-  /* darkOnOff(event: Event) {
-    let darkMode = <any>event;
-    let element: Element = document.querySelector('body')!;
-
-    if (darkMode === 'dark') {
-      element.classList.add('dark');
-    } else {
-      element.classList.remove('dark');
-    }
-  } */
-
 
 }
