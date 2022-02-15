@@ -599,6 +599,8 @@ ul.pesto {
 }
 li {
 	line-height: 1.8;
+  font-family: 'Roboto Slab', serif;
+  color: var(--main-color-disney);
 }
 
 ol {	
@@ -618,6 +620,10 @@ ol > li::before {
 ol > li > ul {
 	margin: 0;
 }
+p{
+  margin: 0;
+  padding: 0;
+}
 
 
 figure{
@@ -627,6 +633,16 @@ figure{
 figure img {
 	width: 400px;
 	border-radius: 30px;
+}
+
+figcaption, p {
+	font-size: 13px;
+	text-align: center;
+  font-family: 'Roboto Slab', serif;
+  color: var(--main-color-disney);
+}
+figcaption::before {
+	content: "Création by ";
 }
 
 
