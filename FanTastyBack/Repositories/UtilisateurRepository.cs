@@ -64,5 +64,12 @@ namespace FanTastyBack.Repositories
             return recettesFavoris;
         }
 
+        public void DeleteRecetteFavoris(string idUtilisateur, string idRecette)
+        {
+            Utilisateur utilisateur = this._utilisateur.Find(utili => utili.Id == idUtilisateur).FirstOrDefault();
+            utilisateur.RecetteFavoris.Remove(idRecette);
+            _utilisateur.ReplaceOne(utili => utili.Id == idUtilisateur, utilisateur);
+        }
+
     }
 }

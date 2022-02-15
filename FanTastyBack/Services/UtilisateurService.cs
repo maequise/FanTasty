@@ -53,5 +53,10 @@ namespace FanTastyBack.Services
             return recettesFavoris;
         }
 
+        public void DeleteRecetteFavoris(string idUtilisateur, string idRecette)
+        {
+            this._repository.DeleteRecetteFavoris(idUtilisateur, idRecette);
+        }
+
     }
 }

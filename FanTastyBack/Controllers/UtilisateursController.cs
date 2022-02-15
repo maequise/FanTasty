@@ -61,6 +61,13 @@ namespace FanTastyBack.Controllers
             return Ok(this._service.FindAllRecetteFavoris(idUtilisateur));
         }
 
+        [HttpDelete("{idUtilisateur}/recettesFavoris/{idRecette}")]
+        public IActionResult DeleteRecetteFavoris(string idUtilisateur, string idRecette)
+        {
+            this._service.DeleteRecetteFavoris(idUtilisateur, idRecette);
+            return Ok("Recette favoris supprimé");
+        }
+
 
     }
 }

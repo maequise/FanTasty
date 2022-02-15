@@ -18,5 +18,7 @@ namespace FanTastyBack.Repositories.Interfaces
         public void AjoutRecetteFavoris(string idUtilisateur, string idRecette);
 
         public List<string> FindAllRecetteFavoris(string idUtilisateur);
+
+        public void DeleteRecetteFavoris(string idUtilisateur, string idRecette);
     }
 }
