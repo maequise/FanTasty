@@ -16,6 +16,8 @@ namespace FanTastyBack.Models
 
         public string Univers { get; set; }
 
+        public string Description { get; set; }
+
         public List<IngredientRecette> Ingredients { get; set;}
 
         public List<string> Ustensiles { get; set; }

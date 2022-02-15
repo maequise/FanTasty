@@ -132,6 +132,7 @@ db.Recettes.insertMany([
         "nom": "Les Ramen Ichiraku",
         "auteur": "Timothée",
         "univers": "Naruto",
+	"description" : "Yum yum ! Vive les ramens !",
         "ingredients": [
             {
                 "_id": nouille_id,
@@ -224,6 +225,7 @@ db.Recettes.insertMany([
         "nom": "Bière au beurre",
         "auteur": "Estefania",
         "univers": "Harry Potter",
+	"description" : "Abracadabra, une recette magique !",
         "ingredients": [
             {
                 "_id": sucreRoux_id,
@@ -280,6 +282,7 @@ db.Recettes.insertMany([
         "nom": "Crêpes de Jafar",
         "auteur": "Audrey",
         "univers": "Disney",
+	"description" : "Sesame, ouvre-toi !",
         "ingredients": [
             {
                 "_id": farine_id,
