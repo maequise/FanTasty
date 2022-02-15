@@ -198,8 +198,8 @@ db.Recettes.insertMany([
         },
         "tags": {
             "typePlat": "Plat",
-            "difficulte": "Moyen",
-            "cout": "Moyen",
+            "difficulte": 3,
+            "cout": 3,
             "saison": "Toutes"
         },
         "photo": "url de la photo",
@@ -263,8 +263,8 @@ db.Recettes.insertMany([
         },
         "tags": {
             "typePlat": "Dessert",
-            "difficulte": "Facile",
-            "cout": "Bon marché",
+            "difficulte": 2,
+            "cout": 1,
             "saison": "Toutes"
         },
         "photo": "url de la photo",
@@ -325,8 +325,8 @@ db.Recettes.insertMany([
         },
         "tags": {
             "typePlat": "Dessert",
-            "difficulte": "Facile",
-            "cout": "Bon marché",
+            "difficulte": 2,
+            "cout": 1,
             "saison": "Toutes"
         },
         "photo": "url de la photo",

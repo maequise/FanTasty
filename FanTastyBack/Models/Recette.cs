@@ -43,8 +43,8 @@ namespace FanTastyBack.Models
     public record Tag
     {
         public string TypePlat { get; set; }
-        public string Difficulte { get; set; }
-        public string Cout { get; set; }
+        public int Difficulte { get; set; }
+        public int Cout { get; set; }
         public string Saison { get; set; }
     }
 
