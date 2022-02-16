@@ -15,7 +15,11 @@ namespace FanTastyBack.Repositories.Interfaces
 
         public List<Recette> FindByAuteur(string auteur);
 
-        public List<Recette> FindByTag(string tag);
+        public List<Recette> FindByTag(Tag tag);
+
+        public List<Recette> FindByIngredient(string ingredient);
+
+        public List<Recette> FindByUstensile(string ustensile);
 
         public Recette Create(Recette recette);
 

@@ -2,7 +2,9 @@
 using FanTastyBack.Models;
 using FanTastyBack.Repositories.Interfaces;
 using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FanTastyBack.Repositories
 {
@@ -54,7 +56,10 @@ namespace FanTastyBack.Repositories
 
         public List<Recette> FindByUnivers(string univers)
         {
-            List<Recette> recettes = this._recettes.Find(rec => rec.Univers==univers).ToList();
+            List<Recette> recettes = this._recettes.AsQueryable<Recette>()
+                .Where(x => x.Univers.ToLower() == univers.ToLower())
+                .ToList();
+           
             for (int i = 0; i < recettes.Count; i++)
             {
                 foreach (IngredientRecette ingr in recettes[i].Ingredients)
@@ -78,20 +83,77 @@ namespace FanTastyBack.Repositories
             return recettes;
         }
 
-        //public List<Recette> FindByTags(List<string> tags)
-        //{
-        //    var filter = Builders<Recette>.Filter.Eq("tags", "typePlat");
-        //    List<Recette> recettes = this._recettes.Find(filter).ToList();
-        //    return recettes;
-
-        //}
-
-        public List<Recette> FindByTag(string tag)
+        public List<Recette> FindByTag(Models.Tag tag)
         {
-            throw new System.NotImplementedException();
+            var builder = Builders<Recette>.Filter;
+            var filter = builder.Empty;
+
+            if (!string.IsNullOrWhiteSpace(tag.Saison))
+            {
+                var SeasonFilter = builder.Eq(rec => rec.Tags.Saison, tag.Saison);
+                filter &= SeasonFilter;
+            }
+
+            if (!string.IsNullOrWhiteSpace(tag.TypePlat))
+            {
+                var TypePlatFilter = builder.Eq(rec => rec.Tags.TypePlat, tag.TypePlat);
+                filter &= TypePlatFilter;
+            }
+
+            if (tag.Difficulte!=0)
+            {
+                var DifficulteFilter = builder.Eq(rec => rec.Tags.Difficulte, tag.Difficulte);
+                filter &= DifficulteFilter;
+            }
+
+            if (tag.Cout != 0)
+            {
+                var CoutFilter = builder.Eq(recette => recette.Tags.Cout, tag.Cout);
+                filter &= CoutFilter;
+            }
+            
+            List<Recette> recettes = this._recettes.Find(filter).ToList();
+
+            for (int i = 0; i < recettes.Count; i++)
+            {
+                foreach (IngredientRecette ingr in recettes[i].Ingredients)
+                {
+                    ingr.Ingredient = this._ingredientRepository.FindById(ingr.Id);
+                }
+            }
+            return recettes;
         }
 
-        public Recette Create(Recette recette)
+        public List<Recette> FindByIngredient(string ingredient)
+        {
+            var filter = Builders<Recette>.Filter.ElemMatch(rec => rec.Ingredients, ingr => ingr.Id == ingredient);
+            List<Recette> recettes = this._recettes.Find(filter).ToList();
+            for (int i = 0; i < recettes.Count; i++)
+            {
+                foreach (IngredientRecette ingr in recettes[i].Ingredients)
+                {
+                    ingr.Ingredient = this._ingredientRepository.FindById(ingr.Id);
+                }
+            }
+            return recettes;
+        }
+
+        public List<Recette> FindByUstensile(string ustensile)
+        {
+            var filter = Builders<Recette>.Filter.AnyEq(rec => rec.Ustensiles, ustensile);
+
+            List<Recette> recettes = this._recettes.Find(filter).ToList();
+            for (int i = 0; i < recettes.Count; i++)
+            {
+                foreach (IngredientRecette ingr in recettes[i].Ingredients)
+                {
+                    ingr.Ingredient = this._ingredientRepository.FindById(ingr.Id);
+                }
+            }
+            return recettes;
+        }
+
+            public Recette Create(Recette recette)
         {
             _recettes.InsertOne(recette);
             return recette;

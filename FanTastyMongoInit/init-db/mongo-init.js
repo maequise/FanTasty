@@ -1,7 +1,16 @@
-db = db.getSiblingDB('FanTastyDB');
+db.auth('admin', 'admin');
+
+db = db.getSiblingDB('FanTastyDB')
+
+db.createUser({
+    user: 'admin',
+    pwd: 'admin',
+    roles: [{role: 'dbAdmin', db: 'FanTastyDB'}]
+});
 
 db.createCollection('Recettes');
 db.createCollection('Ingredients');
+db.createCollection('Utilisateurs');
 
 nouille_id = ObjectId()
 porcChashu_id = ObjectId()
@@ -23,6 +32,21 @@ cremeEpaisse_id = ObjectId()
 extraitVanille_id = ObjectId()
 biere_id = ObjectId()
 oeuf_id = ObjectId()
+
+db.Utilisateurs.insertMany([
+    {
+        "nom": "adminNom",
+        "prenom": "adminPrenom",
+        "email": "admin@admin.com",
+        "motDePasse": "123",
+    },
+    {
+        "nom": "utilisateurNom",
+        "prenom": "utilisateurPrenom",
+        "email": "utilisateur@utilisateur.com",
+        "motDePasse": "123",
+    }
+])
 
 db.Ingredients.insertMany([
     {
@@ -132,6 +156,7 @@ db.Recettes.insertMany([
         "nom": "Les Ramen Ichiraku",
         "auteur": "Timothée",
         "univers": "Naruto",
+	"description" : "Yum yum ! Vive les ramens !",
         "ingredients": [
             {
                 "_id": nouille_id,
@@ -224,6 +249,7 @@ db.Recettes.insertMany([
         "nom": "Bière au beurre",
         "auteur": "Estefania",
         "univers": "Harry Potter",
+	"description" : "Abracadabra, une recette magique !",
         "ingredients": [
             {
                 "_id": sucreRoux_id,
@@ -280,6 +306,7 @@ db.Recettes.insertMany([
         "nom": "Crêpes de Jafar",
         "auteur": "Audrey",
         "univers": "Disney",
+	"description" : "Sesame, ouvre-toi !",
         "ingredients": [
             {
                 "_id": farine_id,

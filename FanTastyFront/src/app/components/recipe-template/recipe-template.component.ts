@@ -45,7 +45,7 @@ export class RecipeTemplateComponent implements OnInit {
 
       this.recette = response;
 
-      console.log(this.recette);
+      console.log(response);
     });
 
   }
