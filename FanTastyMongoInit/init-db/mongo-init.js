@@ -1,4 +1,12 @@
-db = db.getSiblingDB('FanTastyDB');
+db.auth('admin', 'admin');
+
+db = db.getSiblingDB('FanTastyDB')
+
+db.createUser({
+    user: 'admin',
+    pwd: 'admin',
+    roles: [{role: 'dbAdmin', db: 'FanTastyDB'}]
+});
 
 db.createCollection('Recettes');
 db.createCollection('Ingredients');
