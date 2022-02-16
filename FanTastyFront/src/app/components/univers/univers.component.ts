@@ -14,6 +14,7 @@ export class UniversComponent implements OnInit {
   isFromUniverse = true;
 
   recettes: Recette[] = [];
+  universeSelected: string = '';
 
   href: string = '/assets/css/marvel.univers.component.css';
 
@@ -28,9 +29,8 @@ export class UniversComponent implements OnInit {
     this.render.setProperty(tag, 'href', this.href);
     this.render.appendChild(document.body, tag);
 
-    let id = this.router.url.split('/')[3];
 
-    this.recettesService.findAll().subscribe(response => this.recettes = response);
+    this.recettesService.findByUnivers(this.getUniverseSelected()).subscribe(response => this.recettes = response);
 
   }
 
@@ -50,6 +50,22 @@ export class UniversComponent implements OnInit {
     console.log(this.href);
 
     return this.href;
+  }
+
+  getUniverseSelected(): string {
+    let urlUniverse: String = this.router.url;
+
+    if (urlUniverse.startsWith('/naruto')) {
+      return 'naruto';
+    } else if (urlUniverse.startsWith('/disney')) {
+      return 'disney';
+    } else if (urlUniverse.startsWith('/harrypotter')) {
+      return 'harrypotter';
+    } else if (urlUniverse.startsWith('/marvel')) {
+      return 'marvel';
+    }
+
+    return '';
   }
 
 }

@@ -23,7 +23,6 @@ export class FooterComponent implements OnInit {
     let urlUniverse: String = this.router.url;
     let element: Element = document.querySelector('footer')!;
 
-    console.log(urlUniverse)
     if (urlUniverse.startsWith('/naruto')) {
       element.classList.add('bgColorNaruto');
       return 'bgColorNaruto';

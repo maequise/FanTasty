@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Recette } from '../models/recette';
+import {Constants} from "../core/Constants";
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +27,9 @@ export class RecettesService {
   }
   findById(id: string): Observable<Recette> {
     return this.httpClient.get<Recette>(this.apiServer + '/api/recettes/' + id);
+  }
+
+  findByUnivers(universe: string) : Observable<Recette[]> {
+    return this.httpClient.get<Recette[]>(Constants.URL_BACK + '/api/recettes/univers/' + universe);
   }
 }

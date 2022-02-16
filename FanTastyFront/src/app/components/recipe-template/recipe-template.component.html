@@ -5,8 +5,8 @@
         <p>#Moyen #BonMarché #AllSeasons</p>
 
         <h2 class="subtitle-ingredients">Ingrédients</h2>
-        <ul class="ingredients" *ngFor="let ingredients of ingredients">
-            <li>{{ingredients.nom}}</li>
+        <ul class="ingredients" *ngFor="let ingredientRecette of recette?.ingredients">
+            <li>{{ingredientRecette.ingredient.nom}} | {{ingredientRecette.quantite}} {{ingredientRecette.unite}}</li>
         </ul>
 
     </div>
@@ -17,10 +17,10 @@
             <figcaption>Shania</figcaption>
         </figure>
         <ul>
-            <li>🥄Personnes: 4</li>
-            <li>⏲️Temps de préparation : 5 minutes</li>
-            <li>👨🏻‍🍳Temps de Cuisson : 25 minutes</li>
-            <li>✔️Temps total : 30 minutes</li>
+            <li>🥄Personnes: {{recette?.nombrePersonnes}}</li>
+            <li>⏲️Temps de préparation : {{recette?.temps?.tempsPreparation}}</li>
+            <li>👨🏻‍🍳Temps de Cuisson : {{recette?.temps?.tempsCuisson}}</li>
+            <li>✔️Temps total : {{recette?.temps?.tempsTotal}}</li>
 
         </ul>
 
@@ -41,34 +41,5 @@
 <!--End Components Block-->
 
 <!--Common App Blocks-->
-<footer>
-    <div class="footer-inner">
-
-        <section class="footer-item">
-            <h3>Explore</h3>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Capabilities</a></li>
-                <li><a href="#">Careers</a></li>
-            </ul>
-        </section>
-
-        <section class="footer-item">
-            <h3>Visit</h3>
-            <a href="#">
-                <p>Envoy So. California</p>
-                <p>34 Tesla, Ste 100</p>
-                <p>Irvine, Ca, USA 92618</p>
-            </a>
-
-        </section>
-
-        <section class="footer-item">
-            <h3>New Business</h3>
-            <p><a href="#">Email us</a></p>
-            <p><a href="#">949.333.3106</a></p>
-        </section>
-    </div>
-</footer>
+<app-footer></app-footer>
 <!--End Common Blocks CSS-->
