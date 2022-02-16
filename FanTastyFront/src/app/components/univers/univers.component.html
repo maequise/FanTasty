@@ -1,0 +1,13 @@
+<div class="main-cards-container" *ngIf="isFromUniverse">
+
+    <ul class="cards">
+        <li class="cards_item" *ngFor="let recette of recettes">
+            <a routerLink="/disney/recette/{{recette.id}}">
+                <div class="card">
+                    <div class="card_image"><img src="../../assets/disney-frozen-cupcakes.jpg"></div>
+                </div>
+                <button class="btn card_btn">{{recette.nom}}</button>
+            </a>
+        </li>
+    </ul>
+</div>

@@ -29,3 +29,20 @@ body.dark{
 .card-bg{ 
   background-color: white ;
 }
+
+.bgColorMarvel {
+  background-color: #d32f2f;
+}
+
+.bgColorNaruto {
+  background-color: #f85325d8;
+}
+.bgColorLight {
+  background-color: #745bf1b7;
+}
+.bgColorDisney {
+  background-color: #10b9d6;
+}
+.bgColorHarryPotter {
+  background-color: #ab003d;
+}
