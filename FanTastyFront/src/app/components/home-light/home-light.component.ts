@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-home-light',
   templateUrl: './home-light.component.html',
-  styleUrls: ['./home-light.component.css'],
+  styleUrls: ['../../../assets/css/home-light.component.css'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class HomeLightComponent implements OnInit {

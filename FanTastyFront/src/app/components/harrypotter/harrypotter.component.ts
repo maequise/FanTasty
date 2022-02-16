@@ -1,21 +1,17 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { Recette } from '../models/recette';
-import { RecettesService } from '../services/recettes.service';
 
 @Component({
-  selector: 'app-marvel',
-  templateUrl: './marvel.component.html',
-  styleUrls: ['./marvel.component.css'],
+  selector: 'app-harrypotter',
+  templateUrl: './harrypotter.component.html',
+  styleUrls: ['../../../assets/css/harrypotter.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class MarvelComponent implements OnInit {
-  recettes: Recette[] = [];
+export class HarrypotterComponent implements OnInit {
 
-  constructor(private router: Router, private recetteService: RecettesService) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.recetteService.findAll().subscribe(response => this.recettes = response);
   }
   btnClickHome() {
     this.router.navigate(['']);

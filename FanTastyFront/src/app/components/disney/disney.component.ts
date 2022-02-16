@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { Recette } from '../models/recette';
-import { RecettesService } from '../services/recettes.service';
+import { Recette } from '../../models/recette';
+import { RecettesService } from '../../services/recettes.service';
 
 @Component({
   selector: 'app-disney',
   templateUrl: './disney.component.html',
-  styleUrls: ['./disney.component.css'],
+  styleUrls: ['../../../assets/css/disney.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class DisneyComponent implements OnInit {
