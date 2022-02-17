@@ -497,7 +497,7 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Crêpes de Jafar",
+        "nom": "Gaufres Mickey",
         "auteur": "Audrey",
         "univers": "Disney",
         "description": "Sesame, ouvre-toi !",
@@ -801,8 +801,8 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Chocogrenouilles",
-        "auteur": "Timothée",
+        "nom": "Gâteau Le Monstrueux Livre des Monstres",
+        "auteur": "Estefania",
         "univers": "HarryPotter",
         "description": "La friandise ensorcelée préférée des sorciers",
         "ingredients": [
@@ -846,7 +846,7 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "harrypotter/harry-potter-cake-pops.jpg",
+        "photo": "harrypotter/harry-potter-birthdaycake.png",
         "etapePreparation": [
             "Tempérer le chocolat ou le faire fondre au bain-marie et le retirer du feu quand environ la moitié  est fondue, continuer de mélanger pour laisser fondre le chocolat doucement.",
             "A l'aide d'un pinceau, passer une couche de chocolat à l'intérieur des moules. Retirer l'excédent de chocolat sur le moule. ",
@@ -859,8 +859,8 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Polyjuice potion",
-        "auteur": "Timothée",
+        "nom": "Pretzels baguette magique",
+        "auteur": "Claire",
         "univers": "HarryPotter",
         "description": "La potion qui te change de tête",
         "ingredients": [
@@ -901,7 +901,7 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "harrypotter/harry-potter-butterbeer-jell-o-shots.jpg",
+        "photo": "harrypotter/harry-potter-pretzels.jpg",
         "etapePreparation": [
             "Bien laver les ingrédients et les couper en morceaux.",
             "Passer à l'extracteur de jus",
@@ -911,7 +911,7 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Bantha Cocoa",
+        "nom": "BB-8 Droid Quesadillas",
         "auteur": "Timothée",
         "univers": "Disney",
         "description": "Le délice de l'univers",
@@ -969,7 +969,7 @@ db.Recettes.insertMany([
     {
         "nom": "Pyro-côtelettes de chimaerok à la Dirge",
         "auteur": "Timothée",
-        "univers": "World of warcraft",
+        "univers": "WorldOfWarcraft",
         "description": "Elle te restaure 1962 points de vie et tu seras bien nourri",
         "ingredients": [
             {
@@ -1046,7 +1046,7 @@ db.Recettes.insertMany([
     {
         "nom": "Lorem Ipsum a",
         "auteur": "Timothée",
-        "univers": "World of warcraft",
+        "univers": "WorldOfWarcraft",
         "description": "Lorem Ipsum is simply dummy text of the printin",
         "ingredients": [
             {
@@ -1119,7 +1119,7 @@ db.Recettes.insertMany([
     {
         "nom": "Lorem Ipsum b",
         "auteur": "Timothée",
-        "univers": "World of warcraft",
+        "univers": "WorldOfWarcraft",
         "description": "Lorem Ipsum is simply dummy text of the printin",
         "ingredients": [
             {
@@ -1192,7 +1192,7 @@ db.Recettes.insertMany([
     {
         "nom": "Lorem Ipsum c",
         "auteur": "Timothée",
-        "univers": "World of warcraft",
+        "univers": "WorldOfWarcraft",
         "description": "Lorem Ipsum is simply dummy text of the printin",
         "ingredients": [
             {
@@ -1263,8 +1263,8 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum d",
-        "auteur": "Timothée",
+        "nom": "Beignets à la citrouille",
+        "auteur": "Simon",
         "univers": "HarryPotter",
         "description": "Lorem Ipsum is simply dummy text of the printin",
         "ingredients": [
@@ -1326,7 +1326,7 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "marvel/marvel-boulettes-viande.jpg",
+        "photo": "harrypotter/harry-potter-butterbeer-doughnuts.jpg",
         "etapePreparation": [
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
@@ -1336,8 +1336,8 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum e",
-        "auteur": "Timothée",
+        "nom": "Balai volant cake pops",
+        "auteur": "Danielle",
         "univers": "HarryPotter",
         "description": "Lorem Ipsum is simply dummy text of the printin",
         "ingredients": [
@@ -1399,7 +1399,7 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "marvel/marvel-cookies.jpg",
+        "photo": "harrypotter/harry-potter-cake-pops.jpg",
         "etapePreparation": [
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
@@ -1409,8 +1409,8 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum f",
-        "auteur": "Timothée",
+        "nom": "Crèmes Canari à la Weasley.",
+        "auteur": "Thomas",
         "univers": "HarryPotter",
         "description": "Lorem Ipsum is simply dummy text of the printin",
         "ingredients": [
@@ -1472,7 +1472,7 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "marvel/marvel-cupcakes.jpg",
+        "photo": "harrypotter/harry-potter-canary-creams.jpg",
         "etapePreparation": [
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
@@ -1482,9 +1482,9 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum g",
+        "nom": "Beignets Hulk",
         "auteur": "Timothée",
-        "univers": "Disney",
+        "univers": "marvel",
         "description": "Lorem Ipsum is simply dummy text of the printin",
         "ingredients": [
             {
@@ -1555,9 +1555,9 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum h",
-        "auteur": "Timothée",
-        "univers": "Disney",
+        "nom": "Smoothie façon Hulk",
+        "auteur": "Audrey",
+        "univers": "marvel",
         "description": "Lorem Ipsum is simply dummy text of the printin",
         "ingredients": [
             {
@@ -1628,8 +1628,592 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum i",
+        "nom": "Boulettes de viande Ant Man",
         "auteur": "Timothée",
+        "univers": "marvel",
+        "description": "Lorem Ipsum is simply dummy text of the printin",
+        "ingredients": [
+            {
+                "_id": coteDePorc_id,
+                "quantite": 4,
+                "unite": "pièce"
+            },
+            {
+                "_id": confitDOrange_id,
+                "quantite": 25,
+                "unite": "centilitre"
+            },
+            {
+                "_id": sauceSoja_id,
+                "quantite": 6,
+                "unite": "centilitre"
+            },
+            {
+                "_id": pimentRouge_id,
+                "quantite": 1,
+                "unite": "cuillère à soupe"
+            },
+            {
+                "_id": gingembre_id,
+                "quantite": 2,
+                "unite": "cuillère à café"
+            },
+            {
+                "_id": sauceSriracha_id,
+                "quantite": 2,
+                "unite": "cuillère à soupe"
+            },
+            {
+                "_id": sel_id,
+                "quantite": 0,
+                "unite": ""
+            },
+            {
+                "_id": poivre_id,
+                "quantite": 0,
+                "unite": ""
+            }
+        ],
+        "ustensiles": [
+            "plat",
+            "bol",
+            "poêle"
+        ],
+        "nombrePersonnes": 2,
+        "temps": {
+            "tempsPreparation": "",
+            "tempsCuisson": "20mn",
+            "tempsTotal": "20mn"
+        },
+        "tags": {
+            "typePlat": "Plat",
+            "difficulte": 1,
+            "cout": 1,
+            "saison": "Toutes"
+        },
+        "photo": "marvel/marvel-boulettes-viande.jpg",
+        "etapePreparation": [
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+        ]
+    },
+    {
+        "nom": "Salade de fruits Hedwige",
+        "auteur": "Léna",
+        "univers": "HarryPotter",
+        "description": "Lorem Ipsum is simply dummy text of the printin",
+        "ingredients": [
+            {
+                "_id": coteDePorc_id,
+                "quantite": 4,
+                "unite": "pièce"
+            },
+            {
+                "_id": confitDOrange_id,
+                "quantite": 25,
+                "unite": "centilitre"
+            },
+            {
+                "_id": sauceSoja_id,
+                "quantite": 6,
+                "unite": "centilitre"
+            },
+            {
+                "_id": pimentRouge_id,
+                "quantite": 1,
+                "unite": "cuillère à soupe"
+            },
+            {
+                "_id": gingembre_id,
+                "quantite": 2,
+                "unite": "cuillère à café"
+            },
+            {
+                "_id": sauceSriracha_id,
+                "quantite": 2,
+                "unite": "cuillère à soupe"
+            },
+            {
+                "_id": sel_id,
+                "quantite": 0,
+                "unite": ""
+            },
+            {
+                "_id": poivre_id,
+                "quantite": 0,
+                "unite": ""
+            }
+        ],
+        "ustensiles": [
+            "plat",
+            "bol",
+            "poêle"
+        ],
+        "nombrePersonnes": 2,
+        "temps": {
+            "tempsPreparation": "",
+            "tempsCuisson": "20mn",
+            "tempsTotal": "20mn"
+        },
+        "tags": {
+            "typePlat": "Plat",
+            "difficulte": 1,
+            "cout": 1,
+            "saison": "Toutes"
+        },
+        "photo": "harrypotter/harry-potter-fruit-salad.jpg",
+        "etapePreparation": [
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+        ]
+    },
+    {
+        "nom": "Sucettes le Vif d\'Or",
+        "auteur": "Timothée",
+        "univers": "HarryPotter",
+        "description": "Lorem Ipsum is simply dummy text of the printin",
+        "ingredients": [
+            {
+                "_id": coteDePorc_id,
+                "quantite": 4,
+                "unite": "pièce"
+            },
+            {
+                "_id": confitDOrange_id,
+                "quantite": 25,
+                "unite": "centilitre"
+            },
+            {
+                "_id": sauceSoja_id,
+                "quantite": 6,
+                "unite": "centilitre"
+            },
+            {
+                "_id": pimentRouge_id,
+                "quantite": 1,
+                "unite": "cuillère à soupe"
+            },
+            {
+                "_id": gingembre_id,
+                "quantite": 2,
+                "unite": "cuillère à café"
+            },
+            {
+                "_id": sauceSriracha_id,
+                "quantite": 2,
+                "unite": "cuillère à soupe"
+            },
+            {
+                "_id": sel_id,
+                "quantite": 0,
+                "unite": ""
+            },
+            {
+                "_id": poivre_id,
+                "quantite": 0,
+                "unite": ""
+            }
+        ],
+        "ustensiles": [
+            "plat",
+            "bol",
+            "poêle"
+        ],
+        "nombrePersonnes": 2,
+        "temps": {
+            "tempsPreparation": "",
+            "tempsCuisson": "20mn",
+            "tempsTotal": "20mn"
+        },
+        "tags": {
+            "typePlat": "Plat",
+            "difficulte": 1,
+            "cout": 1,
+            "saison": "Toutes"
+        },
+        "photo": "harrypotter/harry-potter-golden-snitch-pops.png",
+        "etapePreparation": [
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+        ]
+    },
+    {
+        "nom": "Pâtisseries Beuglantes",
+        "auteur": "Guillaume",
+        "univers": "HarryPotter",
+        "description": "Lorem Ipsum is simply dummy text of the printin",
+        "ingredients": [
+            {
+                "_id": coteDePorc_id,
+                "quantite": 4,
+                "unite": "pièce"
+            },
+            {
+                "_id": confitDOrange_id,
+                "quantite": 25,
+                "unite": "centilitre"
+            },
+            {
+                "_id": sauceSoja_id,
+                "quantite": 6,
+                "unite": "centilitre"
+            },
+            {
+                "_id": pimentRouge_id,
+                "quantite": 1,
+                "unite": "cuillère à soupe"
+            },
+            {
+                "_id": gingembre_id,
+                "quantite": 2,
+                "unite": "cuillère à café"
+            },
+            {
+                "_id": sauceSriracha_id,
+                "quantite": 2,
+                "unite": "cuillère à soupe"
+            },
+            {
+                "_id": sel_id,
+                "quantite": 0,
+                "unite": ""
+            },
+            {
+                "_id": poivre_id,
+                "quantite": 0,
+                "unite": ""
+            }
+        ],
+        "ustensiles": [
+            "plat",
+            "bol",
+            "poêle"
+        ],
+        "nombrePersonnes": 2,
+        "temps": {
+            "tempsPreparation": "",
+            "tempsCuisson": "20mn",
+            "tempsTotal": "20mn"
+        },
+        "tags": {
+            "typePlat": "Plat",
+            "difficulte": 1,
+            "cout": 1,
+            "saison": "Toutes"
+        },
+        "photo": "harrypotter/harry-potter-pasties.jpg",
+        "etapePreparation": [
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+        ]
+    },
+    {
+        "nom": "Iron Man bento",
+        "auteur": "Timothée",
+        "univers": "marvel",
+        "description": "Lorem Ipsum is simply dummy text of the printin",
+        "ingredients": [
+            {
+                "_id": coteDePorc_id,
+                "quantite": 4,
+                "unite": "pièce"
+            },
+            {
+                "_id": confitDOrange_id,
+                "quantite": 25,
+                "unite": "centilitre"
+            },
+            {
+                "_id": sauceSoja_id,
+                "quantite": 6,
+                "unite": "centilitre"
+            },
+            {
+                "_id": pimentRouge_id,
+                "quantite": 1,
+                "unite": "cuillère à soupe"
+            },
+            {
+                "_id": gingembre_id,
+                "quantite": 2,
+                "unite": "cuillère à café"
+            },
+            {
+                "_id": sauceSriracha_id,
+                "quantite": 2,
+                "unite": "cuillère à soupe"
+            },
+            {
+                "_id": sel_id,
+                "quantite": 0,
+                "unite": ""
+            },
+            {
+                "_id": poivre_id,
+                "quantite": 0,
+                "unite": ""
+            }
+        ],
+        "ustensiles": [
+            "plat",
+            "bol",
+            "poêle"
+        ],
+        "nombrePersonnes": 2,
+        "temps": {
+            "tempsPreparation": "",
+            "tempsCuisson": "20mn",
+            "tempsTotal": "20mn"
+        },
+        "tags": {
+            "typePlat": "Plat",
+            "difficulte": 1,
+            "cout": 1,
+            "saison": "Toutes"
+        },
+        "photo": "marvel/marvel-lunchbox.jpg",
+        "etapePreparation": [
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+        ]
+    },
+    {
+        "nom": "Sasuke bento",
+        "auteur": "Timothée",
+        "univers": "Naruto",
+        "description": "Lorem Ipsum is simply dummy text of the printin",
+        "ingredients": [
+            {
+                "_id": coteDePorc_id,
+                "quantite": 4,
+                "unite": "pièce"
+            },
+            {
+                "_id": confitDOrange_id,
+                "quantite": 25,
+                "unite": "centilitre"
+            },
+            {
+                "_id": sauceSoja_id,
+                "quantite": 6,
+                "unite": "centilitre"
+            },
+            {
+                "_id": pimentRouge_id,
+                "quantite": 1,
+                "unite": "cuillère à soupe"
+            },
+            {
+                "_id": gingembre_id,
+                "quantite": 2,
+                "unite": "cuillère à café"
+            },
+            {
+                "_id": sauceSriracha_id,
+                "quantite": 2,
+                "unite": "cuillère à soupe"
+            },
+            {
+                "_id": sel_id,
+                "quantite": 0,
+                "unite": ""
+            },
+            {
+                "_id": poivre_id,
+                "quantite": 0,
+                "unite": ""
+            }
+        ],
+        "ustensiles": [
+            "plat",
+            "bol",
+            "poêle"
+        ],
+        "nombrePersonnes": 2,
+        "temps": {
+            "tempsPreparation": "",
+            "tempsCuisson": "20mn",
+            "tempsTotal": "20mn"
+        },
+        "tags": {
+            "typePlat": "Plat",
+            "difficulte": 1,
+            "cout": 1,
+            "saison": "Toutes"
+        },
+        "photo": "naruto/sasuke-bento.jpeg",
+        "etapePreparation": [
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+        ]
+    },
+    {
+        "nom": "Narutomaki",
+        "auteur": "Timothée",
+        "univers": "Naruto",
+        "description": "Lorem Ipsum is simply dummy text of the printin",
+        "ingredients": [
+            {
+                "_id": coteDePorc_id,
+                "quantite": 4,
+                "unite": "pièce"
+            },
+            {
+                "_id": confitDOrange_id,
+                "quantite": 25,
+                "unite": "centilitre"
+            },
+            {
+                "_id": sauceSoja_id,
+                "quantite": 6,
+                "unite": "centilitre"
+            },
+            {
+                "_id": pimentRouge_id,
+                "quantite": 1,
+                "unite": "cuillère à soupe"
+            },
+            {
+                "_id": gingembre_id,
+                "quantite": 2,
+                "unite": "cuillère à café"
+            },
+            {
+                "_id": sauceSriracha_id,
+                "quantite": 2,
+                "unite": "cuillère à soupe"
+            },
+            {
+                "_id": sel_id,
+                "quantite": 0,
+                "unite": ""
+            },
+            {
+                "_id": poivre_id,
+                "quantite": 0,
+                "unite": ""
+            }
+        ],
+        "ustensiles": [
+            "plat",
+            "bol",
+            "poêle"
+        ],
+        "nombrePersonnes": 2,
+        "temps": {
+            "tempsPreparation": "",
+            "tempsCuisson": "20mn",
+            "tempsTotal": "20mn"
+        },
+        "tags": {
+            "typePlat": "Plat",
+            "difficulte": 1,
+            "cout": 1,
+            "saison": "Toutes"
+        },
+        "photo": "naruto/Narutomaki.jpeg",
+        "etapePreparation": [
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+        ]
+    },
+    {
+        "nom": "Porc shogayaki",
+        "auteur": "Timothée",
+        "univers": "Naruto",
+        "description": "Lorem Ipsum is simply dummy text of the printin",
+        "ingredients": [
+            {
+                "_id": coteDePorc_id,
+                "quantite": 4,
+                "unite": "pièce"
+            },
+            {
+                "_id": confitDOrange_id,
+                "quantite": 25,
+                "unite": "centilitre"
+            },
+            {
+                "_id": sauceSoja_id,
+                "quantite": 6,
+                "unite": "centilitre"
+            },
+            {
+                "_id": pimentRouge_id,
+                "quantite": 1,
+                "unite": "cuillère à soupe"
+            },
+            {
+                "_id": gingembre_id,
+                "quantite": 2,
+                "unite": "cuillère à café"
+            },
+            {
+                "_id": sauceSriracha_id,
+                "quantite": 2,
+                "unite": "cuillère à soupe"
+            },
+            {
+                "_id": sel_id,
+                "quantite": 0,
+                "unite": ""
+            },
+            {
+                "_id": poivre_id,
+                "quantite": 0,
+                "unite": ""
+            }
+        ],
+        "ustensiles": [
+            "plat",
+            "bol",
+            "poêle"
+        ],
+        "nombrePersonnes": 2,
+        "temps": {
+            "tempsPreparation": "",
+            "tempsCuisson": "20mn",
+            "tempsTotal": "20mn"
+        },
+        "tags": {
+            "typePlat": "Plat",
+            "difficulte": 1,
+            "cout": 1,
+            "saison": "Toutes"
+        },
+        "photo": "naruto/viande-naruto.jpg",
+        "etapePreparation": [
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+        ]
+    },
+    {
+        "nom": "Beignets La Princesse et la Grenouille",
+        "auteur": "Estefania",
         "univers": "Disney",
         "description": "Lorem Ipsum is simply dummy text of the printin",
         "ingredients": [
@@ -1691,591 +2275,7 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "marvel/marvel-hulk-tacos.jpg",
-        "etapePreparation": [
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-        ]
-    },
-    {
-        "nom": "Lorem Ipsum j",
-        "auteur": "Timothée",
-        "univers": "HarryPotter",
-        "description": "Lorem Ipsum is simply dummy text of the printin",
-        "ingredients": [
-            {
-                "_id": coteDePorc_id,
-                "quantite": 4,
-                "unite": "pièce"
-            },
-            {
-                "_id": confitDOrange_id,
-                "quantite": 25,
-                "unite": "centilitre"
-            },
-            {
-                "_id": sauceSoja_id,
-                "quantite": 6,
-                "unite": "centilitre"
-            },
-            {
-                "_id": pimentRouge_id,
-                "quantite": 1,
-                "unite": "cuillère à soupe"
-            },
-            {
-                "_id": gingembre_id,
-                "quantite": 2,
-                "unite": "cuillère à café"
-            },
-            {
-                "_id": sauceSriracha_id,
-                "quantite": 2,
-                "unite": "cuillère à soupe"
-            },
-            {
-                "_id": sel_id,
-                "quantite": 0,
-                "unite": ""
-            },
-            {
-                "_id": poivre_id,
-                "quantite": 0,
-                "unite": ""
-            }
-        ],
-        "ustensiles": [
-            "plat",
-            "bol",
-            "poêle"
-        ],
-        "nombrePersonnes": 2,
-        "temps": {
-            "tempsPreparation": "",
-            "tempsCuisson": "20mn",
-            "tempsTotal": "20mn"
-        },
-        "tags": {
-            "typePlat": "Plat",
-            "difficulte": 1,
-            "cout": 1,
-            "saison": "Toutes"
-        },
-        "photo": "disney/disney-baby-yoda-pie.jpg",
-        "etapePreparation": [
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-        ]
-    },
-    {
-        "nom": "Lorem Ipsum k",
-        "auteur": "Timothée",
-        "univers": "HarryPotter",
-        "description": "Lorem Ipsum is simply dummy text of the printin",
-        "ingredients": [
-            {
-                "_id": coteDePorc_id,
-                "quantite": 4,
-                "unite": "pièce"
-            },
-            {
-                "_id": confitDOrange_id,
-                "quantite": 25,
-                "unite": "centilitre"
-            },
-            {
-                "_id": sauceSoja_id,
-                "quantite": 6,
-                "unite": "centilitre"
-            },
-            {
-                "_id": pimentRouge_id,
-                "quantite": 1,
-                "unite": "cuillère à soupe"
-            },
-            {
-                "_id": gingembre_id,
-                "quantite": 2,
-                "unite": "cuillère à café"
-            },
-            {
-                "_id": sauceSriracha_id,
-                "quantite": 2,
-                "unite": "cuillère à soupe"
-            },
-            {
-                "_id": sel_id,
-                "quantite": 0,
-                "unite": ""
-            },
-            {
-                "_id": poivre_id,
-                "quantite": 0,
-                "unite": ""
-            }
-        ],
-        "ustensiles": [
-            "plat",
-            "bol",
-            "poêle"
-        ],
-        "nombrePersonnes": 2,
-        "temps": {
-            "tempsPreparation": "",
-            "tempsCuisson": "20mn",
-            "tempsTotal": "20mn"
-        },
-        "tags": {
-            "typePlat": "Plat",
-            "difficulte": 1,
-            "cout": 1,
-            "saison": "Toutes"
-        },
-        "photo": "disney/disney-breakfast-rapunzel.jpg",
-        "etapePreparation": [
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-        ]
-    },
-    {
-        "nom": "Lorem Ipsum l",
-        "auteur": "Timothée",
-        "univers": "HarryPotter",
-        "description": "Lorem Ipsum is simply dummy text of the printin",
-        "ingredients": [
-            {
-                "_id": coteDePorc_id,
-                "quantite": 4,
-                "unite": "pièce"
-            },
-            {
-                "_id": confitDOrange_id,
-                "quantite": 25,
-                "unite": "centilitre"
-            },
-            {
-                "_id": sauceSoja_id,
-                "quantite": 6,
-                "unite": "centilitre"
-            },
-            {
-                "_id": pimentRouge_id,
-                "quantite": 1,
-                "unite": "cuillère à soupe"
-            },
-            {
-                "_id": gingembre_id,
-                "quantite": 2,
-                "unite": "cuillère à café"
-            },
-            {
-                "_id": sauceSriracha_id,
-                "quantite": 2,
-                "unite": "cuillère à soupe"
-            },
-            {
-                "_id": sel_id,
-                "quantite": 0,
-                "unite": ""
-            },
-            {
-                "_id": poivre_id,
-                "quantite": 0,
-                "unite": ""
-            }
-        ],
-        "ustensiles": [
-            "plat",
-            "bol",
-            "poêle"
-        ],
-        "nombrePersonnes": 2,
-        "temps": {
-            "tempsPreparation": "",
-            "tempsCuisson": "20mn",
-            "tempsTotal": "20mn"
-        },
-        "tags": {
-            "typePlat": "Plat",
-            "difficulte": 1,
-            "cout": 1,
-            "saison": "Toutes"
-        },
-        "photo": "disney/disney-cinderella-cookies.jpg",
-        "etapePreparation": [
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-        ]
-    },
-    {
-        "nom": "Lorem Ipsum m",
-        "auteur": "Timothée",
-        "univers": "marvel",
-        "description": "Lorem Ipsum is simply dummy text of the printin",
-        "ingredients": [
-            {
-                "_id": coteDePorc_id,
-                "quantite": 4,
-                "unite": "pièce"
-            },
-            {
-                "_id": confitDOrange_id,
-                "quantite": 25,
-                "unite": "centilitre"
-            },
-            {
-                "_id": sauceSoja_id,
-                "quantite": 6,
-                "unite": "centilitre"
-            },
-            {
-                "_id": pimentRouge_id,
-                "quantite": 1,
-                "unite": "cuillère à soupe"
-            },
-            {
-                "_id": gingembre_id,
-                "quantite": 2,
-                "unite": "cuillère à café"
-            },
-            {
-                "_id": sauceSriracha_id,
-                "quantite": 2,
-                "unite": "cuillère à soupe"
-            },
-            {
-                "_id": sel_id,
-                "quantite": 0,
-                "unite": ""
-            },
-            {
-                "_id": poivre_id,
-                "quantite": 0,
-                "unite": ""
-            }
-        ],
-        "ustensiles": [
-            "plat",
-            "bol",
-            "poêle"
-        ],
-        "nombrePersonnes": 2,
-        "temps": {
-            "tempsPreparation": "",
-            "tempsCuisson": "20mn",
-            "tempsTotal": "20mn"
-        },
-        "tags": {
-            "typePlat": "Plat",
-            "difficulte": 1,
-            "cout": 1,
-            "saison": "Toutes"
-        },
-        "photo": "disney/disney-cookies-rapunzel.jpg",
-        "etapePreparation": [
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-        ]
-    },
-    {
-        "nom": "Lorem Ipsum n",
-        "auteur": "Timothée",
-        "univers": "marvel",
-        "description": "Lorem Ipsum is simply dummy text of the printin",
-        "ingredients": [
-            {
-                "_id": coteDePorc_id,
-                "quantite": 4,
-                "unite": "pièce"
-            },
-            {
-                "_id": confitDOrange_id,
-                "quantite": 25,
-                "unite": "centilitre"
-            },
-            {
-                "_id": sauceSoja_id,
-                "quantite": 6,
-                "unite": "centilitre"
-            },
-            {
-                "_id": pimentRouge_id,
-                "quantite": 1,
-                "unite": "cuillère à soupe"
-            },
-            {
-                "_id": gingembre_id,
-                "quantite": 2,
-                "unite": "cuillère à café"
-            },
-            {
-                "_id": sauceSriracha_id,
-                "quantite": 2,
-                "unite": "cuillère à soupe"
-            },
-            {
-                "_id": sel_id,
-                "quantite": 0,
-                "unite": ""
-            },
-            {
-                "_id": poivre_id,
-                "quantite": 0,
-                "unite": ""
-            }
-        ],
-        "ustensiles": [
-            "plat",
-            "bol",
-            "poêle"
-        ],
-        "nombrePersonnes": 2,
-        "temps": {
-            "tempsPreparation": "",
-            "tempsCuisson": "20mn",
-            "tempsTotal": "20mn"
-        },
-        "tags": {
-            "typePlat": "Plat",
-            "difficulte": 1,
-            "cout": 1,
-            "saison": "Toutes"
-        },
-        "photo": "disney/disney-frozen-cupcakes.jpg",
-        "etapePreparation": [
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-        ]
-    },
-    {
-        "nom": "Lorem Ipsum o",
-        "auteur": "Timothée",
-        "univers": "marvel",
-        "description": "Lorem Ipsum is simply dummy text of the printin",
-        "ingredients": [
-            {
-                "_id": coteDePorc_id,
-                "quantite": 4,
-                "unite": "pièce"
-            },
-            {
-                "_id": confitDOrange_id,
-                "quantite": 25,
-                "unite": "centilitre"
-            },
-            {
-                "_id": sauceSoja_id,
-                "quantite": 6,
-                "unite": "centilitre"
-            },
-            {
-                "_id": pimentRouge_id,
-                "quantite": 1,
-                "unite": "cuillère à soupe"
-            },
-            {
-                "_id": gingembre_id,
-                "quantite": 2,
-                "unite": "cuillère à café"
-            },
-            {
-                "_id": sauceSriracha_id,
-                "quantite": 2,
-                "unite": "cuillère à soupe"
-            },
-            {
-                "_id": sel_id,
-                "quantite": 0,
-                "unite": ""
-            },
-            {
-                "_id": poivre_id,
-                "quantite": 0,
-                "unite": ""
-            }
-        ],
-        "ustensiles": [
-            "plat",
-            "bol",
-            "poêle"
-        ],
-        "nombrePersonnes": 2,
-        "temps": {
-            "tempsPreparation": "",
-            "tempsCuisson": "20mn",
-            "tempsTotal": "20mn"
-        },
-        "tags": {
-            "typePlat": "Plat",
-            "difficulte": 1,
-            "cout": 1,
-            "saison": "Toutes"
-        },
-        "photo": "disney/disney-little-mermaid-clam-shells.jpg",
-        "etapePreparation": [
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-        ]
-    },
-    {
-        "nom": "Lorem Ipsum p",
-        "auteur": "Timothée",
-        "univers": "marvel",
-        "description": "Lorem Ipsum is simply dummy text of the printin",
-        "ingredients": [
-            {
-                "_id": coteDePorc_id,
-                "quantite": 4,
-                "unite": "pièce"
-            },
-            {
-                "_id": confitDOrange_id,
-                "quantite": 25,
-                "unite": "centilitre"
-            },
-            {
-                "_id": sauceSoja_id,
-                "quantite": 6,
-                "unite": "centilitre"
-            },
-            {
-                "_id": pimentRouge_id,
-                "quantite": 1,
-                "unite": "cuillère à soupe"
-            },
-            {
-                "_id": gingembre_id,
-                "quantite": 2,
-                "unite": "cuillère à café"
-            },
-            {
-                "_id": sauceSriracha_id,
-                "quantite": 2,
-                "unite": "cuillère à soupe"
-            },
-            {
-                "_id": sel_id,
-                "quantite": 0,
-                "unite": ""
-            },
-            {
-                "_id": poivre_id,
-                "quantite": 0,
-                "unite": ""
-            }
-        ],
-        "ustensiles": [
-            "plat",
-            "bol",
-            "poêle"
-        ],
-        "nombrePersonnes": 2,
-        "temps": {
-            "tempsPreparation": "",
-            "tempsCuisson": "20mn",
-            "tempsTotal": "20mn"
-        },
-        "tags": {
-            "typePlat": "Plat",
-            "difficulte": 1,
-            "cout": 1,
-            "saison": "Toutes"
-        },
-        "photo": "disney/disney-mickey-cookie-dough.jpg",
-        "etapePreparation": [
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
-        ]
-    },
-    {
-        "nom": "Lorem Ipsum q",
-        "auteur": "Timothée",
-        "univers": "marvel",
-        "description": "Lorem Ipsum is simply dummy text of the printin",
-        "ingredients": [
-            {
-                "_id": coteDePorc_id,
-                "quantite": 4,
-                "unite": "pièce"
-            },
-            {
-                "_id": confitDOrange_id,
-                "quantite": 25,
-                "unite": "centilitre"
-            },
-            {
-                "_id": sauceSoja_id,
-                "quantite": 6,
-                "unite": "centilitre"
-            },
-            {
-                "_id": pimentRouge_id,
-                "quantite": 1,
-                "unite": "cuillère à soupe"
-            },
-            {
-                "_id": gingembre_id,
-                "quantite": 2,
-                "unite": "cuillère à café"
-            },
-            {
-                "_id": sauceSriracha_id,
-                "quantite": 2,
-                "unite": "cuillère à soupe"
-            },
-            {
-                "_id": sel_id,
-                "quantite": 0,
-                "unite": ""
-            },
-            {
-                "_id": poivre_id,
-                "quantite": 0,
-                "unite": ""
-            }
-        ],
-        "ustensiles": [
-            "plat",
-            "bol",
-            "poêle"
-        ],
-        "nombrePersonnes": 2,
-        "temps": {
-            "tempsPreparation": "",
-            "tempsCuisson": "20mn",
-            "tempsTotal": "20mn"
-        },
-        "tags": {
-            "typePlat": "Plat",
-            "difficulte": 1,
-            "cout": 1,
-            "saison": "Toutes"
-        },
-        "photo": "disney/disney-mickey-waffles.jfif",
+        "photo": "disney/disney-princess-and-the-frog-beignets.png",
         "etapePreparation": [
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
@@ -2358,7 +2358,7 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum s",
+        "nom": "Fraises Spiderman",
         "auteur": "Timothée",
         "univers": "marvel",
         "description": "Lorem Ipsum is simply dummy text of the printin",
@@ -2431,7 +2431,7 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum t",
+        "nom": "Smoothie Marvel",
         "auteur": "Timothée",
         "univers": "marvel",
         "description": "Lorem Ipsum is simply dummy text of the printin",
@@ -2504,8 +2504,8 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum u",
-        "auteur": "Timothée",
+        "nom": "Pancakes à la bière au beurre",
+        "auteur": "Cyriak",
         "univers": "HarryPotter",
         "description": "Lorem Ipsum is simply dummy text of the printin",
         "ingredients": [
@@ -2567,7 +2567,7 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "disney/disney-aladdin-pizza.jpg",
+        "photo": "harrypotter/harry-potter-pancakes.jpg",
         "etapePreparation": [
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
@@ -2577,8 +2577,8 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum v",
-        "auteur": "Timothée",
+        "nom": "Gâteaux Choixpeau",
+        "auteur": "Audrey",
         "univers": "HarryPotter",
         "description": "Lorem Ipsum is simply dummy text of the printin",
         "ingredients": [
@@ -2640,7 +2640,7 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "disney/disney-bb8-quesadillas.jpg",
+        "photo": "harrypotter/harry-potter-wizardhat-cakes.jpg",
         "etapePreparation": [
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
@@ -2650,8 +2650,8 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum w",
-        "auteur": "Timothée",
+        "nom": "Cupcakes chaudron",
+        "auteur": "Ben",
         "univers": "HarryPotter",
         "description": "Lorem Ipsum is simply dummy text of the printin",
         "ingredients": [
@@ -2713,7 +2713,7 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "harrypotter/harry-potter-butterbeer-doughnuts.jpg",
+        "photo": "harrypotter/harry-potter-muffin.jpeg",
         "etapePreparation": [
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
@@ -2723,9 +2723,9 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum x",
-        "auteur": "Timothée",
-        "univers": "HarryPotter",
+        "nom": "Cookies Avengers",
+        "auteur": "Estefania",
+        "univers": "marvel",
         "description": "Lorem Ipsum is simply dummy text of the printin",
         "ingredients": [
             {
@@ -2786,7 +2786,7 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "harrypotter/harry-potter-canary-creams.jpg",
+        "photo": "marvel/marvel-cookies.jpg",
         "etapePreparation": [
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
@@ -2796,9 +2796,9 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum y",
-        "auteur": "Timothée",
-        "univers": "HarryPotter",
+        "nom": "Pizza Capitaine America",
+        "auteur": "Lionel",
+        "univers": "marvel",
         "description": "Lorem Ipsum is simply dummy text of the printin",
         "ingredients": [
             {
@@ -2859,7 +2859,7 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "harrypotter/harry-potter-fruit-salad.jpg",
+        "photo": "marvel/marvel-pizza-captain-america.jpg",
         "etapePreparation": [
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
@@ -2869,9 +2869,9 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum z",
-        "auteur": "Timothée",
-        "univers": "HarryPotter",
+        "nom": "Tacos façon Hulk",
+        "auteur": "Sylvain",
+        "univers": "marvel",
         "description": "Lorem Ipsum is simply dummy text of the printin",
         "ingredients": [
             {
@@ -2932,7 +2932,7 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "harrypotter/harry-potter-pasties.jpg",
+        "photo": "marvel/marvel-hulk-tacos.jpg",
         "etapePreparation": [
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
@@ -2942,9 +2942,9 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum za",
-        "auteur": "Timothée",
-        "univers": "HarryPotter",
+        "nom": "Sandwich Baby Groot",
+        "auteur": "Stevie",
+        "univers": "marvel",
         "description": "Lorem Ipsum is simply dummy text of the printin",
         "ingredients": [
             {
@@ -3005,7 +3005,7 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "disney/disney-frozen-cupcakes.jpg",
+        "photo": "marvel/marvel-baby-groot-sandwich.png",
         "etapePreparation": [
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
@@ -3015,9 +3015,9 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum zb",
-        "auteur": "Timothée",
-        "univers": "HarryPotter",
+        "nom": "Cookies Avengers",
+        "auteur": "Estefania",
+        "univers": "marvel",
         "description": "Lorem Ipsum is simply dummy text of the printin",
         "ingredients": [
             {
@@ -3078,7 +3078,7 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "disney/disney-frozen-cupcakes.jpg",
+        "photo": "marvel/marvel-avengers-blue-cookie.jpg",
         "etapePreparation": [
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
@@ -3090,7 +3090,7 @@ db.Recettes.insertMany([
     {
         "nom": "Lorem Ipsum zc",
         "auteur": "Timothée",
-        "univers": "World of warcraft",
+        "univers": "WorldOfWarcraft",
         "description": "Elle te restaure 1962 points de vie et tu seras bien nourri",
         "ingredients": [
             {
@@ -3167,7 +3167,7 @@ db.Recettes.insertMany([
     {
         "nom": "Lorem Ipsum zd",
         "auteur": "Timothée",
-        "univers": "World of warcraft",
+        "univers": "WorldOfWarcraft",
         "description": "Elle te restaure 1962 points de vie et tu seras bien nourri",
         "ingredients": [
             {
@@ -3244,7 +3244,7 @@ db.Recettes.insertMany([
     {
         "nom": "Lorem Ipsum ze",
         "auteur": "Timothée",
-        "univers": "World of warcraft",
+        "univers": "WorldOfWarcraft",
         "description": "Elle te restaure 1962 points de vie et tu seras bien nourri",
         "ingredients": [
             {
@@ -3321,7 +3321,7 @@ db.Recettes.insertMany([
     {
         "nom": "Lorem Ipsum zf",
         "auteur": "Timothée",
-        "univers": "World of warcraft",
+        "univers": "WorldOfWarcraft",
         "description": "Elle te restaure 1962 points de vie et tu seras bien nourri",
         "ingredients": [
             {
@@ -3396,7 +3396,7 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum zg",
+        "nom": "Gohan takikomi",
         "auteur": "Timothée",
         "univers": "Naruto",
         "description": "Le favori de Jiraiya",
@@ -3444,7 +3444,7 @@ db.Recettes.insertMany([
             "cout": 2,
             "saison": "Toutes"
         },
-        "photo": "disney/disney-frozen-cupcakes.jpg",
+        "photo": "naruto/naruto-salade.jpeg",
         "etapePreparation": [
             "Coupez le poulet en petits morceaux (laissez la peau pour plus de croustillant).",
             "Dans un saladier, mélangez le gingembre avec l'ail, la sauce soja et le saké de cuisson. Ajoutez le poulet, enrobez-le bien et laissez mariner 30 minutes.",
@@ -3455,7 +3455,7 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum zh",
+        "nom": "Mochis tricolores",
         "auteur": "Timothée",
         "univers": "Naruto",
         "description": "Le favori de Jiraiya",
@@ -3503,7 +3503,7 @@ db.Recettes.insertMany([
             "cout": 2,
             "saison": "Toutes"
         },
-        "photo": "disney/disney-frozen-cupcakes.jpg",
+        "photo": "naruto/naruto-dango-mochi.jpg",
         "etapePreparation": [
             "Coupez le poulet en petits morceaux (laissez la peau pour plus de croustillant).",
             "Dans un saladier, mélangez le gingembre avec l'ail, la sauce soja et le saké de cuisson. Ajoutez le poulet, enrobez-le bien et laissez mariner 30 minutes.",
@@ -3514,7 +3514,7 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum zi",
+        "nom": "Onigiri façon Naruto",
         "auteur": "Timothée",
         "univers": "Naruto",
         "description": "Le favori de Jiraiya",
@@ -3562,7 +3562,7 @@ db.Recettes.insertMany([
             "cout": 2,
             "saison": "Toutes"
         },
-        "photo": "disney/disney-frozen-cupcakes.jpg",
+        "photo": "naruto/naruto-onigiri.jpg",
         "etapePreparation": [
             "Coupez le poulet en petits morceaux (laissez la peau pour plus de croustillant).",
             "Dans un saladier, mélangez le gingembre avec l'ail, la sauce soja et le saké de cuisson. Ajoutez le poulet, enrobez-le bien et laissez mariner 30 minutes.",
@@ -3573,7 +3573,7 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum zj",
+        "nom": "Yakiniku",
         "auteur": "Timothée",
         "univers": "Naruto",
         "description": "Le favori de Jiraiya",
@@ -3621,7 +3621,7 @@ db.Recettes.insertMany([
             "cout": 2,
             "saison": "Toutes"
         },
-        "photo": "disney/disney-frozen-cupcakes.jpg",
+        "photo": "naruto/naruto-yakiniku.jpeg",
         "etapePreparation": [
             "Coupez le poulet en petits morceaux (laissez la peau pour plus de croustillant).",
             "Dans un saladier, mélangez le gingembre avec l'ail, la sauce soja et le saké de cuisson. Ajoutez le poulet, enrobez-le bien et laissez mariner 30 minutes.",
@@ -3632,7 +3632,7 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum zk",
+        "nom": "Gâteau la Belle au bois dormant",
         "auteur": "Audrey",
         "univers": "Disney",
         "description": "Sesame, ouvre-toi !",
@@ -3685,7 +3685,7 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "disney/disney-frozen-cupcakes.jpg",
+        "photo": "disney/disney-sleeping-beauty-cake.jpeg",
         "etapePreparation": [
             "Mettez la farine dans un saladier avec le sel et le sucre.",
             "Faites un puits au milieu et versez-y les œufs.",
@@ -3697,7 +3697,7 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum zl",
+        "nom": "Sandwich à la crème glacée C-3PO",
         "auteur": "Audrey",
         "univers": "Disney",
         "description": "Sesame, ouvre-toi !",
@@ -3750,7 +3750,7 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "disney/disney-frozen-cupcakes.jpg",
+        "photo": "disney/disney-c3po-ice-cream-sandwich.jpg",
         "etapePreparation": [
             "Mettez la farine dans un saladier avec le sel et le sucre.",
             "Faites un puits au milieu et versez-y les œufs.",
@@ -3762,7 +3762,7 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum zm",
+        "nom": "Petit déjeuner façon Raiponce",
         "auteur": "Audrey",
         "univers": "Disney",
         "description": "Sesame, ouvre-toi !",
@@ -3815,7 +3815,7 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "disney/disney-frozen-cupcakes.jpg",
+        "photo": "disney/disney-breakfast-rapunzel.jpg",
         "etapePreparation": [
             "Mettez la farine dans un saladier avec le sel et le sucre.",
             "Faites un puits au milieu et versez-y les œufs.",
@@ -3827,8 +3827,8 @@ db.Recettes.insertMany([
         ]
     },
     {
-        "nom": "Lorem Ipsum zn",
-        "auteur": "Audrey",
+        "nom": "Cookies Cendrillon",
+        "auteur": "Estefania",
         "univers": "Disney",
         "description": "Sesame, ouvre-toi !",
         "ingredients": [
@@ -3880,7 +3880,332 @@ db.Recettes.insertMany([
             "cout": 1,
             "saison": "Toutes"
         },
-        "photo": "disney/disney-frozen-cupcakes.jpg",
+        "photo": "disney/disney-cinderella-cookies.jpg",
+        "etapePreparation": [
+            "Mettez la farine dans un saladier avec le sel et le sucre.",
+            "Faites un puits au milieu et versez-y les œufs.",
+            "Commencez à mélanger doucement. Quand le mélange devient épais, ajoutez le lait froid petit à petit.",
+            "Quand tout le lait est mélangé, la pâte doit être assez fluide. Si elle vous paraît trop épaisse, rajoutez un peu de lait. Ajoutez ensuite le beurre fondu refroidi, mélangez bien.",
+            "Faites cuire les crêpes dans une poêle chaude (par précaution légèrement huilée si votre poêle à crêpes n'est pas anti-adhésive). Versez une petite louche de pâte dans la poêle, faites un mouvement de rotation pour répartir la pâte sur toute la surface. Posez sur le feu et quand le tour de la crêpe se colore en roux clair, il est temps de la retourner.",
+            "Laissez cuire environ une minute de ce côté et la crêpe est prête.",
+            "Répétez jusqu'à épuisement de la pâte."
+        ]
+    },
+    {
+        "nom": "Tarte Baby Yoda",
+        "auteur": "Estefania",
+        "univers": "Disney",
+        "description": "Sesame, ouvre-toi !",
+        "ingredients": [
+            {
+                "_id": farine_id,
+                "unite": "gramme",
+                "quantite": 250
+            },
+            {
+                "_id": oeuf_id,
+                "unite": "pièce",
+                "quantite": 4
+            },
+            {
+                "_id": lait_id,
+                "unite": "centilitre",
+                "quantite": 50
+            },
+            {
+                "_id": sel_id,
+                "unite": "pincée",
+                "quantite": 1
+            },
+            {
+                "_id": sucre_id,
+                "unite": "cuillère à soupe",
+                "quantite": 2
+            },
+            {
+                "_id": beurre_id,
+                "unite": "gramme",
+                "quantite": 50
+            }
+        ],
+        "ustensiles": [
+            "poele",
+            "fouet",
+            "spatule",
+            "saladier"
+        ],
+        "temps": {
+            "tempsPreparation": "10mn",
+            "tempsCuisson": "15mn",
+            "tempsTotal": "25mn"
+        },
+        "tags": {
+            "typePlat": "Dessert",
+            "difficulte": 2,
+            "cout": 1,
+            "saison": "Toutes"
+        },
+        "photo": "disney/disney-baby-yoda-pie.jpg",
+        "etapePreparation": [
+            "Mettez la farine dans un saladier avec le sel et le sucre.",
+            "Faites un puits au milieu et versez-y les œufs.",
+            "Commencez à mélanger doucement. Quand le mélange devient épais, ajoutez le lait froid petit à petit.",
+            "Quand tout le lait est mélangé, la pâte doit être assez fluide. Si elle vous paraît trop épaisse, rajoutez un peu de lait. Ajoutez ensuite le beurre fondu refroidi, mélangez bien.",
+            "Faites cuire les crêpes dans une poêle chaude (par précaution légèrement huilée si votre poêle à crêpes n'est pas anti-adhésive). Versez une petite louche de pâte dans la poêle, faites un mouvement de rotation pour répartir la pâte sur toute la surface. Posez sur le feu et quand le tour de la crêpe se colore en roux clair, il est temps de la retourner.",
+            "Laissez cuire environ une minute de ce côté et la crêpe est prête.",
+            "Répétez jusqu'à épuisement de la pâte."
+        ]
+    },
+    {
+        "nom": "Smoothie Mike Wazowski",
+        "auteur": "Estefania",
+        "univers": "Disney",
+        "description": "Sesame, ouvre-toi !",
+        "ingredients": [
+            {
+                "_id": farine_id,
+                "unite": "gramme",
+                "quantite": 250
+            },
+            {
+                "_id": oeuf_id,
+                "unite": "pièce",
+                "quantite": 4
+            },
+            {
+                "_id": lait_id,
+                "unite": "centilitre",
+                "quantite": 50
+            },
+            {
+                "_id": sel_id,
+                "unite": "pincée",
+                "quantite": 1
+            },
+            {
+                "_id": sucre_id,
+                "unite": "cuillère à soupe",
+                "quantite": 2
+            },
+            {
+                "_id": beurre_id,
+                "unite": "gramme",
+                "quantite": 50
+            }
+        ],
+        "ustensiles": [
+            "poele",
+            "fouet",
+            "spatule",
+            "saladier"
+        ],
+        "temps": {
+            "tempsPreparation": "10mn",
+            "tempsCuisson": "15mn",
+            "tempsTotal": "25mn"
+        },
+        "tags": {
+            "typePlat": "Dessert",
+            "difficulte": 2,
+            "cout": 1,
+            "saison": "Toutes"
+        },
+        "photo": "disney/disney-monsters-inc-green-smoothie.jpg",
+        "etapePreparation": [
+            "Mettez la farine dans un saladier avec le sel et le sucre.",
+            "Faites un puits au milieu et versez-y les œufs.",
+            "Commencez à mélanger doucement. Quand le mélange devient épais, ajoutez le lait froid petit à petit.",
+            "Quand tout le lait est mélangé, la pâte doit être assez fluide. Si elle vous paraît trop épaisse, rajoutez un peu de lait. Ajoutez ensuite le beurre fondu refroidi, mélangez bien.",
+            "Faites cuire les crêpes dans une poêle chaude (par précaution légèrement huilée si votre poêle à crêpes n'est pas anti-adhésive). Versez une petite louche de pâte dans la poêle, faites un mouvement de rotation pour répartir la pâte sur toute la surface. Posez sur le feu et quand le tour de la crêpe se colore en roux clair, il est temps de la retourner.",
+            "Laissez cuire environ une minute de ce côté et la crêpe est prête.",
+            "Répétez jusqu'à épuisement de la pâte."
+        ]
+    },
+    {
+        "nom": "Crème glacée Mickey",
+        "auteur": "Estefania",
+        "univers": "Disney",
+        "description": "Sesame, ouvre-toi !",
+        "ingredients": [
+            {
+                "_id": farine_id,
+                "unite": "gramme",
+                "quantite": 250
+            },
+            {
+                "_id": oeuf_id,
+                "unite": "pièce",
+                "quantite": 4
+            },
+            {
+                "_id": lait_id,
+                "unite": "centilitre",
+                "quantite": 50
+            },
+            {
+                "_id": sel_id,
+                "unite": "pincée",
+                "quantite": 1
+            },
+            {
+                "_id": sucre_id,
+                "unite": "cuillère à soupe",
+                "quantite": 2
+            },
+            {
+                "_id": beurre_id,
+                "unite": "gramme",
+                "quantite": 50
+            }
+        ],
+        "ustensiles": [
+            "poele",
+            "fouet",
+            "spatule",
+            "saladier"
+        ],
+        "temps": {
+            "tempsPreparation": "10mn",
+            "tempsCuisson": "15mn",
+            "tempsTotal": "25mn"
+        },
+        "tags": {
+            "typePlat": "Dessert",
+            "difficulte": 2,
+            "cout": 1,
+            "saison": "Toutes"
+        },
+        "photo": "disney/disney-mickey-cookie-dough.jpg",
+        "etapePreparation": [
+            "Mettez la farine dans un saladier avec le sel et le sucre.",
+            "Faites un puits au milieu et versez-y les œufs.",
+            "Commencez à mélanger doucement. Quand le mélange devient épais, ajoutez le lait froid petit à petit.",
+            "Quand tout le lait est mélangé, la pâte doit être assez fluide. Si elle vous paraît trop épaisse, rajoutez un peu de lait. Ajoutez ensuite le beurre fondu refroidi, mélangez bien.",
+            "Faites cuire les crêpes dans une poêle chaude (par précaution légèrement huilée si votre poêle à crêpes n'est pas anti-adhésive). Versez une petite louche de pâte dans la poêle, faites un mouvement de rotation pour répartir la pâte sur toute la surface. Posez sur le feu et quand le tour de la crêpe se colore en roux clair, il est temps de la retourner.",
+            "Laissez cuire environ une minute de ce côté et la crêpe est prête.",
+            "Répétez jusqu'à épuisement de la pâte."
+        ]
+    },
+    {
+        "nom": "Cookies Raiponce",
+        "auteur": "Estefania",
+        "univers": "Disney",
+        "description": "Sesame, ouvre-toi !",
+        "ingredients": [
+            {
+                "_id": farine_id,
+                "unite": "gramme",
+                "quantite": 250
+            },
+            {
+                "_id": oeuf_id,
+                "unite": "pièce",
+                "quantite": 4
+            },
+            {
+                "_id": lait_id,
+                "unite": "centilitre",
+                "quantite": 50
+            },
+            {
+                "_id": sel_id,
+                "unite": "pincée",
+                "quantite": 1
+            },
+            {
+                "_id": sucre_id,
+                "unite": "cuillère à soupe",
+                "quantite": 2
+            },
+            {
+                "_id": beurre_id,
+                "unite": "gramme",
+                "quantite": 50
+            }
+        ],
+        "ustensiles": [
+            "poele",
+            "fouet",
+            "spatule",
+            "saladier"
+        ],
+        "temps": {
+            "tempsPreparation": "10mn",
+            "tempsCuisson": "15mn",
+            "tempsTotal": "25mn"
+        },
+        "tags": {
+            "typePlat": "Dessert",
+            "difficulte": 2,
+            "cout": 1,
+            "saison": "Toutes"
+        },
+        "photo": "disney/cookies-rapunzel.jpg",
+        "etapePreparation": [
+            "Mettez la farine dans un saladier avec le sel et le sucre.",
+            "Faites un puits au milieu et versez-y les œufs.",
+            "Commencez à mélanger doucement. Quand le mélange devient épais, ajoutez le lait froid petit à petit.",
+            "Quand tout le lait est mélangé, la pâte doit être assez fluide. Si elle vous paraît trop épaisse, rajoutez un peu de lait. Ajoutez ensuite le beurre fondu refroidi, mélangez bien.",
+            "Faites cuire les crêpes dans une poêle chaude (par précaution légèrement huilée si votre poêle à crêpes n'est pas anti-adhésive). Versez une petite louche de pâte dans la poêle, faites un mouvement de rotation pour répartir la pâte sur toute la surface. Posez sur le feu et quand le tour de la crêpe se colore en roux clair, il est temps de la retourner.",
+            "Laissez cuire environ une minute de ce côté et la crêpe est prête.",
+            "Répétez jusqu'à épuisement de la pâte."
+        ]
+    },
+    {
+        "nom": "Snacks La Petite Sirène",
+        "auteur": "Estefania",
+        "univers": "Disney",
+        "description": "Sesame, ouvre-toi !",
+        "ingredients": [
+            {
+                "_id": farine_id,
+                "unite": "gramme",
+                "quantite": 250
+            },
+            {
+                "_id": oeuf_id,
+                "unite": "pièce",
+                "quantite": 4
+            },
+            {
+                "_id": lait_id,
+                "unite": "centilitre",
+                "quantite": 50
+            },
+            {
+                "_id": sel_id,
+                "unite": "pincée",
+                "quantite": 1
+            },
+            {
+                "_id": sucre_id,
+                "unite": "cuillère à soupe",
+                "quantite": 2
+            },
+            {
+                "_id": beurre_id,
+                "unite": "gramme",
+                "quantite": 50
+            }
+        ],
+        "ustensiles": [
+            "poele",
+            "fouet",
+            "spatule",
+            "saladier"
+        ],
+        "temps": {
+            "tempsPreparation": "10mn",
+            "tempsCuisson": "15mn",
+            "tempsTotal": "25mn"
+        },
+        "tags": {
+            "typePlat": "Dessert",
+            "difficulte": 2,
+            "cout": 1,
+            "saison": "Toutes"
+        },
+        "photo": "disney/disney-little-mermaid-clam-shells.jpg",
         "etapePreparation": [
             "Mettez la farine dans un saladier avec le sel et le sucre.",
             "Faites un puits au milieu et versez-y les œufs.",
