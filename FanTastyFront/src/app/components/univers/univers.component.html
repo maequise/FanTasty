@@ -4,7 +4,9 @@
         <li class="cards_item" *ngFor="let recette of recettes">
             <a routerLink="/{{getUniverseSelected()}}/recette/{{recette.id}}">
                 <div class="card">
-                    <div class="card_image"><img src="../../assets/disney-frozen-cupcakes.jpg"></div>
+                    <!-- <div class="card_image"><img src="../../assets/disney-frozen-cupcakes.jpg"></div> -->
+                    <div class="card_image"><img src="http://localhost:60599/Resources/{{recette.photo}}" alt=""></div>
+                    
                 </div>
                 <button class="btn card_btn">{{recette.nom}}</button>
             </a>
