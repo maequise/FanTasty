@@ -29,3 +29,34 @@ body.dark{
 .card-bg{ 
   background-color: white ;
 }
+
+.sd-light {
+  background-color: #FFFFFF;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  
+
+}
+
+.sd-dark {
+  background-color: #28282B;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;
+  
+}
+
+
+.bgColorMarvel {
+  background-color: #d32f2f;
+}
+
+.bgColorNaruto {
+  background-color: #f85325d8;
+}
+.bgColorLight {
+  background-color: #745bf1b7;
+}
+.bgColorDisney {
+  background-color: #10b9d6;
+}
+.bgColorHarryPotter {
+  background-color: #ab003d;
+}

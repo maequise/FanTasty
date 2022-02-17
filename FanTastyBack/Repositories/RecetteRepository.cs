@@ -4,6 +4,7 @@ using FanTastyBack.Repositories.Interfaces;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FanTastyBack.Repositories
 {
@@ -55,7 +56,10 @@ namespace FanTastyBack.Repositories
 
         public List<Recette> FindByUnivers(string univers)
         {
-            List<Recette> recettes = this._recettes.Find(rec => rec.Univers==univers).ToList();
+            List<Recette> recettes = this._recettes.AsQueryable<Recette>()
+                .Where(x => x.Univers.ToLower() == univers.ToLower())
+                .ToList();
+           
             for (int i = 0; i < recettes.Count; i++)
             {
                 foreach (IngredientRecette ingr in recettes[i].Ingredients)

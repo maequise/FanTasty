@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeLightComponent } from './home-light/home-light.component';
-import { NarutoComponent } from './naruto/naruto.component';
-import { HarrypotterComponent } from './harrypotter/harrypotter.component';
-import { DisneyComponent } from './disney/disney.component';
-import { MarvelComponent } from './marvel/marvel.component';
-import { RecipeTemplateComponent } from './recipe-template/recipe-template.component';
+import { HomeLightComponent } from './components/home-light/home-light.component';
+import { NarutoComponent } from './components/naruto/naruto.component';
+import { HarrypotterComponent } from './components/harrypotter/harrypotter.component';
+import { DisneyComponent } from './components/disney/disney.component';
+import { MarvelComponent } from './components/marvel/marvel.component';
+import { RecipeTemplateComponent } from './components/recipe-template/recipe-template.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home-light', pathMatch: 'full' },
@@ -14,7 +14,11 @@ const routes: Routes = [
   { path: 'harrypotter', component: HarrypotterComponent },
   { path: 'disney', component: DisneyComponent },
   { path: 'marvel', component: MarvelComponent },
-  { path: 'recette', component: RecipeTemplateComponent }
+  { path: 'disney/recette/:id', component: RecipeTemplateComponent },
+  { path: 'naruto/recette/:id', component: RecipeTemplateComponent },
+  { path: 'harrypotter/recette/:id', component: RecipeTemplateComponent },
+  { path: 'marvel/recette/:id', component: RecipeTemplateComponent },
+
 
 
 ];

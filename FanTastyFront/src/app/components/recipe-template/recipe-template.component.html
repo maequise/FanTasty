@@ -1,0 +1,45 @@
+<!--Components Block-->
+<div class="recipe-card card-bg">
+    <div class="description">
+        <h2 class="title-recipe">Pasta with Pesto and Tomatoes</h2>
+        <p>#Moyen #BonMarché #AllSeasons</p>
+
+        <h2 class="subtitle-ingredients">Ingrédients</h2>
+        <ul class="ingredients" *ngFor="let ingredientRecette of recette?.ingredients">
+            <li>{{ingredientRecette.ingredient.nom}} | {{ingredientRecette.quantite}} {{ingredientRecette.unite}}</li>
+        </ul>
+
+    </div>
+
+    <div>
+        <figure>
+            <img src="../../assets/disney-baby-yoda-pie.jpg" />
+            <figcaption>Shania</figcaption>
+        </figure>
+        <ul>
+            <li>🥄Personnes: {{recette?.nombrePersonnes}}</li>
+            <li>⏲️Temps de préparation : {{recette?.temps?.tempsPreparation}}</li>
+            <li>👨🏻‍🍳Temps de Cuisson : {{recette?.temps?.tempsCuisson}}</li>
+            <li>✔️Temps total : {{recette?.temps?.tempsTotal}}</li>
+
+        </ul>
+
+    </div>
+</div>
+
+<div id="process"></div>
+
+<div class="process">
+    <h2 class="subtitle-recipe">Préparation</h2>
+
+    <ol class="instructions" *ngFor="let etape of recette?.etapes; let index = index">
+        <h3 class="subtitle-process">Etape {{index +1}}</h3>
+        <li class="instructions">{{etape}}</li>
+    </ol>
+</div>
+
+<!--End Components Block-->
+
+<!--Common App Blocks-->
+<app-footer></app-footer>
+<!--End Common Blocks CSS-->
