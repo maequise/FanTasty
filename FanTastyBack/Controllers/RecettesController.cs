@@ -19,7 +19,14 @@ namespace FanTastyBack.Controllers
         [HttpGet]
         public IActionResult FindAll()
         {
-            return Ok(this._service.FindAll());
+            try
+            {
+                return Ok(this._service.FindAll());
+            }
+            catch (NotFoundException e)
+            {
+                return NotFound(e.Message);
+            }
         }
 
         [HttpGet("{id}")]
