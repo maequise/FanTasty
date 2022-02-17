@@ -1,14 +1,14 @@
 :root{
   
   --main-color-light: #7B61F8;
-  --link-color-light: #7a61f8ea;
+  --link-color-light: #7a61f8a8;
   --bg-color-dark: #1d1e1f;
   --main-color-naruto : #F85125;
-  --link-color-naruto : #f85325cb;
+  --link-color-naruto : #f853259f;
   --main-color-harrypotter : #c30046;
-  --link-color-harrypotter: #c30048d3;
+  --link-color-harrypotter: #c30048af;
   --main-color-disney : #12c4e3;
-  --link-color-disney : #12c4e3ce;
+  --link-color-disney : #12c4e3af;
   --main-color-marvel : #e53935;
   --link-color-marvel: #e53835c7; 
 }
