@@ -60,7 +60,7 @@ export class RecipeTemplateComponent implements OnInit {
     if (urlUniverse.startsWith('/naruto')) {
       this.href = '/assets/css/naruto.component.css';
     } else if (urlUniverse.startsWith('/disney')) {
-      this.href = '~/assets/css/disney.component.css';
+      this.href = '/assets/css/disney.component.css';
     } else if (urlUniverse.startsWith('/harrypotter')) {
       this.href = '/assets/css/harrypotter.component.css';
     } else if (urlUniverse === '') {

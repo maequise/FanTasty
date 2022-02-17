@@ -339,9 +339,13 @@ h1 {
 }
 
 .sidebar {
-  padding: 8px;
+  margin: 0;
+  padding-right: 6px;
+  padding-left: 6px;
+  padding-top: 0;
+  padding-bottom: 0;
   position: fixed;
-  width: 36px;
+  width: 35px;
   height: auto;
   right: 0px; 
   top: 55%; 
@@ -355,14 +359,11 @@ h1 {
 
 .sidebar .ico {
   display: block; 
-  padding: 0px;  
+  padding: 0px;
+  margin:0;  
 }
 
-.sidebar:hover .ico {
-  
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  
+.styleA-sideBar{
+  margin: 2px;
+  padding: 0;
 }

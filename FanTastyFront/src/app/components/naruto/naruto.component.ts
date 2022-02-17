@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-naruto',
   templateUrl: './naruto.component.html',
-  styleUrls: ['../../assets/css/naruto.component.css'],
+  styleUrls: ['../../../assets/css/naruto.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class NarutoComponent implements OnInit {
