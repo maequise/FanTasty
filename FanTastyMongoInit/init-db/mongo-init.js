@@ -32,6 +32,39 @@ cremeEpaisse_id = ObjectId()
 extraitVanille_id = ObjectId()
 biere_id = ObjectId()
 oeuf_id = ObjectId()
+poivre_id = ObjectId()
+sauceSriracha_id = ObjectId()
+pimentRouge_id = ObjectId()
+confitDOrange_id = ObjectId()
+coteDePorc_id = ObjectId()
+cremeFouettee_id = ObjectId()
+colorantAlimentaireBleu_id = ObjectId()
+chocolatBlanc_id = ObjectId()
+lait_id = ObjectId()
+vanille_id = ObjectId()
+beurreDeCacahouete_id = ObjectId()
+chocolatDeCouverture_id = ObjectId()
+pomme_id = ObjectId()
+celeri_id = ObjectId()
+bettes_id = ObjectId()
+feculeDePommeDeTerreKatakuriko_id = ObjectId()
+ail_id = ObjectId()
+gingembre_id = ObjectId()
+sake_id = ObjectId()
+cuisseDePoulet_id = ObjectId()
+eau_id = ObjectId()
+huileVegetale_id = ObjectId()
+carotte_id = ObjectId()
+mirin_id = ObjectId()
+dashiLiquide_id = ObjectId()
+edamame_id = ObjectId()
+tofuFritAburaage_id = ObjectId()
+konnyaku_id = ObjectId()
+tofuFritAburaage_id = ObjectId()
+algueHijikiSechee_id = ObjectId()
+sauceSoja_id = ObjectId()
+katsuobushi_id = ObjectId()
+rizJaponais_id = ObjectId()
 
 db.Utilisateurs.insertMany([
     {
@@ -165,7 +198,7 @@ db.Ingredients.insertMany([
         "image": "http://img.url"
     },
     {
-        "_id": algueHijikiSéchée_id,
+        "_id": algueHijikiSechee_id,
         "nom": "Algue hijiki séchée",
         "image": "http://img.url"
     },
