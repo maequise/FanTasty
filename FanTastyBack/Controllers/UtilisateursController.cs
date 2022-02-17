@@ -1,5 +1,6 @@
 ﻿using FanTastyBack.Models;
 using FanTastyBack.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FanTastyBack.Controllers
@@ -68,6 +69,11 @@ namespace FanTastyBack.Controllers
             return Ok("Recette favoris supprimé");
         }
 
+        [HttpPost("login")]
+        public IActionResult Login(Login user)
+        {
+            return Ok(this._service.Login(user.Username, user.Password));
+        }
 
     }
 }
