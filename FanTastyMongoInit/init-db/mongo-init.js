@@ -140,7 +140,173 @@ db.Ingredients.insertMany([
         "_id": oeuf_id,
         "nom": "oeuf",
         "image": "http://img.url"
+    },
+    {
+        "_id": rizJaponais_id,
+        "nom": "riz japonais",
+        "image": "http://img.url"
+    },
+    {
+        "_id": katsuobushi_id,
+        "nom": "katsuobushi",
+        "image": "http://img.url"
+    },
+    {
+        "_id": sauceSoja_id,
+        "nom": "sauce soja",
+        "image": "http://img.url"
+    },
+    {
+        "_id": algueHijikiSéchée_id,
+        "nom": "Algue hijiki séchée",
+        "image": "http://img.url"
+    },
+    {
+        "_id": tofuFritAburaage_id,
+        "nom": "tofu frit aburaage",
+        "image": "http://img.url"
+    },
+    {
+        "_id": konnyaku_id,
+        "nom": "konnyaku",
+        "image": "http://img.url"
+    },
+    {
+        "_id": tofuFritAburaage_id,
+        "nom": "tofu frit aburaage",
+        "image": "http://img.url"
+    },
+    {
+        "_id": edamame_id,
+        "nom": "edamame",
+        "image": "http://img.url"
+    },
+    {
+        "_id": dashiLiquide_id,
+        "nom": "dashi liquide",
+        "image": "http://img.url"
+    },
+    {
+        "_id": mirin_id,
+        "nom": "mirin",
+        "image": "http://img.url"
+    },
+    {
+        "_id": carotte_id,
+        "nom": "carotte",
+        "image": "http://img.url"
+    },
+    {
+        "_id": huileVegetale_id,
+        "nom": "huile végétale",
+        "image": "http://img.url"
+    },
+    {
+        "_id": eau_id,
+        "nom": "eau",
+        "image": "http://img.url"
+    },
+    {
+        "_id": cuisseDePoulet_id,
+        "nom": "cuisse de poulet",
+        "image": "http://img.url"
+    },
+    {
+        "_id": sake_id,
+        "nom": "sake",
+        "image": "http://img.url"
+    },
+    {
+        "_id": gingembre_id,
+        "nom": "gingembre",
+        "image": "http://img.url"
+    },
+    {
+        "_id": ail_id,
+        "nom": "ail",
+        "image": "http://img.url"
+    },
+    {
+        "_id": feculeDePommeDeTerreKatakuriko_id,
+        "nom": "fécule de pomme de terre katakuriko",
+        "image": "http://img.url"
+    },
+    {
+        "_id": bettes_id,
+        "nom": "bette",
+        "image": "http://img.url"
+    },
+    {
+        "_id": celeri_id,
+        "nom": "céleri",
+        "image": "http://img.url"
+    },
+    {
+        "_id": pomme_id,
+        "nom": "pomme",
+        "image": "http://img.url"
+    },
+    {
+        "_id": chocolatDeCouverture_id,
+        "nom": "chocolat de couverture",
+        "image": "http://img.url"
+    },
+    {
+        "_id": beurreDeCacahouete_id,
+        "nom": "beurre de cacahuète",
+        "image": "http://img.url"
+    },
+    {
+        "_id": vanille_id,
+        "nom": "vanille",
+        "image": "http://img.url"
+    },
+    {
+        "_id": lait_id,
+        "nom": "lait",
+        "image": "http://img.url"
+    },
+    {
+        "_id": chocolatBlanc_id,
+        "nom": "chocolat blanc",
+        "image": "http://img.url"
+    },
+    {
+        "_id": colorantAlimentaireBleu_id,
+        "nom": "colorant alimentaire bleu",
+        "image": "http://img.url"
+    },
+    {
+        "_id": cremeFouettee_id,
+        "nom": "crème fouttée",
+        "image": "http://img.url"
+    },
+    {
+        "_id": coteDePorc_id,
+        "nom": "côte de porc",
+        "image": "http://img.url"
+    },
+    {
+        "_id": confitDOrange_id,
+        "nom": "confit d'orange",
+        "image": "http://img.url"
+    },
+    {
+        "_id": pimentRouge_id,
+        "nom": "piment rouge",
+        "image": "http://img.url"
+    },
+    {
+        "_id": sauceSriracha_id,
+        "nom": "sauce sriracha",
+        "image": "http://img.url"
+    },
+    {
+        "_id": poivre_id,
+        "nom": "poivre",
+        "image": "http://img.url"
     }
+    
 ]);
 
 db.Recettes.insertMany([
@@ -358,5 +524,488 @@ db.Recettes.insertMany([
             "Laissez cuire environ une minute de ce côté et la crêpe est prête.",
             "Répétez jusqu'à épuisement de la pâte."
         ]
-    }
+    },
+        {
+            "nom": "Okaka Onigiri",
+            "auteur": "Timothée",
+            "univers": "Naruto",
+        "description" : "Le plat préféré de Sasuke",
+            "ingredients": [
+                {
+                    "_id": rizJaponais_id,
+                    "quantite": 1,
+                    "unite": "tasse"
+                },
+                {
+                    "_id": katsuobushi_id,
+                    "quantite": 0.25,
+                    "unite": "tasse"
+                },
+                {
+                    "_id": sauceSoja_id,
+                    "quantite": 1,
+                    "unite": "cuillère à soupe"
+                }
+            ],
+            "ustensiles": [
+                "bol"
+            ],
+            "nombrePersonnes": 1,
+            "temps": {
+                "tempsPreparation": "",
+                "tempsCuisson": "",
+                "tempsTotal": ""
+            },
+            "tags": {
+                "typePlat": "Plat",
+                "difficulte": 1,
+                "cout": 1,
+                "saison": "Toutes"
+            },
+            "photo": "url de la photo",
+            "etapePreparation": [
+                "Mettez le katsuobushi dans un bol moyen.",
+                "Assaisonner de saucec soja.",
+                "Mettez le riz cuit à la vapeur dans le bol et mélangez bien avec le katsuobushi.",
+                "Mouillez-vous les mains dans l'eau pour que le riz ne colle pas.",
+                "Placez la moitié du riz sur vos mains. Former le riz en rond ou en triangle, en appuyant légèrement avec vos deux paumes."
+            ]
+        },
+        {
+            "nom": "Salade d'algues hijiki",
+            "auteur": "Timothée",
+            "univers": "Naruto",
+        "description" : "Le favori de Danzo",
+            "ingredients": [
+                {
+                    "_id": algueHijikiSéchée_id,
+                    "quantite": 25,
+                    "unite": "gramme"
+                },
+                {
+                    "_id": tofuFritAburaage_id,
+                    "quantite": 2,
+                    "unite": "morceaux"
+                },
+                {
+                    "_id": konnyaku_id,
+                    "quantite": 100,
+                    "unite": "gramme"
+                },
+                {
+                    "_id": edamame_id,
+                    "quantite": 125,
+                    "unite": "gramme"
+                },
+                {
+                    "_id": dashiLiquide_id,
+                    "quantite": 480,
+                    "unite": "millilitre"
+                },
+                {
+                    "_id": mirin_id,
+                    "quantite": 60,
+                    "unite": "millilitre"
+                },
+                {
+                    "_id": sauceSoja_id,
+                    "quantite": 60,
+                    "unite": "millilitre"
+                },
+                {
+                    "_id": carotte_id,
+                    "quantite": 1,
+                    "unite": "pièce"
+                },
+                {
+                    "_id": huileVegetale_id,
+                    "quantite": 15,
+                    "unite": "millilitre"
+                }
+            ],
+            "ustensiles": [
+                "bol",
+                "casserole",
+                "passoire",
+                ""
+            ],
+            "nombrePersonnes": 4,
+            "temps": {
+                "tempsPreparation": "30mn",
+                "tempsCuisson": "38mn",
+                "tempsTotal": "1h08"
+            },
+            "tags": {
+                "typePlat": "Plat",
+                "difficulte": 2,
+                "cout": 2,
+                "saison": "Toutes"
+            },
+            "photo": "url de la photo",
+            "etapePreparation": [
+                "Mettez les hijiki dans un bol et recouvrez-les d'eau froide. Faites tremper 30 minutes",
+                "Pendant ce temps, mettez les morceaux d'aburaage dans une passoire au-dessus d'un évier et versez de l'eau bouillante dessus. Égouttez, coupez les morceaux finement et réservez.",
+                "Portez une casserole d'eau à ébullition, ajoutez les edamame et faites cuire 5 minutes. Retirez les edamame, rincez-les sous l'eau froide et retirez les fèves des cosses. Réservez les edamame écossés.",
+                "Mettez le konnyaku dans la même casserole d'eau bouillante et faites cuire 3 minutes. Retirez-le de la casserole, coupez-le en tranches fines et réservez.",
+                "Faites chauffer l'huile dans une casserole à feu moyen. Ajoutez la carotte et faites cuire jusqu'à ce qu'elle soit tendre. Ajoutez les hijiki, l'aburaage et le konnyaku, puis mélangez bien.",
+                "Ajoutez le dashi et portez à ébullition. Ajoutez le mirin et la sauce soja, puis mélangez. Réduisez à feu moyen-doux et faites cuire pendant 30 minutes.",
+                "Après 30 minutes, ajoutez les edamame et mélangez. Continuez la cuisson à découvert jusqu'à ce que la sauce ait réduit et que vous puissiez voir le fond de la casserole. Servez et dégustez."
+            ]
+        },
+        {
+            "nom": "Zenzai",
+            "auteur": "Timothée",
+            "univers": "Naruto",
+        "description" : "Le favori de Hinata",
+            "ingredients": [
+                {
+                    "_id": haricotRouge_id,
+                    "quantite": 200,
+                    "unite": "gramme"
+                },
+                {
+                    "_id": eau_id,
+                    "quantite": 1.25,
+                    "unite": "litre"
+                },
+                {
+                    "_id": sucre_id,
+                    "quantite": 150,
+                    "unite": "gramme"
+                }
+            ],
+            "ustensiles": [
+                "bol",
+                "casserole",
+                "grill"
+            ],
+            "nombrePersonnes": 4,
+            "temps": {
+                "tempsPreparation": "",
+                "tempsCuisson": "1h",
+                "tempsTotal": "1h"
+            },
+            "tags": {
+                "typePlat": "Dessert",
+                "difficulte": 2,
+                "cout": 2,
+                "saison": "Toutes"
+            },
+            "photo": "url de la photo",
+            "etapePreparation": [
+                "Laver bien les haricots adzuki",
+                "Placer dans une casserole en recouvrant largement d'eau. Amenez à ébullition, coupez le feu et égouttez les haricots.",
+                "Remettez les haricots dans la casserole avec 1,25 l d'eau.",
+                "Amenez à nouveau à ébullition, puis baissez le feu et laissez mijoter jusqu'à ce que les haricots soient tendres et s'écrasent facilement sous la cuillère (50 min - 1 heure environ, le temps peu varier selon l'âge et la qualité des haricots).",
+                "Ajoutez le sucre et continuez à cuire quelques minutes.",
+                "Ajoutez de l'eau si besoin pour avoir la consistance d'une soupe.",
+                "Passez les mochis sous le grill (ou sur un grill en fonte) en les retournant régulièrement.",
+                "Ils vont gonfler et se boursoufler.",
+                "Quand ils sont bien dorés et gonflés, retirez du grill.",
+                "Placez un mochi dans chaque bol, et versez dessus la soupe de haricots chaude."
+
+            ]
+        },
+        {
+            "nom": "Poulet frit japonais karaage",
+            "auteur": "Timothée",
+            "univers": "Naruto",
+        "description" : "Le favori de Jiraiya",
+            "ingredients": [
+                {
+                    "_id": cuisseDePoulet_id,
+                    "quantite": 300,
+                    "unite": "gramme"
+                },
+                {
+                    "_id": sake_id,
+                    "quantite": 1,
+                    "unite": "cuillière à soupe"
+                },
+                {
+                    "_id": gingembre_id,
+                    "quantite": 5,
+                    "unite": "gramme"
+                },
+                {
+                    "_id": ail_id,
+                    "quantite": 2,
+                    "unite": "gousse"
+                },
+                {
+                    "_id": feculeDePommeDeTerreKatakuriko_id,
+                    "quantite": 60,
+                    "unite": "millilitre"
+                }
+            ],
+            "ustensiles": [
+                "saladier",
+                "poêle",
+                "grille"
+            ],
+            "nombrePersonnes": 4,
+            "temps": {
+                "tempsPreparation": "30mn",
+                "tempsCuisson": "",
+                "tempsTotal": "30mn"
+            },
+            "tags": {
+                "typePlat": "Plat",
+                "difficulte": 2,
+                "cout": 2,
+                "saison": "Toutes"
+            },
+            "photo": "url de la photo",
+            "etapePreparation": [
+                "Coupez le poulet en petits morceaux (laissez la peau pour plus de croustillant).",
+                "Dans un saladier, mélangez le gingembre avec l'ail, la sauce soja et le saké de cuisson. Ajoutez le poulet, enrobez-le bien et laissez mariner 30 minutes.",
+                "Égouttez tout excès de liquide et ajoutez le katakuriko. Mélangez jusqu'à ce que le poulet soit complètement enrobé.",
+                "Faites chauffer de l'huile dans une poêle jusqu'à ce qu'elle atteigne une température d'environ 180°C. Testez la température en mettant un peu de farine dans l'huile : si elle grésille en tombant, l'huile est assez chaude. Faites frire 3 ou 4 morceaux à la fois, jusqu'à ce qu'ils soient bien dorés. Quand ils sont prêts, retirez-les de la poêle et laissez-les sécher sur une grille.",
+                "Servez froid ou chaud, avec quelques quartiers de citron et un filet de mayonnaise japonaise."
+
+            ]
+        },
+        {
+            "nom": "Chocogrenouilles",
+            "auteur": "Timothée",
+            "univers": "Harry potter",
+        "description" : "La friandise ensorcelée préférée des sorciers",
+            "ingredients": [
+                {
+                    "_id": chocolatDeCouverture_id,
+                    "quantite": 200,
+                    "unite": "gramme"
+                },
+                {
+                    "_id": beurreDeCacahouete_id,
+                    "quantite": 70,
+                    "unite": "gramme"
+                },
+                {
+                    "_id": sucreRoux_id,
+                    "quantite": 25,
+                    "unite": "gramme"
+                },
+                {
+                    "_id": vanille_id,
+                    "quantite": 1,
+                    "unite": "pincée"
+                }
+            ],
+            "ustensiles": [
+                "cul de poule",
+                "moule en forme de grenouille",
+                "pinceau",
+                "bol",
+                "spatule"
+            ],
+            "nombrePersonnes": 4,
+            "temps": {
+                "tempsPreparation": "",
+                "tempsCuisson": "",
+                "tempsTotal": ""
+            },
+            "tags": {
+                "typePlat": "Dessert",
+                "difficulte": 2,
+                "cout": 1,
+                "saison": "Toutes"
+            },
+            "photo": "url de la photo",
+            "etapePreparation": [
+                "Tempérer le chocolat ou le faire fondre au bain-marie et le retirer du feu quand environ la moitié  est fondue, continuer de mélanger pour laisser fondre le chocolat doucement.",
+                "A l'aide d'un pinceau, passer une couche de chocolat à l'intérieur des moules. Retirer l'excédent de chocolat sur le moule. ",
+                "Laisser prendre au frais 5 minutes environ pour que le chocolat durcisse.",
+                "Renouveler l'opération.",
+                "Mélanger le beurre de cacahouète, le sucre, la vanille et le sel dans un petit bol.",
+                "Garnir l'intérieur des coques en chocolat et les \"fermer\" avec une couche de chocolat. Bien lisser le moule avec une spatule pour retirer l'excédent de chocolat.",
+                "Bien laisser durcir et démouler les chocolats. Conserver dans une boite en carton ou une boite hermétique."
+
+            ]
+        },
+        {
+            "nom": "Polyjuice potion",
+            "auteur": "Timothée",
+            "univers": "Harry potter",
+        "description" : "La potion qui te change de tête",
+            "ingredients": [
+                {
+                    "_id": bette_id,
+                    "quantite": 1,
+                    "unite": "botte"
+                },
+                {
+                    "_id": celeri_id,
+                    "quantite": 5,
+                    "unite": "branche"
+                },
+                {
+                    "_id": pomme_id,
+                    "quantite": 3,
+                    "unite": "pièce"
+                },
+                {
+                    "_id": gingembre_id,
+                    "quantite": 1,
+                    "unite": "morceau"
+                }
+            ],
+            "ustensiles": [
+                "blender",
+                "extracteur de jus"
+            ],
+            "nombrePersonnes": 4,
+            "temps": {
+                "tempsPreparation": "",
+                "tempsCuisson": "",
+                "tempsTotal": ""
+            },
+            "tags": {
+                "typePlat": "Boisson",
+                "difficulte": 1,
+                "cout": 1,
+                "saison": "Toutes"
+            },
+            "photo": "url de la photo",
+            "etapePreparation": [
+                "Bien laver les ingrédients et les couper en morceaux.",
+                "Passer à l'extracteur de jus",
+                "ou Passer au blender avec un peu d'eau ou d'eau de coco pour obtenir un smoothie vert et filtrer pour obtenir un jus lisse.",
+                "Transvaser dans des petites bouteilles, fioles ou tubes à essais, fermer et placer au frais ou dans un récipient remplir de glace. ",
+                "A réaliser le jour même, au plus près de l'arrivée des convives."
+            ]
+        },
+        {
+            "nom": "Bantha Cocoa",
+            "auteur": "Timothée",
+            "univers": "Star wars",
+        "description" : "Le délice de l'univers",
+            "ingredients": [
+                {
+                    "_id": lait_id,
+                    "quantite": 4,
+                    "unite": "tasse"
+                },
+                {
+                    "_id": vanille_id,
+                    "quantite": 1,
+                    "unite": "cuillière à café"
+                },
+                {
+                    "_id": chocolatBlanc_id,
+                    "quantite": 8,
+                    "unite": "carré"
+                },
+                {
+                    "_id": colorantAlimentaireBleu_id,
+                    "quantite": 2,
+                    "unite": "goutte"
+                },
+                {
+                    "_id": cremeFouettee_id,
+                    "quantite": 0,
+                    "unite": ""
+                }
+            ],
+            "ustensiles": [
+                "casserole",
+                "vérine"
+            ],
+            "nombrePersonnes": 4,
+            "temps": {
+                "tempsPreparation": "5",
+                "tempsCuisson": "5",
+                "tempsTotal": "10"
+            },
+            "tags": {
+                "typePlat": "Dessert",
+                "difficulte": 1,
+                "cout": 1,
+                "saison": "Toutes"
+            },
+            "photo": "url de la photo",
+            "etapePreparation": [
+                "Mélanger le lait, la vanille, le colorant alimentaire et le chocolat blanc dans une casserole moyenne.",
+                "Cuire à feu moyen-doux, en remuant souvent, jusqu'à ce que le chocolat chaud blanc mijote et fonde.",
+                "Ne le laissez pas bouillir.",
+                "Retirer du feu et servir immédiatement, garni de crème fouettée."
+            ]
+        },
+        {
+            "nom": "Pyro-côtelettes de chimaerok à la Dirge",
+            "auteur": "Timothée",
+            "univers": "World of warcraft",
+        "description" : "Elle te restaure 1962 points de vie et tu seras bien nourri",
+            "ingredients": [
+                {
+                    "_id": coteDePorc_id,
+                    "quantite": 4,
+                    "unite": "pièce"
+                },
+                {
+                    "_id": confitDOrange_id,
+                    "quantite": 25,
+                    "unite": "centilitre"
+                },
+                {
+                    "_id": sauceSoja_id,
+                    "quantite": 6,
+                    "unite": "centilitre"
+                },
+                {
+                    "_id": pimentRouge_id,
+                    "quantite": 1,
+                    "unite": "cuilliètre à soupe"
+                },
+                {
+                    "_id": gingembre_id,
+                    "quantite": 2,
+                    "unite": "cuilliètre à café"
+                },
+                {
+                    "_id": sauceSriracha_id,
+                    "quantite": 2,
+                    "unite": "cuilliètre à soupe"
+                },
+                {
+                    "_id": sel_id,
+                    "quantite": 0,
+                    "unite": ""
+                },
+                {
+                    "_id": poivre_id,
+                    "quantite": 0,
+                    "unite": ""
+                }
+            ],
+            "ustensiles": [
+                "plat",
+                "bol",
+                "poêle"
+            ],
+            "nombrePersonnes": 2,
+            "temps": {
+                "tempsPreparation": "",
+                "tempsCuisson": "20mn",
+                "tempsTotal": "20mn"
+            },
+            "tags": {
+                "typePlat": "Plat",
+                "difficulte": 1,
+                "cout": 1,
+                "saison": "Toutes"
+            },
+            "photo": "url de la photo",
+            "etapePreparation": [
+                "Préparez vos côtelettes en les rinçant à l’eau et placez-les dans un plat.",
+                "Saupoudrez les deux côtés avec du sel et du poivre et laissez-les de côté pendant que vous préparez la sauce.",
+                "Commencez par versez le confit d’oranges dans un bol (de préférence ignifugé).",
+                "Ajoutez la sauce de soja et le piment rouge.",
+                "Saupoudrez de gingembre.",
+                "Enfin, ajoutez deux cuillères à soupe de Sriracha. Mélangez le tout jusqu’à ce que vous avez une belle concoction à vous déboucher les sinus.",
+                "Faites chauffer un peu d’huile dans une poêle et ajoutez les côtelettes. Faites cuire à feu vif jusqu’à ce qu’elles commencent à dorer.",
+                "Baissez alors le feu et versez environ la moitié de votre sauce sur les côtelettes. Faites cuire à couvert à feu moyen-doux pendant environ 10 minutes, puis retournez les côtelettes et enduisez de nouveau avec la sauce.",
+                "Couvrez et laissez cuire 10 minutes de plus. Ajoutez plus de sauce pour des sensations fortes"
+            ]
+        }
 ])
