@@ -338,10 +338,10 @@ h1 {
   margin-left: 30px;
 }
 
-.sideBar {
+.sidebar {
   padding: 8px;
   position: fixed;
-  width: 35px;
+  width: 36px;
   height: auto;
   right: 0px; 
   top: 55%; 
@@ -350,14 +350,15 @@ h1 {
   -webkit-transform: translate(0%, -50%); 
   -moz-transform: translate(0%, -50%); 
   -o-transform: translate(0%, -50%); 
-  background-color: #303030; 
+  
 }
-.sideBar .ico {
+
+.sidebar .ico {
   display: block; 
   padding: 0px;  
 }
 
-.sideBar:hover .ico {
+.sidebar:hover .ico {
   
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;

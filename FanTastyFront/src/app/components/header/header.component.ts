@@ -16,30 +16,50 @@ export class HeaderComponent implements OnInit {
   iconTopContest: string = '../assets/concours.png';
   iconHome: string = '../../assets/home.png';
   iconLogin: string = '../../assets/login.png';
+  iconDisney: string = '../../assets/home-disney-light.png';
+  iconNaruto: string = '../../assets/home-naruto-light.png';
+  iconMarvel: string = '../../assets/home-marvel-light.png';
+  iconHarryPotter: string = '../../assets/home-harry-potter-light.png';
+  borderColorSideBar: string = 'borderColorLight';
+
+
 
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+
   }
 
   btnClickHome() {
     this.router.navigate(['']);
   }
 
+
   darkOnOff(event: Event) {
     let darkMode = <any>event;
     let element: Element = document.querySelector('body')!;
     let recipeCard: Element = document.querySelector('.recipe-card')!;
+    let sideBarBg: Element = document.querySelector('.sidebar')!;
 
-    console.log(recipeCard)
+    console.log(sideBarBg)
 
     if (darkMode === 'dark') {
-      (element.classList.add('dark'));
-      (recipeCard.classList.remove('card-bg'));
+      element.classList.add('dark');
+      sideBarBg.classList.remove('sd-light');
+      sideBarBg.classList.add('sd-dark');
+
+      if (recipeCard !== null) {
+        recipeCard.classList.remove('card-bg');
+      }
     } else {
       element.classList.remove('dark');
-      (recipeCard.classList.add('card-bg'));
+      if (recipeCard !== null) {
+        recipeCard.classList.add('card-bg');
+      }
+
+      sideBarBg.classList.remove('sd-dark');
+      sideBarBg.classList.add('sd-light');
     }
   }
 
@@ -137,18 +157,93 @@ export class HeaderComponent implements OnInit {
     let urlUniverse: string = this.router.url;
 
     if (urlUniverse.startsWith('/naruto')) {
-      this.iconLogin = '../../assets/login-naruto.png';
+      this.iconLogin = '../../assets/home-login-orange.png';
     } else if (urlUniverse.startsWith('/disney')) {
-      this.iconLogin = '../../assets/login-disney.png';
+      this.iconLogin = '../../assets/home-login-blue.png';
     } else if (urlUniverse.startsWith('/harrypotter')) {
-      this.iconLogin = '../../assets/login-harry-potter.png';
+      this.iconLogin = '../../assets/home-login-red-bordeaux.png';
     } else if (urlUniverse === '') {
       this.iconLogin = '../../assets/login.png';
     } else if (urlUniverse.startsWith('/marvel')) {
-      this.iconLogin = '../../assets/login-marvel.png';
+      this.iconLogin = '../../assets/home-login-red-marvel.png';
     }
 
     return this.iconLogin;
   }
+
+  getIconDisney(): string {
+    let urlUniverse: string = this.router.url;
+
+    if (urlUniverse.startsWith('/naruto')) {
+      this.iconDisney = '../../assets/home-disney-orange.png';
+    } else if (urlUniverse.startsWith('/disney')) {
+      this.iconDisney = '../../assets/home-disney-blue.png';
+    } else if (urlUniverse.startsWith('/harrypotter')) {
+      this.iconDisney = '../../assets/home-harrypotter-red-bordeaux.png';
+    } else if (urlUniverse === '') {
+      this.iconDisney = '../../assets/home-disney-light.png';
+    } else if (urlUniverse.startsWith('/marvel')) {
+      this.iconDisney = '../../assets/home-disney-red-marvel.png';
+    }
+
+    return this.iconDisney;
+  }
+
+  getIconNaruto(): string {
+    let urlUniverse: string = this.router.url;
+
+    if (urlUniverse.startsWith('/naruto')) {
+      this.iconNaruto = '../../assets/home-naruto-orange.png';
+    } else if (urlUniverse.startsWith('/disney')) {
+      this.iconNaruto = '../../assets/home-naruto-blue.png';
+    } else if (urlUniverse.startsWith('/harrypotter')) {
+      this.iconNaruto = '../../assets/home-naruto-red-bordeaux.png';
+    } else if (urlUniverse === '') {
+      this.iconNaruto = '../../assets/home-naruto-light.png';
+    } else if (urlUniverse.startsWith('/marvel')) {
+      this.iconNaruto = '../../assets/home-naruto-red-marvel.png';
+    }
+
+    return this.iconNaruto;
+  }
+
+  getIconMarvel(): string {
+    let urlUniverse: string = this.router.url;
+
+    if (urlUniverse.startsWith('/naruto')) {
+      this.iconMarvel = '../../assets/home-marvel-orange.png';
+    } else if (urlUniverse.startsWith('/disney')) {
+      this.iconMarvel = '../../assets/home-marvel-blue.png';
+    } else if (urlUniverse.startsWith('/harrypotter')) {
+      this.iconMarvel = '../../assets/home-marvel-red-bordeaux.png';
+    } else if (urlUniverse === '') {
+      this.iconMarvel = '../../assets/home-marvel-light.png';
+    } else if (urlUniverse.startsWith('/marvel')) {
+      this.iconMarvel = '../../assets/home-marvel-red-marvel.png';
+    }
+
+    return this.iconMarvel;
+  }
+
+  getIconHarryPotter(): string {
+    let urlUniverse: string = this.router.url;
+
+    if (urlUniverse.startsWith('/naruto')) {
+      this.iconHarryPotter = '../../assets/home-harry-potter-orange.png';
+    } else if (urlUniverse.startsWith('/disney')) {
+      this.iconHarryPotter = '../../assets/home-harry-potter-blue.png';
+    } else if (urlUniverse.startsWith('/harrypotter')) {
+      this.iconHarryPotter = '../../assets/home-harry-potter-red-bordeaux.png';
+    } else if (urlUniverse === '') {
+      this.iconHarryPotter = '../../assets/home-harry-potter-light.png';
+    } else if (urlUniverse.startsWith('/marvel')) {
+      this.iconHarryPotter = '../../assets/home-harry-potter-red-marvel.png';
+    }
+
+    return this.iconHarryPotter;
+  }
+
+
+
 
 }

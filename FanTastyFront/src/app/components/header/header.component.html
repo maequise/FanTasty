@@ -99,9 +99,13 @@
 
 <!--SideBar-->
 
-<div class="sideBar">
+<div class="sidebar sd-light">
     <a href="#"><img class="ico" [src]="getIconHome()"></a>
-    <a href="#"><img class="ico" [src]="getIconLogin()"></a>
-    <a href="#"><img class="ico" src="http://i224.photobucket.com/albums/dd65/etaguile/Youtube_zpsukjqxwxm.png"></a>
-    <a href="#"><img class="ico" src="http://i224.photobucket.com/albums/dd65/etaguile/Skype_zpsynhtoecv.png"></a>
+    <a><img class="ico" [src]="getIconLogin()"></a>
+    <a routerLink="/disney"><img class="ico" [src]="getIconDisney()"></a>
+    <a routerLink="/naruto"><img class="ico" [src]="getIconNaruto()"></a>
+    <a routerLink="/marvel"><img class="ico" [src]="getIconMarvel()"></a>
+    <a routerLink="/harrypotter"><img class="ico" [src]="getIconHarryPotter()"></a>
 </div>
+
+<router-outlet></router-outlet>
