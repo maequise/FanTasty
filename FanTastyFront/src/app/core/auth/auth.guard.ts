@@ -18,13 +18,18 @@ export class AuthGuard implements CanActivate {
   }
 
   private checkLogin(url: string) : boolean {
-    console.log('in guard chek login')
-    if(AuthService.isLogged) {
+    console.log('check login');
+
+    console.log(this.authService.currentUserValue);
+
+
+    if(this.authService.currentUserValue != null && this.authService.currentUserValue.token) {
+      //this.router.navigate(['/admin']);
+
+      console.log('in condition')
+
       return true;
     }
-
-    console.log('check auth service');
-    console.log(this.authService.isLogged);
 
     this.router.navigate(['/admin/login'])
 

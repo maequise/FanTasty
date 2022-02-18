@@ -6,6 +6,7 @@ export class Utilisateur {
   public recetteFavoris: string[];
   public preferenceIngredients: string[];
   public roles: string[];
+  private _token!: string | null;
 
   constructor(id: string, nom: string, prenom: string, email: string, recetteFavoris: string[], preferenceIngredients: string[], roles: string[]) {
     this.id = id;
@@ -15,5 +16,13 @@ export class Utilisateur {
     this.recetteFavoris = recetteFavoris;
     this.preferenceIngredients = preferenceIngredients;
     this.roles = roles;
+  }
+
+  public set token(token: string) {
+    this._token = token;
+  }
+
+  public get token() {
+    return this._token!;
   }
 }

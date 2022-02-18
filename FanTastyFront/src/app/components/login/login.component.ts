@@ -18,12 +18,13 @@ export class LoginComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private router : Router) { }
 
   ngOnInit(): void {
+    console.log(this.router);
   }
 
   login() : void {
     let user : Login = new Login(this.formLogin.get('username')?.value, this.formLogin.get('password')?.value);
 
-    this.authService.login(user).subscribe(result => {
+    this.authService.loginBis(user).subscribe(result => {
       console.log(result);
       if(result){
         this.router.navigate(['/admin']);

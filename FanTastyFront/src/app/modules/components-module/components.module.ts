@@ -8,10 +8,13 @@ import {RecipeTemplateComponent} from "../../components/recipe-template/recipe-t
 import {UniversComponent} from "../../components/univers/univers.component";
 import {AppRoutingModule} from "../../app-routing.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {BrowserModule} from "@angular/platform-browser";
 import {AppComponent} from "../../app.component";
 import {LoginComponent} from "../../components/login/login.component";
+import {AdminModuleModule} from "../admin-module/admin-module.module";
+import {AuthService} from "../../services/auth.service";
+import {AuthInterceptor} from "../../core/interceptors/auth.interceptor";
 
 
 @NgModule({
@@ -31,11 +34,13 @@ import {LoginComponent} from "../../components/login/login.component";
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
   exports: [
     LoginComponent
   ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class ComponentsModule { }

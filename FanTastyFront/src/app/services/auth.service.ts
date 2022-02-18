@@ -1,10 +1,11 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {Observable, of, pipe, Subject} from "rxjs";
+import {BehaviorSubject, Observable, Subject} from "rxjs";
 import {Constants} from "../core/Constants";
 import {Login} from "../models/Login";
 import {Utilisateur} from "../models/utilisateur";
-import {delay, tap} from "rxjs/operators";
+import {map} from "rxjs/operators";
+import {CookieService} from "ngx-cookie-service";
 
 @Injectable({
   providedIn: 'root'
@@ -14,53 +15,41 @@ export class AuthService {
 
   redirectUrl: string | null = null;
 
-  private static result = new Subject<boolean>();
+  private result = new Subject<boolean>();
 
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Access-Control-Allow-Origin': '*',
-      'Content-Type': 'application/json'
-    })
+  private currentUser: BehaviorSubject<any>;
+
+  constructor(private httpClient: HttpClient, private cookieService: CookieService) {
+    this.currentUser = new BehaviorSubject<any>(JSON.parse(localStorage.getItem("user")!));
+    if(this.currentUser.value){
+      this.isLogged = true;
+    }
   }
 
-  private static _isLogged: boolean;
-
-
-  static get isLogged(): boolean {
-    return this._isLogged;
+  public get currentUserValue(){
+    return this.currentUser.value;
   }
 
-  constructor(private httpClient: HttpClient) {
-  }
+  loginBis(user: Login): Observable<any> {
+    this.result.next(this.isLogged);
 
-  login(user: Login): Observable<boolean> {
-    AuthService.result.next(this.isLogged);
+    // @ts-ignore
+    return this.httpClient.post<Login>(Constants.URL_BACK + '/api/utilisateurs/login/', user).pipe(map(response => {
+      let userFound: Utilisateur = <Utilisateur><any>response;
 
-    this.httpClient.post<Login>(Constants.URL_BACK + '/api/utilisateurs/login/', user).subscribe({
-        next(response) {
-          let userFound: Utilisateur = <Utilisateur><any>response;
+      if (response != null && userFound.roles != null && userFound.roles.length >= 1) {
+        if (userFound.roles.includes('admin')) {
+          this.isLogged = true;
 
-          console.log(userFound);
+          this.result.next(this.isLogged);
 
-          if (response != null && userFound.roles != null && userFound.roles.length >= 1) {
-            if (userFound.roles.includes('admin')) {
-              console.log('roles founds !');
-              AuthService._isLogged = true;
-            }
+          userFound.token = 'current_token';
 
-            AuthService._isLogged = true;
+          localStorage.setItem("user", JSON.stringify(userFound));
 
-            AuthService.result.next(AuthService._isLogged);
-          }
-        },
-        error(err) {
-        },
-        complete() {
-          console.log('complete !')
+          return this.isLogged;
         }
-      },
-    );
-
-    return AuthService.result.asObservable();
+      }
+    }));
   }
 }
