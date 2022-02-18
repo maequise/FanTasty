@@ -32,6 +32,18 @@ export class RecipeTemplateComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    //add init to remove the light color when entering in the component
+    let card = document.querySelector('.recipe-card');
+    let body = document.querySelector('body');
+
+    let colorBodyIsDark = body?.classList.contains('dark');
+
+    if (colorBodyIsDark) {
+      card?.classList.remove('card-bg');
+    } else {
+      card?.classList.add('card-bg');
+    }
+
     let tag = this.render.createElement('link');
     this.href = this.getStyleHeader();
 

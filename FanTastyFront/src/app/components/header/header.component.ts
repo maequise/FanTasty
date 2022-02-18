@@ -49,12 +49,12 @@ export class HeaderComponent implements OnInit {
       sideBarBg.classList.remove('sd-light');
       sideBarBg.classList.add('sd-dark');
 
-      if (recipeCard !== null) {
+      if (recipeCard != null) {
         recipeCard.classList.remove('card-bg');
       }
     } else {
       element.classList.remove('dark');
-      if (recipeCard !== null) {
+      if (recipeCard != null) {
         recipeCard.classList.add('card-bg');
       }
 
