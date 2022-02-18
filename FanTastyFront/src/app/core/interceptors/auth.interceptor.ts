@@ -9,21 +9,13 @@ export class AuthInterceptor implements HttpInterceptor {
   }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log(req);
-    console.log(next);
-
-    console.log('service');
-    console.log(this.authService.isLogged)
-
-    if(this.authService.isLogged){
+    if(this.authService.isUserLogged()){
       req = req.clone( {
         setHeaders: {
           Authorization: this.authService.currentUserValue.token
         }
       });
     }
-
-    console.log(req);
 
     return next.handle(req);
   }

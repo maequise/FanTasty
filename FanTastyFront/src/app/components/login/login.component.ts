@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {AuthService} from "../../services/auth.service";
 import {Login} from "../../models/Login";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router, RouterState} from "@angular/router";
+import {HttpRequest} from "@angular/common/http";
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
   formLogin: FormGroup = this.formBuilder.group({
@@ -15,10 +16,12 @@ export class LoginComponent implements OnInit {
     password: []
   });
 
+  userLogged: boolean = false;
+
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private router : Router) { }
 
   ngOnInit(): void {
-    console.log(this.router);
+    this.userLogged = this.authService.isUserLogged();
   }
 
   login() : void {
@@ -27,8 +30,13 @@ export class LoginComponent implements OnInit {
     this.authService.loginBis(user).subscribe(result => {
       console.log(result);
       if(result){
-        this.router.navigate(['/admin']);
+        this.router.navigate(['/user/login']);
       }
     });
+  }
+
+  logout() : void {
+    this.authService.logout();
+    this.router.navigate(['/']);
   }
 }

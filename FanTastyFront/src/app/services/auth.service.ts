@@ -17,13 +17,23 @@ export class AuthService {
 
   private result = new Subject<boolean>();
 
-  private currentUser: BehaviorSubject<any>;
+  private readonly currentUser: BehaviorSubject<Utilisateur>;
 
   constructor(private httpClient: HttpClient, private cookieService: CookieService) {
-    this.currentUser = new BehaviorSubject<any>(JSON.parse(localStorage.getItem("user")!));
+    this.currentUser = new BehaviorSubject<Utilisateur>(JSON.parse(localStorage.getItem("user")!));
     if(this.currentUser.value){
       this.isLogged = true;
     }
+  }
+
+  isUserLogged() : boolean {
+    if(this.currentUser != null && this.currentUser.getValue() != null) {
+      if(this.currentUser.getValue().token != null) {
+        return true;
+      }
+    }
+
+    return false;
   }
 
   public get currentUserValue(){
@@ -51,5 +61,9 @@ export class AuthService {
         }
       }
     }));
+  }
+
+  logout(): void {
+    localStorage.removeItem('user');
   }
 }
