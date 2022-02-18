@@ -97,7 +97,8 @@ img {
   text-rendering: optimizeLegibility;
 }
 .title-top-container{
-  margin: 18px;
+  margin: 24px;
+  margin-left: 6px;
   padding: 0;
   color: var(--main-color-light);
   font-family: 'Encode Sans Expanded', sans-serif;
@@ -107,7 +108,7 @@ img {
 .icon-top-container{
   width: 30px;
   height: 30px;
-  margin-left: -6px;
+  margin-left: 0px;
 }
 
 .navmenu {
@@ -122,7 +123,7 @@ img {
 
 .navmodal {
   position: absolute;
-  margin-top: 140px;
+  margin-top: 145px;
   left: 0;
   z-index: 999;
   width: 100%;
@@ -131,7 +132,6 @@ img {
   overflow-x: hidden;
   border: none;
   outline: none;
-  background: #FAF9F6;
   transform: translateY(-1600px);
   transition: transform 0.5s ease-in-out;
   border-radius: 30px;
@@ -183,7 +183,7 @@ img {
   font-size: 1rem;
   font-weight: 500;
   line-height: inherit;  
-  color: #7a61f8ea;  
+  color: var(--link-color-light);  
   text-transform: capitalize;
   text-rendering: optimizeLegibility;
 }
@@ -207,6 +207,7 @@ img {
     flex-basis: 100%;
   }
 }
+
 
 .header-container{
   margin: 0;
@@ -353,7 +354,7 @@ h1 {
   width: 35px;
   height: auto;
   right: 0px; 
-  top: 55%; 
+  top: 60%; 
   border-radius: 15px;
   transform: translate(0%, -50%);
   -webkit-transform: translate(0%, -50%); 

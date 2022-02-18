@@ -12,10 +12,10 @@
 
 
     <div class="navmodal" id="navmodal">
-        <div class="container">
+        <div class="container bg-light-modal">
             <div class="closemenu" id="closemenu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
-                    <path [attr.fill]="pathColor" fill-rule="evenodd"
+                    <path [attr.fill]="getCloseModalPathColor()" fill-rule="evenodd"
                         d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z" />
                 </svg>
             </div>
@@ -73,15 +73,18 @@
 
 
 <div class="top-container">
-    <h3 class="title-top-container">Recettes de saison</h3>
     <img class="icon-top-container" [src]="getIconTopSeason()" />
-    <h3 class="title-top-container">Recette Random</h3>
+    <h3 class="title-top-container">Recettes de saison</h3>
+
     <img class="icon-top-container" [src]="getIconTopDice()" />
-    <h3 class="title-top-container">Concours</h3>
+    <h3 class="title-top-container">Recette Random</h3>
+
     <img class="icon-top-container" [src]="getIconTopContest()" />
-    <h3 class="title-top-container">Light/Dark</h3>
+    <h3 class="title-top-container">Concours</h3>
+
     <input #example type="checkbox" class="switch" id="example" reauired="required" (appDarkMode)="darkOnOff($event)" />
     <label for="example"></label>
+    <h3 class="title-top-container">Light/Dark</h3>
 </div>
 
 <hr class="hline_color">

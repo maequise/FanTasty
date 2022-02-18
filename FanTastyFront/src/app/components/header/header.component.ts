@@ -41,11 +41,14 @@ export class HeaderComponent implements OnInit {
     let element: Element = document.querySelector('body')!;
     let recipeCard: Element = document.querySelector('.recipe-card')!;
     let sideBarBg: Element = document.querySelector('.sidebar')!;
+    let modal: Element = document.querySelector('.container')!;
 
     console.log(sideBarBg)
 
     if (darkMode === 'dark') {
       element.classList.add('dark');
+      modal.classList.remove('bg-light-modal');
+      modal.classList.add('bg-dark-modal');
       sideBarBg.classList.remove('sd-light');
       sideBarBg.classList.add('sd-dark');
 
@@ -58,9 +61,28 @@ export class HeaderComponent implements OnInit {
         recipeCard.classList.add('card-bg');
       }
 
+      modal.classList.add('bg-light-modal');
+      modal.classList.remove('bg-dark-modal')
       sideBarBg.classList.remove('sd-dark');
       sideBarBg.classList.add('sd-light');
     }
+  }
+
+  getCloseModalPathColor(): string {
+    let urlUniverse: String = this.router.url;
+    if (urlUniverse.startsWith('/naruto')) {
+      this.pathColor = '#F85125';
+    } else if (urlUniverse.startsWith('/disney')) {
+      this.pathColor = '#12c4e3';
+    } else if (urlUniverse.startsWith('/harrypotter')) {
+      this.pathColor = '#c30046';
+    } else if (urlUniverse.startsWith('/marvel')) {
+      this.pathColor = '#e53935';
+    } else if (urlUniverse.startsWith('')) {
+      this.pathColor = '#7B61F8';
+    }
+
+    return this.pathColor;
   }
 
   getBurgerMenu(): string {
