@@ -73,15 +73,18 @@
 
 
 <div class="top-container">
-    <h3 class="title-top-container">Recettes de saison</h3>
     <img class="icon-top-container" [src]="getIconTopSeason()" />
-    <h3 class="title-top-container">Recette Random</h3>
+    <h3 class="title-top-container">Recettes de saison</h3>
+
     <img class="icon-top-container" [src]="getIconTopDice()" />
-    <h3 class="title-top-container">Concours</h3>
+    <h3 class="title-top-container">Recette Random</h3>
+
     <img class="icon-top-container" [src]="getIconTopContest()" />
-    <h3 class="title-top-container">Light/Dark</h3>
+    <h3 class="title-top-container">Concours</h3>
+
     <input #example type="checkbox" class="switch" id="example" reauired="required" (appDarkMode)="darkOnOff($event)" />
     <label for="example"></label>
+    <h3 class="title-top-container">Light/Dark</h3>
 </div>
 
 <hr class="hline_color">

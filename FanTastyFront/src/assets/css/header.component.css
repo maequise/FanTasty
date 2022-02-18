@@ -97,7 +97,8 @@ img {
   text-rendering: optimizeLegibility;
 }
 .title-top-container{
-  margin: 18px;
+  margin: 24px;
+  margin-left: 6px;
   padding: 0;
   color: var(--main-color-light);
   font-family: 'Encode Sans Expanded', sans-serif;
@@ -107,7 +108,7 @@ img {
 .icon-top-container{
   width: 30px;
   height: 30px;
-  margin-left: -6px;
+  margin-left: 0px;
 }
 
 .navmenu {
