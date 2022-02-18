@@ -1,0 +1,47 @@
+<div class="search-container">
+    <form [formGroup]="searchForm" (ngSubmit)="btnClickSearch()">
+        <div class="search-box">
+            <!-- <input type="text" class="search-input"
+        placeholder="miam miam..."
+        [(ng-model)]="searchString">
+        <input type="button" value="Do something" (click)="btnClickSearch()"> -->
+            <!-- <label>Nom : </label>
+            <input type="text" formControlName="nom"> -->
+
+
+            <h4>Type</h4>
+            <ng-container *ngFor="let item of lstTypePlat">
+                <label>
+                    <span>{{item}}</span>
+                    <input type="radio" value="{{item}}" formControlName="typePlat">
+                </label>
+            </ng-container>
+
+            <h4>Saison</h4>
+            <ng-container *ngFor="let item of lstSaison">
+                <label>
+                    <span>{{item}}</span>
+                    <input type="radio" value="{{item}}" formControlName="saison">
+                </label>
+            </ng-container>
+
+            <h4>Cout</h4>
+            <ng-container *ngFor="let item of lstCout | keyvalue">
+                <label>
+                    <span>{{item.value}}</span>
+                    <input type="radio" value="{{item.key}}" formControlName="cout">
+                </label>
+            </ng-container>
+
+            <h4>Cout</h4>
+            <ng-container *ngFor="let item of lstDifficulte | keyvalue">
+                <label>
+                    <span>{{item.value}}</span>
+                    <input type="radio" value="{{item.key}}" formControlName="difficulte">
+                </label>
+            </ng-container>
+
+            <input type="submit" value="Do something">
+        </div>
+    </form>
+</div>
