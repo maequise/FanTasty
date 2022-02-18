@@ -6,6 +6,7 @@ import { HarrypotterComponent } from './components/harrypotter/harrypotter.compo
 import { DisneyComponent } from './components/disney/disney.component';
 import { MarvelComponent } from './components/marvel/marvel.component';
 import { RecipeTemplateComponent } from './components/recipe-template/recipe-template.component';
+import {MongoComponent} from "./components/mongo/mongo.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/home-light', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'naruto/recette/:id', component: RecipeTemplateComponent },
   { path: 'harrypotter/recette/:id', component: RecipeTemplateComponent },
   { path: 'marvel/recette/:id', component: RecipeTemplateComponent },
+  {path: 'mongo', component: MongoComponent}
 
 
 
