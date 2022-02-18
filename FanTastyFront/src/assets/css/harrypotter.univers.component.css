@@ -127,7 +127,6 @@ img {
   overflow-x: hidden;
   border: none;
   outline: none;
-  background: #FAF9F6;
   transform: translateY(-1600px);
   transition: transform 0.5s ease-in-out;
   border-radius: 30px;
