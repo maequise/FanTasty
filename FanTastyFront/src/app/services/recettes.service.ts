@@ -32,4 +32,13 @@ export class RecettesService {
   findByUnivers(universe: string) : Observable<Recette[]> {
     return this.httpClient.get<Recette[]>(Constants.URL_BACK + '/api/recettes/univers/' + universe);
   }
+
+  update(recette: Recette | null) : void {
+
+    if(recette == null){
+      return;
+    }
+
+    this.httpClient.put<Recette>(Constants.URL_BACK + '/api/recettes/'+recette.id, recette).subscribe();
+  }
 }

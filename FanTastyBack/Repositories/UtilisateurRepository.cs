@@ -3,6 +3,7 @@ using FanTastyBack.Models;
 using FanTastyBack.Repositories.Interfaces;
 using MongoDB.Driver;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FanTastyBack.Repositories
 {
@@ -15,6 +16,15 @@ namespace FanTastyBack.Repositories
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
             _utilisateur = database.GetCollection<Utilisateur>(settings.UtilisateursCollectionName);
+        }
+
+        public Utilisateur Login(string email, string password)
+        {
+            Utilisateur user = this._utilisateur.AsQueryable<Utilisateur>()
+                .Where(user => user.Email.Equals(email) && user.MotDePasse.Equals(password))
+                .FirstOrDefault();
+
+            return user;
         }
 
         public List<Utilisateur> FindAll()

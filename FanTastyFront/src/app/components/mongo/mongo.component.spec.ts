@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NarutoComponent } from './naruto.component';
+import { MongoComponent } from './mongo.component';
 
-describe('NarutoComponent', () => {
-  let component: NarutoComponent;
-  let fixture: ComponentFixture<NarutoComponent>;
+describe('MongoComponent', () => {
+  let component: MongoComponent;
+  let fixture: ComponentFixture<MongoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NarutoComponent]
+      declarations: [ MongoComponent ]
     })
-      .compileComponents();
+    .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NarutoComponent);
+    fixture = TestBed.createComponent(MongoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

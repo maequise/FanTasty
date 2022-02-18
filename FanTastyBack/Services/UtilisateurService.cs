@@ -14,6 +14,11 @@ namespace FanTastyBack.Services
             this._repository = repository;
         }
 
+        public Utilisateur Login(string email, string password)
+        {
+            return this._repository.Login(email, password);
+        }
+
         public List<Utilisateur> FindAll()
         {
             List<Utilisateur> Utilisateurs = this._repository.FindAll();
