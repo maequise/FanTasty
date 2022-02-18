@@ -32,4 +32,8 @@ export class RecettesService {
   findByUnivers(universe: string) : Observable<Recette[]> {
     return this.httpClient.get<Recette[]>(Constants.URL_BACK + '/api/recettes/univers/' + universe);
   }
+
+  getImage(filename : string) : string{
+    return Constants.URL_BACK + '/Resources/' + filename;
+  }
 }

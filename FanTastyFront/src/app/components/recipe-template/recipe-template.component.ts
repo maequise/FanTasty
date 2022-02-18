@@ -14,15 +14,11 @@ import { RecettesService } from '../../services/recettes.service';
 
 })
 export class RecipeTemplateComponent implements OnInit {
-  ingredients: Ingredient[] = [
-    {
-      id: '',
-      nom: '',
-      image: ''
-    },
-  ];
 
-  recette!: Recette;
+  ingredients : Ingredient[] = [new Ingredient()]
+
+  recette: Recette = new Recette();
+  urlImage : string = "";
 
   href: string = '/assets/css/marvel.component.css';
 
@@ -56,10 +52,9 @@ export class RecipeTemplateComponent implements OnInit {
     this.recettesService.findById(id).subscribe(response => {
 
       this.recette = response;
+      this.urlImage=this.recettesService.getImage(this.recette.photo)
 
-      console.log(response);
     });
-
   }
 
   btnClickHome() {
