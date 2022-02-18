@@ -5,6 +5,8 @@ namespace FanTastyBack.Repositories.Interfaces
 {
     public interface IUtilisateurRepository
     {
+
+        public Utilisateur Login(string email, string password);
         public List<Utilisateur> FindAll();
 
         public Utilisateur FindById(string id);

@@ -24,6 +24,8 @@ namespace FanTastyBack.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public List<string> PreferenceIngredients { get; set; }
 
+        public List<string> Roles { get; set; }
+
         public Utilisateur(string id, string nom, string prenom, string email)
         {
             Id = id;
