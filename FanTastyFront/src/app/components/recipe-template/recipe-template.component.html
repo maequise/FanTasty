@@ -1,8 +1,24 @@
 <!--Components Block-->
 <div class="recipe-card card-bg">
     <div class="description">
-        <h2 class="title-recipe">Pasta with Pesto and Tomatoes</h2>
-        <p>#Moyen #BonMarché #AllSeasons</p>
+        <h2 class="title-recipe">{{recette?.nom}}</h2>
+        <p>
+            <span [ngSwitch]="recette?.tags?.difficulte">
+                <span *ngSwitchCase="1">#Très facile </span>
+                <span *ngSwitchCase="2">#Facile </span>
+                <span *ngSwitchCase="3">#Moyen </span>
+                <span *ngSwitchCase="4">#Difficile </span>
+            </span>
+
+            <span [ngSwitch]="recette?.tags?.cout">
+                <span *ngSwitchCase="1">#Bon marché</span>
+                <span *ngSwitchCase="2">#Moyen</span>
+                <span *ngSwitchCase="3">#Assez cher</span>
+            </span>
+            <span>
+                #{{recette?.tags?.saison}}
+            </span>
+        </p>
 
         <h2 class="subtitle-ingredients">Ingrédients</h2>
         <ul class="ingredients" *ngFor="let ingredientRecette of recette?.ingredients">
@@ -15,7 +31,7 @@
         <figure>
             <!-- <img src="../../assets/disney-baby-yoda-pie.jpg" /> -->
             <img src="http://localhost:60599/Resources/{{recette?.photo}}" alt="">
-            <figcaption>Shania</figcaption>
+            <figcaption>{{recette?.auteur}}</figcaption>
         </figure>
         <ul>
             <li>🥄Personnes: {{recette?.nombrePersonnes}}</li>
