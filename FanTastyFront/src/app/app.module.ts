@@ -9,11 +9,12 @@ import { NarutoComponent } from './components/naruto/naruto.component';
 import { HarrypotterComponent } from './components/harrypotter/harrypotter.component';
 import { DisneyComponent } from './components/disney/disney.component';
 import { MarvelComponent } from './components/marvel/marvel.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DarkModeDirective } from './dark-mode.directive';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { UniversComponent } from './components/univers/univers.component';
+import { SearchFormComponent } from './components/search-form/search-form.component';
 
 
 @NgModule({
@@ -29,11 +30,13 @@ import { UniversComponent } from './components/univers/univers.component';
     RecipeTemplateComponent,
     UniversComponent,
     MarvelComponent,
+    SearchFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],
