@@ -8,40 +8,33 @@ import {
   UrlTree
 } from '@angular/router';
 import { Observable } from 'rxjs';
-import {LoginService} from "../../services/login.service";
+import {Utilisateur} from "../../models/utilisateur";
 import {AuthService} from "../../services/auth.service";
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate, CanActivateChild {
-  constructor(private loginService: LoginService, private authService: AuthService, private router: Router) {
+export class AdminGuard implements CanActivate, CanActivateChild {
+  userAdmin : Utilisateur | null = null;
+
+  constructor(private authService : AuthService, private router : Router) {
+    this.userAdmin = this.authService.currentUserValue;
   }
 
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    console.log(route);
-
-    return this.checkLogin('');
+    return this.isAdminUser() != undefined && <boolean> this.isAdminUser();
   }
 
   canActivateChild(
     childRoute: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return this.checkLogin('');
+    return true;
   }
 
-
-
-  private checkLogin(url: string) : boolean {
-    if(this.authService.isUserLogged()) {
-      return true;
-    }
-
-    this.router.navigate(['/login'])
-
-    return false;
+  private isAdminUser() : boolean | undefined {
+    return this.userAdmin?.roles.includes('admin');
   }
 
 }

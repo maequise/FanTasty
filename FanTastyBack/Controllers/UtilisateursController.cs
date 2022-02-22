@@ -53,7 +53,7 @@ namespace FanTastyBack.Controllers
         public IActionResult AjoutRecetteFavoris(string idUtilisateur, string idRecette)
         {
             this._service.AjoutRecetteFavoris(idUtilisateur, idRecette);
-            return Ok("Ajout recette dans favoris |OK| ");
+            return Ok("{\"message\": \"Ajout recette dans favoris |OK|\"}");
         }
 
         [HttpGet("{idUtilisateur}/recettesFavoris")]

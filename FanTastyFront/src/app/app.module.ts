@@ -7,9 +7,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ComponentsModule} from "./modules/components-module/components.module";
 import {AdminModuleModule} from "./modules/admin-module/admin-module.module";
 import {MongoComponent} from './components/mongo/mongo.component';
-import {CookieService} from "ngx-cookie-service";
-import {AuthService} from "./services/auth.service";
 import {AuthInterceptor} from "./core/interceptors/auth.interceptor";
+import {UserModule} from "./modules/user-module/user.module";
 
 
 @NgModule({
@@ -25,6 +24,7 @@ import {AuthInterceptor} from "./core/interceptors/auth.interceptor";
     ReactiveFormsModule,
     HttpClientModule,
     AdminModuleModule,
+    UserModule
 
   ],
   providers: [

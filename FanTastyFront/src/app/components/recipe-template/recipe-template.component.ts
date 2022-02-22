@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Ingredient } from '../../models/ingredient';
 import { Recette } from '../../models/recette';
 import { RecettesService } from '../../services/recettes.service';
+import {AuthService} from "../../services/auth.service";
 
 
 
@@ -26,12 +27,23 @@ export class RecipeTemplateComponent implements OnInit {
 
   href: string = '/assets/css/marvel.component.css';
 
-  constructor(private render: Renderer2, private router: Router, public recettesService: RecettesService) {
+  userLogged: boolean = false;
+
+  constructor(private render: Renderer2, private router: Router,
+                    private recettesService: RecettesService, private authService: AuthService) {
 
 
   }
 
   ngOnInit(): void {
+    let id = this.router.url.split('/')[3];
+
+    this.recettesService.findById(id).subscribe((response: Recette) => {
+      this.recette = response;
+    });
+
+    this.userLogged = this.authService.isUserLogged();
+
     //add init to remove the light color when entering in the component
     let card = document.querySelector('.recipe-card');
     let body = document.querySelector('body');
@@ -51,14 +63,7 @@ export class RecipeTemplateComponent implements OnInit {
     this.render.setProperty(tag, 'href', this.href);
     this.render.appendChild(document.querySelector('head'), tag);
 
-    let id = this.router.url.split('/')[3];
 
-    this.recettesService.findById(id).subscribe(response => {
-
-      this.recette = response;
-
-      console.log(response);
-    });
 
   }
 
@@ -80,8 +85,6 @@ export class RecipeTemplateComponent implements OnInit {
     } else if (urlUniverse.startsWith('/marvel')) {
       this.href = '/assets/css/marvel.component.css';
     }
-
-    console.log(this.href);
 
     return this.href;
   }

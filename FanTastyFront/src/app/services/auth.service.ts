@@ -17,7 +17,7 @@ export class AuthService {
 
   private result = new Subject<boolean>();
 
-  private readonly currentUser: BehaviorSubject<Utilisateur>;
+  private currentUser: BehaviorSubject<Utilisateur>;
 
   constructor(private httpClient: HttpClient, private cookieService: CookieService) {
     this.currentUser = new BehaviorSubject<Utilisateur>(JSON.parse(localStorage.getItem("user")!));
@@ -57,6 +57,8 @@ export class AuthService {
 
           localStorage.setItem("user", JSON.stringify(userFound));
 
+          this.setTheCurrentUser();
+
           return this.isLogged;
         }
       }
@@ -65,5 +67,10 @@ export class AuthService {
 
   logout(): void {
     localStorage.removeItem('user');
+    this.currentUser = new BehaviorSubject<Utilisateur>(JSON.parse(localStorage.getItem("user")!));
+  }
+
+  setTheCurrentUser() : void {
+    this.currentUser = new BehaviorSubject<Utilisateur>(JSON.parse(localStorage.getItem("user")!));
   }
 }

@@ -3,7 +3,6 @@ import {CommonModule} from '@angular/common';
 import {AdminComponent} from "./components/admin/admin.component";
 import {AdminModuleRoutingModule} from "./admin-module-routing.module";
 import {ComponentsModule} from "../components-module/components.module";
-import {AuthService} from "../../services/auth.service";
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {AuthInterceptor} from "../../core/interceptors/auth.interceptor";
 

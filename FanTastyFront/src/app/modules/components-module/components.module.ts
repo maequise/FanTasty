@@ -15,6 +15,7 @@ import {LoginComponent} from "../../components/login/login.component";
 import {AdminModuleModule} from "../admin-module/admin-module.module";
 import {AuthService} from "../../services/auth.service";
 import {AuthInterceptor} from "../../core/interceptors/auth.interceptor";
+import { FavoriteComponent } from '../../components/favorite/favorite.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import {AuthInterceptor} from "../../core/interceptors/auth.interceptor";
     RecipeTemplateComponent,
     UniversComponent,
     LoginComponent,
+    FavoriteComponent,
   ],
   imports: [
     BrowserModule,

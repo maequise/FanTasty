@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {AuthService} from "../../services/auth.service";
 import {Login} from "../../models/Login";
-import {ActivatedRoute, Router, RouterState} from "@angular/router";
-import {HttpRequest} from "@angular/common/http";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -28,9 +27,8 @@ export class LoginComponent implements OnInit {
     let user : Login = new Login(this.formLogin.get('username')?.value, this.formLogin.get('password')?.value);
 
     this.authService.loginBis(user).subscribe(result => {
-      console.log(result);
       if(result){
-        this.router.navigate(['/user/login']);
+        this.router.navigate(['/user/manage']);
       }
     });
   }
