@@ -7,11 +7,15 @@ namespace FanTastyBack.Services.Interfaces
     {
         public List<Recette> FindAll();
 
+        public List<Recette> FindAll(int page);
+
         public Recette FindById(string id);
 
         public Recette FindByName(string nom);
 
         public List<Recette> FindByUnivers(string univers);
+        
+        public List<Recette> FindByUnivers(string univers, int page);
 
         public List<Recette> FindByAuteur(string auteur);
 

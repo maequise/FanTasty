@@ -25,6 +25,11 @@ namespace FanTastyBack.Services
             return recettes;
         }
 
+        public List<Recette> FindAll(int page)
+        {
+            return this._repository.FindAll(page);
+        }
+
         public Recette FindById(string id)
         {
             Recette recette = this._repository.FindById(id);
@@ -48,6 +53,16 @@ namespace FanTastyBack.Services
         public List<Recette> FindByUnivers(string univers)
         {
             List<Recette> recettes = this._repository.FindByUnivers(univers);
+            if (recettes == null || recettes.Count == 0)
+            {
+                throw new NotFoundException("Not found.");
+            }
+            return recettes;
+        }
+        
+        public List<Recette> FindByUnivers(string univers, int page)
+        {
+            List<Recette> recettes = this._repository.FindByUnivers(univers, page);
             if (recettes == null || recettes.Count == 0)
             {
                 throw new NotFoundException("Not found.");

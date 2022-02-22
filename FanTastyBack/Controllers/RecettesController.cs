@@ -28,7 +28,8 @@ namespace FanTastyBack.Controllers
                 return NotFound(e.Message);
             }
         }
-
+        
+      
         [HttpGet("{id}")]
         public IActionResult FindById(string id)
         {
@@ -61,6 +62,19 @@ namespace FanTastyBack.Controllers
             try
             {
                 return Ok(this._service.FindByUnivers(univers));
+            }
+            catch(NotFoundException e)
+            {
+                return NotFound(e.Message);
+            }
+        }
+        
+        [HttpGet("univers/{univers}/{page}")]
+        public IActionResult FindByUnivers(string univers, int page)
+        {
+            try
+            {
+                return Ok(this._service.FindByUnivers(univers, page));
             }
             catch(NotFoundException e)
             {

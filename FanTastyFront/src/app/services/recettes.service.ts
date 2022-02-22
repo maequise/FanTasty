@@ -25,12 +25,17 @@ export class RecettesService {
   findAll(): Observable<Recette[]> {
     return this.httpClient.get<Recette[]>(this.apiServer + '/api/recettes');
   }
+
   findById(id: string): Observable<Recette> {
     return this.httpClient.get<Recette>(this.apiServer + '/api/recettes/' + id);
   }
 
   findByUnivers(universe: string) : Observable<Recette[]> {
-    return this.httpClient.get<Recette[]>(Constants.URL_BACK + '/api/recettes/univers/' + universe);
+    return this.httpClient.get<Recette[]>(Constants.URL_BACK + '/api/recettes/univers/' + universe+'/0');
+  }
+
+  findByUniversPaginate(universe: string, page: number) : Observable<Recette[]> {
+    return this.httpClient.get<Recette[]>(Constants.URL_BACK + '/api/recettes/univers/' + universe+'/' + page);
   }
 
   update(recette: Recette | null) : void {

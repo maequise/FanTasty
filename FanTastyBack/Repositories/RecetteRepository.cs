@@ -34,6 +34,20 @@ namespace FanTastyBack.Repositories
             return recettes;
         }
 
+        public List<Recette> FindAll(int page)
+        {
+            List<Recette> recettes = this._recettes.Find(rec => true).Limit(3).Skip(page * 3).ToList();
+
+            foreach (Recette recette in recettes) {
+                foreach(IngredientRecette ingredient in recette.Ingredients)
+                {
+                    ingredient.Ingredient = this._ingredientRepository.FindById(ingredient.Id);
+                }
+            }
+
+            return recettes;
+        }
+
         public Recette FindById(string id)
         {
             Recette recette = this._recettes.Find(rec => rec.Id == id).FirstOrDefault();
@@ -56,9 +70,35 @@ namespace FanTastyBack.Repositories
 
         public List<Recette> FindByUnivers(string univers)
         {
-            List<Recette> recettes = this._recettes.AsQueryable<Recette>()
+            var filter = Builders<Recette>.Filter.Where(recette => recette.Univers.ToLower() == univers.ToLower());
+
+            List<Recette> recettes = this._recettes.Find(filter).ToList();
+
+            for (int i = 0; i < recettes.Count; i++)
+            {
+                foreach (IngredientRecette ingr in recettes[i].Ingredients)
+                {
+                    ingr.Ingredient = this._ingredientRepository.FindById(ingr.Id);
+                }
+            }
+            return recettes;
+        }
+        
+        public List<Recette> FindByUnivers(string univers, int page)
+        {
+            var builderFilter = Builders<Recette>.Filter;
+
+            var whereFilter = builderFilter.Where(recette => recette.Univers.ToLower() == univers.ToLower());
+
+            var filter = builderFilter.Empty;
+
+            /*List<Recette> recettes = this._recettes.AsQueryable<Recette>()
                 .Where(x => x.Univers.ToLower() == univers.ToLower())
+               
                 .ToList();
+            */
+
+            List<Recette> recettes = this._recettes.Find(whereFilter).Limit(3).Skip(page * 3).ToList();
            
             for (int i = 0; i < recettes.Count; i++)
             {

@@ -18,6 +18,8 @@ export class UniversComponent implements OnInit {
 
   href: string = '/assets/css/marvel.univers.component.css';
 
+  page: number = 0;
+
   constructor(private render: Renderer2, private router: Router, public recettesService: RecettesService) { }
 
   ngOnInit(): void {
@@ -30,7 +32,7 @@ export class UniversComponent implements OnInit {
     this.render.appendChild(document.body, tag);
 
 
-    this.recettesService.findByUnivers(this.getUniverseSelected()).subscribe(response => this.recettes = response);
+    this.recettesService.findByUniversPaginate(this.getUniverseSelected(), this.page).subscribe(response => this.recettes = response);
 
   }
 
