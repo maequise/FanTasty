@@ -15,15 +15,11 @@ import {AuthService} from "../../services/auth.service";
 
 })
 export class RecipeTemplateComponent implements OnInit {
-  ingredients: Ingredient[] = [
-    {
-      id: '',
-      nom: '',
-      image: ''
-    },
-  ];
 
-  recette!: Recette;
+  ingredients : Ingredient[] = [new Ingredient()]
+
+  recette: Recette = new Recette();
+  urlImage : string = "";
 
   href: string = '/assets/css/marvel.component.css';
 
@@ -63,7 +59,7 @@ export class RecipeTemplateComponent implements OnInit {
     this.render.setProperty(tag, 'href', this.href);
     this.render.appendChild(document.querySelector('head'), tag);
 
-
+    this.urlImage=this.recettesService.getImage(this.recette.photo)
 
   }
 

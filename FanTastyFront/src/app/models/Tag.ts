@@ -5,7 +5,7 @@ export class Tag {
   public saison: string;
 
 
-  constructor(typePlat: string, difficulte: string, cout: string, saison: string) {
+  constructor(typePlat: string = "", difficulte: string = "", cout: string = "", saison: string = "") {
     this.typePlat = typePlat;
     this.difficulte = difficulte;
     this.cout = cout;

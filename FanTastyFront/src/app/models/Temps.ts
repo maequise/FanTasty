@@ -4,7 +4,7 @@ export class Temps {
   public tempsTotal: string;
 
 
-  constructor(tempsPreparation: string, tempsCuisson: string, tempsTotal: string) {
+  constructor(tempsPreparation: string = "", tempsCuisson: string = "", tempsTotal: string = "") {
     this.tempsPreparation = tempsPreparation;
     this.tempsCuisson = tempsCuisson;
     this.tempsTotal = tempsTotal;

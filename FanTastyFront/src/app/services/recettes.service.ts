@@ -41,4 +41,8 @@ export class RecettesService {
 
     this.httpClient.put<Recette>(Constants.URL_BACK + '/api/recettes/'+recette.id, recette).subscribe();
   }
+
+  getImage(filename : string) : string{
+    return Constants.URL_BACK + '/Resources/' + filename;
+  }
 }
