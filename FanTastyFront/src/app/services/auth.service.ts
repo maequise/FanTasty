@@ -1,11 +1,10 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import {BehaviorSubject, Observable, Subject} from "rxjs";
 import {Constants} from "../core/Constants";
 import {Login} from "../models/Login";
 import {Utilisateur} from "../models/utilisateur";
 import {map} from "rxjs/operators";
-import {CookieService} from "ngx-cookie-service";
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +18,7 @@ export class AuthService {
 
   private currentUser: BehaviorSubject<Utilisateur>;
 
-  constructor(private httpClient: HttpClient, private cookieService: CookieService) {
+  constructor(private httpClient: HttpClient) {
     this.currentUser = new BehaviorSubject<Utilisateur>(JSON.parse(localStorage.getItem("user")!));
     if(this.currentUser.value){
       this.isLogged = true;

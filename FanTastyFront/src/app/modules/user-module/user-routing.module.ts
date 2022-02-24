@@ -6,7 +6,7 @@ import {Login} from "../../models/Login";
 import {UserComponent} from "./components/user/user.component";
 
 const routes: Routes = [
-  {path: 'login', component : LoginComponent},
+  {path: '', component : LoginComponent},
   {path: 'user', canActivateChild: [AuthGuard], children:
       [
         {path: 'manage', component: UserComponent}
