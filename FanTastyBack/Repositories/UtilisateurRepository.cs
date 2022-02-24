@@ -20,8 +20,12 @@ namespace FanTastyBack.Repositories
 
         public Utilisateur Login(string email, string password)
         {
-            Utilisateur user = this._utilisateur.AsQueryable<Utilisateur>()
+            /*Utilisateur user = this._utilisateur.AsQueryable<Utilisateur>()
                 .Where(user => user.Email.Equals(email) && user.MotDePasse.Equals(password))
+                .FirstOrDefault();*/
+            
+            Utilisateur user = this._utilisateur.AsQueryable<Utilisateur>()
+                .Where(user => user.Email.Equals(email))
                 .FirstOrDefault();
 
             return user;

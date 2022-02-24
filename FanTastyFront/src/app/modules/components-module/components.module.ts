@@ -16,6 +16,7 @@ import {AdminModuleModule} from "../admin-module/admin-module.module";
 import {AuthService} from "../../services/auth.service";
 import {AuthInterceptor} from "../../core/interceptors/auth.interceptor";
 import { FavoriteComponent } from '../../components/favorite/favorite.component';
+import {UserModule} from "../user-module/user.module";
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { FavoriteComponent } from '../../components/favorite/favorite.component'
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    UserModule,
 
   ],
   exports: [

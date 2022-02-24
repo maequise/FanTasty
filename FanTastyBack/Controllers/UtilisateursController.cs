@@ -72,7 +72,17 @@ namespace FanTastyBack.Controllers
         [HttpPost("login")]
         public IActionResult Login(Login user)
         {
-            return Ok(this._service.Login(user.Username, user.Password));
+            Utilisateur userFound = this._service.Login(user.Username, user.Password);
+
+            if(userFound != null)
+            {
+                return Ok(userFound);
+            } else
+            {
+                return NotFound();
+            }
+
+            //return Ok(this._service.Login(user.Username, user.Password));
         }
 
     }
