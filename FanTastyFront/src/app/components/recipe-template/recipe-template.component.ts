@@ -10,7 +10,7 @@ import {AuthService} from "../../services/auth.service";
 @Component({
   selector: 'app-recipe-template',
   templateUrl: './recipe-template.component.html',
-  styleUrls: ['../../../assets/css/recipe-template.component.css'],
+  //styleUrls: ['../../../assets/css/recipe-template.component.css'],
   encapsulation: ViewEncapsulation.None
 
 })
@@ -51,13 +51,6 @@ export class RecipeTemplateComponent implements OnInit {
     } else {
       card?.classList.add('card-bg');
     }
-
-    let tag = this.render.createElement('link');
-    this.href = this.getStyleHeader();
-
-    this.render.setProperty(tag, 'rel', 'stylesheet');
-    this.render.setProperty(tag, 'href', this.href);
-    this.render.appendChild(document.querySelector('head'), tag);
 
     this.urlImage=this.recettesService.getImage(this.recette.photo)
 
