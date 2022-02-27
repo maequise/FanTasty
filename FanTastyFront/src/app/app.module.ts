@@ -15,6 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { UniversComponent } from './components/univers/univers.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { SearchFormComponent } from './components/search-form/search-form.compon
     UniversComponent,
     MarvelComponent,
     SearchFormComponent,
+    SearchResultsComponent,
   ],
   imports: [
     BrowserModule,

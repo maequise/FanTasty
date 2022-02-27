@@ -11,68 +11,67 @@ import { RecettesService } from 'src/app/services/recettes.service';
 })
 export class SearchFormComponent implements OnInit {
 
-  searchForm : FormGroup
+  searchForm: FormGroup
 
-  lstSaison : string[] = ["Printemps", "Ete", "Automne", "Hiver", "Toutes"]
-  lstTypePlat : string[] = ["Entree", "Plat", "Dessert", "Tous"]
+  lstSaison: string[] = ["Printemps", "Ete", "Automne", "Hiver", "Toutes"]
 
-  lstCout : {[key : number]: string} = {
-    1 : "Bon marché",
-    2 : "Faible",
-    3 : "Modéré",
-    4 : "Assez cher",
-    0 : "Tous"
+  lstTypePlat: { [key: string]: string } = {
+    "Entree": "Entree",
+    "Plat": "Plat",
+    "Dessert": "Dessert",
+    "": "Tous"
   }
 
-  lstDifficulte : {[key : number]: string} = {
-    1 : "Très facile",
-    2 : "Facile",
-    3 : "Moyen",
-    4 : "Difficile",
-    0 : "Tous"
+  lstCout: { [key: number]: string } = {
+    1: "Bon marché",
+    2: "Faible",
+    3: "Modéré",
+    4: "Assez cher",
+    0: "Tous"
+  }
+
+  lstDifficulte: { [key: number]: string } = {
+    1: "Très facile",
+    2: "Facile",
+    3: "Moyen",
+    4: "Difficile",
+    0: "Tous"
   }
 
   recettes: Recette[] = [];
 
-  constructor(private fb : FormBuilder, private recetteService : RecettesService){
+  constructor(private fb: FormBuilder, private recetteService: RecettesService) {
     this.searchForm = this.fb.group({
-      nom : "",
-      difficulte : 0,
-      saison : "",
-      cout : 0,
-      typePlat : ""
+      nom: "",
+      difficulte: 0,
+      saison: "",
+      cout: 0,
+      typePlat: ""
     })
   }
 
   ngOnInit(): void {
   }
 
-  btnClickSearch(){
-    console.log(this.searchForm.value);
+  btnClickSearch() {
     let val = this.searchForm.value;
-    let tag : Tag = new Tag(val.typePlat, val.difficulte, val.cout, val.saison)
-    console.log(tag);
-
-    this.recetteService.findByTag(tag).subscribe(response => this.recettes = response);
-    console.log(this.recettes)
+    let tag: Tag = new Tag(val.typePlat, val.difficulte, val.cout, val.saison)
+    this.recetteService.findByTag(tag).subscribe(
+      response => {
+        this.recettes = response;
+        console.log(this.recettes);
+      }
+    );
   }
-  
-  // recettesArray: string[] = [];
-  // recettes: Recette[] = [];
-  // searchString : string = "";
 
-  // constructor(public recettesService: RecettesService) { }
-
-  // ngOnInit(): void {
-  //   this.recettesService.findAll().subscribe(response => this.recettes = response);
-  //   this.recettes.forEach(element => {
-  //     this.recettesArray.push(element.nom)
-  //   });
-  // }
-
-  // btnClickSearch(){
-  //   alert("Test"+this.searchString);
-  // }
-
+  btnClickReset(){
+    this.searchForm = this.fb.group({
+      nom: "",
+      difficulte: 0,
+      saison: "",
+      cout: 0,
+      typePlat: ""
+    })
+  }
 }
 

@@ -35,7 +35,7 @@ export class RecettesService {
   }
 
   findByTag(tag : Tag) : Observable<Recette[]>{
-    return this.httpClient.get<Recette[]>(Constants.URL_BACK + '/api/recettes/tag/');
+      return this.httpClient.get<Recette[]>(Constants.URL_BACK + '/api/recettes/tag/' + JSON.stringify(tag))
   }
 
   getImage(filename : string) : string{

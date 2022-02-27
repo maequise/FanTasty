@@ -1,14 +1,14 @@
 export class Tag {
-  public typePlat: string;
-  public difficulte: number;
-  public cout: number;
-  public saison: string;
+  public TypePlat: string;
+  public Difficulte: number;
+  public Cout: number;
+  public Saison: string;
 
 
   constructor(typePlat: string = "", difficulte: string = "", cout: string = "", saison: string = "") {
-    this.typePlat = typePlat;
-    this.difficulte = parseInt(difficulte) ;
-    this.cout = parseInt(cout);
-    this.saison = saison;
+    this.TypePlat = typePlat;
+    this.Difficulte = parseInt(difficulte) ;
+    this.Cout = parseInt(cout);
+    this.Saison = saison;
   }
 }

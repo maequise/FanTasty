@@ -8,12 +8,11 @@
             <!-- <label>Nom : </label>
             <input type="text" formControlName="nom"> -->
 
-
             <h4>Type</h4>
-            <ng-container *ngFor="let item of lstTypePlat">
+            <ng-container *ngFor="let item of lstTypePlat | keyvalue">
                 <label>
-                    <span>{{item}}</span>
-                    <input type="radio" value="{{item}}" formControlName="typePlat">
+                    <span>{{item.value}}</span>
+                    <input type="radio" value="{{item.key}}" formControlName="typePlat">
                 </label>
             </ng-container>
 
@@ -42,6 +41,9 @@
             </ng-container>
 
             <input type="submit" value="Do something">
+            <button (click) ="btnClickReset()">Reset</button>
         </div>
     </form>
 </div>
+
+<app-search-results [recettes]="recettes"></app-search-results>
