@@ -1,0 +1,10 @@
+<form [formGroup]="formLogin" (ngSubmit)="login()" *ngIf="!userLogged">
+  <input type="text" placeholder="username" formControlName="username" />
+  <input type="password" placeholder="password" formControlName="password" />
+
+  <button type="submit">Login</button>
+</form>
+
+<button type="button" (click)="logout()" *ngIf="userLogged">Déconnecter</button>
+
+<app-user-create></app-user-create>

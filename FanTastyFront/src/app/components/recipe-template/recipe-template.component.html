@@ -2,6 +2,7 @@
 <div class="recipe-card card-bg">
     <div class="description">
         <h2 class="title-recipe">{{recette?.nom}}</h2>
+      <app-favorite *ngIf="userLogged" [recetteLiked]="recette"></app-favorite>
         <p>
             <span [ngSwitch]="recette?.tags?.difficulte">
                 <span *ngSwitchCase="1">#Très facile </span>

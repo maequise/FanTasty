@@ -33,6 +33,15 @@ export class RecettesService {
     return this.httpClient.get<Recette[]>(Constants.URL_BACK + '/api/recettes/univers/' + universe);
   }
 
+  update(recette: Recette | null) : void {
+
+    if(recette == null){
+      return;
+    }
+
+    this.httpClient.put<Recette>(Constants.URL_BACK + '/api/recettes/'+recette.id, recette).subscribe();
+  }
+
   getImage(filename : string) : string{
     return Constants.URL_BACK + '/Resources/' + filename;
   }

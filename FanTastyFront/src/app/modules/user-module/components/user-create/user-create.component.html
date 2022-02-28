@@ -1,0 +1,11 @@
+<p>user-create works!</p>
+
+<form [formGroup]="createUserForm" (ngSubmit)="create()">
+  <input type="text" formControlName="name" placeholder="Prénom"/>
+  <input type="text" formControlName="lastname" placeholder="Nom de famille"/>
+  <input type="email" formControlName="email" placeholder="adresse@email.fr"/>
+  <input type="password" formControlName="password" placeholder="Mot de passe"/>
+  <input type="password" formControlName="confirmPassword" placeholder="Confirme mot de passe"/>
+
+  <button type="submit" [disabled]="!createUserForm.valid">Inscription</button>
+</form>
