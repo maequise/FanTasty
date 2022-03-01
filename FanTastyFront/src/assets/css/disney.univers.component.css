@@ -250,7 +250,7 @@ h1 {
 .search-container {
   width: 18%;
   position: absolute;
-  left: 380px;
+  left: 416px;
   top: 34px;
   transform: translate(-50%, -50%);
 }
@@ -380,7 +380,7 @@ h1 {
               0 0 23px var(--main-color-disney);
 }
 .card_image{
-  width: 384px;
+  width: 450px;
   height: 244px;
 }
 

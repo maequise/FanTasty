@@ -6,7 +6,7 @@ import { RecettesService } from '../../services/recettes.service';
 @Component({
   selector: 'app-marvel',
   templateUrl: './marvel.component.html',
-  styleUrls: ['../../../assets/css/marvel.component.css'],
+  styleUrls: ['../../../assets/css/marvel.univers.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class MarvelComponent implements OnInit {

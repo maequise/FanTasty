@@ -6,7 +6,7 @@ import { RecettesService } from '../../services/recettes.service';
 @Component({
   selector: 'app-disney',
   templateUrl: './disney.component.html',
-  styleUrls: ['../../../assets/css/disney.component.css'],
+  styleUrls: ['../../../assets/css/disney.univers.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class DisneyComponent implements OnInit {

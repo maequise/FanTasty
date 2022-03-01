@@ -246,11 +246,13 @@ footer {
 .footer-inner {
   display: flex;
   justify-content: center;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 80px;
-    position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+  position: relative;
+  color: #fff;
+  font-family: 'Balsamiq Sans', cursive;
 }
 
 .footer-item {
@@ -363,17 +365,6 @@ a:hover {
     display: auto;
 }
 
-.footer-inner:after {
-    content: "Made with ♡ by Fan'Tasty 2022";
-    font-weight: 300;
-    letter-spacing: 0.03em;
-    font-size: 13px;
-    color: #d1d1d1;
-    position: absolute;
-    top: 200px;
-    clear: both;
-    display: block;
-}
 
 @media (max-width: 1024px) {
   
@@ -558,8 +549,8 @@ img {
 }
 .title-recipe, 
 .subtitle-recipe {
-	font-size: 2em;
-  font-family: 'Mouse Memoirs', sans-serif;
+	font-size: 27px;
+  font-family: 'Balsamiq Sans', cursive;
    color: var(--main-color-naruto);
 	text-align: center;
 	margin: 0;

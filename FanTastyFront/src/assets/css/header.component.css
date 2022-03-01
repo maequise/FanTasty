@@ -23,7 +23,7 @@ hr{
   color:var(--main-color-light);
   background:var(--main-color-light);
   height:1px;
-  width: 74%;
+  width: 1174px;
 }
 hr.hline_color {
   background:#7a61f850;
@@ -254,7 +254,7 @@ h1 {
 .search-container {
   width: 18%;
   position: absolute;
-  left: 366px;
+  left: 398px;
   top: 30px;
   transform: translate(-50%, -50%);
 }

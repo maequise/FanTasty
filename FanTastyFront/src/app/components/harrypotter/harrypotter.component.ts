@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-harrypotter',
   templateUrl: './harrypotter.component.html',
-  styleUrls: ['../../../assets/css/harrypotter.component.css'],
+  styleUrls: ['../../../assets/css/harrypotter.univers.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class HarrypotterComponent implements OnInit {

@@ -20,7 +20,14 @@
             </span>
         </p>
 
-        <h2 class="subtitle-ingredients">Ingrédients</h2>
+        <label class='toggle-utensils'>
+            <input type='checkbox' />
+            <span class='utensils-back'>
+                <span class='toggle'></span>
+                <span class='label label-utensils'>Ingrédients</span>
+                <span class='label label-ingredients'>Ustensiles</span>
+            </span>
+        </label>
         <ul class="ingredients" *ngFor="let ingredientRecette of recette?.ingredients">
             <li>{{ingredientRecette.ingredient.nom}} | {{ingredientRecette.quantite}} {{ingredientRecette.unite}}</li>
         </ul>

@@ -458,17 +458,6 @@ a:hover {
     display: auto;
 }
 
-.footer-inner:after {
-    content: "Made with ♡ by Fan'Tasty 2022";
-    font-weight: 300;
-    letter-spacing: 0.03em;
-    font-size: 13px;
-    color: #d1d1d1;
-    position: absolute;
-    top: 200px;
-    clear: both;
-    display: block;
-}
 
 @media (max-width: 1024px) {
   
@@ -581,6 +570,80 @@ footer {
   font-size: 18px;
   color: var(--main-color-disney);
 }
+
+.toggle-utensils {
+	position: relative;
+	display: block;
+	width: 235px;
+	height: 35px;
+	margin-left: 70px;
+	margin-top: 10px;
+}
+.toggle-utensils input[type="checkbox"] {
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.toggle-utensils input[type="checkbox"] + .utensils-back {
+	position: absolute;
+	width: 100%;
+	height: 34px;
+	background: #DCDCDC;
+	transition: background 150ms linear;
+  border-radius: 10px;
+}
+.toggle-utensils input[type="checkbox"]:checked + .utensils-back {
+	background: #DCDCDC; /*green*/
+}
+
+.toggle-utensils input[type="checkbox"] + .utensils-back .toggle {
+	display: block;
+	position: absolute;
+	content: " ";
+	background: #fff;
+	width: 49%;
+	height: 30px;
+	transition: margin 150ms linear;
+	border: 2px solid #808080;
+	border-radius: 10px;
+}
+.toggle-utensils input[type="checkbox"]:checked + .utensils-back .toggle {
+	margin-left: 116px;
+}
+.toggle-utensils .label {
+	display: block;
+	position: absolute;
+	width: 50%;
+	color: #ddd;
+	line-height: 35px;
+	text-align: center;
+	font-size: 22px;
+  font-family: 'Mouse Memoirs', sans-serif;
+}
+.toggle-utensils .label-ingredients {
+	left: 0px;
+}
+.toggle-utensils .label-utensils {
+	right: 0px;
+}
+
+.toggle-utensils
+	input[type="checkbox"]:checked
+	+ .utensils-back
+	.label-ingredients {
+	color: #fff;
+}
+.toggle-utensils input[type="checkbox"] + .utensils-back .label-utensils {
+	color: #fff;
+}
+.toggle-utensils
+	input[type="checkbox"]:checked
+	+ .utensils-back
+	.label-utensils {
+	color: #ddd;
+}
+
 
 ul,
 ol {

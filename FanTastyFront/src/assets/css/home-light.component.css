@@ -23,7 +23,6 @@ hr{
   color:var(--main-color-light);
   background:var(--main-color-light);
   height:1px;
-  width: 74%;
 }
 hr.hline_color {
   background:#7a61f850;
@@ -528,7 +527,7 @@ footer {
 
 /*Component's CSS*/
 .title-container{
-  margin: 30px 0 0 -682px;
+  margin: 0 0 0 -898px;
   display:flex;
   flex-direction: row;
   justify-content: right;
@@ -546,7 +545,7 @@ footer {
 }
 .title_container_duo{
   display:flex;
-  margin: 20px 0 15px -198px;
+  margin: 20px 0 15px -370px;
   flex-direction: row;
   justify-content: right;
   width: 100%;
@@ -554,7 +553,7 @@ footer {
   align-items: center;
 }
 .title_container_universe{  
-  margin: 40px 0 8px -140px;
+  margin: 40px 0 8px -168px;
   display:flex;
   flex-direction: row;
   justify-content: center;
@@ -581,7 +580,7 @@ footer {
   font-family: 'Encode Sans Expanded', sans-serif;
 }
 .tags_duo{
-  margin-top:30px;
+  margin-top:15px;
   margin-left:-300px;
   margin-right: 8px;;
   font-size: 16px;
@@ -658,7 +657,7 @@ footer {
 }
 
 .panel_active{
-    flex:0.6;
+    flex:0.45; 
 }
 .panel_active h3{
     opacity:1;
@@ -688,7 +687,7 @@ footer {
 
 .recipe{
   margin: 0 10px 0 10px;
-  width: 550px;
+  width: 571px;
   height: 320px;
   border-radius: 40px;
   border: 2.5px solid var(--main-color-light);
@@ -712,16 +711,17 @@ footer {
 
 .cards-list {
   z-index: 0;
-  width: 100%;
+  width: 1224px;
   display: flex;  
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 90px;
+  margin-left: 349px;
 }
 
 .card {
   margin: 10px;
-  width: 360px;
+  width: 374px;
   height: 240px;
   border-radius: 40px;
   border: 2.5px solid var(--main-color-light);

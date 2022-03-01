@@ -250,7 +250,7 @@ h1 {
 .search-container {
   width: 18%;
   position: absolute;
-  left: 384px;
+  left: 418px;
   top: 40px;
   transform: translate(-50%, -50%);
 }
@@ -383,7 +383,7 @@ img {
               0 0 23px var(--main-color-naruto);
 }
 .card_image{
-  width: 370px;
+  width: 450px;
   height: 244px;
 }
 

@@ -251,7 +251,7 @@ h1 {
 .search-container {
   width: 18%;
   position: absolute;
-  left: 424px;
+  left: 460px;
   top: 39px;
   transform: translate(-50%, -50%);
 }
@@ -386,7 +386,7 @@ img {
               0 0 23px var(--main-color-harrypotter);
 }
 .card_image{
-  width: 384px;
+  width: 450px;
   height: 244px;
 }
 

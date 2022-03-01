@@ -15,12 +15,12 @@ import { RecettesService } from '../../services/recettes.service';
 })
 export class RecipeTemplateComponent implements OnInit {
 
-  ingredients : Ingredient[] = [new Ingredient()]
+  ingredients: Ingredient[] = [new Ingredient()]
 
   recette: Recette = new Recette();
-  urlImage : string = "";
+  urlImage: string = "";
 
-  href: string = '/assets/css/marvel.component.css';
+  href: string = '/assets/css/marvel.univers.component.css';
 
   constructor(private render: Renderer2, private router: Router, public recettesService: RecettesService) {
 
@@ -52,7 +52,7 @@ export class RecipeTemplateComponent implements OnInit {
     this.recettesService.findById(id).subscribe(response => {
 
       this.recette = response;
-      this.urlImage=this.recettesService.getImage(this.recette.photo)
+      this.urlImage = this.recettesService.getImage(this.recette.photo)
 
     });
   }

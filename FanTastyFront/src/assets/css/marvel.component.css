@@ -343,12 +343,15 @@ footer {
 
 .footer-inner {
   display: flex;
+  font-family: 'Coda', cursive;
+  color: #fff;
   justify-content: center;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 80px;
-    position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+  position: relative;
+    
 }
 
 .footer-item {
@@ -459,18 +462,6 @@ a:hover {
   
 .desktop {
     display: auto;
-}
-
-.footer-inner:after {
-    content: "Made with ♡ by Fan'Tasty 2022";
-    font-weight: 300;
-    letter-spacing: 0.03em;
-    font-size: 13px;
-    color: #d1d1d1;
-    position: absolute;
-    top: 200px;
-    clear: both;
-    display: block;
 }
 
 @media (max-width: 1024px) {
@@ -651,8 +642,8 @@ footer {
 }
 .title-recipe, 
 .subtitle-recipe {
-	font-size: 2em;
-  font-family: 'Mouse Memoirs', sans-serif;
+	font-size: 27px;
+  font-family: 'Coda', cursive;
    color: var(--main-color-marvel);
 	text-align: center;
 	margin: 0;
