@@ -22,6 +22,16 @@ export class HeaderComponent implements OnInit {
   iconHarryPotter: string = '../../assets/home-harry-potter-light.png';
   borderColorSideBar: string = 'borderColorLight';
 
+  titleStyle = {
+    position: 'relative',
+    margin: 0,
+    padding: 0,
+    'font-family': '\'Bebas Neue\', cursive',
+    'font-weight': 100,
+    'font-size': '50px',
+    'color': 'var(--main-color-light)'
+  };
+
 
 
 
@@ -29,6 +39,29 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
 
+    console.log(this.router.url);
+    if(this.router.url == '/marvel') {
+      console.log('in')
+      this.titleStyle.color = 'var(--main-color-marvel)'
+    }
+
+  }
+
+  reloadStyle() : object {
+    if(this.router.url == '/marvel') {
+      console.log('in')
+      this.titleStyle = {
+        position: 'relative',
+        margin: 0,
+        padding: 0,
+        'font-family': '\'Bebas Neue\', cursive',
+        'font-weight': 100,
+        'font-size': '50px',
+        'color': 'var(--main-color-marvel)'
+      };
+    }
+
+    return this.titleStyle;
   }
 
   btnClickHome() {
@@ -42,8 +75,6 @@ export class HeaderComponent implements OnInit {
     let recipeCard: Element = document.querySelector('.recipe-card')!;
     let sideBarBg: Element = document.querySelector('.sidebar')!;
     let modal: Element = document.querySelector('.container')!;
-
-    console.log(sideBarBg)
 
     if (darkMode === 'dark') {
       element.classList.add('dark');

@@ -1,12 +1,16 @@
-<div class="main-cards-container" *ngIf="isFromUniverse">
+<div *ngIf="loading">
+  <span> LOADING !!!!!</span>
+</div>
+
+<div class="main-cards-container" *ngIf="isFromUniverse && !loading">
 
     <ul class="cards">
         <li class="cards_item" *ngFor="let recette of recettes">
-            <a routerLink="/{{getUniverseSelected()}}/recette/{{recette.id}}">
+            <a routerLink="/{{getUniverseSelected()}}/recette/{{recette.id}}" routerLinkActive="active">
                 <div class="card">
                     <!-- <div class="card_image"><img src="../../assets/disney-frozen-cupcakes.jpg"></div> -->
                     <div class="card_image"><img src="http://localhost:60599/Resources/{{recette.photo}}" alt=""></div>
-                    
+
                 </div>
                 <button class="btn card_btn">{{recette.nom}}</button>
             </a>

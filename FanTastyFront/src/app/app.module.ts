@@ -9,6 +9,7 @@ import {AdminModuleModule} from "./modules/admin-module/admin-module.module";
 import {MongoComponent} from './components/mongo/mongo.component';
 import {AuthInterceptor} from "./core/interceptors/auth.interceptor";
 import {UserModule} from "./modules/user-module/user.module";
+import {CssInterceptor} from "./core/interceptors/css.interceptor";
 
 
 @NgModule({
@@ -24,11 +25,12 @@ import {UserModule} from "./modules/user-module/user.module";
     ReactiveFormsModule,
     HttpClientModule,
     AdminModuleModule,
-    UserModule
+    UserModule,
 
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi : true}
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi : true},
+    {provide: HttpClientModule}
   ],
   bootstrap: [AppComponent]
 })

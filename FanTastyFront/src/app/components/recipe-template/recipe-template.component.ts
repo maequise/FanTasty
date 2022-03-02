@@ -36,6 +36,7 @@ export class RecipeTemplateComponent implements OnInit {
 
     this.recettesService.findById(id).subscribe((response: Recette) => {
       this.recette = response;
+      this.urlImage=this.recettesService.getImage(this.recette.photo)
     });
 
     this.userLogged = this.authService.isUserLogged();
@@ -51,8 +52,6 @@ export class RecipeTemplateComponent implements OnInit {
     } else {
       card?.classList.add('card-bg');
     }
-
-    this.urlImage=this.recettesService.getImage(this.recette.photo)
 
   }
 

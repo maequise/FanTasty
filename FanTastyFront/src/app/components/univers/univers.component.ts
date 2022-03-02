@@ -1,15 +1,16 @@
-import {Component, OnInit, Renderer2} from '@angular/core';
+import {AfterContentInit, AfterViewChecked, AfterViewInit, Component, OnInit, Renderer2} from '@angular/core';
 import {Router} from '@angular/router';
 import {Recette} from '../../models/recette';
 import {RecettesService} from '../../services/recettes.service';
+import {slideAnimation, slideAnimationUniverse} from "../../annimations";
 
 @Component({
   selector: 'app-univers',
   templateUrl: './univers.component.html',
   styleUrls: [],
-  //encapsulation: ViewEncapsulation.
+  //encapsulation: ViewEncapsulation.,
 })
-export class UniversComponent implements OnInit {
+export class UniversComponent implements OnInit, AfterViewInit, AfterViewChecked {
 
   isFromUniverse = true;
 
@@ -18,6 +19,7 @@ export class UniversComponent implements OnInit {
 
   href: string = '';
   hrefComponent: string = '';
+  loading: boolean = true;
 
   constructor(private render: Renderer2, private router: Router, public recettesService: RecettesService) { }
 
@@ -25,6 +27,7 @@ export class UniversComponent implements OnInit {
     let styleLoaded: HTMLCollectionOf<HTMLLinkElement> = document.getElementsByTagName('link');
 
     for (let i = 0 ; i < styleLoaded.length ; i++) {
+      console.log('looping again !')
       let value: String = styleLoaded[i].href;
 
       if (value.match(/(.*)\/assets\/css\/([a-z]*)(\.univers\.component\.css)/)
@@ -36,6 +39,8 @@ export class UniversComponent implements OnInit {
       }
     }
 
+
+
     let tag = this.render.createElement('link');
     this.getStyleUnivers();
 
@@ -43,6 +48,7 @@ export class UniversComponent implements OnInit {
     this.render.setProperty(tag, 'href', this.href);
 
     this.render.appendChild(document.head, tag);
+    //this.render.insertBefore(document.head, tag, document.head.getElementsByTagName('link')[0]);
 
     tag = this.render.createElement('link');
 
@@ -50,10 +56,24 @@ export class UniversComponent implements OnInit {
     this.render.setProperty(tag, 'href', this.hrefComponent);
 
     this.render.appendChild(document.head, tag);
+    //this.render.insertBefore(document.head, tag, document.head.getElementsByTagName('link')[0]);
 
     this.recettesService.findByUnivers(this.getUniverseSelected()).subscribe(response => this.recettes = response);
 
   }
+
+  ngAfterViewInit(): void {
+
+  }
+
+  ngAfterViewChecked(): void {
+    setTimeout(() => {
+      this.loading = false;
+    },1000)
+
+  }
+
+
 
   getStyleUnivers(): string {
     let urlUniverse: String = this.router.url;
