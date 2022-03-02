@@ -22,6 +22,8 @@ export class RecipeTemplateComponent implements OnInit {
 
   href: string = '/assets/css/marvel.univers.component.css';
 
+  display: boolean = true;
+
   constructor(private render: Renderer2, private router: Router, public recettesService: RecettesService) {
 
 
@@ -79,6 +81,11 @@ export class RecipeTemplateComponent implements OnInit {
     console.log(this.href);
 
     return this.href;
+  }
+
+  showIngredientsUtensils(event: Event): void {
+    this.display = !this.display;
+    event.stopPropagation();
   }
 
 }
