@@ -75,6 +75,8 @@ export class HeaderComponent implements OnInit {
     let recipeCard: Element = document.querySelector('.recipe-card')!;
     let sideBarBg: Element = document.querySelector('.sidebar')!;
     let modal: Element = document.querySelector('.container')!;
+    let toggleOnBg: Element = document.querySelector('.toggle')!;
+    let toggleOffBg: Element = document.querySelector('.utensils-back')!;
 
     if (darkMode === 'dark') {
       element.classList.add('dark');
@@ -86,16 +88,40 @@ export class HeaderComponent implements OnInit {
       if (recipeCard != null) {
         recipeCard.classList.remove('card-bg');
       }
+
+      if (toggleOnBg != null) {
+        toggleOnBg.classList.remove('toggle-light');
+        toggleOnBg.classList.add('toggle-dark');
+      }
+
+      if (toggleOffBg != null) {
+        toggleOffBg.classList.remove('utensils-light');
+        toggleOffBg.classList.add('sd-dark');
+      }
+
     } else {
       element.classList.remove('dark');
+
       if (recipeCard != null) {
         recipeCard.classList.add('card-bg');
+      }
+
+      if (toggleOnBg != null) {
+        toggleOnBg.classList.add('toggle-light');
+        toggleOnBg.classList.remove('toggle-dark');
+
+      }
+
+      if (toggleOffBg != null) {
+        toggleOffBg.classList.add('utensils-light');
+        toggleOffBg.classList.remove('sd-dark');
       }
 
       modal.classList.add('bg-light-modal');
       modal.classList.remove('bg-dark-modal')
       sideBarBg.classList.remove('sd-dark');
       sideBarBg.classList.add('sd-light');
+
     }
   }
 

@@ -21,10 +21,27 @@
             </span>
         </p>
 
-        <h2 class="subtitle-ingredients">Ingrédients</h2>
-        <ul class="ingredients" *ngFor="let ingredientRecette of recette?.ingredients">
-            <li>{{ingredientRecette.ingredient.nom}} | {{ingredientRecette.quantite}} {{ingredientRecette.unite}}</li>
-        </ul>
+        <label class="toggle-utensils">
+            <input type="checkbox" />
+            <span class="utensils-back utensils-light">
+                <span class="toggle toggle-light"></span>
+                <span class="label label-ingredients" (click)="showIngredientsUtensils($event)">Ingrédients</span>
+                <span class="label label-utensils" (click)="showIngredientsUtensils($event)">Ustensiles</span>
+            </span>
+        </label>
+
+        <div *ngIf="display">
+            <ul class="ingredients" *ngFor="let ingredientRecette of recette?.ingredients">
+                <li>{{ingredientRecette.ingredient.nom}} | {{ingredientRecette.quantite}} {{ingredientRecette.unite}}
+                </li>
+            </ul>
+        </div>
+
+        <div *ngIf="!display">
+            <ul class="ingredients" *ngFor="let ustensiles of recette?.ustensiles">
+                <li>{{ustensiles}}</li>
+            </ul>
+        </div>
 
     </div>
 

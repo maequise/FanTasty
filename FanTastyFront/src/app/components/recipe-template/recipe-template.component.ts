@@ -4,6 +4,7 @@ import { Ingredient } from '../../models/ingredient';
 import { Recette } from '../../models/recette';
 import { RecettesService } from '../../services/recettes.service';
 import {AuthService} from "../../services/auth.service";
+import {Utils} from "../../core/Utils";
 
 
 
@@ -21,8 +22,10 @@ export class RecipeTemplateComponent implements OnInit {
   recette: Recette = new Recette();
   urlImage : string = "";
 
-  href: string = '/assets/css/marvel.component.css';
+  href: string = '';
+  hrefComponent : string = '';
 
+  display: boolean = true;
   userLogged: boolean = false;
 
   constructor(private render: Renderer2, private router: Router,
@@ -53,6 +56,14 @@ export class RecipeTemplateComponent implements OnInit {
       card?.classList.add('card-bg');
     }
 
+    Utils.loadStyle(this.render, this.router);
+
+    this.recettesService.findById(id).subscribe(response => {
+
+      this.recette = response;
+      this.urlImage = this.recettesService.getImage(this.recette.photo)
+
+    });
   }
 
   btnClickHome() {
@@ -75,6 +86,11 @@ export class RecipeTemplateComponent implements OnInit {
     }
 
     return this.href;
+  }
+
+  showIngredientsUtensils(event: Event): void {
+    this.display = !this.display;
+    event.stopPropagation();
   }
 
 }
