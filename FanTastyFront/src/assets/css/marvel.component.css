@@ -546,10 +546,6 @@ footer {
   box-shadow: 0 0 23px var(--main-color-marvel),
               0 0 23px var(--main-color-marvel);
 }
-.card_image{
-  width: 384px;
-  height: 244px;
-}
 
 .cards_item {
   display: flex;

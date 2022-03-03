@@ -454,10 +454,6 @@ img {
   box-shadow: 0 0 23px var(--main-color-naruto),
               0 0 23px var(--main-color-naruto);
 }
-.card_image{
-  width: 370px;
-  height: 244px;
-}
 
 .cards_item {
   display: flex;

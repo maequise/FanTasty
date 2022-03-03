@@ -539,10 +539,6 @@ img {
   box-shadow: 0 0 23px var(--main-color-harrypotter),
               0 0 23px var(--main-color-harrypotter);
 }
-.card_image{
-  width: 384px;
-  height: 244px;
-}
 
 .cards_item {
   display: flex;
