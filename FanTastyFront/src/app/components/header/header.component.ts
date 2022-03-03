@@ -22,6 +22,16 @@ export class HeaderComponent implements OnInit {
   iconHarryPotter: string = '../../assets/home-harry-potter-light.png';
   borderColorSideBar: string = 'borderColorLight';
 
+  titleStyle = {
+    position: 'relative',
+    margin: 0,
+    padding: 0,
+    'font-family': '\'Bebas Neue\', cursive',
+    'font-weight': 100,
+    'font-size': '50px',
+    'color': 'var(--main-color-light)'
+  };
+
 
 
 
@@ -29,6 +39,29 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
 
+    console.log(this.router.url);
+    if(this.router.url == '/marvel') {
+      console.log('in')
+      this.titleStyle.color = 'var(--main-color-marvel)'
+    }
+
+  }
+
+  reloadStyle() : object {
+    if(this.router.url == '/marvel') {
+      console.log('in')
+      this.titleStyle = {
+        position: 'relative',
+        margin: 0,
+        padding: 0,
+        'font-family': '\'Bebas Neue\', cursive',
+        'font-weight': 100,
+        'font-size': '50px',
+        'color': 'var(--main-color-marvel)'
+      };
+    }
+
+    return this.titleStyle;
   }
 
   btnClickHome() {
@@ -42,8 +75,8 @@ export class HeaderComponent implements OnInit {
     let recipeCard: Element = document.querySelector('.recipe-card')!;
     let sideBarBg: Element = document.querySelector('.sidebar')!;
     let modal: Element = document.querySelector('.container')!;
-
-    console.log(sideBarBg)
+    let toggleOnBg: Element = document.querySelector('.toggle')!;
+    let toggleOffBg: Element = document.querySelector('.utensils-back')!;
 
     if (darkMode === 'dark') {
       element.classList.add('dark');
@@ -55,16 +88,40 @@ export class HeaderComponent implements OnInit {
       if (recipeCard != null) {
         recipeCard.classList.remove('card-bg');
       }
+
+      if (toggleOnBg != null) {
+        toggleOnBg.classList.remove('toggle-light');
+        toggleOnBg.classList.add('toggle-dark');
+      }
+
+      if (toggleOffBg != null) {
+        toggleOffBg.classList.remove('utensils-light');
+        toggleOffBg.classList.add('sd-dark');
+      }
+
     } else {
       element.classList.remove('dark');
+
       if (recipeCard != null) {
         recipeCard.classList.add('card-bg');
+      }
+
+      if (toggleOnBg != null) {
+        toggleOnBg.classList.add('toggle-light');
+        toggleOnBg.classList.remove('toggle-dark');
+
+      }
+
+      if (toggleOffBg != null) {
+        toggleOffBg.classList.add('utensils-light');
+        toggleOffBg.classList.remove('sd-dark');
       }
 
       modal.classList.add('bg-light-modal');
       modal.classList.remove('bg-dark-modal')
       sideBarBg.classList.remove('sd-dark');
       sideBarBg.classList.add('sd-light');
+
     }
   }
 

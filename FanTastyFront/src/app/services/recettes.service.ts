@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Recette } from '../models/recette';
 import {Constants} from "../core/Constants";
+import {map} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +27,9 @@ export class RecettesService {
     return this.httpClient.get<Recette[]>(this.apiServer + '/api/recettes');
   }
   findById(id: string): Observable<Recette> {
-    return this.httpClient.get<Recette>(this.apiServer + '/api/recettes/' + id);
+    return this.httpClient.get<Recette>(this.apiServer + '/api/recettes/' + id).pipe(map(response => {
+      return response;
+    }));
   }
 
   findByUnivers(universe: string) : Observable<Recette[]> {

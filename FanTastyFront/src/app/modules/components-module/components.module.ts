@@ -17,6 +17,7 @@ import {AuthService} from "../../services/auth.service";
 import {AuthInterceptor} from "../../core/interceptors/auth.interceptor";
 import { FavoriteComponent } from '../../components/favorite/favorite.component';
 import {UserModule} from "../user-module/user.module";
+import {CssInterceptor} from "../../core/interceptors/css.interceptor";
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import {UserModule} from "../user-module/user.module";
   exports: [
     LoginComponent
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class ComponentsModule { }
