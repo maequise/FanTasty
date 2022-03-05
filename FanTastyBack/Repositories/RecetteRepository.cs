@@ -85,34 +85,54 @@ namespace FanTastyBack.Repositories
 
         public List<Recette> FindByTag(Models.Tag tag)
         {
-            var builder = Builders<Recette>.Filter;
-            var filter = builder.Empty;
+            FilterDefinition<Recette> filterSaison = null;
+            FilterDefinition<Recette> filterTypePlat = null;
+            FilterDefinition<Recette> filterDifficulty = null;
+            FilterDefinition<Recette> filterCost = null;
+
+            var builder = Builders<Recette>.Filter;           
 
             if (!string.IsNullOrWhiteSpace(tag.Saison))
             {
-                var SeasonFilter = builder.Eq(rec => rec.Tags.Saison, tag.Saison);
-                filter &= SeasonFilter;
+                filterSaison = builder.Eq(rec => rec.Tags.Saison, tag.Saison);
             }
 
             if (!string.IsNullOrWhiteSpace(tag.TypePlat))
             {
-                var TypePlatFilter = builder.Eq(rec => rec.Tags.TypePlat, tag.TypePlat);
-                filter &= TypePlatFilter;
+                filterTypePlat = builder.Eq(rex => rex.Tags.TypePlat, tag.TypePlat);
             }
 
             if (tag.Difficulte!=0)
             {
-                var DifficulteFilter = builder.Eq(rec => rec.Tags.Difficulte, tag.Difficulte);
-                filter &= DifficulteFilter;
+                filterDifficulty = builder.Eq(rec => rec.Tags.Difficulte, tag.Difficulte);
             }
 
             if (tag.Cout != 0)
             {
-                var CoutFilter = builder.Eq(recette => recette.Tags.Cout, tag.Cout);
-                filter &= CoutFilter;
+                filterCost = builder.Eq(recette => recette.Tags.Cout, tag.Cout);
             }
-            
-            List<Recette> recettes = this._recettes.Find(filter).ToList();
+
+            if(filterSaison == null)
+            {
+                filterSaison = builder.Empty;
+            }
+
+            if(filterCost == null)
+            {
+                filterCost = builder.Empty;
+            }
+
+            if(filterDifficulty == null)
+            {
+                filterDifficulty = builder.Empty;
+            }
+
+            if(filterTypePlat == null)
+            {
+                filterTypePlat = builder.Empty;
+            }
+
+            List<Recette> recettes = this._recettes.Find(filterSaison & filterTypePlat & filterCost & filterDifficulty).ToList();
 
             for (int i = 0; i < recettes.Count; i++)
             {

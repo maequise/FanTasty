@@ -84,7 +84,26 @@ namespace FanTastyBack.Controllers
         }
 
         [HttpGet("tag/{tagString}")]
-        public IActionResult FindByTag(string tagString)
+        public IActionResult FindByTag(Tag tagString)
+        {
+            //Tag tag = JsonSerializer.Deserialize<Tag>(tagString);
+
+            try
+            {
+                return Ok(this._service.FindByTag(tagString));
+            }
+            catch (NotFoundException e)
+            {
+                //return NotFound(e.Message);
+                return Ok(new List<Recette>());
+            }
+        }
+        
+        /**
+         * @TMER : Test 
+         * */
+        [HttpGet("tag-search")]
+        public IActionResult FindByTagSearch(string tagString)
         {
             Tag tag = JsonSerializer.Deserialize<Tag>(tagString);
 
