@@ -124,6 +124,46 @@ namespace FanTastyBack.Repositories
             return recettes;
         }
 
+        public List<Recette> FindByTags(SearchedTag tags)
+        {
+            var builder = Builders<Recette>.Filter;
+            var filter = builder.Empty;
+
+            if (tags.Saison.Any())
+            {
+                var SeasonFilter = builder.In(rec => rec.Tags.Saison, tags.Saison);
+                filter &= SeasonFilter;
+            }
+
+            if (tags.TypePlat.Any())
+            {
+                var TypePlatFilter = builder.In(rec => rec.Tags.TypePlat, tags.TypePlat);
+                filter &= TypePlatFilter;
+            }
+
+            if (tags.Difficulte.Any())
+            {
+                var DifficulteFilter = builder.In(rec => rec.Tags.Difficulte, tags.Difficulte);
+                filter &= DifficulteFilter;
+            }
+
+            if (tags.Cout.Any())
+            {
+                var CoutFilter = builder.In(recette => recette.Tags.Cout, tags.Cout);
+                filter &= CoutFilter;
+            }
+
+            List<Recette> recettes = this._recettes.Find(filter).ToList();
+            for (int i = 0; i < recettes.Count; i++)
+            {
+                foreach (IngredientRecette ingr in recettes[i].Ingredients)
+                {
+                    ingr.Ingredient = this._ingredientRepository.FindById(ingr.Id);
+                }
+            }
+            return recettes;
+        }
+
         public List<Recette> FindByIngredient(string ingredient)
         {
             var filter = Builders<Recette>.Filter.ElemMatch(rec => rec.Ingredients, ingr => ingr.Id == ingredient);

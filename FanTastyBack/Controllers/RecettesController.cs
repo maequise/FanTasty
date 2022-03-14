@@ -100,6 +100,22 @@ namespace FanTastyBack.Controllers
             }
         }
 
+        [HttpGet("tags")]
+        public IActionResult FindByTags(string tagsString)
+        {
+            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            SearchedTag tags = JsonSerializer.Deserialize<SearchedTag>(tagsString, options);
+
+            try
+            {
+                return Ok(this._service.FindByTags(tags));
+            }
+            catch (NotFoundException e)
+            {
+                return Ok(new List<Recette>());
+            }
+        }
+
         [HttpGet("ingredient/{ingredient}")]
         public IActionResult FindByIngredient(string ingredient)
         {
