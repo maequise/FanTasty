@@ -8,7 +8,7 @@
 
 a,
 button {
-  font-family: inherit;
+  
   font-size: inherit;
   line-height: inherit;
   border: none;
@@ -31,7 +31,7 @@ hr.hline_color {
 }
 
 
-img {
+.ico {
   display: block;
   width: 100%;
   height: auto;

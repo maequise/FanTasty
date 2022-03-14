@@ -1,10 +1,10 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {BehaviorSubject, Observable, Subject} from "rxjs";
-import {Constants} from "../core/Constants";
-import {Login} from "../models/Login";
-import {Utilisateur} from "../models/utilisateur";
-import {map} from "rxjs/operators";
+import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { BehaviorSubject, Observable, Subject } from "rxjs";
+import { Constants } from "../core/Constants";
+import { Login } from "../models/Login";
+import { Utilisateur } from "../models/utilisateur";
+import { map } from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -20,14 +20,14 @@ export class AuthService {
 
   constructor(private httpClient: HttpClient) {
     this.currentUser = new BehaviorSubject<Utilisateur>(JSON.parse(localStorage.getItem("user")!));
-    if(this.currentUser.value){
+    if (this.currentUser.value) {
       this.isLogged = true;
     }
   }
 
-  isUserLogged() : boolean {
-    if(this.currentUser != null && this.currentUser.getValue() != null) {
-      if(this.currentUser.getValue().token != null) {
+  isUserLogged(): boolean {
+    if (this.currentUser != null && this.currentUser.getValue() != null) {
+      if (this.currentUser.getValue().token != null) {
         return true;
       }
     }
@@ -35,7 +35,7 @@ export class AuthService {
     return false;
   }
 
-  public get currentUserValue(){
+  public get currentUserValue() {
     return this.currentUser.value;
   }
 
@@ -47,7 +47,7 @@ export class AuthService {
       let userFound: Utilisateur = <Utilisateur><any>response;
 
       if (response != null && userFound.roles != null && userFound.roles.length >= 1) {
-        if (userFound.roles.includes('admin')) {
+        if (userFound.roles.includes('user')) {
           this.isLogged = true;
 
           this.result.next(this.isLogged);
@@ -69,7 +69,7 @@ export class AuthService {
     this.currentUser = new BehaviorSubject<Utilisateur>(JSON.parse(localStorage.getItem("user")!));
   }
 
-  setTheCurrentUser() : void {
+  setTheCurrentUser(): void {
     this.currentUser = new BehaviorSubject<Utilisateur>(JSON.parse(localStorage.getItem("user")!));
   }
 }

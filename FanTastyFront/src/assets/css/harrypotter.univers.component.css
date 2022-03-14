@@ -27,12 +27,6 @@ hr.hline_color {
   height:2px;
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -350,13 +344,6 @@ h1 {
   margin: 0;
 }
 
-
-img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-}
-
 .btn {
   
   font-family: 'Roboto Slab', serif;
@@ -489,8 +476,8 @@ img {
 	color: var(--main-color-harrypotter);
 	line-height: 35px;
 	text-align: center;
-	font-size: 22px;
-  font-family: 'Mouse Memoirs', sans-serif;
+	font-size: 16px;
+  font-family: 'Eczar', serif;
 }
 .toggle-utensils .label-ingredients {
 	left: 0px;

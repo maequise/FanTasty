@@ -1,4 +1,4 @@
-import {animate, animateChild, group, query, style, transition, trigger} from "@angular/animations";
+/*import {animate, animateChild, group, query, style, transition, trigger} from "@angular/animations";
 
 // Routable animations
 export const slideAnimation =
@@ -89,5 +89,5 @@ export const slideAnimationUniverse =
   ]);*/
 
 
-export const narutoAnimation =
-  trigger('naruto', []);
+/*export const narutoAnimation =
+  trigger('naruto', []);*/

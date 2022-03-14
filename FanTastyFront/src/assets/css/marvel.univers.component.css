@@ -28,12 +28,6 @@ hr.hline_color {
   height:2px;
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -252,7 +246,7 @@ h1 {
 .search-container {
   width: 18%;
   position: absolute;
-  left: 432px;
+  left: 446px;
   top: 35px;
   transform: translate(-50%, -50%);
 }
@@ -484,8 +478,8 @@ h1 {
 	color: var(--main-color-marvel);
 	line-height: 35px;
 	text-align: center;
-	font-size: 22px;
-  font-family: 'Mouse Memoirs', sans-serif;
+	font-size: 16px;
+  font-family: 'Do Hyeon', sans-serif;
 }
 .toggle-utensils .label-ingredients {
 	left: 0px;

@@ -27,12 +27,6 @@ hr.hline_color {
   height:2px;
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -420,12 +414,6 @@ footer {
 }
 
 
-img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-}
-
 .btn {
   
   font-family: 'Balsamiq Sans', cursive;
@@ -549,14 +537,14 @@ img {
 .subtitle-ingredients{
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Balsamiq Sans', cursive;
   font-weight:unset;
   font-size: 20px;
   color: var(--main-color-naruto);
 }
 .instructions{
   padding: 0;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Balsamiq Sans', cursive;
   font-weight: unset;
   font-size: 15px;
   color: var(--main-color-naruto);
@@ -564,7 +552,7 @@ img {
 .subtitle-process{
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Balsamiq Sans', cursive;
   font-weight:bolder;
   font-size: 18px;
   color: var(--main-color-naruto);
@@ -576,7 +564,7 @@ ol {
 }
 
 ul.ingredients > li {
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Balsamiq Sans', cursive;
   font-weight: unset;
   font-size: 15px;
   color: var(--main-color-naruto);
@@ -587,7 +575,7 @@ ul.pesto {
 }
 li {
 	line-height: 1.8;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Balsamiq Sans', cursive;
   color: var(--main-color-naruto);
 }
 
@@ -613,20 +601,25 @@ p{
   padding: 0;
 }
 
+.recipe_img {
+  height: auto;
+  width: 100%;
+  vertical-align: middle;
+}
 
 figure{
   margin: 0;
 }
 
-figure img {
+.recipe-template_img {
 	width: 400px;
 	border-radius: 30px;
 }
 
 figcaption, p {
-	font-size: 13px;
+	font-size: 16px;
 	text-align: center;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Balsamiq Sans', cursive;
   color: var(--main-color-naruto);
 }
 figcaption::before {

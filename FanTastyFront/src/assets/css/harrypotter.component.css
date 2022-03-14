@@ -26,11 +26,6 @@ hr.hline_color {
   height:2px;
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -504,13 +499,6 @@ footer {
   margin: 0;
 }
 
-
-img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-}
-
 .btn {
   
   font-family: 'Roboto Slab', serif;
@@ -700,12 +688,17 @@ p{
   padding: 0;
 }
 
+.recipe_img {
+  height: auto;
+  width: 100%;
+  vertical-align: middle;
+}
 
 figure{
   margin: 0;
 }
 
-figure img {
+.recipe-template_img {
 	width: 400px;
 	border-radius: 30px;
 }

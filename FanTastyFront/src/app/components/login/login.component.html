@@ -1,10 +1,15 @@
-<form [formGroup]="formLogin" (ngSubmit)="login()" *ngIf="!userLogged">
-  <input type="text" placeholder="username" formControlName="username" />
-  <input type="password" placeholder="password" formControlName="password" />
+<div class="login-container">
+  <div [formGroup]="formLogin" (ngSubmit)="login()" *ngIf="!userLogged">
+    <div>
+      <input class="user-name_input" type="text" placeholder="nom" formControlName="username" />
+    </div>
+    <div>
+      <input class="mdp_input" type="password" placeholder="mot de passe" formControlName="password" />
+    </div>
+    <div>
+      <button class="login_btn" type="submit">Se connecter</button>
+    </div>
+  </div>
 
-  <button type="submit">Login</button>
-</form>
-
-<button type="button" (click)="logout()" *ngIf="userLogged">Déconnecter</button>
-
-<app-user-create></app-user-create>
+  <button type="button" (click)="logout()" *ngIf="userLogged">Déconnecter</button>
+</div>

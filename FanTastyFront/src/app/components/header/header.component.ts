@@ -32,23 +32,20 @@ export class HeaderComponent implements OnInit {
     'color': 'var(--main-color-light)'
   };
 
-
-
-
   constructor(private router: Router) { }
 
   ngOnInit(): void {
 
     console.log(this.router.url);
-    if(this.router.url == '/marvel') {
+    if (this.router.url == '/marvel') {
       console.log('in')
       this.titleStyle.color = 'var(--main-color-marvel)'
     }
 
   }
 
-  reloadStyle() : object {
-    if(this.router.url == '/marvel') {
+  reloadStyle(): object {
+    if (this.router.url == '/marvel') {
       console.log('in')
       this.titleStyle = {
         position: 'relative',
@@ -78,6 +75,8 @@ export class HeaderComponent implements OnInit {
     let toggleOnBg: Element = document.querySelector('.toggle')!;
     let toggleOffBg: Element = document.querySelector('.utensils-back')!;
 
+    console.log(toggleOffBg)
+
     if (darkMode === 'dark') {
       element.classList.add('dark');
       modal.classList.remove('bg-light-modal');
@@ -90,13 +89,14 @@ export class HeaderComponent implements OnInit {
       }
 
       if (toggleOnBg != null) {
+        console.log(toggleOffBg)
         toggleOnBg.classList.remove('toggle-light');
         toggleOnBg.classList.add('toggle-dark');
       }
 
       if (toggleOffBg != null) {
         toggleOffBg.classList.remove('utensils-light');
-        toggleOffBg.classList.add('sd-dark');
+        toggleOffBg.classList.add('utensils-dark');
       }
 
     } else {
@@ -114,7 +114,7 @@ export class HeaderComponent implements OnInit {
 
       if (toggleOffBg != null) {
         toggleOffBg.classList.add('utensils-light');
-        toggleOffBg.classList.remove('sd-dark');
+        toggleOffBg.classList.remove('utensils-dark');
       }
 
       modal.classList.add('bg-light-modal');
@@ -155,6 +155,8 @@ export class HeaderComponent implements OnInit {
       this.burger = '../../assets/hamburger.png';
     } else if (urlUniverse.startsWith('/marvel')) {
       this.burger = '../../assets/burger-marvel.png';
+    } else if (urlUniverse === '/login') {
+      this.burger = '../../assets/hamburger.png';
     }
 
     return this.burger;
@@ -173,6 +175,8 @@ export class HeaderComponent implements OnInit {
       this.iconTop = '../../assets/recipe-book.png';
     } else if (urlUniverse.startsWith('/marvel')) {
       this.iconTop = '../../assets/recipe-book-red-marvel.png';
+    } else if (urlUniverse.startsWith('/login')) {
+      this.iconTop = '../../assets/recipe-book.png';
     }
 
     return this.iconTop;
@@ -191,6 +195,8 @@ export class HeaderComponent implements OnInit {
       this.iconTopDice = '../../assets/dice.png';
     } else if (urlUniverse.startsWith('/marvel')) {
       this.iconTopDice = '../../assets/dice-red-marvel.png';
+    } else if (urlUniverse === '/login') {
+      this.iconTopDice = '../../assets/dice.png';
     }
 
     return this.iconTopDice;
@@ -209,6 +215,8 @@ export class HeaderComponent implements OnInit {
       this.iconTopContest = '../../assets/concours.png';
     } else if (urlUniverse.startsWith('/marvel')) {
       this.iconTopContest = '../../assets/concours-red-marvel.png';
+    } else if (urlUniverse === '/login') {
+      this.iconTopContest = '../../assets/concours.png';
     }
 
     return this.iconTopContest;
@@ -227,6 +235,8 @@ export class HeaderComponent implements OnInit {
       this.iconHome = '../../assets/home.png';
     } else if (urlUniverse.startsWith('/marvel')) {
       this.iconHome = '../../assets/home-red-marvel.png';
+    } else if (urlUniverse === '/login') {
+      this.iconHome = '../../assets/home.png';
     }
 
     return this.iconHome;
@@ -245,6 +255,8 @@ export class HeaderComponent implements OnInit {
       this.iconLogin = '../../assets/login.png';
     } else if (urlUniverse.startsWith('/marvel')) {
       this.iconLogin = '../../assets/home-login-red-marvel.png';
+    } else if (urlUniverse === '/login') {
+      this.iconLogin = '../../assets/login.png';
     }
 
     return this.iconLogin;
@@ -263,6 +275,8 @@ export class HeaderComponent implements OnInit {
       this.iconDisney = '../../assets/home-disney-light.png';
     } else if (urlUniverse.startsWith('/marvel')) {
       this.iconDisney = '../../assets/home-disney-red-marvel.png';
+    } else if (urlUniverse === '/login') {
+      this.iconDisney = '../../assets/home-disney-light.png';
     }
 
     return this.iconDisney;
@@ -281,6 +295,8 @@ export class HeaderComponent implements OnInit {
       this.iconNaruto = '../../assets/home-naruto-light.png';
     } else if (urlUniverse.startsWith('/marvel')) {
       this.iconNaruto = '../../assets/home-naruto-red-marvel.png';
+    } else if (urlUniverse === '/login') {
+      this.iconNaruto = '../../assets/home-naruto-light.png';
     }
 
     return this.iconNaruto;
@@ -299,6 +315,8 @@ export class HeaderComponent implements OnInit {
       this.iconMarvel = '../../assets/home-marvel-light.png';
     } else if (urlUniverse.startsWith('/marvel')) {
       this.iconMarvel = '../../assets/home-marvel-red-marvel.png';
+    } else if (urlUniverse === '/login') {
+      this.iconMarvel = '../../assets/home-marvel-light.png';
     }
 
     return this.iconMarvel;
@@ -317,11 +335,12 @@ export class HeaderComponent implements OnInit {
       this.iconHarryPotter = '../../assets/home-harry-potter-light.png';
     } else if (urlUniverse.startsWith('/marvel')) {
       this.iconHarryPotter = '../../assets/home-harry-potter-red-marvel.png';
+    } else if (urlUniverse === '/login') {
+      this.iconHarryPotter = '../../assets/home-harry-potter-light.png';
     }
 
     return this.iconHarryPotter;
   }
-
 
 
 

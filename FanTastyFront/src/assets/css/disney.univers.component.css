@@ -27,11 +27,6 @@ hr.hline_color {
   height:2px;
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 
 ::-webkit-scrollbar {
   width: 5px;

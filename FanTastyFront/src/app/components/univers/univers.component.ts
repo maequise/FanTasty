@@ -1,9 +1,10 @@
-import {AfterContentInit, AfterViewChecked, AfterViewInit, Component, OnInit, Renderer2} from '@angular/core';
-import {Router} from '@angular/router';
-import {Recette} from '../../models/recette';
-import {RecettesService} from '../../services/recettes.service';
-import {slideAnimation, slideAnimationUniverse} from "../../annimations";
-import {Utils} from "../../core/Utils";
+import { AfterContentInit, AfterViewChecked, AfterViewInit, Component, OnInit, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
+import { Recette } from '../../models/recette';
+import { RecettesService } from '../../services/recettes.service';
+import { Utils } from "../../core/Utils";
+
+/*import {slideAnimation, slideAnimationUniverse} from "../../annimations";*/
 
 @Component({
   selector: 'app-univers',
@@ -28,9 +29,11 @@ export class UniversComponent implements OnInit, AfterViewInit, AfterViewChecked
 
     Utils.loadStyle(this.render, this.router);
 
+    /*this.recettesService.findByUnivers(this.getUniverseSelected()).subscribe(response => this.recettes = response);*/
     this.recettesService.findByUnivers(this.getUniverseSelected()).subscribe(response => this.recettes = response);
 
   }
+
 
   ngAfterViewInit(): void {
 
@@ -39,7 +42,7 @@ export class UniversComponent implements OnInit, AfterViewInit, AfterViewChecked
   ngAfterViewChecked(): void {
     setTimeout(() => {
       this.loading = false;
-    },1000)
+    }, 1000)
 
   }
 
@@ -65,6 +68,7 @@ export class UniversComponent implements OnInit, AfterViewInit, AfterViewChecked
     return this.href;
   }
 
+
   getUniverseSelected(): string {
     let urlUniverse: String = this.router.url;
 
@@ -80,5 +84,6 @@ export class UniversComponent implements OnInit, AfterViewInit, AfterViewChecked
 
     return '';
   }
+
 
 }

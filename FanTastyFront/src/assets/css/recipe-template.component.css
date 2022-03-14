@@ -27,12 +27,6 @@ hr.hline_color {
   height:2px;
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -667,27 +661,6 @@ p{
   margin: 0;
   padding: 0;
 }
-
-
-figure{
-  margin: 0;
-}
-
-figure img {
-	width: 400px;
-	border-radius: 30px;
-}
-
-figcaption, p {
-	font-size: 13px;
-	text-align: center;
-  font-family: 'Roboto Slab', serif;
-  color: var(--main-color-disney);
-}
-figcaption::before {
-	content: "Création by ";
-}
-
 
 .variation {
 	font-size: 0.9rem;

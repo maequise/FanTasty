@@ -26,11 +26,6 @@ hr.hline_color {
   height:2px;
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -503,24 +498,23 @@ footer {
 .subtitle-ingredients{
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Mouse Memoirs', sans-serif;
   font-weight:unset;
   font-size: 20px;
   color: var(--main-color-disney);
 }
 .instructions{
   padding: 0;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Mouse Memoirs', sans-serif;
   font-weight: unset;
-  font-size: 15px;
+  font-size: 18px;
   color: var(--main-color-disney);
 }
 .subtitle-process{
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Slab', serif;
-  font-weight:bolder;
-  font-size: 18px;
+  font-family:  'Mouse Memoirs', sans-serif;
+  font-size: 20px;
   color: var(--main-color-disney);
 }
 
@@ -530,9 +524,9 @@ ol {
 }
 
 ul.ingredients > li {
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Mouse Memoirs', sans-serif;
   font-weight: unset;
-  font-size: 15px;
+  font-size: 18px;
   color: var(--main-color-disney);
 }
 ul.pesto {
@@ -541,7 +535,8 @@ ul.pesto {
 }
 li {
 	line-height: 1.8;
-  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  font-family: 'Mouse Memoirs', sans-serif;
   color: var(--main-color-disney);
 }
 
@@ -566,21 +561,25 @@ p{
   margin: 0;
   padding: 0;
 }
-
+.recipe_img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 figure{
   margin: 0;
 }
 
-figure img {
+.recipe-template_img {
 	width: 400px;
 	border-radius: 30px;
 }
 
 figcaption, p {
-	font-size: 13px;
+	font-size: 18px;
 	text-align: center;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Mouse Memoirs', sans-serif;
   color: var(--main-color-disney);
 }
 figcaption::before {
