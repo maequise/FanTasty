@@ -568,6 +568,7 @@ ul.ingredients > li {
   font-weight: unset;
   font-size: 15px;
   color: var(--main-color-naruto);
+  text-align: center;
 }
 ul.pesto {
 	margin: 0;
@@ -577,6 +578,7 @@ li {
 	line-height: 1.8;
   font-family: 'Balsamiq Sans', cursive;
   color: var(--main-color-naruto);
+  font-size: 15px;
 }
 
 ol {	
@@ -625,11 +627,11 @@ figcaption, p {
 figcaption::before {
 	content: "Création by ";
 }
-
-
 .variation {
 	font-size: 0.9rem;
 	margin: 100px 25px 0 0;
 }
-
+.favorite-recipe_img{
+    border: solid 2.5px var(--main-color-naruto);
+}
 

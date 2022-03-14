@@ -1,7 +1,7 @@
 <div class="login-container">
-  <div [formGroup]="formLogin" (ngSubmit)="login()" *ngIf="!userLogged">
+  <form [formGroup]="formLogin" (ngSubmit)="login()" *ngIf="!userLogged">
     <div>
-      <input class="user-name_input" type="text" placeholder="nom d'utilisateur" formControlName="username" />
+      <input class="user-name_input" type="text" placeholder="adresse mail" formControlName="username" />
     </div>
     <div>
       <input class="mdp_input" type="password" placeholder="mot de passe" formControlName="password" />
@@ -13,7 +13,7 @@
     <div>
       <a routerLinkActive="active" routerLink="/create"> <button class="createAccout_btn">S'inscrire</button></a>
     </div>
-  </div>
+  </form>
 
   <button type="button" (click)="logout()" *ngIf="userLogged">Déconnecter</button>
 </div>

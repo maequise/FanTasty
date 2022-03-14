@@ -1,1 +1,6 @@
-<button type="button" (click)="favorite()">Like</button>
+<div class="heart_container">
+    <button class="heart_btn" type="button" (click)="favorite()">
+        <img class="heart_icon" [src]="getIconHeart()">
+    </button>
+
+</div>

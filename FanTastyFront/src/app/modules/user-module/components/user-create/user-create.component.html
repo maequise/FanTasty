@@ -1,5 +1,5 @@
 <div class="create-form_container">
-  <div [formGroup]="createUserForm" (ngSubmit)="create()">
+  <form [formGroup]="createUserForm" (ngSubmit)="create()">
     <div>
       <input class="name_input" type="text" formControlName="name" placeholder="prénom" />
     </div>
@@ -19,5 +19,5 @@
     <div>
       <button class="create_btn" type="submit" [disabled]="!createUserForm.valid">S'inscrire</button>
     </div>
-  </div>
+  </form>
 </div>

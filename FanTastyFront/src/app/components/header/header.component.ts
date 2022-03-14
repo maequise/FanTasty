@@ -76,6 +76,7 @@ export class HeaderComponent implements OnInit {
     let toggleOffBg: Element = document.querySelector('.utensils-back')!;
 
     console.log(toggleOffBg)
+    console.log(recipeCard)
 
     if (darkMode === 'dark') {
       element.classList.add('dark');

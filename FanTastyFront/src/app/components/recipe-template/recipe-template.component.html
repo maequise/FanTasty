@@ -1,73 +1,83 @@
-<!--Components Block-->
-<div class="recipe-card card-bg">
-    <div class="description">
-        <h2 class="title-recipe">{{recette?.nom}}</h2>
-        <app-favorite *ngIf="userLogged" [recetteLiked]="recette"></app-favorite>
-        <p>
-            <span [ngSwitch]="recette?.tags?.difficulte">
-                <span *ngSwitchCase="1">#Très facile </span>
-                <span *ngSwitchCase="2">#Facile </span>
-                <span *ngSwitchCase="3">#Moyen </span>
-                <span *ngSwitchCase="4">#Difficile </span>
-            </span>
-
-            <span [ngSwitch]="recette?.tags?.cout">
-                <span *ngSwitchCase="1">#Bon marché</span>
-                <span *ngSwitchCase="2">#Moyen</span>
-                <span *ngSwitchCase="3">#Assez cher</span>
-            </span>
-            <span>
-                #{{recette?.tags?.saison}}
-            </span>
-        </p>
-
-        <label class="toggle-utensils">
-            <input type="checkbox" />
-            <span class="utensils-back utensils-light">
-                <span class="toggle toggle-light"></span>
-                <span class="label label-ingredients" (click)="showIngredientsUtensils($event)">Ingrédients</span>
-                <span class="label label-utensils" (click)="showIngredientsUtensils($event)">Ustensiles</span>
-            </span>
-        </label>
-
-        <div *ngIf="display">
-            <ul class="ingredients" *ngFor="let ingredientRecette of recette?.ingredients">
-                <li>{{ingredientRecette.ingredient.nom}} | {{ingredientRecette.quantite}} {{ingredientRecette.unite}}
-                </li>
-            </ul>
-        </div>
-
-        <div *ngIf="!display">
-            <ul class="ingredients" *ngFor="let ustensiles of recette?.ustensiles">
-                <li>{{ustensiles}}</li>
-            </ul>
-        </div>
-
-    </div>
-
-    <div>
-        <figure>
-            <img class="recipe-template_img" [src]="urlImage" alt="">
-            <figcaption>{{recette?.auteur}}</figcaption>
-        </figure>
-        <ul>
-            <li>🥄Personnes: {{recette?.nombrePersonnes}}</li>
-            <li>⏲️Temps de préparation : {{recette?.temps?.tempsPreparation}}</li>
-            <li>👨🏻‍🍳Temps de Cuisson : {{recette?.temps?.tempsCuisson}}</li>
-            <li>✔️Temps total : {{recette?.temps?.tempsTotal}}</li>
-
-        </ul>
-
+<div *ngIf="loading">
+    <div class="container">
+        <span class="loader-1"></span>
     </div>
 </div>
 
-<div id="process"></div>
+<!--Components Block-->
 
-<div class="process">
-    <h2 class="subtitle-recipe">Préparation</h2>
+<div *ngIf="isFromUniverse && !loading">
+    <div class="recipe-card">
+        <div class="description">
+            <h2 class="title-recipe">{{recette?.nom}}</h2>
+            <app-favorite *ngIf="userLogged" [recetteLiked]="recette"></app-favorite>
+            <p>
+                <span [ngSwitch]="recette?.tags?.difficulte">
+                    <span *ngSwitchCase="1">#Très facile </span>
+                    <span *ngSwitchCase="2">#Facile </span>
+                    <span *ngSwitchCase="3">#Moyen </span>
+                    <span *ngSwitchCase="4">#Difficile </span>
+                </span>
 
-    <ol class="instructions" *ngFor="let etape of recette?.etapes; let index = index">
-        <h3 class="subtitle-process">Etape {{index +1}}</h3>
-        <li class="instructions">{{etape}}</li>
-    </ol>
+                <span [ngSwitch]="recette?.tags?.cout">
+                    <span *ngSwitchCase="1">#Bon marché</span>
+                    <span *ngSwitchCase="2">#Moyen</span>
+                    <span *ngSwitchCase="3">#Assez cher</span>
+                </span>
+                <span>
+                    #{{recette?.tags?.saison}}
+                </span>
+            </p>
+
+            <label class="toggle-utensils">
+                <input type="checkbox" />
+                <span class="utensils-back utensils-light">
+                    <span class="toggle toggle-light"></span>
+                    <span class="label label-ingredients" (click)="showIngredientsUtensils($event)">Ingrédients</span>
+                    <span class="label label-utensils" (click)="showIngredientsUtensils($event)">Ustensiles</span>
+                </span>
+            </label>
+
+            <div *ngIf="display">
+                <ul class="ingredients" *ngFor="let ingredientRecette of recette?.ingredients">
+                    <li>{{ingredientRecette.ingredient.nom}} | {{ingredientRecette.quantite}}
+                        {{ingredientRecette.unite}}
+                    </li>
+                </ul>
+            </div>
+
+            <div *ngIf="!display">
+                <ul class="ingredients" *ngFor="let ustensiles of recette?.ustensiles">
+                    <li>{{ustensiles}}</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div>
+            <figure>
+                <img class="recipe-template_img" [src]="urlImage" alt="">
+                <figcaption>{{recette?.auteur}}</figcaption>
+            </figure>
+            <ul>
+                <li>🥄Personnes: {{recette?.nombrePersonnes}}</li>
+                <li>⏲️Temps de préparation : {{recette?.temps?.tempsPreparation}}</li>
+                <li>👨🏻‍🍳Temps de Cuisson : {{recette?.temps?.tempsCuisson}}</li>
+                <li>✔️Temps total : {{recette?.temps?.tempsTotal}}</li>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <div id="process"></div>
+
+    <div class="process">
+        <h2 class="subtitle-recipe">Préparation</h2>
+
+        <ol class="instructions" *ngFor="let etape of recette?.etapes; let index = index">
+            <h3 class="subtitle-process">Etape {{index +1}}</h3>
+            <li class="instructions">{{etape}}</li>
+        </ol>
+    </div>
 </div>

@@ -654,7 +654,8 @@ ul.ingredients > li {
 	font-family: 'Roboto Slab', serif;
   font-weight: unset;
   font-size: 15px;
-  color: var(--main-color-harrypotter);
+  color: var(--main-color-harrypotter);  
+  text-align: center;
 }
 ul.pesto {
 	margin: 0;
@@ -712,9 +713,11 @@ figcaption, p {
 figcaption::before {
 	content: "Création by ";
 }
-
-
 .variation {
 	font-size: 0.9rem;
 	margin: 100px 25px 0 0;
+}
+
+.favorite-recipe_img{
+    border: solid 2.5px var(--main-color-harrypotter);
 }

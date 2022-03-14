@@ -1,10 +1,10 @@
-import { Component, OnInit, Renderer2, ViewEncapsulation } from '@angular/core';
+import { AfterViewChecked, Component, OnInit, Renderer2, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { Ingredient } from '../../models/ingredient';
 import { Recette } from '../../models/recette';
 import { RecettesService } from '../../services/recettes.service';
-import {AuthService} from "../../services/auth.service";
-import {Utils} from "../../core/Utils";
+import { AuthService } from "../../services/auth.service";
+import { Utils } from "../../core/Utils";
 
 
 
@@ -15,21 +15,25 @@ import {Utils} from "../../core/Utils";
   encapsulation: ViewEncapsulation.None
 
 })
-export class RecipeTemplateComponent implements OnInit {
+export class RecipeTemplateComponent implements OnInit, AfterViewChecked {
 
-  ingredients : Ingredient[] = [new Ingredient()]
+  ingredients: Ingredient[] = [new Ingredient()]
 
   recette: Recette = new Recette();
-  urlImage : string = "";
+  urlImage: string = "";
 
   href: string = '';
-  hrefComponent : string = '';
+  hrefComponent: string = '';
 
   display: boolean = true;
   userLogged: boolean = false;
 
+
+  isFromUniverse = true;
+  loading: boolean = true;
+
   constructor(private render: Renderer2, private router: Router,
-                    private recettesService: RecettesService, private authService: AuthService) {
+    private recettesService: RecettesService, private authService: AuthService) {
 
 
   }
@@ -39,7 +43,7 @@ export class RecipeTemplateComponent implements OnInit {
 
     this.recettesService.findById(id).subscribe((response: Recette) => {
       this.recette = response;
-      this.urlImage=this.recettesService.getImage(this.recette.photo)
+      this.urlImage = this.recettesService.getImage(this.recette.photo)
     });
 
     this.userLogged = this.authService.isUserLogged();
@@ -91,6 +95,13 @@ export class RecipeTemplateComponent implements OnInit {
   showIngredientsUtensils(event: Event): void {
     this.display = !this.display;
     event.stopPropagation();
+  }
+
+  ngAfterViewChecked(): void {
+    setTimeout(() => {
+      this.loading = false;
+    }, 1000)
+
   }
 
 }

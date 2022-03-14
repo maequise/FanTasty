@@ -233,7 +233,7 @@ h1 {
 }
 .search-input {
   width: 100%;
-  height: 16px;
+  height: 19px;
   padding: 10px;
   border: 2.5px solid var(--main-color-light);
   border-radius: 10px 10px 10px 10px;
@@ -372,4 +372,11 @@ h1 {
 .styleA-sideBar{
   margin: 2px;
   padding: 0;
+}
+.favorite-recipe_img{
+    border: solid 2.5px var(--main-color-light);
+}
+.favorite-recipe_img:hover{
+  text-shadow: 0 0 10px var(--main-color-light),
+              0 0 10px var(--main-color-light);
 }

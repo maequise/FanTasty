@@ -1,5 +1,19 @@
-<p>Bienvenue {{currentUser?.nom}}</p>
+<div class="profile-wrapper">
+    <div class="profile-header">
+        <h1 class="display-name">Coups de cœur de {{currentUser?.nom}}</h1>
+    </div>
 
+    <div class="profile-body-section">
+        <div *ngFor="let rec of recettes">
+            <a routerLinkActive="active" routerLink="/{{rec.univers | lowercase}}/recette/{{rec.id}}">
+                <div class="img_container">
+                    <img class="favorite-recipe_img" [src]="getImage(rec.photo)" />
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>
 
 <button type="button" (click)="disconnect()">Déconnecter</button>
 

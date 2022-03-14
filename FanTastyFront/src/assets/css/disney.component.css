@@ -507,14 +507,15 @@ footer {
   padding: 0;
   font-family: 'Mouse Memoirs', sans-serif;
   font-weight: unset;
-  font-size: 18px;
+  font-size: 22px;
   color: var(--main-color-disney);
 }
 .subtitle-process{
   margin: 0;
   padding: 0;
   font-family:  'Mouse Memoirs', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: 600;
   color: var(--main-color-disney);
 }
 
@@ -524,10 +525,14 @@ ol {
 }
 
 ul.ingredients > li {
+
+  margin-top: 10px;
 	font-family: 'Mouse Memoirs', sans-serif;
   font-weight: unset;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--main-color-disney);
+  text-align: center;
+  line-height: 18px;
 }
 ul.pesto {
 	margin: 0;
@@ -535,7 +540,7 @@ ul.pesto {
 }
 li {
 	line-height: 1.8;
-  font-size: 16px;
+  font-size: 17px;
   font-family: 'Mouse Memoirs', sans-serif;
   color: var(--main-color-disney);
 }
@@ -585,9 +590,11 @@ figcaption, p {
 figcaption::before {
 	content: "Création by ";
 }
-
-
 .variation {
 	font-size: 0.9rem;
 	margin: 100px 25px 0 0;
+}
+
+.favorite-recipe_img{
+    border: solid 2.5px var(--main-color-disney);
 }

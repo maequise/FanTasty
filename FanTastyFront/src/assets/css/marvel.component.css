@@ -643,7 +643,7 @@ footer {
 }
 .instructions{
   padding: 0;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Coda', cursive;
   font-weight: unset;
   font-size: 15px;
   color: var(--main-color-marvel);
@@ -663,10 +663,11 @@ ol {
 }
 
 ul.ingredients > li {
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Coda', cursive;
   font-weight: unset;
   font-size: 15px;
   color: var(--main-color-marvel);
+  text-align: center;
 }
 ul.pesto {
 	margin: 0;
@@ -674,7 +675,7 @@ ul.pesto {
 }
 li {
 	line-height: 1.8;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Coda', cursive;
   color: var(--main-color-marvel);
 }
 
@@ -726,9 +727,12 @@ figcaption::before {
 	content: "Création by ";
 }
 
-
 .variation {
 	font-size: 0.9rem;
 	margin: 100px 25px 0 0;
+}
+
+.favorite-recipe_img{
+    border: solid 2.5px var(--main-color-marvel);
 }
 
