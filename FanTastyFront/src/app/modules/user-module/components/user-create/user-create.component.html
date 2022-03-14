@@ -1,9 +1,23 @@
-<form [formGroup]="createUserForm" (ngSubmit)="create()">
-  <input type="text" formControlName="name" placeholder="prénom" />
-  <input type="text" formControlName="lastname" placeholder="nom de famille" />
-  <input type="email" formControlName="email" placeholder="adresse@email.fr" />
-  <input type="password" formControlName="password" placeholder="mot de passe" />
-  <input type="password" formControlName="confirmPassword" placeholder="confirmer mot de passe" />
-
-  <button type="submit" [disabled]="!createUserForm.valid">Inscription</button>
-</form>
+<div class="create-form_container">
+  <div [formGroup]="createUserForm" (ngSubmit)="create()">
+    <div>
+      <input class="name_input" type="text" formControlName="name" placeholder="prénom" />
+    </div>
+    <div>
+      <input class="lastname_input" type="text" formControlName="lastname" placeholder="nom de famille" />
+    </div>
+    <div>
+      <input class="email_input" type="email" formControlName="email" placeholder="adresse@email.fr" />
+    </div>
+    <div>
+      <input class="password_input" type="password" formControlName="password" placeholder="mot de passe" />
+    </div>
+    <div>
+      <input class="confirm_input" type="password" formControlName="confirmPassword"
+        placeholder="confirmer mot de passe" />
+    </div>
+    <div>
+      <button class="create_btn" type="submit" [disabled]="!createUserForm.valid">S'inscrire</button>
+    </div>
+  </div>
+</div>
