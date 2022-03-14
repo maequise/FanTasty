@@ -11,18 +11,22 @@
             </span>
 
             <span [ngSwitch]="recette?.tags?.cout">
-                <span *ngSwitchCase="1">#Bon marché</span>
-                <span *ngSwitchCase="2">#Moyen</span>
-                <span *ngSwitchCase="3">#Assez cher</span>
+                <span *ngSwitchCase="1"> #Bon marché </span>
+                <span *ngSwitchCase="2"> #Moyen </span>
+                <span *ngSwitchCase="3" >#Assez cher </span>
             </span>
             <span>
                 #{{recette?.tags?.saison}}
             </span>
         </p>
 
+        <!-- DEBUT pour le nombre d'ingrédient -->
+   
+        <!-- FIN pour le nombre d'ingrédient -->
+
         <h2 class="subtitle-ingredients">Ingrédients</h2>
         <ul class="ingredients" *ngFor="let ingredientRecette of recette?.ingredients">
-            <li>{{ingredientRecette.ingredient.nom}} | {{ingredientRecette.quantite}} {{ingredientRecette.unite}}</li>
+            <li>{{ingredientRecette.ingredient.nom}} | {{personneVoulu * ingredientRecette.quantite / recette.nombrePersonnes}} {{ingredientRecette.unite}}</li>
         </ul>
 
     </div>
@@ -34,7 +38,13 @@
             <figcaption>{{recette?.auteur}}</figcaption>
         </figure>
         <ul>
-            <li>🥄Personnes: {{recette?.nombrePersonnes}}</li>
+            <!-- bouton pour augmenter le nombre de personnes-->
+            <li>
+                <button class="btnPortion" (click)="btnIncrementationNbrIngredient()">+</button>
+                    🥄Personnes: {{personneVoulu}}
+                <button class="btnPortion" (click)="btnDecrementationNbrIngredient()">-</button>
+            </li>
+            <!-- Fin bouton -->
             <li>⏲️Temps de préparation : {{recette?.temps?.tempsPreparation}}</li>
             <li>👨🏻‍🍳Temps de Cuisson : {{recette?.temps?.tempsCuisson}}</li>
             <li>✔️Temps total : {{recette?.temps?.tempsTotal}}</li>

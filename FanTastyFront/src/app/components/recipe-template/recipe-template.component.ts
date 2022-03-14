@@ -24,6 +24,8 @@ export class RecipeTemplateComponent implements OnInit {
 
   recette!: Recette;
 
+  personneVoulu: number = 1;
+
   href: string = '/assets/css/marvel.component.css';
 
   constructor(private render: Renderer2, private router: Router, public recettesService: RecettesService) {
@@ -57,6 +59,8 @@ export class RecipeTemplateComponent implements OnInit {
 
       this.recette = response;
 
+      this.personneVoulu =  this.recette.nombrePersonnes;
+
       console.log(response);
     });
 
@@ -84,6 +88,25 @@ export class RecipeTemplateComponent implements OnInit {
     console.log(this.href);
 
     return this.href;
+  }
+
+
+  btnIncrementationNbrIngredient() {
+    this.personneVoulu++;
+    if(this.personneVoulu >= 50){
+      this.personneVoulu = 50;
+    }
+    return this.personneVoulu;
+  }
+
+  btnDecrementationNbrIngredient(){
+    if(this.personneVoulu <= 1){
+      this.personneVoulu = 1;
+    }else{
+      this.personneVoulu--;
+    }
+
+    return this.personneVoulu;
   }
 
 }
