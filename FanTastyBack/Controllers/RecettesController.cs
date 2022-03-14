@@ -86,7 +86,8 @@ namespace FanTastyBack.Controllers
         [HttpGet("tag")]
         public IActionResult FindByTag(string tagString)
         {
-            Tag tag = JsonSerializer.Deserialize<Tag>(tagString);
+            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            Tag tag = JsonSerializer.Deserialize<Tag>(tagString, options);
 
             try
             {

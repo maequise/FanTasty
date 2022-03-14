@@ -3,20 +3,20 @@
     <div class="description">
         <h2 class="title-recipe">{{recette?.nom}}</h2>
         <p>
-            <span [ngSwitch]="recette?.tags?.Difficulte">
+            <span [ngSwitch]="recette?.tags?.difficulte">
                 <span *ngSwitchCase="1">#Très facile </span>
                 <span *ngSwitchCase="2">#Facile </span>
                 <span *ngSwitchCase="3">#Moyen </span>
                 <span *ngSwitchCase="4">#Difficile </span>
             </span>
 
-            <span [ngSwitch]="recette?.tags?.Cout">
+            <span [ngSwitch]="recette?.tags?.cout">
                 <span *ngSwitchCase="1">#Bon marché</span>
                 <span *ngSwitchCase="2">#Moyen</span>
                 <span *ngSwitchCase="3">#Assez cher</span>
             </span>
             <span>
-                #{{recette?.tags?.Saison}}
+                #{{recette?.tags?.saison}}
             </span>
         </p>
 
