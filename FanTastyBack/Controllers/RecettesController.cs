@@ -83,7 +83,7 @@ namespace FanTastyBack.Controllers
             }
         }
 
-        [HttpGet("tag/{tagString}")]
+        [HttpGet("tag")]
         public IActionResult FindByTag(string tagString)
         {
             Tag tag = JsonSerializer.Deserialize<Tag>(tagString);

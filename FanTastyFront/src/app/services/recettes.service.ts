@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Recette } from '../models/recette';
@@ -35,7 +35,12 @@ export class RecettesService {
   }
 
   findByTag(tag : Tag) : Observable<Recette[]>{
-      return this.httpClient.get<Recette[]>(Constants.URL_BACK + '/api/recettes/tag/' + JSON.stringify(tag))
+    console.log(tag);
+    let params = new HttpParams().set('tagString', JSON.stringify(tag));
+    console.log(params);
+    return this.httpClient.get<Recette[]>(Constants.URL_BACK + '/api/recettes/tag/', {
+      params: params
+    });
   }
 
   getImage(filename : string) : string{
