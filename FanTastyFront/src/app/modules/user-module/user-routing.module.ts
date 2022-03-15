@@ -5,6 +5,7 @@ import {AuthGuard} from "../../core/auth/auth.guard";
 import {UserComponent} from "./components/user/user.component";
 
 const routes: Routes = [
+  {path : 'create', component: UserComponent},
   {path: 'login', component : LoginComponent},
   {path: 'user', canActivateChild: [AuthGuard], children:
       [

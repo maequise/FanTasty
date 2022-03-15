@@ -1,24 +1,22 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { HomeLightComponent } from './components/home-light/home-light.component';
-import { RecipeTemplateComponent } from './components/recipe-template/recipe-template.component';
-import { UniversComponent } from "./components/univers/univers.component";
-import { MongoComponent } from "./components/mongo/mongo.component";
-import { UserCreateComponent } from './modules/user-module/components/user-create/user-create.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {HomeLightComponent} from './components/home-light/home-light.component';
+import {MongoComponent} from "./components/mongo/mongo.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/home-light', pathMatch: 'full' },
   { path: 'home-light', component: HomeLightComponent },
-  { path: 'naruto', component: UniversComponent },
-  { path: 'harrypotter', component: UniversComponent },
-  { path: 'disney', component: UniversComponent },
-  { path: 'marvel', component: UniversComponent },
-  { path: 'disney/recette/:id', component: RecipeTemplateComponent },
-  { path: 'naruto/recette/:id', component: RecipeTemplateComponent },
-  { path: 'harrypotter/recette/:id', component: RecipeTemplateComponent },
-  { path: 'marvel/recette/:id', component: RecipeTemplateComponent },
+  {path : 'naruto', loadChildren: () => import('./modules/universe/universe.module').then(m => m.UniverseModule)},
+  {path : 'disney', loadChildren: () => import('./modules/universe/universe.module').then(m => m.UniverseModule)},
+  {path : 'harrypotter', loadChildren: () => import('./modules/universe/universe.module').then(m => m.UniverseModule)},
+  {path : 'marvel', loadChildren: () => import('./modules/universe/universe.module').then(m => m.UniverseModule)},
+  {path : 'disney/recette/:id', loadChildren: () => import('./modules/recipe/recipe.module').then(m => m.RecipeModule)},
+  {path : 'marvel/recette/:id', loadChildren: () => import('./modules/recipe/recipe.module').then(m => m.RecipeModule)},
+  {path : 'harrypotter/recette/:id', loadChildren: () => import('./modules/recipe/recipe.module').then(m => m.RecipeModule)},
+  {path : 'naruto/recette/:id', loadChildren: () => import('./modules/recipe/recipe.module').then(m => m.RecipeModule)},
   { path: 'mongo', component: MongoComponent },
-  { path: 'create', component: UserCreateComponent },
+  { path: 'create', loadChildren: () => import('./modules/user-module/user.module').then(m => m.UserModule) },
+  { path: 'user/manage', loadChildren: () => import('./modules/user-module/user.module').then(m => m.UserModule) },
 
 
 

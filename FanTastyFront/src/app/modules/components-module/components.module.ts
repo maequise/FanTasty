@@ -17,6 +17,7 @@ import { AuthService } from "../../services/auth.service";
 import { AuthInterceptor } from "../../core/interceptors/auth.interceptor";
 import { FavoriteComponent } from '../../components/favorite/favorite.component';
 import { UserModule } from "../user-module/user.module";
+import {UniverseModule} from "../universe/universe.module";
 
 
 @NgModule({
@@ -27,7 +28,6 @@ import { UserModule } from "../user-module/user.module";
     HeaderComponent,
     FooterComponent,
     RecipeTemplateComponent,
-    UniversComponent,
     LoginComponent,
     FavoriteComponent,
   ],
@@ -38,11 +38,13 @@ import { UserModule } from "../user-module/user.module";
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    UserModule,
+    //UserModule,
+    //UniverseModule
 
   ],
   exports: [
-    LoginComponent
+    LoginComponent,
+    RecipeTemplateComponent
   ],
   providers: [
   ],

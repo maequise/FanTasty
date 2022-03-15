@@ -9,6 +9,7 @@ import { AdminModuleModule } from "./modules/admin-module/admin-module.module";
 import { MongoComponent } from './components/mongo/mongo.component';
 import { AuthInterceptor } from "./core/interceptors/auth.interceptor";
 import { UserModule } from "./modules/user-module/user.module";
+import {UniverseModule} from "./modules/universe/universe.module";
 
 
 @NgModule({
@@ -23,8 +24,8 @@ import { UserModule } from "./modules/user-module/user.module";
     HttpClientModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AdminModuleModule,
-    UserModule,
+    /*UserModule,
+    UniverseModule*/
 
   ],
   providers: [
