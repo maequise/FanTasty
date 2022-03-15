@@ -12,6 +12,8 @@ import { RecettesService } from 'src/app/services/recettes.service';
 export class SearchFormComponent implements OnInit {
 
   searchForm: FormGroup
+  search : boolean = false;
+  searched : boolean = false;
 
   lstDifficulte: Array<any> = [
     { name: 'Très facile', value: '1' },
@@ -56,13 +58,31 @@ export class SearchFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  disable() : void {
+    document.querySelector('body')?.classList.remove('disable-scroll');
+    document.querySelector('#search-box-model-container')?.classList.remove('active')
+    document.querySelector('.search-box-modal-over')?.classList.remove('active')
+    document.querySelector('.search-box-modal-over')?.classList.add('disable')
+    document.querySelector('#search-box-model-container')?.classList.add('disable')
+  }
+
+  displayModal() : void {
+    document.querySelector('body')?.classList.add('disable-scroll');
+    document.querySelector('#search-box-model-container')?.classList.remove('disable')
+    document.querySelector('.search-box-modal-over')?.classList.remove('disable')
+    document.querySelector('.search-box-modal-over')?.classList.add('active')
+    document.querySelector('#search-box-model-container')?.classList.add('active')
+    this.search = true;
+
+  }
+
   btnClickSearch() {
     let val = this.searchForm.value;
     // console.log(val);
     let tag: SearchedTag = new SearchedTag(
-      val.checkTypePlat, 
-      val.checkDifficulte, 
-      val.checkCout, 
+      val.checkTypePlat,
+      val.checkDifficulte,
+      val.checkCout,
       val.checkSaison)
     this.recetteService.findByTags(tag).subscribe(
       response => {
