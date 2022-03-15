@@ -15,7 +15,7 @@ export class UserComponent implements OnInit {
   currentUser: Utilisateur | null = null;
   recettes: Recette[] = [];
 
-  iconHeart: string = '../../assets/heart-light.png';
+  iconHeart: string = '../../assets/img/heart-light.png';
 
 
   constructor(private authService: AuthService, private router: Router, private recetteService: RecettesService) { }
@@ -47,13 +47,13 @@ export class UserComponent implements OnInit {
     let urlUniverse: String = this.router.url;
 
     if (urlUniverse.startsWith('/naruto')) {
-      this.iconHeart = '../../assets/heart-naruto.png';
+      this.iconHeart = '../../assets/img/heart-naruto.png';
     } else if (urlUniverse.startsWith('/disney')) {
-      this.iconHeart = '../../assets/heart-disney.png';
+      this.iconHeart = '../../assets/img/heart-disney.png';
     } else if (urlUniverse.startsWith('/harrypotter')) {
-      this.iconHeart = '../../assets/heart-harrypotter.png';
+      this.iconHeart = '../../assets/img/heart-harrypotter.png';
     } else if (urlUniverse.startsWith('/marvel')) {
-      this.iconHeart = '../../assets/heart-marvel.png';
+      this.iconHeart = '../../assets/img/heart-marvel.png';
     }
 
     return this.iconHeart;
