@@ -1,4 +1,4 @@
-import { AfterViewChecked, Component, OnInit, Renderer2, ViewEncapsulation } from '@angular/core';
+import {AfterViewChecked, Component, OnInit, Output, Renderer2, ViewEncapsulation} from '@angular/core';
 import { Router } from '@angular/router';
 import { Ingredient } from '../../models/ingredient';
 import { Recette } from '../../models/recette';
@@ -32,13 +32,20 @@ export class RecipeTemplateComponent implements OnInit, AfterViewChecked {
   isFromUniverse = true;
   loading: boolean = true;
 
+ optionalClassSpanUtensil : string = '';
+ optionalClassSpanToggle : string = '';
+
   constructor(private render: Renderer2, private router: Router,
     private recettesService: RecettesService, private authService: AuthService) {
-
-
   }
 
+
   ngOnInit(): void {
+    //utensils-light
+    this.optionalClassSpanToggle = Utils.isInDarkMode() ? 'toggle-dark' : 'toggle-light';
+    this.optionalClassSpanUtensil = Utils.isInDarkMode() ? 'utensils-dark' : 'utensils-light';
+
+    //this.isDarkMode = Utils.isInDarkMode() ? 'Y' : 'N';
     let id = this.router.url.split('/')[3];
 
     this.recettesService.findById(id).subscribe((response: Recette) => {
@@ -100,6 +107,7 @@ export class RecipeTemplateComponent implements OnInit, AfterViewChecked {
   ngAfterViewChecked(): void {
     setTimeout(() => {
       this.loading = false;
+      //this.isDarkMode = Utils.isInDarkMode();
     }, 1000)
 
   }

@@ -5,6 +5,14 @@ export class Utils {
   private static href: string = '';
   private static hrefComponent : string = '';
 
+  static isInDarkMode() : boolean {
+    return document.body.classList.contains("dark");
+  }
+
+  static defineDarkModeForRecipe(render : Renderer2) : void {
+
+  }
+
   static loadStyle(render : Renderer2, router: Router) : void {
     let styleLoaded: HTMLCollectionOf<HTMLLinkElement> = document.getElementsByTagName('link');
 
