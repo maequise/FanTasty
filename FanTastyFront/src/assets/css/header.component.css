@@ -231,6 +231,12 @@ h1 {
   position: relative;
   display: flex;
 }
+
+.search-box_modal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .search-input {
   width: 100%;
   height: 19px;
@@ -240,8 +246,9 @@ h1 {
   outline: none;
   font-size: 20px;
   color: var(--link-color-light);
-  background: none;
-  
+  background: url(../img/control-light.png) 5px no-repeat;
+  background-size: 30px;
+  background-position-x: right;  
 }
 
 .search-input::placeholder{
@@ -257,6 +264,14 @@ h1 {
   left: 398px;
   top: 30px;
   transform: translate(-50%, -50%);
+}
+
+.search-container_modal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
 @media only screen and (max-width: 500px) {

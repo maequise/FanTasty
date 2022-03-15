@@ -5,6 +5,7 @@ import { RecipeTemplateComponent } from './components/recipe-template/recipe-tem
 import { UniversComponent } from "./components/univers/univers.component";
 import { MongoComponent } from "./components/mongo/mongo.component";
 import { UserCreateComponent } from './modules/user-module/components/user-create/user-create.component';
+import { SearchFormComponent } from './components/search-form/search-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home-light', pathMatch: 'full' },
@@ -19,9 +20,7 @@ const routes: Routes = [
   { path: 'marvel/recette/:id', component: RecipeTemplateComponent },
   { path: 'mongo', component: MongoComponent },
   { path: 'create', component: UserCreateComponent },
-
-
-
+  { path: 'search', component: SearchFormComponent }
 
 ];
 

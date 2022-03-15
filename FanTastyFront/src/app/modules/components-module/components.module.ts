@@ -17,6 +17,8 @@ import { AuthService } from "../../services/auth.service";
 import { AuthInterceptor } from "../../core/interceptors/auth.interceptor";
 import { FavoriteComponent } from '../../components/favorite/favorite.component';
 import { UserModule } from "../user-module/user.module";
+import { SearchFormComponent } from 'src/app/components/search-form/search-form.component';
+import { SearchResultsComponent } from 'src/app/components/search-results/search-results.component';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import { UserModule } from "../user-module/user.module";
     UniversComponent,
     LoginComponent,
     FavoriteComponent,
+    SearchFormComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,
