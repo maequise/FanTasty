@@ -1,0 +1,13 @@
+<div class="main-cards-container">
+    <h2>{{recettes.length}} recettes trouvées</h2>
+    <ul class="cards">
+        <li class="cards_item" *ngFor="let recette of recettes">
+            <a routerLink="/{{recette.univers}}/recette/{{recette.id}}">
+                <div class="card">
+                    <div class="card_image"><img src="http://localhost:60599/Resources/{{recette.photo}}" alt=""></div>
+                </div>
+                <button class="btn card_btn">{{recette.nom}}</button>
+            </a>
+        </li>
+    </ul>
+</div>
