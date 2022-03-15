@@ -1,56 +1,52 @@
 <div class="search-container_modal">
   <form [formGroup]="searchForm" (ngSubmit)="btnClickSearch()" novalidate>
+    <h4>Type</h4>
     <div class="search-box_modal">
-      <!-- <input type="text" class="search-input"
-        placeholder="miam miam..."
-        [(ng-model)]="searchString">
-        <input type="button" value="Do something" (click)="btnClickSearch()"> -->
-      <!-- <label>Nom : </label>
-            <input type="text" formControlName="nom"> -->
-
-      <div class="search-box_modal">
-        <h4>Type</h4>
-
-        <ng-container *ngFor="let item of lstTypePlat; let i=index">
-          <label>
-            <input type="checkbox" [value]="item.value" (change)="onCheckboxChange($event,1)" />
-            {{item.name}}
-          </label>
-        </ng-container>
-      </div>
-      <div class="search-box_modal">
-        <h4>Saison</h4>
-        <ng-container *ngFor="let item of lstSaison; let i=index">
-          <label>
-            <input type="checkbox" [value]="item.value" (change)="onCheckboxChange($event,2)" />
-            {{item.name}}
-          </label>
-        </ng-container>
-      </div>
-
-      <div class="search-box_modal">
-        <h4>Coût</h4>
-        <ng-container *ngFor="let item of lstCout; let i=index">
-          <label>
-            <input type="checkbox" [value]="item.value" (change)="onCheckboxChange($event,3)" />
-            {{item.name}}
-          </label>
-        </ng-container>
-      </div>
-
-      <div class="search-box_modal">
-        <h4>Difficulté</h4>
-        <ng-container *ngFor="let item of lstDifficulte; let i=index">
-          <label>
-            <input type="checkbox" [value]="item.value" (change)="onCheckboxChange($event,4)" />
-            {{item.name}}
-          </label>
-        </ng-container>
-      </div>
-
-      <input type="submit" value="Filtrer">
-      <button (click)="btnClickReset()">Reset</button>
+      <ng-container *ngFor="let item of lstTypePlat; let i=index">
+        <label>
+          <input type="checkbox" [value]="item.value" (change)="onCheckboxChange($event,1)" />
+          {{item.name}}
+        </label>
+      </ng-container>
     </div>
+
+    <h4>Saison</h4>
+
+    <div class="search-box_modal">
+      <ng-container *ngFor="let item of lstSaison; let i=index">
+        <label>
+          <input type="checkbox" [value]="item.value" (change)="onCheckboxChange($event,2)" />
+          {{item.name}}
+        </label>
+      </ng-container>
+    </div>
+
+    <h4>Coût</h4>
+    <div class="search-box_modal">
+      <ng-container *ngFor="let item of lstCout; let i=index">
+        <label>
+          <input type="checkbox" [value]="item.value" (change)="onCheckboxChange($event,3)" />
+          {{item.name}}
+        </label>
+      </ng-container>
+    </div>
+
+    <h4>Difficulté</h4>
+    <div class="search-box_modal">
+      <ng-container *ngFor="let item of lstDifficulte; let i=index">
+        <label>
+          <input type="checkbox" [value]="item.value" (change)="onCheckboxChange($event,4)" />
+          {{item.name}}
+        </label>
+      </ng-container>
+    </div>
+
+    <div class="search-box_btn">
+      <input class="filter_btn" type="submit" value="Filtrer">
+      <button class="reset_btn" (click)="btnClickReset()">Reset</button>
+    </div>
+
+
   </form>
 </div>
 
