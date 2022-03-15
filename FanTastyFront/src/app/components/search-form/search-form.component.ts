@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, FormControl, AbstractControl } from '@angular/forms';
 import { Recette } from 'src/app/models/recette';
-import { Tag } from 'src/app/models/Tag';
+import { SearchedTag } from 'src/app/models/searchedTag';
 import { RecettesService } from 'src/app/services/recettes.service';
 
 @Component({
@@ -13,41 +13,44 @@ export class SearchFormComponent implements OnInit {
 
   searchForm: FormGroup
 
-  lstSaison: string[] = ["Printemps", "Ete", "Automne", "Hiver", "Toutes"]
+  lstDifficulte: Array<any> = [
+    { name: 'Très facile', value: '1' },
+    { name: 'Facile', value: '2' },
+    { name: 'Moyen', value: '3' },
+    { name: 'Difficile', value: '4' }
+  ];
 
-  lstTypePlat: { [key: string]: string } = {
-    "Entree": "Entree",
-    "Plat": "Plat",
-    "Dessert": "Dessert",
-    "": "Tous"
-  }
+  lstTypePlat: Array<any> = [
+    { name: 'Entree', value: 'Entrée' },
+    { name: 'Plat', value: 'Plat' },
+    { name: 'Dessert', value: 'Dessert' }
+  ];
 
-  lstCout: { [key: number]: string } = {
-    1: "Bon marché",
-    2: "Faible",
-    3: "Modéré",
-    4: "Assez cher",
-    0: "Tous"
-  }
+  lstCout: Array<any> = [
+    { name: 'Bon marché', value: '1' },
+    { name: 'Faible', value: '2' },
+    { name: 'Modéré', value: '3' },
+    { name: 'Assez cher', value: '4' }
+  ];
 
-  lstDifficulte: { [key: number]: string } = {
-    1: "Très facile",
-    2: "Facile",
-    3: "Moyen",
-    4: "Difficile",
-    0: "Tous"
-  }
+  lstSaison: Array<any> = [
+    { name: 'Printemps', value: 'Printemps' },
+    { name: 'Ete', value: 'Ete' },
+    { name: 'Automne', value: 'Automne' },
+    { name: 'Hiver', value: 'Hiver' },
+    {name : 'Toutes', value : 'Toutes'}
+  ];
 
   recettes: Recette[] = [];
 
   constructor(private fb: FormBuilder, private recetteService: RecettesService) {
+
     this.searchForm = this.fb.group({
-      nom: "",
-      difficulte: 0,
-      saison: "",
-      cout: 0,
-      typePlat: ""
-    })
+      checkSaison: this.fb.array([]),
+      checkDifficulte: this.fb.array([]),
+      checkCout: this.fb.array([]),
+      checkTypePlat: this.fb.array([])
+    });
   }
 
   ngOnInit(): void {
@@ -55,16 +58,21 @@ export class SearchFormComponent implements OnInit {
 
   btnClickSearch() {
     let val = this.searchForm.value;
-    let tag: Tag = new Tag(val.typePlat, val.difficulte, val.cout, val.saison)
-    this.recetteService.findByTag(tag).subscribe(
+    // console.log(val);
+    let tag: SearchedTag = new SearchedTag(
+      val.checkTypePlat, 
+      val.checkDifficulte, 
+      val.checkCout, 
+      val.checkSaison)
+    this.recetteService.findByTags(tag).subscribe(
       response => {
         this.recettes = response;
-        console.log(this.recettes);
+        console.log(this.recettes.length);
       }
     );
   }
 
-  btnClickReset(){
+  btnClickReset() {
     this.searchForm = this.fb.group({
       nom: "",
       difficulte: 0,
@@ -73,5 +81,38 @@ export class SearchFormComponent implements OnInit {
       typePlat: ""
     })
   }
-}
 
+  onCheckboxChange(e: any, categorie: number) {
+    if (categorie == 1) {
+      this.updateCheckArray(e, this.searchForm.get('checkTypePlat') as FormArray);
+    }
+    else if (categorie == 2) {
+      this.updateCheckArray(e, this.searchForm.get('checkSaison') as FormArray);
+    }
+    else if (categorie == 3) {
+      this.updateCheckArray(e, this.searchForm.get('checkCout') as FormArray);
+    }
+    else if (categorie == 4) {
+      this.updateCheckArray(e, this.searchForm.get('checkDifficulte') as FormArray);
+    }
+    else {
+      return;
+    }
+  }
+
+  updateCheckArray(e: any, checkArray: FormArray) {
+    if (e.target.checked) {
+      checkArray.push(new FormControl(e.target.value));
+    } else {
+      let i: number = 0;
+      checkArray.controls.forEach((item: AbstractControl) => {
+        if (item.value == e.target.value) {
+          checkArray.removeAt(i);
+          return;
+        }
+        i++;
+      });
+    }
+  }
+
+}

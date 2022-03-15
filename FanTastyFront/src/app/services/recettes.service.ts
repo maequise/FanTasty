@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Recette } from '../models/recette';
 import {Constants} from "../core/Constants";
-import { Tag } from '../models/Tag';
+import { Tag } from '../models/tag';
+import { SearchedTag } from '../models/searchedTag';
 
 @Injectable({
   providedIn: 'root'
@@ -39,6 +40,15 @@ export class RecettesService {
     let params = new HttpParams().set('tagString', JSON.stringify(tag));
     console.log(params);
     return this.httpClient.get<Recette[]>(Constants.URL_BACK + '/api/recettes/tag/', {
+      params: params
+    });
+  }
+
+  findByTags(tags : SearchedTag) : Observable<Recette[]>{
+    console.log(tags);
+    let params = new HttpParams().set('tagsString', JSON.stringify(tags));
+    console.log(params);
+    return this.httpClient.get<Recette[]>(Constants.URL_BACK + '/api/recettes/tags/', {
       params: params
     });
   }

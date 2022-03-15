@@ -1,5 +1,5 @@
 <div class="search-container">
-    <form [formGroup]="searchForm" (ngSubmit)="btnClickSearch()">
+    <form [formGroup]="searchForm" (ngSubmit)="btnClickSearch()" novalidate>
         <div class="search-box">
             <!-- <input type="text" class="search-input"
         placeholder="miam miam..."
@@ -8,37 +8,45 @@
             <!-- <label>Nom : </label>
             <input type="text" formControlName="nom"> -->
 
-            <h4>Type</h4>
-            <ng-container *ngFor="let item of lstTypePlat | keyvalue">
-                <label>
-                    <span>{{item.value}}</span>
-                    <input type="radio" value="{{item.key}}" formControlName="typePlat">
-                </label>
-            </ng-container>
+            <div class="search-box" style="background-color: aquamarine;">
+                <h4>Type</h4>
+            
+                <ng-container *ngFor="let item of lstTypePlat; let i=index">
+                    <label>
+                        <input type="checkbox" [value]="item.value" (change)="onCheckboxChange($event,1)" />
+                        {{item.name}}
+                    </label>
+                </ng-container>
+            </div>
+            <div class="search-box" style="background-color: yellowgreen;">
+                <h4>Saison</h4>
+                <ng-container *ngFor="let item of lstSaison; let i=index">
+                    <label>
+                        <input type="checkbox" [value]="item.value" (change)="onCheckboxChange($event,2)" />
+                        {{item.name}}
+                    </label>
+                </ng-container>
+            </div>
 
-            <h4>Saison</h4>
-            <ng-container *ngFor="let item of lstSaison">
+            <div class="search-box" style="background-color: pink;">
+              <h4>Coût</h4>
+              <ng-container *ngFor="let item of lstCout; let i=index">
                 <label>
-                    <span>{{item}}</span>
-                    <input type="radio" value="{{item}}" formControlName="saison">
+                  <input type="checkbox" [value]="item.value" (change)="onCheckboxChange($event,3)" />
+                  {{item.name}}
                 </label>
-            </ng-container>
+              </ng-container>
+            </div>
 
-            <h4>Cout</h4>
-            <ng-container *ngFor="let item of lstCout | keyvalue">
+            <div class="search-box" style="background-color: lightblue;">
+              <h4>Difficulté</h4>
+              <ng-container *ngFor="let item of lstDifficulte; let i=index">
                 <label>
-                    <span>{{item.value}}</span>
-                    <input type="radio" value="{{item.key}}" formControlName="cout">
+                  <input type="checkbox" [value]="item.value" (change)="onCheckboxChange($event,4)" />
+                  {{item.name}}
                 </label>
-            </ng-container>
-
-            <h4>Cout</h4>
-            <ng-container *ngFor="let item of lstDifficulte | keyvalue">
-                <label>
-                    <span>{{item.value}}</span>
-                    <input type="radio" value="{{item.key}}" formControlName="difficulte">
-                </label>
-            </ng-container>
+              </ng-container>
+            </div>
 
             <input type="submit" value="Do something">
             <button (click) ="btnClickReset()">Reset</button>

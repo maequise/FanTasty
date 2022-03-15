@@ -1,6 +1,6 @@
 import { IngredientRecette } from "./ingredientRecette";
-import { Temps } from "./Temps";
-import { Tag } from "./Tag";
+import { Tag } from "./tag";
+import { Temps } from "./temps";
 
 export class Recette {
   public id: string;
