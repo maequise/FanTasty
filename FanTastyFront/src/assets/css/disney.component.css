@@ -594,3 +594,31 @@ figcaption::before {
     right: 0;
   }
 }
+.logout_btn {
+   
+   text-decoration: none;
+   background: var(--main-color-disney);
+   border: 2.5px solid var(--main-color-disney);
+   transition: flex 0.7s ease-in;
+   font-family: 'Mouse Memoirs', sans-serif;
+   border-radius: 10px;
+   color: black;
+   width: 148px;
+   height: 44px;
+   font-size: 17px;
+   font-weight: unset;
+   letter-spacing: 1.5px;
+   cursor: pointer;
+}
+
+.logout_btn:hover {
+  color: var(--main-color-disney);
+  background-color: transparent;
+  font-weight: unset;
+}
+.delete_btn {
+  font-family: 'Mouse Memoirs', sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 17px;
+  font-weight: unset;
+}

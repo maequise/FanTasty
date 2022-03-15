@@ -628,3 +628,32 @@ figcaption::before {
     right: 0;
   }
 }
+
+
+.logout_btn {
+   margin: 18px;
+   text-decoration: none;
+   background: var(--main-color-naruto);
+   border: 2.5px solid var(--main-color-naruto);
+   transition: flex 0.7s ease-in;
+   font-family: 'Balsamiq Sans', cursive;
+   border-radius: 10px;
+   color: black;
+   width: 148px;
+   height: 48px;
+   font-size: 15px;
+   font-weight: unset;
+   cursor: pointer;
+   text-align: center;
+}
+
+.logout_btn:hover {
+  color: var(--main-color-naruto);
+  font-weight: unset;
+  background-color: transparent;
+}
+.delete_btn {
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 15px;
+  font-weight: unset;
+}

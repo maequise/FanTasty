@@ -1,4 +1,4 @@
-<button type="button" (click)="deleteAccount()">Supprimer</button>
+<button class="delete_btn" type="button" (click)="deleteAccount()">Supprimer compte</button>
 
 <button *ngIf="clickedToDelete" type="button" (click)="confirmation(); deleteAccount();">Confirmer</button>
 <button *ngIf="clickedToDelete" type="button" (click)="cancelDelete()">Annuler</button>

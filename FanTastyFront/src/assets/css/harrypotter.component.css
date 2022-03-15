@@ -726,3 +726,31 @@ figcaption::before {
     right: 0;
   }
 }
+
+.logout_btn {
+
+   text-decoration: none;
+   background: var(--main-color-harrypotter);
+   border: 2.5px solid var(--main-color-harrypotter);
+   transition: flex 0.7s ease-in;
+   font-family: 'Roboto Slab', serif;
+   border-radius: 10px;
+   color: black;
+   width: 148px;
+   height: 48px;
+   font-size: 15px;
+   font-weight: unset;
+   cursor: pointer;
+   text-align: center;
+}
+
+.logout_btn:hover {
+  color: var(--main-color-harrypotter);
+  font-weight: unset;
+  background-color: transparent;
+}
+.delete_btn {
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+  font-weight: unset;
+}

@@ -380,3 +380,31 @@ h1 {
   text-shadow: 0 0 10px var(--main-color-light),
               0 0 10px var(--main-color-light);
 }
+.logout_btn {
+   margin: 18px;
+   text-decoration: none;
+   background: var(--main-color-light);
+   border: 2.5px solid var(--main-color-light);
+   transition: flex 0.7s ease-in;
+   font-family: 'Encode Sans Expanded', sans-serif;
+   border-radius: 10px;
+   color: black;
+   width: 148px;
+   height: 44px;
+   font-size: 14px;
+   font-weight: 600;
+   cursor: pointer;
+   text-align: center;
+}
+ 
+.logout_btn:hover {
+  color: var(--main-color-light);
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.delete_btn {
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}

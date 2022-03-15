@@ -209,7 +209,7 @@ h1 {
     position: relative;
     margin-top: 6px;
     padding:0;
-    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Coda', cursive;
     font-weight: lighter;
     font-size: 45px;
     color: var(--main-color-marvel);
@@ -727,4 +727,34 @@ figcaption::before {
     left: auto;
     right: 0;
   }
+}
+
+
+.logout_btn {
+   margin: 18px;
+   text-decoration: none;
+   background: var(--main-color-marvel);
+   border: 2.5px solid var(--main-color-marvel);
+   transition: flex 0.7s ease-in;
+   font-family: 'Coda', cursive;
+   border-radius: 10px;
+   color: black;
+   width: 148px;
+   height: 48px;
+   font-size: 15px;
+   font-weight: unset;
+   cursor: pointer;
+   text-align: center;
+}
+
+.logout_btn:hover {
+  color: var(--main-color-marvel);
+  font-weight: unset;
+  background-color: transparent;
+}
+
+.delete_btn {
+  font-family: 'Coda', cursive;
+  font-size: 15px;
+  font-weight: unset;
 }

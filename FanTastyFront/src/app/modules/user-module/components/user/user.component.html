@@ -2,6 +2,10 @@
     <div class="profile-header">
         <h1 class="display-name">Coups de cœur de {{currentUser?.nom}}</h1>
     </div>
+    <div class="container_user-btn">
+        <button class="logout_btn" type="button" (click)="disconnect()">Se déconnecter</button>
+        <app-user-delete></app-user-delete>
+    </div>
 
     <div class="profile-body-section">
         <div *ngFor="let rec of recettes">
@@ -14,7 +18,3 @@
 
     </div>
 </div>
-
-<button type="button" (click)="disconnect()">Déconnecter</button>
-
-<app-user-delete></app-user-delete>
