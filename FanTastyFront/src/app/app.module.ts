@@ -23,7 +23,6 @@ import { UserModule } from "./modules/user-module/user.module";
     HttpClientModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AdminModuleModule,
     UserModule,
 
   ],
