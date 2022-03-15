@@ -2,7 +2,6 @@
 
 <div class="search-container_modal">
   <form [formGroup]="searchForm" (ngSubmit)="btnClickSearch()" novalidate>
-
     <input type="input" class="search-input" placeholder="miam miam..." (click)="displayModal()"/>
 
     <div id="search-box-model-container" class="search-box_modal disable">
@@ -48,7 +47,7 @@
         <input type="submit" value="Filtrer">
         <button (click)="btnClickReset()">Reset</button>
       </div>
-    </div>
+
   </form>
 </div>
 
