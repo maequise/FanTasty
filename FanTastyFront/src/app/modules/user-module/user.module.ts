@@ -7,6 +7,7 @@ import { UserDeleteComponent } from './components/user-delete/user-delete.compon
 import { UserCreateComponent } from './components/user-create/user-create.component';
 import { UserPasswordComponent } from './components/user-password/user-password.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import {StaticModule} from "../static/static.module";
 
 
 
@@ -16,7 +17,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     UserEditComponent,
     UserDeleteComponent,
     UserCreateComponent,
-    UserPasswordComponent
+    UserPasswordComponent,
   ],
   exports: [
     UserCreateComponent
@@ -24,7 +25,8 @@ import {ReactiveFormsModule} from "@angular/forms";
   imports: [
     CommonModule,
     UserRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StaticModule
   ]
 })
 export class UserModule { }
