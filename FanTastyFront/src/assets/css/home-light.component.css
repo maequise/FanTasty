@@ -616,24 +616,24 @@ footer {
     border: 2.5px solid var(--main-color-light);
 }
 .panel_0{
-  background-image: url(../../assets/mike-wazowski-recipe.jpg);
+  background-image: url(../../assets/img/mike-wazowski-recipe.jpg);
   background-repeat: no-repeat;
   background-position:center;
 }
 .panel_1{
-  background-image: url(../../assets/star-wars-marshmallows.jpg);
+  background-image: url(../../assets/img/star-wars-marshmallows.jpg);
   background-repeat: no-repeat;
   background-position: center;
 
 }
 .panel_2{
-  background-image: url(../../assets/batman-cake.jpg);
+  background-image: url(../../assets/img/batman-cake.jpg);
   background-repeat: no-repeat;
   background-position: center;
 
 }
 .panel_3{
-  background-image: url( ../../assets/mickey-waffles.jpg);
+  background-image: url( ../../assets/img/mickey-waffles.jpg);
   background-repeat: no-repeat;
   background-position: center;
 
@@ -680,14 +680,14 @@ footer {
   border: 2.5px solid var(--main-color-light);
 }
 .recipe_1{
-  background-image: url(../../assets/superman-pizza.jpg);
+  background-image: url(../../assets/img/superman-pizza.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .recipe_2{
   
-  background-image: url(../../assets/superhero-cupcakes.jpg);
+  background-image: url(../../assets/img/superhero-cupcakes.jpg);
   background-repeat: no-repeat;
   background-position:top;
 }
@@ -732,7 +732,7 @@ footer {
               0 0 23px var(--main-color-light);
 }
 .gif_1{
-  background-image: url("../../assets/walt-disney.jpg");
+  background-image: url("../../assets/img/walt-disney.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size:cover;
@@ -741,7 +741,7 @@ footer {
   background-image: url("https://media.giphy.com/media/42ZPYptEGgxaM/giphy.gif");
 }
 .gif_2{
-  background-image: url(../../assets/naruto.jpg);
+  background-image: url(../../assets/img/naruto.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size:cover;
@@ -750,7 +750,7 @@ footer {
   background-image: url("https://64.media.tumblr.com/05e0e8b044615ef489489b74d03d3b44/tumblr_nm7eoliv5J1qj5jqso1_500.gifv");
 }
 .gif_3{
-  background-image: url(../../assets/marvel.jpg);
+  background-image: url(../../assets/img/marvel.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size:cover;
@@ -759,7 +759,7 @@ footer {
   background-image: url("https://media.giphy.com/media/vBjLa5DQwwxbi/giphy.gif");
 }
 .gif_4{
-  background-image: url(../../assets/harry-potter.jpg);
+  background-image: url(../../assets/img/harry-potter.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -768,22 +768,22 @@ footer {
   background-image: url("https://img.wattpad.com/c26f32faafd3f46ff7035d673c280d61f559abd3/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f452d2d68306e5a487471364d4b513d3d2d3339373035373832332e313462343762323762376465343834663439323435303232313230342e676966");
 }
 .gif_5{
-  background-image: url("../../assets/wow.jpg");
+  background-image: url("../../assets/img/wow.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .gif_5:hover{
-  background-image: url("../../assets/wow.gif");
+  background-image: url("../../assets/img/wow.gif");
 }
 .gif_6{
-  background-image: url("../../assets/back-to-the-future.jpg");
+  background-image: url("../../assets/img/back-to-the-future.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .gif_6:hover{
-  background-image: url("../../assets/back-to-the-future.gif");
+  background-image: url("../../assets/img/back-to-the-future.gif");
 }
 
 
