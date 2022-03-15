@@ -1,3 +1,9 @@
+<div *ngIf="loading">
+    <div class="container_loader">
+        <span class="loader"></span>
+    </div>
+</div>
+
 <!--Components Block-->
 
 <div *ngIf="isFromUniverse && !loading">
@@ -75,3 +81,5 @@
         </ol>
     </div>
 </div>
+
+<app-footer *ngIf="!loading"></app-footer>

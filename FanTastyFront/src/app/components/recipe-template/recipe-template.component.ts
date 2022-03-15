@@ -1,4 +1,4 @@
-import {AfterViewChecked, Component, OnInit, Output, Renderer2, ViewEncapsulation} from '@angular/core';
+import { AfterViewChecked, Component, OnInit, Output, Renderer2, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { Ingredient } from '../../models/ingredient';
 import { Recette } from '../../models/recette';
@@ -32,8 +32,8 @@ export class RecipeTemplateComponent implements OnInit, AfterViewChecked {
   isFromUniverse = true;
   loading: boolean = true;
 
- optionalClassSpanUtensil : string = '';
- optionalClassSpanToggle : string = '';
+  optionalClassSpanUtensil: string = '';
+  optionalClassSpanToggle: string = '';
 
   constructor(private render: Renderer2, private router: Router,
     private recettesService: RecettesService, private authService: AuthService) {
@@ -108,7 +108,7 @@ export class RecipeTemplateComponent implements OnInit, AfterViewChecked {
     setTimeout(() => {
       this.loading = false;
       //this.isDarkMode = Utils.isInDarkMode();
-    }, 1000)
+    }, 1500)
 
   }
 
