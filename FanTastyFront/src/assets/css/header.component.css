@@ -8,7 +8,7 @@
 
 a,
 button {
-  
+
   font-size: inherit;
   line-height: inherit;
   border: none;
@@ -182,8 +182,8 @@ hr.hline_color {
   font-family: inherit;
   font-size: 1rem;
   font-weight: 500;
-  line-height: inherit;  
-  color: var(--link-color-light);  
+  line-height: inherit;
+  color: var(--link-color-light);
   text-transform: capitalize;
   text-rendering: optimizeLegibility;
 }
@@ -213,7 +213,7 @@ hr.hline_color {
   margin: 0;
   display: inline-flex;
   justify-content: space-evenly;
-    
+
 }
 
 h1 {
@@ -243,7 +243,7 @@ h1 {
   color: var(--link-color-light);
   background: url(../img/control-light.png) 5px no-repeat;
   background-size: 30px;
-  background-position-x: right;  
+  background-position-x: right;
 }
 
 .search-input::placeholder{
@@ -301,13 +301,13 @@ h1 {
 }
 
 @media only screen and (max-width: 500px) {
-   
+
   .search-container {
    width: 30%;
    position: absolute;
    left: 300px;
   }
-  
+
   .search-input::placeholder{
    color: var(--link-color-light);
    font-family: 'Encode Sans Expanded', sans-serif;
@@ -316,7 +316,7 @@ h1 {
   }
 
   .sidebar {
-    top: 60%;    
+    top: 60%;
   }
 
 }
@@ -324,7 +324,7 @@ h1 {
 .login{
   margin: 10px;
     display: flex;
-    float: right;    
+    float: right;
     margin-top: 8px;
 }
 .login-btn-img{
@@ -394,20 +394,20 @@ h1 {
   position: fixed;
   width: 35px;
   height: auto;
-  right: 0px; 
-  top: 60%; 
+  right: 0px;
+  top: 60%;
   border-radius: 15px;
   transform: translate(0%, -50%);
-  -webkit-transform: translate(0%, -50%); 
-  -moz-transform: translate(0%, -50%); 
-  -o-transform: translate(0%, -50%); 
-  
+  -webkit-transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -o-transform: translate(0%, -50%);
+
 }
 
 .sidebar .ico {
-  display: block; 
+  display: block;
   padding: 0px;
-  margin:0;  
+  margin:0;
 }
 
 .styleA-sideBar{
@@ -437,7 +437,7 @@ h1 {
    cursor: pointer;
    text-align: center;
 }
- 
+
 .logout_btn:hover {
   color: var(--main-color-light);
   font-weight: 600;
@@ -448,4 +448,44 @@ h1 {
   font-family: 'Encode Sans Expanded', sans-serif;
   font-weight: 600;
   font-size: 14px;
+}
+
+#search-box-model-container.disable {
+  display: none;
+}
+
+#search-box-model-container.active {
+  display: flex;
+
+  transform: translateY(10px);
+  transition: transform 0.5s ease-in-out;
+  border-radius: 20px;
+  padding: 15px;
+  width: 300px;
+  position: absolute;
+  z-index: 999;
+}
+
+.search-box-modal-over.disable {
+  display: none;
+}
+
+.search-box-modal-over.active {
+  display: block;
+  z-index: 998;
+  background-color: #000000;
+  opacity: 0.1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-left: 0px;
+  left:0;
+  top: 0;
+  bottom: 0;
+  overflow-x: unset;
+  overflow-y: unset;
+}
+
+.disable-scroll {
+  overflow: hidden;
 }
