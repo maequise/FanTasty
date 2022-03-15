@@ -42,7 +42,7 @@ export class UniversComponent implements OnInit, AfterViewInit, AfterViewChecked
   ngAfterViewChecked(): void {
     setTimeout(() => {
       this.loading = false;
-    }, 1000)
+    }, 1500)
 
   }
 
@@ -84,6 +84,7 @@ export class UniversComponent implements OnInit, AfterViewInit, AfterViewChecked
 
     return '';
   }
+
 
 
 }

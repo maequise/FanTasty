@@ -100,7 +100,7 @@ export class RecipeTemplateComponent implements OnInit, AfterViewChecked {
   ngAfterViewChecked(): void {
     setTimeout(() => {
       this.loading = false;
-    }, 1000)
+    }, 1500)
 
   }
 
