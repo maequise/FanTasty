@@ -4,17 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Do+Hyeon&family=Eczar:wght@600&family=Mouse+Memoirs&family=Mrs+Sheppards&family=Roboto+Slab&family=Sedgwick+Ave+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Coda&family=Do+Hyeon&family=Eczar:wght@600&family=Mouse+Memoirs&family=Mrs+Sheppards&family=Roboto+Slab&family=Sedgwick+Ave+Display&display=swap');
 
-
-.testTitleIcon{
-  font-family: 'Roboto Slab', serif;
-  font-weight: bold;
-  color: var(--main-color-marvel);
-}
-
-.testContainerProportions{
-  color: var(--main-color-marvel);
-}
-
 a,
 button {
   font-family: inherit;
@@ -768,4 +757,32 @@ figcaption::before {
   font-family: 'Coda', cursive;
   font-size: 15px;
   font-weight: unset;
+}
+
+
+.containerIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgIconDifficulteBudgetSaison{
+  width: 30px;
+  height: 30px;
+}
+
+.containerProportions{
+  margin: 15px 0 15px 0;
+  color: var(--main-color-marvel);
+}
+
+.imgIconPlusMoins{
+  width: 15px;
+  height: 15px;
+}
+
+.titleIconDifficulteBudgetSaison{
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  color: var(--main-color-marvel);
 }

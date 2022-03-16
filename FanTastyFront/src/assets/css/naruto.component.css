@@ -3,17 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Bungee+Shade&family=Mrs+Sheppards&family=Sedgwick+Ave+Display&family=Titan+One&display=swap');
 
-
-.testTitleIcon{
-  font-family: 'Roboto Slab', serif;
-  font-weight: bold;
-  color: var(--main-color-naruto);
-}
-
-.testContainerProportions{
-  color: var(--main-color-naruto);
-}
-
 a,
 button {
   font-family: inherit;
@@ -667,4 +656,31 @@ figcaption::before {
   font-family: 'Balsamiq Sans', cursive;
   font-size: 15px;
   font-weight: unset;
+}
+
+.containerIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgIconDifficulteBudgetSaison{
+  width: 30px;
+  height: 30px;
+}
+
+.containerProportions{
+  margin: 15px 0 15px 0;
+  color: var(--main-color-naruto);
+}
+
+.imgIconPlusMoins{
+  width: 15px;
+  height: 15px;
+}
+
+.titleIconDifficulteBudgetSaison{
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  color: var(--main-color-naruto);
 }

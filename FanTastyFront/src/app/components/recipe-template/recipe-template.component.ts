@@ -32,7 +32,6 @@ export class RecipeTemplateComponent implements OnInit, AfterViewChecked {
 
   moinsIcon: string = "";
 
-  href: string = '/assets/css/marvel.component.css';
 
   recette: Recette = new Recette();
   urlImage: string = "";
