@@ -17,8 +17,11 @@
         <img class="duo_icon" src="../../assets/img/two.png" />
     </div>
     <div class="recipes-home">
-        <div class="recipe recipe_1"></div>
-        <div class="recipe recipe_2"></div>
+        <div class="recipe" *ngFor="let recipe of recettes">
+            <a routerLink="/{{recipe.univers | lowercase}}/recette/{{recipe.id}}">
+                <img [src]="getImage(recipe.photo)" width="571" height="240" />
+            </a>
+        </div>
     </div>
 
     <div class="title_container_universe">
