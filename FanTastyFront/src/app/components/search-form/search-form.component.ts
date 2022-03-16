@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormArray, FormControl, AbstractControl } from 
 import { Recette } from 'src/app/models/recette';
 import { SearchedTag } from 'src/app/models/searchedTag';
 import { RecettesService } from 'src/app/services/recettes.service';
+import {Utils} from "../../core/Utils";
 
 @Component({
   selector: 'app-search-form',
@@ -65,6 +66,14 @@ export class SearchFormComponent implements OnInit {
     document.querySelector('.search-box-modal-over')?.classList.add('disable')
     document.querySelector('#search-box-model-container')?.classList.add('disable')
     document.querySelector('.search-input')?.classList.remove('search-input-prop');
+
+    if(Utils.isInDarkMode()){
+      document.querySelector('#search-box-model-container')?.classList.remove('bg-light-modal')
+      document.querySelector('.search-input')?.classList.remove('bg-light-modal')
+    } else {
+      document.querySelector('#search-box-model-container')?.classList.remove('bg-dark-modal')
+      document.querySelector('.search-input')?.classList.remove('bg-dark-modal')
+    }
   }
 
   displayModal(): void {
@@ -74,9 +83,15 @@ export class SearchFormComponent implements OnInit {
     document.querySelector('.search-box-modal-over')?.classList.remove('disable')
     document.querySelector('.search-box-modal-over')?.classList.add('active')
     document.querySelector('#search-box-model-container')?.classList.add('active')
-    document.querySelector('#search-box-model-container')?.classList.remove('bg-dark-modal')
-    document.querySelector('#search-box-model-container')?.classList.add('bg-dark-modal')
-    //bg-dark-modal
+
+    if(!Utils.isInDarkMode()){
+      document.querySelector('#search-box-model-container')?.classList.add('bg-light-modal')
+      document.querySelector('.search-input')?.classList.add('bg-light-modal')
+    } else {
+      document.querySelector('#search-box-model-container')?.classList.add('bg-dark-modal')
+      document.querySelector('.search-input')?.classList.add('bg-dark-modal')
+    }
+
     this.search = true;
 
   }
