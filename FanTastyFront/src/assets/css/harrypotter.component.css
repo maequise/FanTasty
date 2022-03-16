@@ -3,6 +3,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Bungee+Shade&family=Eczar:wght@600&family=Mrs+Sheppards&family=Roboto+Slab&family=Sedgwick+Ave+Display&family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Bungee+Shade&family=Eczar:wght@600&family=Mrs+Sheppards&family=Sedgwick+Ave+Display&family=Titan+One&display=swap');
 
+.testTitleIcon{
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  color: var(--main-color-harry);
+}
+
+.testContainerProportions{
+  color: var(--main-color-harry);
+}
+
 a,
 button {
   font-family: inherit;
