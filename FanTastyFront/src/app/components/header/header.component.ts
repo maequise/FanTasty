@@ -75,9 +75,8 @@ export class HeaderComponent implements OnInit {
     let toggleOnBg: Element = document.querySelector('.toggle')!;
     let toggleOffBg: Element = document.querySelector('.utensils-back')!;
     let searchModal: Element = document.querySelector('#search-box-model-container')!;
+    let searchModalInput: Element = document.querySelector('.search-input')!;
 
-    console.log(toggleOffBg)
-    console.log(recipeCard)
 
     if (darkMode === 'dark') {
       element.classList.add('dark');
@@ -87,7 +86,8 @@ export class HeaderComponent implements OnInit {
       sideBarBg.classList.add('sd-dark');
       searchModal.classList.add('bg-dark-modal');
       searchModal.classList.remove('bg-light-modal');
-
+      searchModalInput.classList.remove('bg-light-modal')
+      searchModalInput.classList.add('bg-dark-modal')
 
       if (recipeCard != null) {
         recipeCard.classList.remove('card-bg');
@@ -128,6 +128,7 @@ export class HeaderComponent implements OnInit {
       sideBarBg.classList.add('sd-light');
       searchModal.classList.remove('bg-dark-modal');
       searchModal.classList.add('bg-light_search-modal');
+      searchModalInput.classList.remove('bg-dark-modal')
 
     }
   }
