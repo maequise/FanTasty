@@ -264,7 +264,8 @@ h1 {
 .search-box_modal {
   width: 100%;
 }
-.search-container_modal {
+
+/* .search-container_modal {
   margin: 47px;
   display: flex;
   width: 22%;
@@ -274,7 +275,7 @@ h1 {
   color: var(--main-color-light);
   font-family: 'Encode Sans Expanded', sans-serif;
   padding: 30px;  
-}
+} */
 .search-box_btn {
   margin-top: 25px;
 }
@@ -461,9 +462,12 @@ h1 {
   transition: transform 0.5s ease-in-out;
   border-radius: 20px;
   padding: 15px;
-  width: 300px;
+  width: 420px;
   position: absolute;
   z-index: 999;
+  border: 2.5px solid var(--main-color-light);
+  font-family: 'Encode Sans Expanded', sans-serif;
+  color: var(--main-color-light);
 }
 
 .search-box-modal-over.disable {
