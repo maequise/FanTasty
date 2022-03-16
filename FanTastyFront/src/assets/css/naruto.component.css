@@ -3,6 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Bungee+Shade&family=Mrs+Sheppards&family=Sedgwick+Ave+Display&family=Titan+One&display=swap');
 
+
+.testTitleIcon{
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  color: var(--main-color-naruto);
+}
+
+.testContainerProportions{
+  color: var(--main-color-naruto);
+}
+
 a,
 button {
   font-family: inherit;
