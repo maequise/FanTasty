@@ -1,15 +1,29 @@
-<div class="main-cards-container" *ngIf="isFromUniverse">
-
-    <ul class="cards">
-        <li class="cards_item" *ngFor="let recette of recettes">
-            <a routerLink="/{{getUniverseSelected()}}/recette/{{recette.id}}">
-                <div class="card">
-                    <!-- <div class="card_image"><img src="../../assets/disney-frozen-cupcakes.jpg"></div> -->
-                    <div class="card_image"><img src="http://localhost:60599/Resources/{{recette.photo}}" alt=""></div>
-                    
-                </div>
-                <button class="btn card_btn">{{recette.nom}}</button>
-            </a>
-        </li>
-    </ul>
+<div *ngIf="loading">
+    <div class="container_loader">
+        <span class="loader"></span>
+    </div>
 </div>
+
+<div class="main-cards-container" *ngIf="isFromUniverse && !loading">
+
+
+    <div class="main-cards-container" *ngIf="isFromUniverse">
+
+        <ul class="cards">
+            <li class="cards_item" *ngFor="let recette of recettes">
+
+                <a routerLink="/{{getUniverseSelected()}}/recette/{{recette.id}}" routerLinkActive="active">
+                    <div class="card">
+
+                        <div class="card_image"><img class="recipe_img"
+                                src="http://localhost:60599/Resources/{{recette.photo}}" alt=""></div>
+
+                    </div>
+                    <button class="btn card_btn">{{recette.nom}}</button>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<app-footer *ngIf="!loading"></app-footer>

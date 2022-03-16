@@ -12,10 +12,10 @@
 
 
     <div class="navmodal" id="navmodal">
-        <div class="container">
+        <div class="container bg-light-modal">
             <div class="closemenu" id="closemenu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
-                    <path [attr.fill]="pathColor" fill-rule="evenodd"
+                    <path [attr.fill]="getCloseModalPathColor()" fill-rule="evenodd"
                         d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z" />
                 </svg>
             </div>
@@ -60,28 +60,22 @@
 
 
     <h1>Fan'Tasty</h1>
-
-    <div class="search-container">
-        <div class="search-box">
-            <input type="text" class="search-input" placeholder="miam miam...">
-
-
-        </div>
-    </div>
+    <app-search-form></app-search-form>
 </div>
 
-
-
 <div class="top-container">
-    <h3 class="title-top-container">Recettes de saison</h3>
     <img class="icon-top-container" [src]="getIconTopSeason()" />
-    <h3 class="title-top-container">Recette Random</h3>
+    <h3 class="title-top-container">Recettes de saison</h3>
+
     <img class="icon-top-container" [src]="getIconTopDice()" />
-    <h3 class="title-top-container">Concours</h3>
+    <h3 class="title-top-container">Recette Random</h3>
+
     <img class="icon-top-container" [src]="getIconTopContest()" />
-    <h3 class="title-top-container">Light/Dark</h3>
+    <h3 class="title-top-container">Concours</h3>
+
     <input #example type="checkbox" class="switch" id="example" reauired="required" (appDarkMode)="darkOnOff($event)" />
     <label for="example"></label>
+    <h3 class="title-top-container">Light/Dark</h3>
 </div>
 
 <hr class="hline_color">
@@ -89,12 +83,19 @@
 <!--SideBar-->
 
 <div class="sidebar sd-light">
-    <a class="styleA-sideBar" href="#"><img class="ico" [src]="getIconHome()"></a>
-    <a class="styleA-sideBar"><img class="ico" [src]="getIconLogin()"></a>
-    <a class="styleA-sideBar" routerLink="/disney"><img class="ico" [src]="getIconDisney()"></a>
-    <a class="styleA-sideBar" routerLink="/naruto"><img class="ico" [src]="getIconNaruto()"></a>
-    <a class="styleA-sideBar" routerLink="/marvel"><img class="ico" [src]="getIconMarvel()"></a>
-    <a class="styleA-sideBar" routerLink="/harrypotter"><img class="ico" [src]="getIconHarryPotter()"></a>
+    <a class="styleA-sideBar" href="/"><img class="ico" [src]="getIconHome()"></a>
+    <a class="styleA-sideBar" routerLinkActive="active" routerLink="/user/manage"><img class="ico"
+            [src]="getIconLogin()"></a>
+    <a class="styleA-sideBar" routerLinkActive="active" routerLink="/disney"><img class="ico"
+            [src]="getIconDisney()"></a>
+    <a class="styleA-sideBar" routerLinkActive="active" routerLink="/naruto"><img class="ico"
+            [src]="getIconNaruto()"></a>
+    <a class="styleA-sideBar" routerLinkActive="active" routerLink="/marvel"><img class="ico"
+            [src]="getIconMarvel()"></a>
+    <a class="styleA-sideBar" routerLinkActive="active" routerLink="/harrypotter"><img class="ico"
+            [src]="getIconHarryPotter()"></a>
 </div>
 
-<router-outlet></router-outlet>
+<!--<div [@routeAnimation]="getAnimationData()">
+  <router-outlet ></router-outlet>
+</div>-->

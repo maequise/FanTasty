@@ -1,8 +1,17 @@
+<div *ngIf="loading">
+    <div class="container_loader">
+        <span class="loader"></span>
+    </div>
+</div>
+
 <!--Components Block-->
-<div class="recipe-card card-bg">
-    <div class="description">
-        <h2 class="title-recipe">{{recette?.nom}}</h2>
-        
+
+<div *ngIf="isFromUniverse && !loading">
+    <div class="recipe-card">
+        <div class="description">
+            <h2 class="title-recipe">{{recette?.nom}}</h2>
+            <app-favorite *ngIf="userLogged" [recetteLiked]="recette"></app-favorite>
+          
             <div class="testContainerIcon">
                 <h3 class="testTitleIcon">Difficulté:</h3>
                 <div *ngFor="let nbIconeDifficulte of iconTableau(recette.tags.difficulte)">
@@ -16,50 +25,66 @@
                 <img class="testImgIcon" [src]="iconSaison()" />
             </div>
 
+            <label class="toggle-utensils">
+                <input type="checkbox" />
+                <span class="utensils-back {{optionalClassSpanUtensil}}">
+                    <span class="toggle {{optionalClassSpanToggle}}"></span>
+                    <span class="label label-ingredients" (click)="showIngredientsUtensils($event)">Ingrédients</span>
+                    <span class="label label-utensils" (click)="showIngredientsUtensils($event)">Ustensiles</span>
+                </span>
+            </label>
 
-        <!-- bouton pour augmenter le nombre de personnes-->
-        <div class="testContainerProportions">
-            
-            🥄 Personne(s): 
-            <button class="btnPortion" (click)="btnDecrementationNbrIngredient()">
-                <img class="testImgIconPlusMoins" [src]="iconMoins()" />
-            </button>
-            {{personneVoulu}}
-            <button class="btnPortion" (click)="btnIncrementationNbrIngredient()">
-                <img class="testImgIconPlusMoins" [src]="iconPlus()" />
-            </button>
+            <div *ngIf="display">
+                      <!-- bouton pour augmenter le nombre de personnes-->
+                        <div class="testContainerProportions">
+
+                            🥄 Personne(s): 
+                            <button class="btnPortion" (click)="btnDecrementationNbrIngredient()">
+                                <img class="testImgIconPlusMoins" [src]="iconMoins()" />
+                            </button>
+                            {{personneVoulu}}
+                            <button class="btnPortion" (click)="btnIncrementationNbrIngredient()">
+                                <img class="testImgIconPlusMoins" [src]="iconPlus()" />
+                            </button>
+                        </div>
+                      <!-- Fin bouton -->
+                <ul class="ingredients" *ngFor="let ingredientRecette of recette?.ingredients">
+                    <li>{{ingredientRecette.ingredient.nom}} | {{personneVoulu * ingredientRecette.quantite / recette.nombrePersonnes}} {{ingredientRecette.unite}}</li>
+                </ul>
+            </div>
+
+            <div *ngIf="!display">
+                <ul class="ingredients" *ngFor="let ustensiles of recette?.ustensiles">
+                    <li>{{ustensiles}}</li>
+                </ul>
+            </div>
+
+
+        <div>
+            <figure>
+                <img class="recipe-template_img" [src]="urlImage" alt="">
+                <figcaption>{{recette?.auteur}}</figcaption>
+            </figure>
+            <ul>
+                <li>⏲️Temps de préparation : {{recette?.temps?.tempsPreparation}}</li>
+                <li>👨🏻‍🍳Temps de Cuisson : {{recette?.temps?.tempsCuisson}}</li>
+                <li>✔️Temps total : {{recette?.temps?.tempsTotal}}</li>
+
+            </ul>
+
         </div>
-        <!-- Fin bouton -->
-
-        <h2 class="subtitle-ingredients">Ingrédients</h2>
-        <ul class="ingredients" *ngFor="let ingredientRecette of recette?.ingredients">
-            <li>{{ingredientRecette.ingredient.nom}} | {{personneVoulu * ingredientRecette.quantite / recette.nombrePersonnes}} {{ingredientRecette.unite}}</li>
-        </ul>
-
     </div>
 
-    <div>
-        <figure>
-            <!-- <img src="../../assets/disney-baby-yoda-pie.jpg" /> -->
-            <img src="http://localhost:60599/Resources/{{recette?.photo}}" alt="">
-            <figcaption>{{recette?.auteur}}</figcaption>
-        </figure>
-        <ul>
-            <li>⏲️Temps de préparation : {{recette?.temps?.tempsPreparation}}</li>
-            <li>👨🏻‍🍳Temps de Cuisson : {{recette?.temps?.tempsCuisson}}</li>
-            <li>✔️Temps total : {{recette?.temps?.tempsTotal}}</li>
-        </ul>
+    <div id="process"></div>
 
+    <div class="process">
+        <h2 class="subtitle-recipe">Préparation</h2>
+
+        <ol class="instructions" *ngFor="let etape of recette?.etapes; let index = index">
+            <h3 class="subtitle-process">Etape {{index +1}}</h3>
+            <li class="instructions">{{etape}}</li>
+        </ol>
     </div>
 </div>
 
-<div id="process"></div>
-
-<div class="process">
-    <h2 class="subtitle-recipe">Préparation</h2>
-
-    <ol class="instructions" *ngFor="let etape of recette?.etapes; let index = index">
-        <h3 class="subtitle-process">Etape {{index +1}}</h3>
-        <li class="instructions">{{etape}}</li>
-    </ol>
-</div>
+<app-footer *ngIf="!loading"></app-footer>
