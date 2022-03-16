@@ -2,6 +2,8 @@
 using FanTastyBack.Models;
 using FanTastyBack.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Text.Json;
 
 namespace FanTastyBack.Controllers
 {
@@ -81,16 +83,36 @@ namespace FanTastyBack.Controllers
             }
         }
 
-        [HttpGet("tag/")]
-        public IActionResult FindByTag(Tag tag)
+        [HttpGet("tag")]
+        public IActionResult FindByTag(string tagString)
         {
+            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            Tag tag = JsonSerializer.Deserialize<Tag>(tagString, options);
+
             try
             {
                 return Ok(this._service.FindByTag(tag));
             }
             catch (NotFoundException e)
             {
-                return NotFound(e.Message);
+                //return NotFound(e.Message);
+                return Ok(new List<Recette>());
+            }
+        }
+
+        [HttpGet("tags")]
+        public IActionResult FindByTags(string tagsString)
+        {
+            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            SearchedTag tags = JsonSerializer.Deserialize<SearchedTag>(tagsString, options);
+
+            try
+            {
+                return Ok(this._service.FindByTags(tags));
+            }
+            catch (NotFoundException e)
+            {
+                return Ok(new List<Recette>());
             }
         }
 

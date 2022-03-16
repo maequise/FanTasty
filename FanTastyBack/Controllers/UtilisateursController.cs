@@ -1,5 +1,6 @@
 ﻿using FanTastyBack.Models;
 using FanTastyBack.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FanTastyBack.Controllers
@@ -52,7 +53,7 @@ namespace FanTastyBack.Controllers
         public IActionResult AjoutRecetteFavoris(string idUtilisateur, string idRecette)
         {
             this._service.AjoutRecetteFavoris(idUtilisateur, idRecette);
-            return Ok("Ajout recette dans favoris |OK| ");
+            return Ok("{\"message\": \"Ajout recette dans favoris |OK|\"}");
         }
 
         [HttpGet("{idUtilisateur}/recettesFavoris")]
@@ -68,6 +69,21 @@ namespace FanTastyBack.Controllers
             return Ok("Recette favoris supprimé");
         }
 
+        [HttpPost("login")]
+        public IActionResult Login(Login user)
+        {
+            Utilisateur userFound = this._service.Login(user.Username, user.Password);
+
+            if(userFound != null)
+            {
+                return Ok(userFound);
+            } else
+            {
+                return NotFound();
+            }
+
+            //return Ok(this._service.Login(user.Username, user.Password));
+        }
 
     }
 }

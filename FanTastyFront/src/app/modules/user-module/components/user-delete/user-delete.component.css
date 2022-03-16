@@ -1,0 +1,17 @@
+
+.delete_btn {
+   text-decoration: none;
+   background: #909090;
+   border: 2.5px solid #909090;
+   transition: flex 0.7s ease-in;
+   border-radius: 10px;
+   color: #fffafa;
+   width: 148px;
+   height: 44px;
+   cursor: pointer;
+}
+
+.delete_btn:hover {
+  color: #909090;
+  background-color: transparent;
+}

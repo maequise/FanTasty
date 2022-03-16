@@ -1,0 +1,55 @@
+<div class="search-box-modal-over disable" (click)="disable()"></div>
+
+<div class="search-container_modal">
+  <form [formGroup]="searchForm" (ngSubmit)="btnClickSearch()" novalidate>
+    <input type="input" class="search-input" placeholder="miam miam..." (click)="displayModal()" />
+
+    <div id="search-box-model-container" class="search-box_modal disable">
+      <div class="search-box-modal-wrapper">
+        <div class="search-box_modal">
+          <h4>Type</h4>
+
+          <ng-container *ngFor="let item of lstTypePlat; let i=index">
+            <label>
+              <input type="checkbox" [value]="item.value" (change)="onCheckboxChange($event,1)" />
+              {{item.name}}
+            </label>
+          </ng-container>
+        </div>
+        <div class="search-box_modal">
+          <h4>Saison</h4>
+          <ng-container *ngFor="let item of lstSaison; let i=index">
+            <label>
+              <input type="checkbox" [value]="item.value" (change)="onCheckboxChange($event,2)" />
+              {{item.name}}
+            </label>
+          </ng-container>
+        </div>
+        <div class="search-box_modal">
+          <h4>Coût</h4>
+          <ng-container *ngFor="let item of lstCout; let i=index">
+            <label>
+              <input type="checkbox" [value]="item.value" (change)="onCheckboxChange($event,3)" />
+              {{item.name}}
+            </label>
+          </ng-container>
+        </div>
+        <div class="search-box_modal">
+          <h4>Difficulté</h4>
+          <ng-container *ngFor="let item of lstDifficulte; let i=index">
+            <label>
+              <input type="checkbox" [value]="item.value" (change)="onCheckboxChange($event,4)" />
+              {{item.name}}
+            </label>
+          </ng-container>
+        </div>
+
+        <input class="filter_btn" type="submit" value="Filtrer">
+        <button (click)="btnClickReset()">Reset</button>
+      </div>
+    </div>
+  </form>
+
+</div>
+
+<app-search-results *ngIf="searched" [recettes]="recettes"></app-search-results>

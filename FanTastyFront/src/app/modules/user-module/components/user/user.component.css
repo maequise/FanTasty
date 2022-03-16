@@ -1,0 +1,45 @@
+.profile-wrapper {
+  width: 1174px;
+  height: fit-content;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;  
+  border-radius: 35px;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.display-name {
+  font-size: 37px;
+}
+
+.profile-body-section {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-column-gap: 77px;
+  grid-row-gap: 47px;
+  margin: 40px;
+}
+
+.favorite-recipe_img{   
+  border-radius: 35px;   
+  width: 320px;
+  height: 220px;      
+}
+
+.container_user-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+  
