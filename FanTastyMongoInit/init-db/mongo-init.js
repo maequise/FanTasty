@@ -355,52 +355,52 @@ db.Recettes.insertMany([
             {
                 "_id": nouille_id,
                 "quantite": 200,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": porcChashu_id,
                 "quantite": 3,
-                "unite": "tranche"
+                "unite": "tranche(s)"
             },
             {
                 "_id": oeufMollet_id,
                 "quantite": 1,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": pateMiso_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": pousseDeBambou_id,
                 "quantite": 50,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": bouillonPorc_id,
                 "quantite": 1,
-                "unite": "cube"
+                "unite": "cube(s)"
             },
             {
                 "_id": huileSesame_id,
                 "quantite": 1,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": algueNori_id,
                 "quantite": 1,
-                "unite": "feuille"
+                "unite": "feuille(s)"
             },
             {
                 "_id": oignonFrais_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": narutomaki_id,
                 "quantite": 2,
-                "unite": "tranche"
+                "unite": "tranche(s)"
             }
         ],
         "ustensiles": [
@@ -447,27 +447,27 @@ db.Recettes.insertMany([
         "ingredients": [
             {
                 "_id": sucreRoux_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 200
             },
             {
                 "_id": beurre_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 25
             },
             {
                 "_id": cremeEpaisse_id,
-                "unite": "centilitre",
+                "unite": "cl",
                 "quantite": 60
             },
             {
                 "_id": extraitVanille_id,
-                "unite": "cuillère à café",
+                "unite": "c. à c.",
                 "quantite": 0.25
             },
             {
                 "_id": biere_id,
-                "unite": "litre",
+                "unite": "l",
                 "quantite": 1
             }
         ],
@@ -476,6 +476,7 @@ db.Recettes.insertMany([
             "fouet",
             "spatule"
         ],
+        "nombrePersonnes": 1,
         "temps": {
             "tempsPreparation": "5mn",
             "tempsCuisson": "15mn",
@@ -504,32 +505,32 @@ db.Recettes.insertMany([
         "ingredients": [
             {
                 "_id": farine_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 250
             },
             {
                 "_id": oeuf_id,
-                "unite": "pièce",
+                "unite": "pièce(s)",
                 "quantite": 4
             },
             {
                 "_id": lait_id,
-                "unite": "centilitre",
+                "unite": "cl",
                 "quantite": 50
             },
             {
                 "_id": sel_id,
-                "unite": "pincée",
+                "unite": "pincée(s)",
                 "quantite": 1
             },
             {
                 "_id": sucre_id,
-                "unite": "cuillère à soupe",
+                "unite": "c. à s.",
                 "quantite": 2
             },
             {
                 "_id": beurre_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 50
             }
         ],
@@ -539,6 +540,7 @@ db.Recettes.insertMany([
             "spatule",
             "saladier"
         ],
+        "nombrePersonnes": 1,
         "temps": {
             "tempsPreparation": "10mn",
             "tempsCuisson": "15mn",
@@ -570,17 +572,17 @@ db.Recettes.insertMany([
             {
                 "_id": rizJaponais_id,
                 "quantite": 1,
-                "unite": "tasse"
+                "unite": "tasse(s)"
             },
             {
                 "_id": katsuobushi_id,
                 "quantite": 0.25,
-                "unite": "tasse"
+                "unite": "tasse(s)"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             }
         ],
         "ustensiles": [
@@ -616,47 +618,47 @@ db.Recettes.insertMany([
             {
                 "_id": algueHijikiSechee_id,
                 "quantite": 25,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": tofuFritAburaage_id,
                 "quantite": 2,
-                "unite": "morceaux"
+                "unite": "morceau(x)"
             },
             {
                 "_id": konnyaku_id,
                 "quantite": 100,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": edamame_id,
                 "quantite": 125,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": dashiLiquide_id,
                 "quantite": 480,
-                "unite": "millilitre"
+                "unite": "ml"
             },
             {
                 "_id": mirin_id,
                 "quantite": 60,
-                "unite": "millilitre"
+                "unite": "ml"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 60,
-                "unite": "millilitre"
+                "unite": "ml"
             },
             {
                 "_id": carotte_id,
                 "quantite": 1,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": huileVegetale_id,
                 "quantite": 15,
-                "unite": "millilitre"
+                "unite": "ml"
             }
         ],
         "ustensiles": [
@@ -671,7 +673,7 @@ db.Recettes.insertMany([
             "tempsTotal": "1h08"
         },
         "tags": {
-            "typePlat": "Plat",
+            "typePlat": "Entrée",
             "difficulte": 2,
             "cout": 2,
             "saison": "Toutes"
@@ -696,17 +698,17 @@ db.Recettes.insertMany([
             {
                 "_id": haricotRouge_id,
                 "quantite": 200,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": eau_id,
                 "quantite": 1.25,
-                "unite": "litre"
+                "unite": "l"
             },
             {
                 "_id": sucre_id,
                 "quantite": 150,
-                "unite": "gramme"
+                "unite": "g"
             }
         ],
         "ustensiles": [
@@ -750,27 +752,27 @@ db.Recettes.insertMany([
             {
                 "_id": cuisseDePoulet_id,
                 "quantite": 300,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": sake_id,
                 "quantite": 1,
-                "unite": "cuillière à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 5,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": ail_id,
                 "quantite": 2,
-                "unite": "gousse"
+                "unite": "gousse(s)"
             },
             {
                 "_id": feculeDePommeDeTerreKatakuriko_id,
                 "quantite": 60,
-                "unite": "millilitre"
+                "unite": "ml"
             }
         ],
         "ustensiles": [
@@ -809,22 +811,22 @@ db.Recettes.insertMany([
             {
                 "_id": chocolatDeCouverture_id,
                 "quantite": 200,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": beurreDeCacahouete_id,
                 "quantite": 70,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": sucreRoux_id,
                 "quantite": 25,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": vanille_id,
                 "quantite": 1,
-                "unite": "pincée"
+                "unite": "pincée(s)"
             }
         ],
         "ustensiles": [
@@ -867,22 +869,22 @@ db.Recettes.insertMany([
             {
                 "_id": bettes_id,
                 "quantite": 1,
-                "unite": "botte"
+                "unite": "botte(s)"
             },
             {
                 "_id": celeri_id,
                 "quantite": 5,
-                "unite": "branche"
+                "unite": "branche(s)"
             },
             {
                 "_id": pomme_id,
                 "quantite": 3,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": gingembre_id,
                 "quantite": 1,
-                "unite": "morceau"
+                "unite": "morceau(x)"
             }
         ],
         "ustensiles": [
@@ -919,22 +921,22 @@ db.Recettes.insertMany([
             {
                 "_id": lait_id,
                 "quantite": 4,
-                "unite": "tasse"
+                "unite": "tasse(s)"
             },
             {
                 "_id": vanille_id,
                 "quantite": 1,
-                "unite": "cuillière à café"
+                "unite": "c. à c."
             },
             {
                 "_id": chocolatBlanc_id,
                 "quantite": 8,
-                "unite": "carré"
+                "unite": "carré(s)"
             },
             {
                 "_id": colorantAlimentaireBleu_id,
                 "quantite": 2,
-                "unite": "goutte"
+                "unite": "goutte(s)"
             },
             {
                 "_id": cremeFouettee_id,
@@ -975,32 +977,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -1052,32 +1054,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -1125,32 +1127,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -1198,32 +1200,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -1271,32 +1273,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -1321,7 +1323,7 @@ db.Recettes.insertMany([
             "tempsTotal": "20mn"
         },
         "tags": {
-            "typePlat": "Plat",
+            "typePlat": "Dessert",
             "difficulte": 1,
             "cout": 1,
             "saison": "Toutes"
@@ -1344,32 +1346,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -1394,7 +1396,7 @@ db.Recettes.insertMany([
             "tempsTotal": "20mn"
         },
         "tags": {
-            "typePlat": "Plat",
+            "typePlat": "Entrée",
             "difficulte": 1,
             "cout": 1,
             "saison": "Toutes"
@@ -1417,32 +1419,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -1467,7 +1469,7 @@ db.Recettes.insertMany([
             "tempsTotal": "20mn"
         },
         "tags": {
-            "typePlat": "Plat",
+            "typePlat": "Entrée",
             "difficulte": 1,
             "cout": 1,
             "saison": "Toutes"
@@ -1490,32 +1492,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -1563,32 +1565,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -1636,32 +1638,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -1709,32 +1711,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -1782,32 +1784,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -1835,7 +1837,7 @@ db.Recettes.insertMany([
             "typePlat": "Plat",
             "difficulte": 1,
             "cout": 1,
-            "saison": "Toutes"
+            "saison": "Automne"
         },
         "photo": "harrypotter/harry-potter-golden-snitch-pops.png",
         "etapePreparation": [
@@ -1855,32 +1857,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -1908,7 +1910,7 @@ db.Recettes.insertMany([
             "typePlat": "Plat",
             "difficulte": 1,
             "cout": 1,
-            "saison": "Toutes"
+            "saison": "Printemps"
         },
         "photo": "harrypotter/harry-potter-pasties.jpg",
         "etapePreparation": [
@@ -1928,32 +1930,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -2001,32 +2003,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -2074,32 +2076,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -2147,32 +2149,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -2198,8 +2200,8 @@ db.Recettes.insertMany([
         },
         "tags": {
             "typePlat": "Plat",
-            "difficulte": 1,
-            "cout": 1,
+            "difficulte": 4,
+            "cout": 3,
             "saison": "Toutes"
         },
         "photo": "naruto/viande-naruto.jpg",
@@ -2220,32 +2222,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -2293,32 +2295,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -2366,32 +2368,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -2439,32 +2441,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -2492,7 +2494,7 @@ db.Recettes.insertMany([
             "typePlat": "Plat",
             "difficulte": 1,
             "cout": 1,
-            "saison": "Toutes"
+            "saison": "Été"
         },
         "photo": "marvel/marvel-smoothie.jpg",
         "etapePreparation": [
@@ -2512,32 +2514,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -2585,32 +2587,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -2658,32 +2660,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -2731,32 +2733,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -2804,32 +2806,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -2877,32 +2879,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -2950,32 +2952,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -3023,32 +3025,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -3073,8 +3075,8 @@ db.Recettes.insertMany([
             "tempsTotal": "20mn"
         },
         "tags": {
-            "typePlat": "Plat",
-            "difficulte": 1,
+            "typePlat": "Dessert",
+            "difficulte": 2,
             "cout": 1,
             "saison": "Toutes"
         },
@@ -3096,32 +3098,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -3147,9 +3149,9 @@ db.Recettes.insertMany([
         },
         "tags": {
             "typePlat": "Plat",
-            "difficulte": 1,
-            "cout": 1,
-            "saison": "Toutes"
+            "difficulte": 3,
+            "cout": 2,
+            "saison": "Printemps"
         },
         "photo": "disney/disney-frozen-cupcakes.jpg",
         "etapePreparation": [
@@ -3173,32 +3175,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -3250,32 +3252,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -3301,9 +3303,9 @@ db.Recettes.insertMany([
         },
         "tags": {
             "typePlat": "Plat",
-            "difficulte": 1,
-            "cout": 1,
-            "saison": "Toutes"
+            "difficulte": 2,
+            "cout": 3,
+            "saison": "hiver"
         },
         "photo": "disney/disney-frozen-cupcakes.jpg",
         "etapePreparation": [
@@ -3327,32 +3329,32 @@ db.Recettes.insertMany([
             {
                 "_id": coteDePorc_id,
                 "quantite": 4,
-                "unite": "pièce"
+                "unite": "pièce(s)"
             },
             {
                 "_id": confitDOrange_id,
                 "quantite": 25,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": sauceSoja_id,
                 "quantite": 6,
-                "unite": "centilitre"
+                "unite": "cl"
             },
             {
                 "_id": pimentRouge_id,
                 "quantite": 1,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 2,
-                "unite": "cuillère à café"
+                "unite": "c. à c."
             },
             {
                 "_id": sauceSriracha_id,
                 "quantite": 2,
-                "unite": "cuillère à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": sel_id,
@@ -3378,9 +3380,9 @@ db.Recettes.insertMany([
         },
         "tags": {
             "typePlat": "Plat",
-            "difficulte": 1,
-            "cout": 1,
-            "saison": "Toutes"
+            "difficulte": 4,
+            "cout": 3,
+            "saison": "Hiver"
         },
         "photo": "disney/disney-frozen-cupcakes.jpg",
         "etapePreparation": [
@@ -3404,27 +3406,27 @@ db.Recettes.insertMany([
             {
                 "_id": cuisseDePoulet_id,
                 "quantite": 300,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": sake_id,
                 "quantite": 1,
-                "unite": "cuillière à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 5,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": ail_id,
                 "quantite": 2,
-                "unite": "gousse"
+                "unite": "gousse(s)"
             },
             {
                 "_id": feculeDePommeDeTerreKatakuriko_id,
                 "quantite": 60,
-                "unite": "millilitre"
+                "unite": "ml"
             }
         ],
         "ustensiles": [
@@ -3463,27 +3465,27 @@ db.Recettes.insertMany([
             {
                 "_id": cuisseDePoulet_id,
                 "quantite": 300,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": sake_id,
                 "quantite": 1,
-                "unite": "cuillière à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 5,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": ail_id,
                 "quantite": 2,
-                "unite": "gousse"
+                "unite": "gousse(s)"
             },
             {
                 "_id": feculeDePommeDeTerreKatakuriko_id,
                 "quantite": 60,
-                "unite": "millilitre"
+                "unite": "ml"
             }
         ],
         "ustensiles": [
@@ -3522,27 +3524,27 @@ db.Recettes.insertMany([
             {
                 "_id": cuisseDePoulet_id,
                 "quantite": 300,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": sake_id,
                 "quantite": 1,
-                "unite": "cuillière à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 5,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": ail_id,
                 "quantite": 2,
-                "unite": "gousse"
+                "unite": "gousse(s)"
             },
             {
                 "_id": feculeDePommeDeTerreKatakuriko_id,
                 "quantite": 60,
-                "unite": "millilitre"
+                "unite": "ml"
             }
         ],
         "ustensiles": [
@@ -3558,7 +3560,7 @@ db.Recettes.insertMany([
         },
         "tags": {
             "typePlat": "Plat",
-            "difficulte": 2,
+            "difficulte": 3,
             "cout": 2,
             "saison": "Toutes"
         },
@@ -3581,27 +3583,27 @@ db.Recettes.insertMany([
             {
                 "_id": cuisseDePoulet_id,
                 "quantite": 300,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": sake_id,
                 "quantite": 1,
-                "unite": "cuillière à soupe"
+                "unite": "c. à s."
             },
             {
                 "_id": gingembre_id,
                 "quantite": 5,
-                "unite": "gramme"
+                "unite": "g"
             },
             {
                 "_id": ail_id,
                 "quantite": 2,
-                "unite": "gousse"
+                "unite": "gousse(s)"
             },
             {
                 "_id": feculeDePommeDeTerreKatakuriko_id,
                 "quantite": 60,
-                "unite": "millilitre"
+                "unite": "ml"
             }
         ],
         "ustensiles": [
@@ -3619,7 +3621,7 @@ db.Recettes.insertMany([
             "typePlat": "Plat",
             "difficulte": 2,
             "cout": 2,
-            "saison": "Toutes"
+            "saison": "Printemps"
         },
         "photo": "naruto/naruto-yakiniku.jpeg",
         "etapePreparation": [
@@ -3639,32 +3641,32 @@ db.Recettes.insertMany([
         "ingredients": [
             {
                 "_id": farine_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 250
             },
             {
                 "_id": oeuf_id,
-                "unite": "pièce",
+                "unite": "pièce(s)",
                 "quantite": 4
             },
             {
                 "_id": lait_id,
-                "unite": "centilitre",
+                "unite": "cl",
                 "quantite": 50
             },
             {
                 "_id": sel_id,
-                "unite": "pincée",
+                "unite": "pincée(s)",
                 "quantite": 1
             },
             {
                 "_id": sucre_id,
-                "unite": "cuillère à soupe",
+                "unite": "c. à s.",
                 "quantite": 2
             },
             {
                 "_id": beurre_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 50
             }
         ],
@@ -3683,7 +3685,7 @@ db.Recettes.insertMany([
             "typePlat": "Dessert",
             "difficulte": 2,
             "cout": 1,
-            "saison": "Toutes"
+            "saison": "Automne"
         },
         "photo": "disney/disney-sleeping-beauty-cake.jpeg",
         "etapePreparation": [
@@ -3704,32 +3706,32 @@ db.Recettes.insertMany([
         "ingredients": [
             {
                 "_id": farine_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 250
             },
             {
                 "_id": oeuf_id,
-                "unite": "pièce",
+                "unite": "pièce(s)",
                 "quantite": 4
             },
             {
                 "_id": lait_id,
-                "unite": "centilitre",
+                "unite": "cl",
                 "quantite": 50
             },
             {
                 "_id": sel_id,
-                "unite": "pincée",
+                "unite": "pincée(s)",
                 "quantite": 1
             },
             {
                 "_id": sucre_id,
-                "unite": "cuillère à soupe",
+                "unite": "c. à s.",
                 "quantite": 2
             },
             {
                 "_id": beurre_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 50
             }
         ],
@@ -3748,7 +3750,7 @@ db.Recettes.insertMany([
             "typePlat": "Dessert",
             "difficulte": 2,
             "cout": 1,
-            "saison": "Toutes"
+            "saison": "Été"
         },
         "photo": "disney/disney-c3po-ice-cream-sandwich.jpg",
         "etapePreparation": [
@@ -3769,32 +3771,32 @@ db.Recettes.insertMany([
         "ingredients": [
             {
                 "_id": farine_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 250
             },
             {
                 "_id": oeuf_id,
-                "unite": "pièce",
+                "unite": "pièce(s)",
                 "quantite": 4
             },
             {
                 "_id": lait_id,
-                "unite": "centilitre",
+                "unite": "cl",
                 "quantite": 50
             },
             {
                 "_id": sel_id,
-                "unite": "pincée",
+                "unite": "pincée(s)",
                 "quantite": 1
             },
             {
                 "_id": sucre_id,
-                "unite": "cuillère à soupe",
+                "unite": "c. à s.",
                 "quantite": 2
             },
             {
                 "_id": beurre_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 50
             }
         ],
@@ -3834,32 +3836,32 @@ db.Recettes.insertMany([
         "ingredients": [
             {
                 "_id": farine_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 250
             },
             {
                 "_id": oeuf_id,
-                "unite": "pièce",
+                "unite": "pièce(s)",
                 "quantite": 4
             },
             {
                 "_id": lait_id,
-                "unite": "centilitre",
+                "unite": "cl",
                 "quantite": 50
             },
             {
                 "_id": sel_id,
-                "unite": "pincée",
+                "unite": "pincée(s)",
                 "quantite": 1
             },
             {
                 "_id": sucre_id,
-                "unite": "cuillère à soupe",
+                "unite": "c. à s.",
                 "quantite": 2
             },
             {
                 "_id": beurre_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 50
             }
         ],
@@ -3899,32 +3901,32 @@ db.Recettes.insertMany([
         "ingredients": [
             {
                 "_id": farine_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 250
             },
             {
                 "_id": oeuf_id,
-                "unite": "pièce",
+                "unite": "pièce(s)",
                 "quantite": 4
             },
             {
                 "_id": lait_id,
-                "unite": "centilitre",
+                "unite": "cl",
                 "quantite": 50
             },
             {
                 "_id": sel_id,
-                "unite": "pincée",
+                "unite": "pincée(s)",
                 "quantite": 1
             },
             {
                 "_id": sucre_id,
-                "unite": "cuillère à soupe",
+                "unite": "c. à s.",
                 "quantite": 2
             },
             {
                 "_id": beurre_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 50
             }
         ],
@@ -3941,8 +3943,8 @@ db.Recettes.insertMany([
         },
         "tags": {
             "typePlat": "Dessert",
-            "difficulte": 2,
-            "cout": 1,
+            "difficulte": 4,
+            "cout": 2,
             "saison": "Toutes"
         },
         "photo": "disney/disney-baby-yoda-pie.jpg",
@@ -3964,32 +3966,32 @@ db.Recettes.insertMany([
         "ingredients": [
             {
                 "_id": farine_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 250
             },
             {
                 "_id": oeuf_id,
-                "unite": "pièce",
+                "unite": "pièce(s)",
                 "quantite": 4
             },
             {
                 "_id": lait_id,
-                "unite": "centilitre",
+                "unite": "cl",
                 "quantite": 50
             },
             {
                 "_id": sel_id,
-                "unite": "pincée",
+                "unite": "pincée(s)",
                 "quantite": 1
             },
             {
                 "_id": sucre_id,
-                "unite": "cuillère à soupe",
+                "unite": "c. à s.",
                 "quantite": 2
             },
             {
                 "_id": beurre_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 50
             }
         ],
@@ -4007,8 +4009,8 @@ db.Recettes.insertMany([
         "tags": {
             "typePlat": "Dessert",
             "difficulte": 2,
-            "cout": 1,
-            "saison": "Toutes"
+            "cout": 3,
+            "saison": "Été"
         },
         "photo": "disney/disney-monsters-inc-green-smoothie.jpg",
         "etapePreparation": [
@@ -4029,32 +4031,32 @@ db.Recettes.insertMany([
         "ingredients": [
             {
                 "_id": farine_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 250
             },
             {
                 "_id": oeuf_id,
-                "unite": "pièce",
+                "unite": "pièce(s)",
                 "quantite": 4
             },
             {
                 "_id": lait_id,
-                "unite": "centilitre",
+                "unite": "cl",
                 "quantite": 50
             },
             {
                 "_id": sel_id,
-                "unite": "pincée",
+                "unite": "pincée(s)",
                 "quantite": 1
             },
             {
                 "_id": sucre_id,
-                "unite": "cuillère à soupe",
+                "unite": "c. à s.",
                 "quantite": 2
             },
             {
                 "_id": beurre_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 50
             }
         ],
@@ -4071,9 +4073,9 @@ db.Recettes.insertMany([
         },
         "tags": {
             "typePlat": "Dessert",
-            "difficulte": 2,
-            "cout": 1,
-            "saison": "Toutes"
+            "difficulte": 3,
+            "cout": 2,
+            "saison": "Été"
         },
         "photo": "disney/disney-mickey-cookie-dough.jpg",
         "etapePreparation": [
@@ -4094,32 +4096,32 @@ db.Recettes.insertMany([
         "ingredients": [
             {
                 "_id": farine_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 250
             },
             {
                 "_id": oeuf_id,
-                "unite": "pièce",
+                "unite": "pièce(s)",
                 "quantite": 4
             },
             {
                 "_id": lait_id,
-                "unite": "centilitre",
+                "unite": "cl",
                 "quantite": 50
             },
             {
                 "_id": sel_id,
-                "unite": "pincée",
+                "unite": "pincée(s)",
                 "quantite": 1
             },
             {
                 "_id": sucre_id,
-                "unite": "cuillère à soupe",
+                "unite": "c. à s.",
                 "quantite": 2
             },
             {
                 "_id": beurre_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 50
             }
         ],
@@ -4137,7 +4139,7 @@ db.Recettes.insertMany([
         "tags": {
             "typePlat": "Dessert",
             "difficulte": 2,
-            "cout": 1,
+            "cout": 2,
             "saison": "Toutes"
         },
         "photo": "disney/cookies-rapunzel.jpg",
@@ -4159,32 +4161,32 @@ db.Recettes.insertMany([
         "ingredients": [
             {
                 "_id": farine_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 250
             },
             {
                 "_id": oeuf_id,
-                "unite": "pièce",
+                "unite": "pièce(s)",
                 "quantite": 4
             },
             {
                 "_id": lait_id,
-                "unite": "centilitre",
+                "unite": "cl",
                 "quantite": 50
             },
             {
                 "_id": sel_id,
-                "unite": "pincée",
+                "unite": "pincée(s)",
                 "quantite": 1
             },
             {
                 "_id": sucre_id,
-                "unite": "cuillère à soupe",
+                "unite": "c. à s.",
                 "quantite": 2
             },
             {
                 "_id": beurre_id,
-                "unite": "gramme",
+                "unite": "g",
                 "quantite": 50
             }
         ],

@@ -646,3 +646,30 @@ figcaption::before {
   font-size: 15px;
   font-weight: unset;
 }
+
+.containerIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgIconDifficulteBudgetSaison{
+  width: 30px;
+  height: 30px;
+}
+
+.containerProportions{
+  margin: 15px 0 15px 0;
+  color: var(--main-color-naruto);
+}
+
+.imgIconPlusMoins{
+  width: 15px;
+  height: 15px;
+}
+
+.titleIconDifficulteBudgetSaison{
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  color: var(--main-color-naruto);
+}
