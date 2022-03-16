@@ -6,16 +6,7 @@
 /*Common App CSS*/
 
 
-a,
-button {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  border: none;
-  outline: none;
-  background: none;
-  text-decoration: none;
-}
+
 hr{
   margin-top: -1px;
   border:2px dotted var(--main-color-light);
