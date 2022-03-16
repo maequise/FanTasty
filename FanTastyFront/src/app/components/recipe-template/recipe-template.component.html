@@ -8,21 +8,21 @@
 
 <div *ngIf="isFromUniverse && !loading">
     <div class="recipe-card">
-        <div class="description">
+        <div>
             <h2 class="title-recipe">{{recette?.nom}}</h2>
             <app-favorite *ngIf="userLogged" [recetteLiked]="recette"></app-favorite>
-          
-            <div class="testContainerIcon">
-                <h3 class="testTitleIcon">Difficulté:</h3>
+
+            <div class="containerIcon">
+                <h3 class="titleIconDifficulteBudgetSaison">Difficulté:</h3>
                 <div *ngFor="let nbIconeDifficulte of iconTableau(recette.tags.difficulte)">
-                    <img class="testImgIcon" [src]="iconDifficulte()" />
+                    <img class="imgIconDifficulteBudgetSaison" [src]="iconDifficulte()" />
                 </div>
-                <h3 class="testTitleIcon">Budget:</h3>
+                <h3 class="titleIconDifficulteBudgetSaison">Budget:</h3>
                 <div *ngFor="let nbIconeCout of iconTableau(recette.tags.cout)">
-                    <img class="testImgIcon" [src]="iconBudget()" />
+                    <img class="imgIconDifficulteBudgetSaison" [src]="iconBudget()" />
                 </div>
-                <h3 class="testTitleIcon">Saison:</h3>
-                <img class="testImgIcon" [src]="iconSaison()" />
+                <h3 class="titleIconDifficulteBudgetSaison">Saison:</h3>
+                <img class="imgIconDifficulteBudgetSaison" [src]="iconSaison()" />
             </div>
 
             <label class="toggle-utensils">
@@ -35,21 +35,22 @@
             </label>
 
             <div *ngIf="display">
-                      <!-- bouton pour augmenter le nombre de personnes-->
-                        <div class="testContainerProportions">
+                <!-- bouton pour augmenter le nombre de personnes-->
+                <div class="containerProportions">
 
-                            🥄 Personne(s): 
-                            <button class="btnPortion" (click)="btnDecrementationNbrIngredient()">
-                                <img class="testImgIconPlusMoins" [src]="iconMoins()" />
-                            </button>
-                            {{personneVoulu}}
-                            <button class="btnPortion" (click)="btnIncrementationNbrIngredient()">
-                                <img class="testImgIconPlusMoins" [src]="iconPlus()" />
-                            </button>
-                        </div>
-                      <!-- Fin bouton -->
+                    🥄 Personne(s):
+                    <button class="btnPortion" (click)="btnDecrementationNbrIngredient()">
+                        <img class="imgIconPlusMoins" [src]="iconMoins()" />
+                    </button>
+                    {{personneVoulu}}
+                    <button class="btnPortion" (click)="btnIncrementationNbrIngredient()">
+                        <img class="imgIconPlusMoins" [src]="iconPlus()" />
+                    </button>
+                </div>
+                <!-- Fin bouton -->
                 <ul class="ingredients" *ngFor="let ingredientRecette of recette?.ingredients">
-                    <li>{{ingredientRecette.ingredient.nom}} | {{personneVoulu * ingredientRecette.quantite / recette.nombrePersonnes}} {{ingredientRecette.unite}}</li>
+                    <li>{{ingredientRecette.ingredient.nom}} | {{personneVoulu * ingredientRecette.quantite /
+                        recette.nombrePersonnes}} {{ingredientRecette.unite}}</li>
                 </ul>
             </div>
 
@@ -60,31 +61,31 @@
             </div>
 
 
-        <div>
-            <figure>
-                <img class="recipe-template_img" [src]="urlImage" alt="">
-                <figcaption>{{recette?.auteur}}</figcaption>
-            </figure>
-            <ul>
-                <li>⏲️Temps de préparation : {{recette?.temps?.tempsPreparation}}</li>
-                <li>👨🏻‍🍳Temps de Cuisson : {{recette?.temps?.tempsCuisson}}</li>
-                <li>✔️Temps total : {{recette?.temps?.tempsTotal}}</li>
+            <div>
+                <figure>
+                    <img class="recipe-template_img" [src]="urlImage" alt="">
+                    <figcaption>{{recette?.auteur}}</figcaption>
+                </figure>
+                <ul>
+                    <li>⏲️Temps de préparation : {{recette?.temps?.tempsPreparation}}</li>
+                    <li>👨🏻‍🍳Temps de Cuisson : {{recette?.temps?.tempsCuisson}}</li>
+                    <li>✔️Temps total : {{recette?.temps?.tempsTotal}}</li>
 
-            </ul>
+                </ul>
 
+            </div>
+        </div>
+
+        <div id="process"></div>
+
+        <div class="process">
+            <h2 class="subtitle-recipe">Préparation</h2>
+
+            <ol class="instructions" *ngFor="let etape of recette?.etapes; let index = index">
+                <h3 class="subtitle-process">Etape {{index +1}}</h3>
+                <li class="instructions">{{etape}}</li>
+            </ol>
         </div>
     </div>
 
-    <div id="process"></div>
-
-    <div class="process">
-        <h2 class="subtitle-recipe">Préparation</h2>
-
-        <ol class="instructions" *ngFor="let etape of recette?.etapes; let index = index">
-            <h3 class="subtitle-process">Etape {{index +1}}</h3>
-            <li class="instructions">{{etape}}</li>
-        </ol>
-    </div>
-</div>
-
-<app-footer *ngIf="!loading"></app-footer>
+    <app-footer *ngIf="!loading"></app-footer>
