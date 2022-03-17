@@ -407,9 +407,10 @@ h1 {
     border: solid 2.5px var(--main-color-light);
 }
 .favorite-recipe_img:hover{
-  text-shadow: 0 0 10px var(--main-color-light),
+  box-shadow: 0 0 10px var(--main-color-light),
               0 0 10px var(--main-color-light);
 }
+
 .logout_btn {
    margin: 18px;
    text-decoration: none;

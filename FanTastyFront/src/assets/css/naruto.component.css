@@ -542,6 +542,11 @@ figure{
 	border-radius: 30px;
 }
 
+.favorite-recipe_img:hover{
+  box-shadow: 0 0 23px var(--main-color-naruto),
+              0 0 23px var(--main-color-naruto);
+}
+
 figcaption, p {
 	font-size: 16px;
 	text-align: center;

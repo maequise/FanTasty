@@ -639,6 +639,11 @@ figure{
 	border-radius: 30px;
 }
 
+.favorite-recipe_img:hover{
+  box-shadow: 0 0 23px var(--main-color-marvel),
+              0 0 23px var(--main-color-marvel);
+}
+
 figcaption, p {
 	font-size: 14px;
   font-weight: 500;
