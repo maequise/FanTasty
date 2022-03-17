@@ -607,28 +607,11 @@ footer {
     transition:flex 0.7s ease-in;
     border: 2.5px solid var(--main-color-light);
 }
-.panel_0{
-  background-image: url(../../assets/img/mike-wazowski-recipe.jpg);
-  background-repeat: no-repeat;
-  background-position:center;
-}
-.panel_1{
-  background-image: url(../../assets/img/star-wars-marshmallows.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
 
-}
-.panel_2{
-  background-image: url(../../assets/img/batman-cake.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-
-}
-.panel_3{
-  background-image: url( ../../assets/img/mickey-waffles.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-
+.img_panel{
+  width: 100%;
+  height: 320px;
+  border-radius: 30px;
 }
 .panel:hover{
   box-shadow: 0 0 23px var(--main-color-light),

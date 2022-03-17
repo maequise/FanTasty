@@ -5,10 +5,9 @@
         <p class="tags_users_recipes">#MonstresEtCie #StarWars #Batman #Mickey </p>
     </div>
     <div #children class="container-users-recipes">
-        <div class="panel panel_active panel_0"></div>
-        <div class="panel panel_1"></div>
-        <div class="panel panel_2"></div>
-        <div class="panel panel_3"></div>
+        <div class="panel" *ngFor="let recette of recettesCarroussel">
+            <img class="img_panel" [src]="getImage(recette.photo)" />
+        </div>
     </div>
     <div class="title_container_duo">
         <p class="tags_duo">#Naruto #HarryPotter #Ramen #Bière </p>

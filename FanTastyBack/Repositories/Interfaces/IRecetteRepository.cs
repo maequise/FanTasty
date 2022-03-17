@@ -28,5 +28,6 @@ namespace FanTastyBack.Repositories.Interfaces
         public Recette Update(string id, Recette recette);
 
         void Delete(string id);
+        List<Recette> RecettesCarrousel();
     }
 }

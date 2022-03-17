@@ -118,5 +118,12 @@ namespace FanTastyBack.Services
         {
             return this._repository.Update(id, recette);
         }
+
+        public List<Recette> RecettesCarrousel()
+        {
+            List<Recette> reccettesCarrousel = this._repository.RecettesCarrousel();
+
+            return reccettesCarrousel;
+        }
     }
 }

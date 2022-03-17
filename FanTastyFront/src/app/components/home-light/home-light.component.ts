@@ -1,4 +1,7 @@
 import {
+  AfterContentChecked,
+  AfterContentInit,
+  AfterViewChecked,
   AfterViewInit,
   Component,
   ElementRef,
@@ -8,9 +11,9 @@ import {
   ViewChildren,
   ViewEncapsulation
 } from '@angular/core';
-import {Router} from '@angular/router';
-import {RecettesService} from 'src/app/services/recettes.service';
-import {Recette} from 'src/app/models/recette';
+import { Router } from '@angular/router';
+import { RecettesService } from 'src/app/services/recettes.service';
+import { Recette } from 'src/app/models/recette';
 
 @Component({
   selector: 'app-home-light',
@@ -24,15 +27,20 @@ export class HomeLightComponent implements OnInit, AfterViewInit {
   @ViewChildren('children') children!: QueryList<ElementRef>;
 
   recettes: Recette[] = [];
+  recettesCarroussel: Recette[] = [];
 
 
   constructor(private router: Router, private elementRef: ElementRef, private recetteService: RecettesService) {
   }
 
+
   ngAfterViewInit(): void {
+    console.log(this.children)
     this.children.forEach((element, index, children) => {
       element.nativeElement.childNodes.forEach((value: Element) => {
         value.addEventListener("click", function (event) {//add a click event
+          console.log(event);
+
           children.forEach((elementT) => {
             elementT.nativeElement.childNodes.forEach((valueT: Element) => {
               valueT.classList.remove('panel_active')
@@ -61,6 +69,25 @@ export class HomeLightComponent implements OnInit, AfterViewInit {
       });
     })
 
+    this.recetteService.recettesCarrousel().subscribe(response => {
+      this.recettesCarroussel = response;
+    })
+
+
+    this.children.forEach((element, index, children) => {
+      element.nativeElement.childNodes.forEach((value: Element) => {
+        value.addEventListener("click", function (event) {//add a click event
+          console.log(event);
+
+          children.forEach((elementT) => {
+            elementT.nativeElement.childNodes.forEach((valueT: Element) => {
+              valueT.classList.remove('panel_active')
+            });
+          });
+          value.classList.add("panel_active");//when i click i add a class style 'active '
+        })//
+      })
+    });
   }
 
   getImage(file: string): string {

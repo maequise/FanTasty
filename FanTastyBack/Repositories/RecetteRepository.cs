@@ -211,5 +211,12 @@ namespace FanTastyBack.Repositories
             _recettes.ReplaceOne(rec => rec.Id == id, recette);
             return recette;
         }
+
+        public List<Recette> RecettesCarrousel()
+        {
+            List<Recette> recettesCarrousel = this._recettes.Find(rec => true).Skip(2).Limit(5).ToList();
+
+            return recettesCarrousel;
+        }
     }
 }

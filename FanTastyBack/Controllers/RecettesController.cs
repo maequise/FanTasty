@@ -160,5 +160,11 @@ namespace FanTastyBack.Controllers
         {
             return Ok(this._service.Update(id, recette));
         }
+
+        [HttpGet("carrousel")]
+        public IActionResult RecettesCarrousel()
+        {
+            return Ok(this._service.RecettesCarrousel());
+        }
     }
 }
