@@ -1,9 +1,16 @@
-import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
-import { HttpHandler, HttpInterceptor, HttpRequest } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { RecettesService } from 'src/app/services/recettes.service';
-import { Recette } from 'src/app/models/recette';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  QueryList,
+  ViewChild,
+  ViewChildren,
+  ViewEncapsulation
+} from '@angular/core';
+import {Router} from '@angular/router';
+import {RecettesService} from 'src/app/services/recettes.service';
+import {Recette} from 'src/app/models/recette';
 
 @Component({
   selector: 'app-home-light',
@@ -11,15 +18,31 @@ import { Recette } from 'src/app/models/recette';
   styleUrls: ['../../../assets/css/home-light.component.css'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class HomeLightComponent implements OnInit {
+export class HomeLightComponent implements OnInit, AfterViewInit {
 
   @ViewChild('example') example!: ElementRef;
+  @ViewChildren('children') children!: QueryList<ElementRef>;
 
   recettes: Recette[] = [];
 
 
+  constructor(private router: Router, private elementRef: ElementRef, private recetteService: RecettesService) {
+  }
 
-  constructor(private router: Router, private elementRef: ElementRef, private recetteService: RecettesService) { }
+  ngAfterViewInit(): void {
+    this.children.forEach((element, index, children) => {
+      element.nativeElement.childNodes.forEach((value: Element) => {
+        value.addEventListener("click", function (event) {//add a click event
+          children.forEach((elementT) => {
+            elementT.nativeElement.childNodes.forEach((valueT: Element) => {
+              valueT.classList.remove('panel_active')
+            });
+          });
+          value.classList.add("panel_active");//when i click i add a class style 'active '
+        })//
+      })
+    });
+  }
 
   ngOnInit(): void {
     this.recetteService.findAll().subscribe(response => {
